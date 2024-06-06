@@ -1,9 +1,6 @@
 .progress {
     color: #fefefe;
 
-    &__title {
-        text-align: center;
-    }
 
     &__text {
         color: #efefef;
@@ -16,7 +13,7 @@
         text-align: center;
     }
 
-    &__progressBar,
+    &__bar,
     .progressBar {
         display: flex;
         position: relative;

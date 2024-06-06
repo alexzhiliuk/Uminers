@@ -1025,7 +1025,6 @@ button {
   margin-top: 40px;
 }
 .section__body_centered {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1034,9 +1033,6 @@ button {
 
 .progress {
   color: #fefefe;
-}
-.progress__title {
-  text-align: center;
 }
 .progress__text {
   color: #efefef;
@@ -1048,7 +1044,7 @@ button {
   max-width: 382px;
   text-align: center;
 }
-.progress__progressBar,
+.progress__bar,
 .progress .progressBar {
   display: flex;
   position: relative;
@@ -1056,8 +1052,8 @@ button {
   justify-content: center;
   gap: 20%;
 }
-.progress__progressBar__point,
-.progress__progressBar .point,
+.progress__bar__point,
+.progress__bar .point,
 .progress .progressBar__point,
 .progress .progressBar .point {
   display: flex;
@@ -1066,8 +1062,8 @@ button {
   justify-content: center;
   gap: 10px;
 }
-.progress__progressBar__point__heading,
-.progress__progressBar .point__heading,
+.progress__bar__point__heading,
+.progress__bar .point__heading,
 .progress .progressBar__point__heading,
 .progress .progressBar .point__heading {
   color: #00c1ad;
@@ -1076,8 +1072,8 @@ button {
   letter-spacing: -2px;
   opacity: 0.8;
 }
-.progress__progressBar__point__text,
-.progress__progressBar .point__text,
+.progress__bar__point__text,
+.progress__bar .point__text,
 .progress .progressBar__point__text,
 .progress .progressBar .point__text {
   color: #f0f0f0;
@@ -1086,8 +1082,8 @@ button {
   font-weight: 400;
   opacity: 0.8;
 }
-.progress__progressBar__point__point,
-.progress__progressBar .point__point,
+.progress__bar__point__point,
+.progress__bar .point__point,
 .progress .progressBar__point__point,
 .progress .progressBar .point__point {
   width: 30px;
@@ -1095,7 +1091,7 @@ button {
   background-color: #00c1ad;
   border-radius: 50%;
 }
-.progress__progressBar__line_bg,
+.progress__bar__line_bg,
 .progress .progressBar__line_bg {
   background-color: #00c1ad;
   height: 3%;
@@ -1104,7 +1100,7 @@ button {
   top: 53%;
   opacity: 0.7;
 }
-.progress__progressBar__line_progress,
+.progress__bar__line_progress,
 .progress .progressBar__line_progress {
   background-color: #00c1ad;
   height: 7%;

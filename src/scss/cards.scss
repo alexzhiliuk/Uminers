@@ -8,7 +8,7 @@ $borderRaius: 20 + px;
     flex-wrap: wrap;
     gap: $gap;
 
-    &_column{
+    &_column {
         display: flex;
         flex-wrap: nowrap;
         gap: $gap;
