@@ -1,0 +1,54 @@
+@keyframes fade-in {
+    50% {
+        // scale: 1.05;
+        left: calc(-1*(100vw - 100%) / 2);
+        right: calc(-1*(100vw - 100%) / 2);
+        top: -40px;
+        bottom: -40px;
+    }   
+    to {
+        // scale: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.section {
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    // .section_bg
+    &_bg {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+    }
+
+    // .section__bg
+    &__bg {        
+
+        position: absolute;
+        z-index: -1;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+
+        background-color: $primaryColor;
+        border-radius: 40px;
+
+        transform-origin: center center;
+        animation: fade-in linear;
+        animation-timeline: view(300px);
+    
+    }
+
+    // .section__body
+    &__body {
+        margin-top: 40px;
+    }
+
+}
+
+
