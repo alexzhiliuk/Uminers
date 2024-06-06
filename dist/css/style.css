@@ -343,7 +343,7 @@ html,
 body {
   max-width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -377,6 +377,9 @@ button {
   letter-spacing: -2px;
   color: #FFF;
 }
+.section-title_centered {
+  text-align: center;
+}
 
 .btn {
   display: flex;
@@ -397,8 +400,24 @@ button {
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 1px solid #FFF;
+  border-width: 1px;
+  border-style: solid;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #FFF;
+}
+.btn__arrow svg {
+  width: 60%;
+  rotate: -45deg;
+  transition: all 0.2s ease-in-out;
+}
+.btn__arrow:hover svg {
+  rotate: 0deg;
+}
+.btn__arrow svg path {
+  fill: #FFF;
 }
 
 @keyframes fade {
@@ -837,6 +856,150 @@ button {
   width: 100%;
   height: 73px;
   background-image: linear-gradient(0turn, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0) 100%);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.cards__item {
+  flex: 1 0 calc(25% - 20px * 3 / 4);
+  min-width: min(300px, 100%);
+}
+.cards__item_bigger {
+  flex: 1 0 calc(33.33% - 20px * 2 / 3);
+}
+.cards__item_lg {
+  flex: 1 0 calc(66.66% - 20px / 2);
+}
+
+.card {
+  background-color: #262626;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card_white {
+  background-color: #FFF;
+}
+.card_white .card__title {
+  color: #000;
+}
+.card_white .card__text {
+  color: #000;
+  opacity: 0.4;
+}
+.card:has(.card__arrow):hover {
+  translate: 0 -10px;
+}
+.card:has(.card__arrow):hover .card__arrow svg {
+  rotate: 0deg;
+}
+.card__img {
+  height: 156px;
+}
+.card__img img {
+  height: 100%;
+}
+.card__img_bottom {
+  margin-top: auto;
+  height: 300px;
+  margin-bottom: -20px;
+  margin-right: -20px;
+  margin-left: -20px;
+  display: flex;
+  justify-content: center;
+}
+.card__img_right {
+  display: flex;
+  justify-content: flex-end;
+}
+.card__title {
+  color: #FFF;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+.card__title_with_arrow {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.card__text {
+  color: #f1f1f1;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.card__arrow {
+  height: 50px;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #000;
+}
+.card__arrow svg {
+  width: 60%;
+  rotate: -45deg;
+  transition: all 0.2s ease-in-out;
+}
+.card__arrow:hover svg {
+  rotate: 0deg;
+}
+.card__arrow svg path {
+  fill: #000;
+}
+
+@keyframes fade-in {
+  50% {
+    left: calc(-1 * (100vw - 100%) / 2);
+    right: calc(-1 * (100vw - 100%) / 2);
+    top: -40px;
+    bottom: -40px;
+  }
+  to {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+.section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.section_bg {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.section__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00c1ad;
+  border-radius: 40px;
+  transform-origin: center center;
+  animation: fade-in linear;
+  animation-timeline: view(300px);
+}
+.section__body {
+  margin-top: 40px;
 }
 
 .progress {
