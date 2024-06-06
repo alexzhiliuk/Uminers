@@ -839,6 +839,129 @@ button {
   background-image: linear-gradient(0turn, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0) 100%);
 }
 
+.progress {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.progress__title {
+  text-align: center;
+}
+.progress__cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 2%;
+}
+@media screen and (max-width: 991.98px) {
+  .progress__cards {
+    flex-direction: column;
+    width: fit-content;
+    width: -moz-fit-content;
+    gap: 15px;
+  }
+}
+.progress__card,
+.progress .card {
+  background-color: #262626;
+  max-width: 358px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.progress__card__title,
+.progress .card__title {
+  color: #00c1ad;
+  font-size: clamp(30px, 7vw, 50px);
+  line-height: 1.3;
+  letter-spacing: -2px;
+  opacity: 0.8;
+}
+.progress__card__text,
+.progress .card__text {
+  color: #f1f1f1;
+  font-size: clamp(20px, 1.6vw, 24px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -1px;
+  opacity: 0.8;
+}
+.progress__text {
+  color: #efefef;
+  font-size: clamp(20px, 1.6vw, 24px);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -1px;
+  opacity: 0.8;
+  max-width: 382px;
+  text-align: center;
+}
+.progress__progressBar,
+.progress .progressBar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  gap: 20%;
+}
+.progress__progressBar__point,
+.progress__progressBar .point,
+.progress .progressBar__point,
+.progress .progressBar .point {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.progress__progressBar__point__heading,
+.progress__progressBar .point__heading,
+.progress .progressBar__point__heading,
+.progress .progressBar .point__heading {
+  color: #00c1ad;
+  font-size: clamp(18px, 1.4vw, 30px);
+  line-height: 1.3;
+  letter-spacing: -2px;
+  opacity: 0.8;
+}
+.progress__progressBar__point__text,
+.progress__progressBar .point__text,
+.progress .progressBar__point__text,
+.progress .progressBar .point__text {
+  color: #f0f0f0;
+  font-size: clamp(14px, 1.1vw, 20px);
+  line-height: 1.3;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.progress__progressBar__point__point,
+.progress__progressBar .point__point,
+.progress .progressBar__point__point,
+.progress .progressBar .point__point {
+  width: 30px;
+  height: 30px;
+  background-color: #00c1ad;
+  border-radius: 50%;
+}
+.progress__progressBar__line_bg,
+.progress .progressBar__line_bg {
+  background-color: #00c1ad;
+  height: 5%;
+  width: 100vw;
+  position: absolute;
+  top: 53%;
+  opacity: 0.7;
+}
+.progress__progressBar__line_progress,
+.progress .progressBar__line_progress {
+  background-color: #00c1ad;
+  height: 7%;
+  width: 100vw;
+  position: absolute;
+  top: 53%;
+  left: -20px;
+}
+
 @font-face {
   font-family: "swiper-icons";
   src: url("data:application/font-woff;charset=utf-8;base64, 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") format("woff");
