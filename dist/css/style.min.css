@@ -1109,7 +1109,7 @@ button {
 .progress__progressBar__line_bg,
 .progress .progressBar__line_bg {
   background-color: #00c1ad;
-  height: 5%;
+  height: 3%;
   width: 100vw;
   position: absolute;
   top: 53%;
@@ -1121,8 +1121,9 @@ button {
   height: 7%;
   width: 100vw;
   position: absolute;
-  top: 53%;
+  top: 51.5%;
   left: -20px;
+  border-radius: 20px;
 }
 
 @font-face {

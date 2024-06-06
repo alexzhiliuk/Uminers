@@ -100,7 +100,7 @@
         &__line {
             &_bg {
                 background-color: $primaryColor;
-                height: 5%;
+                height: 3%;
                 width: 100vw;
                 position: absolute;
                 top: 53%;
@@ -112,8 +112,9 @@
                 height: 7%;
                 width: 100vw;
                 position: absolute;
-                top: 53%;
+                top: 51.5%;
                 left: -$containerPadding; 
+                border-radius: 20px;
             }
         }
     }
