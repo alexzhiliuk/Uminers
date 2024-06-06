@@ -1,0 +1,129 @@
+$borderRaius: 20 + px;
+
+.cards {
+
+    $gap: 20 + px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+
+    // .cards__item
+    &__item {
+        flex: 1 0 calc(25% - $gap * 3 / 4);
+        min-width: min(300px, 100%);
+
+        &_bigger {
+            flex: 1 0 calc(33.33% - $gap * 2 / 3);
+        }
+
+        &_lg {
+            flex: 1 0 calc(66.66% - $gap / 2);
+        }
+    }
+}
+
+.card {
+
+    $cardPadding: 20 + px;
+
+    background-color: $backgroundCardColor;
+    border-radius: $borderRaius;
+    overflow: hidden;
+    padding: $cardPadding;
+    transition: $calmTransition;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &_white {
+        background-color: $white;
+
+        .card {
+            // .card__title
+            &__title {
+                color: $black;
+            }
+
+            // .card__text
+            &__text {
+                color: $black;
+                opacity: .4;
+            }
+        }
+    }
+
+    &:has(.card__arrow) {
+        &:hover {
+            translate: 0 -10px;
+            
+            .card__arrow {
+                svg {
+                    rotate: 0deg;
+                }
+            }
+        }
+
+    }
+
+    // .card__img
+    &__img {
+        height: 156px;
+
+        img {
+            height: 100%;
+        }
+
+        &_bottom {
+            margin-top: auto;
+            height: 300px;
+            margin-bottom: -$cardPadding;
+            margin-right: -$cardPadding;
+            margin-left: -$cardPadding;
+            display: flex;
+            justify-content: center;
+        }
+
+        &_right {
+            display: flex;
+            justify-content: flex-end;
+        } 
+    }
+
+    // .card__title
+    &__title {
+        color: $white;
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: -2px;
+
+        &_with_arrow {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+    }
+
+    // .card__text
+    &__text {
+        color: #f1f1f1;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 600;
+        opacity: 0.8;
+    }
+
+    // .card__arrow
+    &__arrow {
+        @include arrow;
+        border-color: $black;
+
+        svg {
+            path {
+                fill: $black;
+            }
+        }
+        
+    }
+}
