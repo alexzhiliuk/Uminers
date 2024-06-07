@@ -1577,7 +1577,7 @@ button {
 }
 .roadmap h4 {
   color: #262626;
-  font-size: 5vw;
+  font-size: min(5vw, 80px);
   line-height: 1.55;
   font-weight: 400;
   letter-spacing: -3px;
@@ -1590,15 +1590,23 @@ button {
   }
 }
 .roadmap__circle {
-  width: 10px;
+  margin-top: min(0.5vw, 10px);
+  width: min(0.5vw, 10px);
   flex-shrink: 0;
-  height: 10px;
+  height: min(0.5vw, 10px);
   border-radius: 3px;
   background-color: #03c1ad;
   background-position: center center;
   border-color: transparent;
   border-style: solid;
   transform: rotate(45deg);
+}
+@media (max-width: 767.98px) {
+  .roadmap__circle {
+    width: 10px;
+    height: 10px;
+    margin-top: 5px;
+  }
 }
 @media (max-width: 767.98px) {
   .roadmap ul {
@@ -1610,7 +1618,7 @@ button {
   display: flex;
   gap: 10px;
   color: #dfdfdf;
-  font-size: 1.5vw;
+  font-size: min(1.5vw, 24px);
   line-height: 1.15;
   letter-spacing: -0.5px;
   margin-bottom: 10px;
