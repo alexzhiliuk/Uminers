@@ -134,6 +134,10 @@ button {
     }
 }
 
+.highlighted{
+    color: $primaryColor;
+}
+
 
 // Animation
 @keyframes fade {
