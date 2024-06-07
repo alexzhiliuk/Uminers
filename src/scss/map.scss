@@ -16,7 +16,7 @@
     }
     &__content{
         background: url('../../img/map.png');
-        background-position: left top;
+        background-position: -$containerPadding top;
         background-repeat: no-repeat;
         background-size: contain;
         min-height: 607px;
@@ -25,7 +25,7 @@
             min-height: 400px;
         }
         @media (max-width:$breakpoint576) {
-            min-height: 300px;
+            min-height: 350px;
         } 
         @media (max-width:$breakpoint480){
             min-height: 200px;

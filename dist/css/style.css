@@ -1139,7 +1139,7 @@ button {
 }
 .map__content {
   background: url("../../img/map.png");
-  background-position: left top;
+  background-position: -20px top;
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 607px;
@@ -1152,7 +1152,7 @@ button {
 }
 @media (max-width: 575.98px) {
   .map__content {
-    min-height: 300px;
+    min-height: 350px;
   }
 }
 @media (max-width: 479.98px) {
