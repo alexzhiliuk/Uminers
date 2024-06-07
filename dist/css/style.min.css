@@ -1116,6 +1116,30 @@ button {
   max-width: 70%;
 }
 
+
+.smallPromo {
+  color: white;
+}
+.smallPromo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 582px;
+}
+.smallPromo__text {
+  color: #ffffff;
+  font-size: clamp(18px, 4vw, 30px);
+  line-height: 1.2;
+  opacity: 0.8;
+}
+@media (max-width: 767.98px) {
+  .smallPromo__text {
+    text-align: center;
+  }
+}
+
 .map {
   color: white;
 }
@@ -1200,6 +1224,7 @@ button {
   align-items: center;
   gap: 10px;
 }
+
 
 @font-face {
   font-family: "swiper-icons";
