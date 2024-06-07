@@ -11,14 +11,14 @@
     align-items: center;
     justify-content: center;
 
-    svg {
+    svg, img {
         width: 60%;
         rotate: -45deg;
         transition: $calmTransition;
     }
 
     &:hover {
-        svg {
+        svg, img {
             rotate: 0deg;
         }
     }
@@ -172,6 +172,52 @@ button {
 .hover-up {
     &:hover {
         translate: 0 -10px;
+    }
+}
+
+.slider-nav {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    // .slider-nav__btn
+    &__btn {
+
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $primaryColor;
+        transition: $calmTransition;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 60%;
+            path {
+                fill: $white;
+            }
+        }
+
+        &:hover {
+            
+            scale: 1.05;
+            
+        }
+
+        // .slider-nav__btn_prev
+        &_prev {
+            svg {
+                rotate: 180deg;
+            }
+        }
+
+        // .slider-nav__btn_next
+        &_next {
+        }
     }
 }
 
