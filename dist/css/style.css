@@ -1515,11 +1515,6 @@ button {
   flex-wrap: wrap;
   gap: 20px;
 }
-@media (max-width: 479.98px) {
-  .gallery__content {
-    flex-direction: column;
-  }
-}
 .gallery__item, .gallery__item_vertical, .gallery__item_horizontal {
   padding: 10px;
   background-color: #262626;
@@ -1542,7 +1537,7 @@ button {
   }
 }
 .gallery__item img, .gallery__item_horizontal img, .gallery__item_vertical img {
-  border-radius: 20px;
+  border-radius: 10px;
   display: block;
   height: 100%;
   width: 100%;
