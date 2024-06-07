@@ -1382,6 +1382,11 @@ button {
   flex-wrap: wrap;
   gap: 20px;
 }
+@media (max-width: 479.98px) {
+  .gallery__content {
+    flex-direction: column;
+  }
+}
 .gallery__item, .gallery__item_vertical, .gallery__item_horizontal {
   padding: 10px;
   background-color: #262626;
@@ -1390,8 +1395,18 @@ button {
 .gallery__item_horizontal {
   flex: 0 0 calc(33% - 20px * 2 / 3);
 }
+@media (max-width: 991.98px) {
+  .gallery__item_horizontal {
+    flex: 1 1 calc(33% - 20px * 2 / 3);
+  }
+}
 .gallery__item_vertical {
   flex: 1 0 calc(25% - 20px * 3 / 4);
+}
+@media (max-width: 991.98px) {
+  .gallery__item_vertical {
+    flex: 1 0 calc(50% - 20px * 3 / 4);
+  }
 }
 .gallery__item img, .gallery__item_horizontal img, .gallery__item_vertical img {
   border-radius: 20px;
