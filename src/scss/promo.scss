@@ -3,35 +3,102 @@
 
     &__content {
         display: flex;
-        gap: 80px;
         background: url(../img/promobg.png);
         padding: $contentPadding;
         border-radius: 40px;
         position: relative;
         overflow: hidden;
         justify-content: space-between;
+        gap: 30px;
+
+        &_solid {
+            background-color: $primaryColor;
+            display: flex;
+            padding: $contentPadding;
+            border-radius: 40px;
+            position: relative;
+            overflow: hidden;
+            justify-content: space-between;
+            gap: 30px;
+            @media (max-width:$breakpoint992) {
+                flex-direction: column-reverse;
+            }
+            @media (max-width:$breakpoint768) {
+                padding: 20px;
+            }
+        }
+        @media (max-width:$breakpoint992) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width:$breakpoint768) {
+            padding: 20px;
+        }
     }
 
     &__textContent {
         display: flex;
         flex-direction: column;
-        width:50%;
+        justify-content: space-between;
+        width: 50%;
+        gap: 20px;
+
+        @media (max-width:$breakpoint992) {
+            align-items: center;
+            text-align: center;
+            width:100%;
+        }
+
         &_gap {
             display: flex;
             flex-direction: column;
-            width:50%;
+            width: 50%;
             gap: 80px;
         }
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     &__title {
         font-weight: 400;
         opacity: 1;
         max-width: 70%;
+        @media (max-width:$breakpoint992) {
+            width:100%;
+        }
+
+        &_thin {
+            font-weight: 600;
+            opacity: 1;
+            max-width: 60%;
+            @media (max-width:$breakpoint992) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__subtitle {
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 1.3;
+        font-weight: 500;
     }
 
     &__image {
-        overflow:visible;
+        width: 50%;
+        height: 100%;
+        @media (max-width:$breakpoint992) {
+            width:100%;
+        }
+
+        .img {
+            width: 100%;
+            border-radius: 30px;
+
+        }
     }
 
     //FOR telega, idk how to standart
@@ -44,22 +111,24 @@
     }
 
     &__counter {
-        position:absolute;
+        position: absolute;
         right: $contentPadding;
         z-index: 1;
         border-radius: 10px;
-        width:355px;
+        width: 355px;
 
         animation: fade-out linear;
         animation-timeline: view(100px);
     }
 }
+
 //анимация пока не работает TODO:анимация
 @keyframes fade-out {
     from {
         transform: translateY(30%);
-      }
-      to {
+    }
+
+    to {
         transform: translateY(0%);
-      }
+    }
 }
