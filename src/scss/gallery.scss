@@ -1,0 +1,46 @@
+.gallery{
+    $gap:20+px;
+    &__content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $gap;
+        // @media (max-width:$breakpoint480) {
+        //     flex-direction: column;
+        // }
+    }
+    &__item{
+        $itemPadding: 10 + px;
+        padding: $itemPadding;
+        background-color: $backgroundCardColor;
+        border-radius: 20px;
+        
+        &_horizontal{
+            @extend .gallery__item;
+            flex: 0 0 calc(33% - $gap * 2 / 3);
+            @media (max-width:$breakpoint992) {
+                flex: 1 1 calc(33% - $gap * 2 / 3)
+            }
+        }
+
+        &_vertical{
+            @extend .gallery__item;
+            flex: 1 0 calc(25% - $gap * 3 / 4);
+            @media (max-width:$breakpoint992) {
+                flex: 1 0 calc(50% - $gap * 3 / 4);
+            }
+        }
+
+        img{
+            border-radius: 10px;
+            display: block;
+            height:100%;
+            width:100%;
+            object-fit: cover;
+            &:hover{
+                transform: scale(1.02);
+                transition: $calmTransition;
+            }
+        }
+    }
+}

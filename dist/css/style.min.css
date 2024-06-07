@@ -1509,6 +1509,45 @@ button {
   object-fit: cover;
 }
 
+
+.gallery__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.gallery__item, .gallery__item_vertical, .gallery__item_horizontal {
+  padding: 10px;
+  background-color: #262626;
+  border-radius: 20px;
+}
+.gallery__item_horizontal {
+  flex: 0 0 calc(33% - 20px * 2 / 3);
+}
+@media (max-width: 991.98px) {
+  .gallery__item_horizontal {
+    flex: 1 1 calc(33% - 20px * 2 / 3);
+  }
+}
+.gallery__item_vertical {
+  flex: 1 0 calc(25% - 20px * 3 / 4);
+}
+@media (max-width: 991.98px) {
+  .gallery__item_vertical {
+    flex: 1 0 calc(50% - 20px * 3 / 4);
+  }
+}
+.gallery__item img, .gallery__item_horizontal img, .gallery__item_vertical img {
+  border-radius: 10px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.gallery__item img:hover, .gallery__item_horizontal img:hover, .gallery__item_vertical img:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
 .footer {
   background-color: #262626;
   border-radius: 40px 40px 0 0;
