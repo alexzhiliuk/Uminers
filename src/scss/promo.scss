@@ -1,0 +1,65 @@
+.promo {
+    $contentPadding: 50px;
+
+    &__content {
+        display: flex;
+        gap: 80px;
+        background: url(../img/promobg.png);
+        padding: $contentPadding;
+        border-radius: 40px;
+        position: relative;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    &__textContent {
+        display: flex;
+        flex-direction: column;
+        width:50%;
+        &_gap {
+            display: flex;
+            flex-direction: column;
+            width:50%;
+            gap: 80px;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        opacity: 1;
+        max-width: 70%;
+    }
+
+    &__image {
+        overflow:visible;
+    }
+
+    //FOR telega, idk how to standart
+    &__telegram {
+        position: absolute;
+        top: 50%;
+        right: 30%;
+        width: 200px;
+        z-index: 2;
+    }
+
+    &__counter {
+        position:absolute;
+        right: $contentPadding;
+        z-index: 1;
+        border-radius: 10px;
+        width:355px;
+
+        animation: fade-out linear;
+        animation-timeline: view(100px);
+    }
+}
+//анимация пока не работает TODO:анимация
+@keyframes fade-out {
+    from {
+        transform: translateY(30%);
+      }
+      to {
+        transform: translateY(0%);
+      }
+}
