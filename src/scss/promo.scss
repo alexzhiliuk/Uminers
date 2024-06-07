@@ -3,30 +3,14 @@
 
     &__content {
         display: flex;
-        background: url(../img/promobg.png);
+        background: url(../img/promobg.png) center top / cover no-repeat;
         padding: $contentPadding;
         border-radius: 40px;
         position: relative;
-        overflow: hidden;
+        overflow: clip;
         justify-content: space-between;
         gap: 30px;
 
-        &_solid {
-            background-color: $primaryColor;
-            display: flex;
-            padding: $contentPadding;
-            border-radius: 40px;
-            position: relative;
-            overflow: hidden;
-            justify-content: space-between;
-            gap: 30px;
-            @media (max-width:$breakpoint992) {
-                flex-direction: column-reverse;
-            }
-            @media (max-width:$breakpoint768) {
-                padding: 20px;
-            }
-        }
         @media (max-width:$breakpoint992) {
             flex-direction: column;
             align-items: center;
@@ -34,6 +18,15 @@
         @media (max-width:$breakpoint768) {
             padding: 20px;
         }
+
+        &_solid {
+            background: $primaryColor;
+
+            @media (max-width:$breakpoint992) {
+                flex-direction: column-reverse;
+            }
+        }
+
     }
 
     &__textContent {
@@ -50,10 +43,11 @@
         }
 
         &_gap {
-            display: flex;
-            flex-direction: column;
-            width: 50%;
             gap: 80px;
+
+            @media (max-width:$breakpoint992) {
+                gap: 20px;
+            }
         }
     }
     &__text{
@@ -63,20 +57,11 @@
     }
 
     &__title {
-        font-weight: 400;
+        font-weight: 600;
         opacity: 1;
-        max-width: 70%;
-        @media (max-width:$breakpoint992) {
-            width:100%;
-        }
 
         &_thin {
-            font-weight: 600;
-            opacity: 1;
-            max-width: 60%;
-            @media (max-width:$breakpoint992) {
-                max-width: 100%;
-            }
+            font-weight: 400;
         }
     }
 
@@ -90,24 +75,38 @@
     &__image {
         width: 50%;
         height: 100%;
+        display: flex;
+        justify-content: center;
+
         @media (max-width:$breakpoint992) {
             width:100%;
+        }
+
+        &_animated {
+            @media (max-width:$breakpoint992) {
+                height: 300px;
+            }
         }
 
         .img {
             width: 100%;
             border-radius: 30px;
-
+            display: block;
         }
     }
 
-    //FOR telega, idk how to standart
+    
     &__telegram {
         position: absolute;
         top: 50%;
         right: 30%;
         width: 200px;
         z-index: 2;
+
+        @media (max-width:$breakpoint992) {
+            right: 5%;
+            width: 20vw;
+        }
     }
 
     &__counter {
@@ -116,13 +115,19 @@
         z-index: 1;
         border-radius: 10px;
         width: 355px;
+        max-width: 90%;
 
         animation: fade-out linear;
-        animation-timeline: view(100px);
+        animation-timeline: view(0px);
+        animation-range-start: 0px;
+        animation-range-end: 500px;
+
+        @media (max-width:$breakpoint992) {
+            right: unset;
+        }
     }
 }
 
-//анимация пока не работает TODO:анимация
 @keyframes fade-out {
     from {
         transform: translateY(30%);
