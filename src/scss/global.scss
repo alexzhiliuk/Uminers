@@ -119,6 +119,11 @@ button {
         height: 50px;
         display: flex;
         align-items: center;
+
+        &_inverted {
+            background:white;
+            color:$primaryColor;
+        }
     }
 
     // .btn__arrow
