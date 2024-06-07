@@ -2,7 +2,7 @@
     color:white;
     &__title{
         max-width: 70%;
-        @media (max-width:890px) {
+        @media (max-width: $breakpoint992) {
             max-width: 100%;
         }
         margin-bottom: 20px;
@@ -10,7 +10,7 @@
     &__subtitle{
         font-size: clamp(18px, 5vw, 30px);
         max-width: 50%;
-        @media (max-width:890px) {
+        @media (max-width: $breakpoint992) {
             max-width: 100%;
         }
     }
@@ -48,7 +48,7 @@
         line-height: 1.6;
         font-weight: 400;
         opacity: 0.8;
-        @media (max-width:1330px) {
+        @media (max-width: $breakpoint1366) {
             top:85%;
         }
         @media (max-width:$breakpoint992) {

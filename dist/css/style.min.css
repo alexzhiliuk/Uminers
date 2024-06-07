@@ -1123,7 +1123,7 @@ button {
   max-width: 70%;
   margin-bottom: 20px;
 }
-@media (max-width: 890px) {
+@media (max-width: 991.98px) {
   .map__title {
     max-width: 100%;
   }
@@ -1132,7 +1132,7 @@ button {
   font-size: clamp(18px, 5vw, 30px);
   max-width: 50%;
 }
-@media (max-width: 890px) {
+@media (max-width: 991.98px) {
   .map__subtitle {
     max-width: 100%;
   }
@@ -1178,7 +1178,7 @@ button {
   font-weight: 400;
   opacity: 0.8;
 }
-@media (max-width: 1330px) {
+@media (max-width: 1365.98px) {
   .map__legend {
     top: 85%;
   }
