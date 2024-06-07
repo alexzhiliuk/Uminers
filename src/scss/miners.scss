@@ -1,0 +1,71 @@
+.miner-card {
+
+    position: relative;
+
+    // .miner-card__header
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    // .miner-card__title
+    &__title {
+        @extend .card__title_highlighted;
+    }
+
+    // .miner-card__icon
+    &__icon {
+        height: 50px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    // .miner-card__specifications
+    &__specifications {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(20px, 3vw, 40px);
+        max-width: 60%;
+        margin-bottom: 60px;
+    }
+
+    // .miner-card__specification
+    &__specification {
+    }
+
+    // .miner-card__btn
+    &__btn {
+        margin-top: auto;
+    }
+
+    // .miner-card__img
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.specification {
+
+    display: flex;
+    flex-direction: column;
+
+    // .specification__value
+    &__value {
+        color: $white;
+        font-size: clamp(20px, 2vw, 30px);
+    }
+
+    // .specification__caption
+    &__caption {
+        color: $white;
+        opacity: .6;
+        font-size: clamp(16px, 1vw, 22px);
+    }
+}
+

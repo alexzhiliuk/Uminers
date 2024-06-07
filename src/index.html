@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('html/head.html',{
-        "title": "Главная"
-    })
-    <body>
+@@include('html/head.html',{
+"title": "Главная"
+})
 
-        <!-- Header -->
-        @@include('html/header.html')
+<body>
 
-        <main>
-            <!-- Hero -->
-            @@include('html/hero.html')
+    <!-- Header -->
+    @@include('html/header.html')
 
-            <!-- Cards -->
-            @@include('html/cards.html')
+    <main>
+        <!-- Hero -->
+        @@include('html/hero.html')
 
-            <!-- Everything For Mining -->
-            @@include('html/everything-for-mining.html')
-            <!-- Progress -->
-            @@include('html/progress.html')
-            
-            <!--Telegram-->
-            @@include('html/telegram-promo.html')
-            @@include('html/telegram-promo.html')
-            @@include('html/telegram-promo.html')
+        <!-- Cards -->
+        @@include('html/cards.html')
 
-        </main>
+        <!-- Everything For Mining -->
+        @@include('html/everything-for-mining.html')
 
-        <!-- Footer -->
-        <!-- @@include('html/footer.html') -->
+        <!-- Progress -->
+        @@include('html/progress.html')
 
-        <script src="js/app.min.js"></script>
-    </body>
+        <!--Map Block-->
+        @@include('html/map.html')
+
+        <!--Small promo-->
+        @@include('html/small-promo.html')
+
+        <!--Telegram-->
+        @@include('html/telegram-promo.html')
+        @@include('html/telegram-promo.html')
+        @@include('html/telegram-promo.html')
+
+        <!-- Miners -->
+        @@include('html/miners.html')
+        >>>>>>> develop
+
+    </main>
+
+    <!-- Footer -->
+    <!-- @@include('html/footer.html') -->
+
+    <script src="js/app.min.js"></script>
+</body>
+
 </html>

@@ -148,6 +148,41 @@ button {
     }
 }
 
+.highlighted{
+    color: $primaryColor;
+}
+
+.see-all {
+    font-size: 18px;
+    line-height: 1.55;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: $primaryColor;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    span {
+        flex-shrink: 0;
+    }
+
+    svg {
+        flex-shrink: 0;
+        height: 24px;
+
+        path {
+            fill: $primaryColor;
+        }
+    }
+}
+
+.hover-up {
+    &:hover {
+        translate: 0 -10px;
+    }
+}
 
 // Animation
 @keyframes fade {

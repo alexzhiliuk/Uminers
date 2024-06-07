@@ -47,6 +47,14 @@
 
     }
 
+    // .section__header
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
     // .section__body
     &__body {
         margin-top: 40px;
