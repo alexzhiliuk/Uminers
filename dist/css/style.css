@@ -424,6 +424,32 @@ button {
   color: #00c1ad;
 }
 
+.see-all {
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #00c1ad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.see-all span {
+  flex-shrink: 0;
+}
+.see-all svg {
+  flex-shrink: 0;
+  height: 24px;
+}
+.see-all svg path {
+  fill: #00c1ad;
+}
+
+.hover-up:hover {
+  translate: 0 -10px;
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -869,10 +895,9 @@ button {
 }
 .cards_column {
   display: flex;
-  flex-wrap: nowrap;
   gap: 20px;
 }
-@media (width < 992px) {
+@media (max-width: 991.98px) {
   .cards_column {
     flex-direction: column;
   }
@@ -883,6 +908,9 @@ button {
 }
 .cards__item_bigger {
   flex: 1 0 calc(33.33% - 20px * 2 / 3);
+}
+.cards__item_half {
+  flex: 1 0 calc(50% - 20px / 2);
 }
 .cards__item_lg {
   flex: 1 0 calc(66.66% - 20px / 2);
@@ -907,9 +935,6 @@ button {
 .card_white .card__text {
   color: #000;
   opacity: 0.4;
-}
-.card:has(.card__arrow):hover {
-  translate: 0 -10px;
 }
 .card:has(.card__arrow):hover .card__arrow svg {
   rotate: 0deg;
@@ -944,7 +969,7 @@ button {
   gap: 20px;
   justify-content: space-between;
 }
-.card__title_highlighted {
+.card__title_highlighted, .miner-card__title {
   color: #00c1ad;
   font-size: clamp(30px, 7vw, 50px);
   opacity: 0.8;
@@ -1024,6 +1049,12 @@ button {
   transform-origin: center center;
   animation: fade-in linear;
   animation-timeline: view(300px);
+}
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 .section__body {
   margin-top: 40px;
@@ -1222,6 +1253,51 @@ button {
   .smallPromo__text {
     text-align: center;
   }
+}
+
+.miner-card {
+  position: relative;
+}
+.miner-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.miner-card__icon {
+  height: 50px;
+}
+.miner-card__icon img {
+  height: 100%;
+}
+.miner-card__specifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 40px);
+  max-width: 60%;
+  margin-bottom: 60px;
+}
+.miner-card__btn {
+  margin-top: auto;
+}
+.miner-card__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.specification {
+  display: flex;
+  flex-direction: column;
+}
+.specification__value {
+  color: #FFF;
+  font-size: clamp(20px, 2vw, 30px);
+}
+.specification__caption {
+  color: #FFF;
+  opacity: 0.6;
+  font-size: clamp(16px, 1vw, 22px);
 }
 
 @font-face {
