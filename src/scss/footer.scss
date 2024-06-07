@@ -1,0 +1,145 @@
+.footer {
+    
+    background-color: $backgroundCardColor;
+    border-radius: 40px 40px 0 0;
+    padding-top: 40px;
+    
+
+    // .footer__row
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @media screen and (max-width: $breakpoint768) {
+            flex-direction: column;
+        }
+    }
+
+    // .footer__col
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        min-width: min(100%, 180px);
+    }
+
+    // .footer__item
+    &__item {
+    }
+
+    // .footer__item-caption
+    &__item-caption {
+        color: #404040;
+        font-size: 14px;
+        line-height: 1.55;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    // .footer__contacts
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    // .footer__contact
+    &__contact {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            width: clamp(18px, 5vw, 50px);
+        }
+
+        a {
+            color: #ffffff;
+            font-size: clamp(18px, 5vw, 50px);
+            line-height: 1.55;
+            font-weight: 400;
+
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+
+    // .footer__text
+    &__text {
+        color: $white;
+        font-size: 16px;
+    }
+
+    // .footer__nav
+    &__nav {
+    }
+
+    // .footer__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (max-width: $breakpoint768) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    // .footer__list-item
+    &__list-item {
+        color: #acacac;
+        font-size: 18px;
+        line-height: 1.55;
+        font-weight: 400;
+
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+
+    // .footer__socials
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    // .footer__social
+    &__social {
+        @include social;
+        height: 50px;
+        width: 50px;
+    }
+
+    
+    // .footer__copy
+    &__copy {
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    // .footer__copy-list
+    &__copy-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        li, a {
+            color: #8c8c8c;
+            font-size: 16px;
+            line-height: 1.55;
+            font-weight: 300;
+            padding: 16px 0;
+        }
+
+        a {
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

@@ -1509,6 +1509,7 @@ button {
   object-fit: cover;
 }
 
+
 .gallery__content {
   display: flex;
   justify-content: center;
@@ -1546,6 +1547,117 @@ button {
 .gallery__item img:hover, .gallery__item_horizontal img:hover, .gallery__item_vertical img:hover {
   transform: scale(1.02);
   transition: all 0.2s ease-in-out;
+}
+.footer {
+  background-color: #262626;
+  border-radius: 40px 40px 0 0;
+  padding-top: 40px;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media screen and (max-width: 767.98px) {
+  .footer__row {
+    flex-direction: column;
+  }
+}
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: min(100%, 180px);
+}
+.footer__item-caption {
+  color: #404040;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer__contact img {
+  width: clamp(18px, 5vw, 50px);
+}
+.footer__contact a {
+  color: #ffffff;
+  font-size: clamp(18px, 5vw, 50px);
+  line-height: 1.55;
+  font-weight: 400;
+}
+.footer__contact a:hover {
+  color: #00c1ad;
+}
+.footer__text {
+  color: #FFF;
+  font-size: 16px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .footer__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.footer__list-item {
+  color: #acacac;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.footer__list-item:hover {
+  color: #00c1ad;
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  transition: all 0.2s ease-in-out;
+  height: 50px;
+  width: 50px;
+}
+.footer__social:hover {
+  background-color: #00c1ad;
+}
+.footer__copy {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer__copy-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.footer__copy-list li, .footer__copy-list a {
+  color: #8c8c8c;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 300;
+  padding: 16px 0;
+}
+.footer__copy-list a:hover {
+  color: #FFF;
 }
 
 @font-face {
