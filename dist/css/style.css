@@ -1953,6 +1953,45 @@ button {
   }
 }
 
+.graphic {
+  color: #fff;
+}
+.graphic__legend {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+.graphic__color {
+  height: 0.7vw;
+  width: 3.4vw;
+  border-radius: 10px;
+  background-color: #00c1ad;
+}
+.graphic__body {
+  width: 100%;
+  position: relative;
+}
+.graphic__body img {
+  width: 100%;
+  display: block;
+}
+.graphic__body [alt="line for a graphic"] {
+  position: absolute;
+  bottom: 1.6vw;
+  left: 5vw;
+  width: 75vw;
+  max-width: 1050px;
+}
+.graphic__lineWrapper {
+  position: absolute;
+  bottom: 20%;
+  left: 8.6%;
+  min-height: 30vw;
+  height: inherit;
+  overflow: hidden;
+  height: fit-content;
+}
+
 .footer {
   background-color: #262626;
   border-radius: 40px 40px 0 0;
