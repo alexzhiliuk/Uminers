@@ -812,9 +812,22 @@ button {
     padding-bottom: 40px;
   }
 }
+.hero_about {
+  margin-top: 0;
+  padding-top: 120px;
+  padding-bottom: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .hero_about .hero__bg {
+    height: 100%;
+  }
+}
 .hero__title {
   text-align: center;
   color: #00c1ad;
+}
+.hero__title span {
+  color: #FFF;
 }
 .hero__text {
   font-size: 16px;
@@ -968,6 +981,10 @@ button {
   color: #000;
   opacity: 0.4;
 }
+.card_outline {
+  background-color: unset;
+  border: 1px solid #4d4d4d;
+}
 .card:has(.card__arrow):hover .card__arrow svg {
   rotate: 0deg;
 }
@@ -1110,6 +1127,7 @@ button {
   opacity: 0.8;
   max-width: 382px;
   text-align: center;
+  margin-top: 40px;
 }
 .progress__bar,
 .progress .progressBar {
