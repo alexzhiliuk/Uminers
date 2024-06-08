@@ -1634,6 +1634,65 @@ button {
   }
 }
 
+.aboutText {
+  color: white;
+}
+.aboutText__content {
+  background-color: rgba(39, 39, 39, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 40px;
+}
+.aboutText__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.7vw;
+  align-items: flex-start;
+}
+.aboutText__item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.aboutText__subtitle {
+  display: block;
+  margin-bottom: 10px;
+}
+.aboutText__textContent {
+  width: 70%;
+}
+.aboutText__illustration {
+  width: 20%;
+}
+.aboutText__illustration img {
+  width: 100%;
+  object-fit: cover;
+}
+.aboutText__illustrationHeading {
+  font-size: clamp(30px, 2.5vw, 60px);
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -2px;
+  opacity: 0.8;
+}
+.aboutText__text {
+  color: #ffffff;
+  font-size: clamp(14px, 2vw, 30px);
+  line-height: 1.2;
+  opacity: 0.8;
+}
+.aboutText__image {
+  border-radius: 30px;
+  overflow: hidden;
+}
+.aboutText__image img {
+  width: 100%;
+}
+
+.text_small {
+  color: #929292;
+  font-size: clamp(10px, 1.1vw, 16px);
+  line-height: 1.55;
+}
+
 .footer {
   background-color: #262626;
   border-radius: 40px 40px 0 0;
