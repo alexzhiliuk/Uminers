@@ -1,0 +1,45 @@
+.graphic {
+    color: #fff;
+
+    &__legend {
+        display: flex;
+        gap: 1vw;
+        align-items: center;
+    }
+
+    &__color {
+        height: 0.7vw;
+        width: 3.4vw;
+        border-radius: 10px;
+        background-color: $primaryColor;
+    }
+
+    &__body {
+        width: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        [alt="line for a graphic"] {
+            position: absolute;
+            bottom:1.6vw;
+            left: 5vw;
+            width: 75vw;
+            max-width: calc(0.75*1400)+px;
+
+        }
+    }
+
+    &__lineWrapper {
+        position: absolute;
+        bottom: 20%;
+        left: 8.6%;
+        min-height: 30vw;
+        height: inherit;
+        overflow: hidden;
+        height: fit-content;
+    }
+}
