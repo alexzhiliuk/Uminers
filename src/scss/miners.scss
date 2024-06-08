@@ -69,3 +69,93 @@
     }
 }
 
+
+@keyframes pulsation {
+    from {
+        scale: 1;
+    }
+    50% {
+        scale: 1.2;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes miner-fade-in {
+    from {
+        scale: 1;
+        top: 30%
+    }
+    to {
+        top: 50%;
+        scale: 1.2;
+    }
+}
+
+.miner {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    // .miner__bg
+    &__bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 70%;
+        width: 100%;
+        position: relative;
+        animation: pulsation 3s linear infinite;
+
+        @media screen and (max-width: $breakpoint480) {
+            max-width: 100%;
+        }
+
+        img {
+
+            &:first-child {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 80%;
+
+            }
+
+            &:last-child {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 60%;
+            }
+        }
+    }
+
+    // .miner__img
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 100%;
+        max-width: 40%;
+        scale: 1.2;
+
+        animation: miner-fade-in linear;
+        animation-timeline: view(-200px);
+        animation-range-start: -200px;
+        animation-range-end: 500px;
+
+        @media screen and (max-width: $breakpoint480) {
+            max-width: 60%;
+        }
+    }
+}

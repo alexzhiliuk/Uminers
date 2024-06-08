@@ -9,10 +9,28 @@
         padding-bottom: 40px;
     }
 
+    &_about {
+        margin-top: 0;
+        padding-top: 120px;
+        padding-bottom: 0;
+
+        .hero {
+            &__bg {
+                @media screen and (max-width: $breakpoint992) {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
     // .hero__title
     &__title {
         text-align: center;
         color: $primaryColor;
+
+        span {
+            color: $white;
+        }
     }
 
     // .hero__text
