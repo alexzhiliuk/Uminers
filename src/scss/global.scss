@@ -104,12 +104,28 @@ button {
     }
 }
 
+.section-subtitle {
+    font-size: clamp(18px, 4vw, 30px);
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: #c1c1c1;
+}
+
 .btn {
     
     display: flex;
 
+    &:hover {
+        .btn__arrow {
+            svg, img {
+                rotate: 0deg;
+            }
+        }
+    }
+
     // .btn__main
     &__main {
+        @extend .hover-up;
         font-size: 16px;
         color: $white;
         background-color: $primaryColor;
@@ -170,6 +186,7 @@ button {
 }
 
 .hover-up {
+    transition: $calmTransition;
     &:hover {
         translate: 0 -10px;
     }
