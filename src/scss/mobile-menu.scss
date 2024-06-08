@@ -1,0 +1,143 @@
+.mobile-menu {
+
+    position: fixed;
+    z-index: $mobileMenuLayer;
+    top: 0;
+    left: 100%;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .6);
+
+    display: flex;
+    justify-content: flex-end;
+
+    transition: $calmTransition;
+    opacity: 0;
+
+    &_active {
+        left: 0;
+        opacity: 1;
+    }
+
+    // .mobile-menu__inner
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        height: 100%;
+        padding: 40px 24px 24px;
+        max-width: fit-content;
+        background-color: #101010;
+    }
+
+    // .mobile-menu__logo
+    &__logo {
+        max-width: 120px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    // .mobile-menu__nav
+    &__nav {
+    }
+
+    // .mobile-menu__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    // .mobile-menu__list-item
+    &__list-item {
+        &:last-child {
+            margin-top: 16px;
+        }
+    }
+
+    // .mobile-menu__list-link
+    &__list-link {
+
+        font-size: 20px;
+        font-weight: 500;
+        color: $white;
+
+        // .mobile-menu__list-link_active
+        &_active {
+            color: $primaryColor;
+        }
+    }
+
+    // .mobile-menu__phone
+    &__phone {
+        font-size: 20px;
+        font-weight: 500;
+        color: $primaryColor;
+        margin-top: auto;
+    }
+
+    // .mobile-menu__socials
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    // .mobile-menu__social
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $white;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+
+        svg {
+            path {
+                fill: #101010;
+            }
+        }
+    }
+
+    // .mobile-menu__close
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        width: 40px;
+        height: 40px;
+        background-color: unset;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            @include burger-line;
+            
+            content: '';
+            position: absolute;
+            rotate: 45deg;
+            translate: -50%;
+            left: 50%;
+            max-width: 30px;
+        }
+        &::after {
+            @include burger-line;
+            
+            content: '';
+            position: absolute;
+            rotate: -45deg;
+            translate: 50%;
+            right: 50%;
+            max-width: 30px;
+        }
+    }
+}
+

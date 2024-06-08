@@ -1,0 +1,22 @@
+.smallPromo {
+    color: white;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+        margin: 0 auto;
+        max-width: 582px;
+    }
+
+    &__text {
+        color: #ffffff;
+        font-size: clamp(18px,4vw,30px);
+        line-height: 1.2;
+        opacity: 0.8;
+        @media (max-width: $breakpoint768) {
+            text-align: center;
+        }
+    }
+}

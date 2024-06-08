@@ -1,0 +1,79 @@
+.progress {
+    color: #fefefe;
+
+
+    &__text {
+        color: #efefef;
+        font-size: clamp(20px, 1.6vw, 24px);
+        line-height: 1.05;
+        font-weight: 400;
+        letter-spacing: -1px;
+        opacity: 0.8;
+        max-width: 382px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    &__bar,
+    .progressBar {
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        gap: 20%;
+
+        &__point,
+        .point {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap:10px;
+
+            &__heading {
+                color: $primaryColor;
+                font-size: clamp(18px,1.4vw,30px);
+                line-height: 1.3;
+                letter-spacing: -2px;
+                opacity: 0.8;
+            }
+
+            &__text {
+                color: #f0f0f0;
+                font-size: clamp(14px, 1.1vw, 20px);
+                line-height: 1.3;
+                font-weight: 400;
+                opacity: 0.8;
+            }
+
+            &__point {
+                width: 30px;
+                height: 30px;
+                background-color: $primaryColor;
+                border-radius: 50%;
+            }
+        }
+
+        &__line {
+            &_bg {
+                background-color: $primaryColor;
+                height: 3%;
+                width: 100vw;
+                position: absolute;
+                top: 53%;
+                opacity: 0.7;
+            }
+
+            &_progress {
+                background-color: $primaryColor;
+                height: 7%;
+                width: 100vw;
+                position: absolute;
+                top: 51.5%;
+                left: calc(-1*(100vw - 100%) / 2);
+                border-radius: 20px;
+                max-width: 70%;
+            }
+        }
+    }
+}

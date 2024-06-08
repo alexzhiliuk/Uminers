@@ -3,6 +3,28 @@
 @import "reset";
 @import "global";
 
+@import "header";
+@import "mobile-menu";
+
+@import "hero";
+@import "cards";
+@import "section";
+
+@import "progress";
+@import "promo";
+
+@import "map";
+@import "small-promo";
+@import "miners";
+@import "articles";
+@import "gallery";
+@import "roadmap";
+
+
+@import "about-text";
+@import "our-mission";
+
+@import "footer";
 
 @import "../libs/swiper-vars";
 @import "../libs/swiper";

@@ -1,0 +1,145 @@
+.ourMission {
+    color: white;
+
+    &__heading {
+        max-width: 430px;
+
+        @media (max-width:$breakpoint768) {
+            max-width: max(90%, 400px);
+        }
+    }
+
+    &__content {
+        max-width: 50%;
+
+        @media (max-width:$breakpoint768) {
+            max-width: 100%;
+        }
+
+    }
+
+    &__text {
+        color: #ffffff;
+        font-size: clamp(12px, 3vw, 30px);
+        line-height: 1.2;
+        opacity: 0.8;
+        margin-bottom: 30px;
+    }
+
+    &__points {
+        color: #ffffff;
+        font-size: clamp(12px, 2vw, 30px);
+        line-height: 1.2;
+        opacity: 0.8;
+    }
+
+    &__point {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .circle {
+        margin-top: min(.5vw, 10px);
+        width: min(1.5vw, 15px);
+        flex-shrink: 0;
+        height: min(1.5vw, 15px);
+        border-radius: 3px;
+        background-color: $primaryColor;
+        transform: rotate(45deg);
+    }
+}
+
+.headQuote {
+
+
+    $authorHeight: 60vmin;
+
+    @media (max-width:$breakpoint768) {
+        margin-top: 100vmin;
+    }
+
+    $contentPadding: 40;
+    $authorPaddingTop: 30;
+    
+    &__content {
+        position: relative;
+        border-radius: 20px;
+        background-color: $backgroundCardColor;
+        padding: $contentPadding+px;
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        @media (max-width:$breakpoint768) {
+            flex-direction: column-reverse;
+            gap: 0px;
+        }
+    }
+
+    &__quotes {
+        color: #ffffff;
+        font-size: 60px;
+        line-height: 1.2;
+        opacity: 0.8;
+        @media (max-width:$breakpoint768) {
+            order: 2;
+            line-height: 0.5; 
+        }
+    }
+
+    &__quote {
+        color: #ffffff;
+        font-size: clamp(12px, 3vw, 24px);
+        line-height: 1.2;
+        opacity: 0.8;
+        @media (max-width:$breakpoint768) {
+            order: 1;
+        }
+    }
+
+    &__author{
+        padding: $authorPaddingTop+px 40px;
+        border-width: 1px;
+        border-radius: 20px;
+        border-color: #5a5a5a;
+        border-style: solid;
+        text-align: center;
+        @media (max-width:$breakpoint768) {
+            order: 3;
+            padding: 20px;
+            margin-bottom: 20px;
+            width:100%;
+        }
+    }
+
+    &__title {
+        white-space: nowrap;
+        font-size: clamp(20px, 2.4vw, 40px);
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -1px;
+        opacity: 0.8;
+    }
+
+    &__subtitle {
+        color: #cecece;
+        font-size: clamp(14px, 1.4vw,20px);
+        line-height: 1.2;
+        opacity: 0.8;
+    }
+
+    &__portrait{
+        display: block;
+        height: min(600px, 40vw);
+        position: absolute;
+        right: 5%;
+        bottom: 100%;
+        translate: 0 10%;
+        
+        @media (max-width:$breakpoint768) {
+            right: 50%;
+            height: 100vmin;
+            translate: 50% 10%;
+        }
+    }
+}
