@@ -1821,11 +1821,11 @@ button {
   color: white;
 }
 .ourMission__heading {
-  max-width: 300px;
+  max-width: 430px;
 }
 @media (max-width: 767.98px) {
   .ourMission__heading {
-    max-width: 80%;
+    max-width: max(90%, 400px);
   }
 }
 .ourMission__content {
@@ -1833,12 +1833,7 @@ button {
 }
 @media (max-width: 767.98px) {
   .ourMission__content {
-    max-width: 70%;
-  }
-}
-@media (max-width: 479.98px) {
-  .ourMission__content {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 .ourMission__text {
@@ -1861,9 +1856,9 @@ button {
 }
 .ourMission .circle {
   margin-top: min(0.5vw, 10px);
-  width: min(1.5vw, 20px);
+  width: min(1.5vw, 15px);
   flex-shrink: 0;
-  height: min(1.5vw, 20px);
+  height: min(1.5vw, 15px);
   border-radius: 3px;
   background-color: #00c1ad;
   transform: rotate(45deg);
@@ -1875,6 +1870,7 @@ button {
   }
 }
 .headQuote__content {
+  position: relative;
   border-radius: 20px;
   background-color: #262626;
   padding: 40px;
@@ -1912,7 +1908,6 @@ button {
   }
 }
 .headQuote__author {
-  position: relative;
   padding: 30px 40px;
   border-width: 1px;
   border-radius: 20px;
@@ -1944,26 +1939,17 @@ button {
 }
 .headQuote__portrait {
   display: block;
-  height: 60vmin;
+  height: min(600px, 40vw);
   position: absolute;
-  left: -40%;
-  bottom: 106px;
-}
-@media (max-width: 991.98px) {
-  .headQuote__portrait {
-    left: -25%;
-  }
+  right: 5%;
+  bottom: 100%;
+  translate: 0 10%;
 }
 @media (max-width: 767.98px) {
   .headQuote__portrait {
-    left: 1.5vmin;
+    right: 50%;
     height: 100vmin;
-    bottom: 70%;
-  }
-}
-@media (max-width: 767.98px) {
-  .headQuote__portrait {
-    bottom: 100%;
+    translate: 50% 10%;
   }
 }
 

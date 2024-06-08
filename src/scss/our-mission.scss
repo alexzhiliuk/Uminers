@@ -2,10 +2,10 @@
     color: white;
 
     &__heading {
-        max-width: 300px;
+        max-width: 430px;
 
         @media (max-width:$breakpoint768) {
-            max-width: 80%;
+            max-width: max(90%, 400px);
         }
     }
 
@@ -13,12 +13,9 @@
         max-width: 50%;
 
         @media (max-width:$breakpoint768) {
-            max-width: 70%;
+            max-width: 100%;
         }
 
-        @media (max-width:$breakpoint480) {
-            max-width: 90%;
-        }
     }
 
     &__text {
@@ -44,9 +41,9 @@
 
     .circle {
         margin-top: min(.5vw, 10px);
-        width: min(1.5vw, 20px);
+        width: min(1.5vw, 15px);
         flex-shrink: 0;
-        height: min(1.5vw, 20px);
+        height: min(1.5vw, 15px);
         border-radius: 3px;
         background-color: $primaryColor;
         transform: rotate(45deg);
@@ -66,6 +63,7 @@
     $authorPaddingTop: 30;
     
     &__content {
+        position: relative;
         border-radius: 20px;
         background-color: $backgroundCardColor;
         padding: $contentPadding+px;
@@ -100,7 +98,6 @@
     }
 
     &__author{
-        position: relative;
         padding: $authorPaddingTop+px 40px;
         border-width: 1px;
         border-radius: 20px;
@@ -133,20 +130,16 @@
 
     &__portrait{
         display: block;
-        height: $authorHeight;
+        height: min(600px, 40vw);
         position: absolute;
-        left:-40%;
-        bottom: ($contentPadding+$authorPaddingTop+36)+px;
-        @media (max-width:$breakpoint992) {
-            left: -25%;
-        }
+        right: 5%;
+        bottom: 100%;
+        translate: 0 10%;
+        
         @media (max-width:$breakpoint768) {
-            left:1.5vmin;
-            height:100vmin;
-            bottom: 70%;
-        }
-        @media (max-width:$breakpoint768) {
-            bottom: 100%;
+            right: 50%;
+            height: 100vmin;
+            translate: 50% 10%;
         }
     }
 }
