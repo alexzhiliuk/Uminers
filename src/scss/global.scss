@@ -104,6 +104,13 @@ button {
     }
 }
 
+.section-subtitle {
+    font-size: clamp(18px, 4vw, 30px);
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: #c1c1c1;
+}
+
 .btn {
     
     display: flex;
