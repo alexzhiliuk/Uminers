@@ -1,0 +1,18 @@
+.ourMission {
+    color: white;
+}
+&__text{
+    
+}
+.circle {
+    margin-top: min(.5vw, 10px);
+    width: min(0.5vw, 10px);
+    flex-shrink: 0;
+    height: min(0.5vw, 10px);
+    border-radius: 3px;
+    background-color: $primaryColor;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    transform: rotate(45deg);
+}
