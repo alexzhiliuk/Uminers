@@ -1678,7 +1678,7 @@ button {
   gap: 20px;
 }
 .aboutText__item:nth-child(2n) .aboutText__text {
-  width: 80%;
+  width: 100%;
 }
 .aboutText__subtitle {
   display: block;
@@ -1703,14 +1703,9 @@ button {
 }
 .aboutText__text {
   color: #ffffff;
-  font-size: clamp(14px, 1.7vw, 30px);
+  font-size: clamp(12px, 1.7vw, 30px);
   line-height: 1.2;
   opacity: 0.8;
-}
-@media (max-width: 767.98px) {
-  .aboutText__text {
-    width: 100%;
-  }
 }
 .aboutText__image {
   border-radius: clamp(20px, 2vw, 30px);
@@ -1718,6 +1713,7 @@ button {
 }
 .aboutText__image img {
   width: 100%;
+  display: block;
 }
 
 .text_small {
