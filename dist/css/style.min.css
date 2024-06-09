@@ -381,8 +381,19 @@ button {
   text-align: center;
 }
 
+.section-subtitle {
+  font-size: clamp(18px, 4vw, 30px);
+  font-weight: 400;
+  letter-spacing: -2px;
+  color: #c1c1c1;
+}
+
 .btn {
   display: flex;
+}
+.btn:hover .btn__arrow svg,
+.btn:hover .btn__arrow img {
+  rotate: 0deg;
 }
 .btn__main {
   font-size: 16px;
@@ -412,12 +423,14 @@ button {
   justify-content: center;
   border-color: #FFF;
 }
-.btn__arrow svg, .btn__arrow img {
+.btn__arrow svg,
+.btn__arrow img {
   width: 60%;
   rotate: -45deg;
   transition: all 0.2s ease-in-out;
 }
-.btn__arrow:hover svg, .btn__arrow:hover img {
+.btn__arrow:hover svg,
+.btn__arrow:hover img {
   rotate: 0deg;
 }
 .btn__arrow svg path {
@@ -450,7 +463,10 @@ button {
   fill: #00c1ad;
 }
 
-.hover-up:hover {
+.hover-up, .btn__main {
+  transition: all 0.2s ease-in-out;
+}
+.hover-up:hover, .btn__main:hover {
   translate: 0 -10px;
 }
 
@@ -490,6 +506,24 @@ button {
     opacity: 1;
   }
 }
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animated {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
 .header {
   position: fixed;
   z-index: 8;
@@ -497,6 +531,7 @@ button {
   left: 25px;
   right: 25px;
   background-color: #262626;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   border-radius: 90px;
@@ -1007,6 +1042,18 @@ button {
   display: flex;
   justify-content: flex-end;
 }
+.card__img_full {
+  width: 100%;
+  height: unset;
+  aspect-ratio: 49/30;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card__img_full img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .card__title {
   color: #FFF;
   font-size: 36px;
@@ -1051,16 +1098,42 @@ button {
   justify-content: center;
   border-color: #000;
 }
-.card__arrow svg, .card__arrow img {
+.card__arrow svg,
+.card__arrow img {
   width: 60%;
   rotate: -45deg;
   transition: all 0.2s ease-in-out;
 }
-.card__arrow:hover svg, .card__arrow:hover img {
+.card__arrow:hover svg,
+.card__arrow:hover img {
   rotate: 0deg;
 }
 .card__arrow svg path {
   fill: #000;
+}
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card__list-item {
+  display: flex;
+  gap: 10px;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.card__list-item a:hover {
+  color: #00c1ad;
+  opacity: 1;
+}
+.card__list-icon {
+  max-width: 20px;
+}
+.card__list-icon img {
+  width: 100%;
 }
 
 @keyframes fade-in {
@@ -1103,6 +1176,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .section__body {
@@ -1492,7 +1566,7 @@ button {
 }
 @keyframes miner-fade-in {
   from {
-    scale: 1;
+    scale: 0.8;
     top: 30%;
   }
   to {
@@ -1501,6 +1575,7 @@ button {
   }
 }
 .miner {
+  margin-bottom: -200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1548,7 +1623,7 @@ button {
   animation: miner-fade-in linear;
   animation-timeline: view(-200px);
   animation-range-start: -200px;
-  animation-range-end: 500px;
+  animation-range-end: 1000px;
 }
 @media screen and (max-width: 479.98px) {
   .miner__img {
@@ -1951,6 +2026,45 @@ button {
     height: 100vmin;
     translate: 50% 10%;
   }
+}
+
+.graphic {
+  color: #fff;
+}
+.graphic__legend {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+.graphic__color {
+  height: 0.7vw;
+  width: 3.4vw;
+  border-radius: 10px;
+  background-color: #00c1ad;
+}
+.graphic__body {
+  width: 100%;
+  position: relative;
+}
+.graphic__body img {
+  width: 100%;
+  display: block;
+}
+.graphic__body [alt="line for a graphic"] {
+  position: absolute;
+  bottom: 1.6vw;
+  left: 5vw;
+  width: 75vw;
+  max-width: 1050px;
+}
+.graphic__lineWrapper {
+  position: absolute;
+  bottom: 20%;
+  left: 8.6%;
+  min-height: 30vw;
+  height: inherit;
+  overflow: hidden;
+  height: fit-content;
 }
 
 .footer {

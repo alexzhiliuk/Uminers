@@ -103,7 +103,21 @@ $borderRaius: 20 + px;
         &_right {
             display: flex;
             justify-content: flex-end;
-        } 
+        }
+        
+        &_full {
+            width: 100%;
+            height: unset;
+            aspect-ratio: 49 / 30;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
     }
 
     // .card__title
@@ -155,5 +169,38 @@ $borderRaius: 20 + px;
             }
         }
         
+    }
+
+    // .card__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &-item {
+            display: flex;
+            gap: 10px;
+
+            color: $white;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 400;
+            opacity: 0.8;
+
+            a {
+                &:hover {
+                    color: $primaryColor;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-icon {
+            max-width: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 }
