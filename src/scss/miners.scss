@@ -13,6 +13,7 @@
     // .miner-card__title
     &__title {
         @extend .card__title_highlighted;
+        @extend .card__title_bigger;
     }
 
     // .miner-card__icon
