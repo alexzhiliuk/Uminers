@@ -394,7 +394,7 @@ button {
 .btn:hover .btn__arrow svg, .btn:hover .btn__arrow img {
   rotate: 0deg;
 }
-.btn__main {
+.btn__main, .btn__main_black {
   font-size: 16px;
   color: #FFF;
   background-color: #00c1ad;
@@ -409,16 +409,9 @@ button {
   background: white;
   color: #00c1ad;
 }
-.btn__black {
-  font-size: 16px;
+.btn__main_black {
   color: #00c1ad;
   background-color: black;
-  padding: 16px 32px;
-  border-radius: 26px;
-  text-align: center;
-  height: 50px;
-  display: flex;
-  align-items: center;
 }
 .btn__arrow {
   height: 50px;
@@ -471,10 +464,10 @@ button {
   fill: #00c1ad;
 }
 
-.hover-up, .btn__main {
+.hover-up, .btn__main, .btn__main_black {
   transition: all 0.2s ease-in-out;
 }
-.hover-up:hover, .btn__main:hover {
+.hover-up:hover, .btn__main:hover, .btn__main_black:hover {
   translate: 0 -10px;
 }
 
@@ -835,6 +828,7 @@ button {
   align-items: center;
   position: relative;
   flex-wrap: nowrap;
+  overflow: hidden;
   border-radius: 50px;
   gap: 40px;
 }

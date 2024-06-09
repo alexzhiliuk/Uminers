@@ -140,18 +140,12 @@ button {
             background:white;
             color:$primaryColor;
         }
-    }
-
-    &__black{
-        font-size: 16px;
-        color: $primaryColor;
-        background-color: black;
-        padding: 16px 32px;
-        border-radius: 26px;
-        text-align: center;
-        height: 50px;
-        display: flex;
-        align-items: center;
+        
+        &_black{
+            color: $primaryColor;
+            background-color: black;
+            @extend .btn__main;
+        }
     }
 
     // .btn__arrow
