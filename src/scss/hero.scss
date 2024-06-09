@@ -1,3 +1,12 @@
+@keyframes text-fade-in {
+    from {
+        translate: 0 200%;
+    }
+    to {
+        translate: 0 0;
+    }
+}
+
 .hero {
 
     position: relative;
@@ -20,6 +29,82 @@
                     height: 100%;
                 }
             }
+        }
+    }
+
+    &_datacenter {
+        margin-top: 0;
+        padding-top: 120px;
+        padding-bottom: 0;
+
+        
+
+        .hero {
+
+            &__text {
+                margin-bottom: 50vmax;
+
+                @media screen and (max-width: $breakpoint768) {
+                    margin-bottom: 60vmin;
+                }
+            }
+
+            &__bg {
+                top: unset;
+                bottom: 0;
+                left: calc(-1 * (100vw - 100%) / 2);
+                width: 100vw;
+                translate: unset;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+
+                @media screen and (max-width: $breakpoint992) {
+                    height: 100%;
+                }
+
+                @media screen and (max-width: $breakpoint768) {
+                    bottom: 30vmin;
+                }
+
+                &-figure {
+                    position: absolute;
+                    z-index: -2;
+                    top: 0; height: 100%;
+                    left: 0; width: 100%;
+                    object-fit: cover;
+                    opacity: .5;
+                }
+    
+                &-img {
+                    width: 100%;
+                    position: relative;
+                }
+
+                &-text {
+                    // position: absolute;
+                    position: relative;
+                    z-index: -1;
+                    width: 80%;
+                    translate: 0 0;
+                    animation: text-fade-in linear;
+                    animation-timeline: view(-100px);
+
+                    @media screen and (max-width: $breakpoint768) {
+                        animation-timeline: view(0px);
+                        animation-range-start: 0px;
+                        animation-range-end: 800px;
+                    }
+                }
+
+                &-shade {
+                    height: min(380px, 20vw);
+                }
+            }
+
+
         }
     }
 

@@ -16,6 +16,36 @@ $borderRaius: 20 + px;
         }
     }
 
+    &_counted {
+        counter-reset: offers;
+        
+        .card {
+            
+            &__title {
+                
+                position: relative;
+
+                &::before {
+                    counter-increment: offers;
+                    content: "0" counter(offers);
+
+                    position: absolute;
+                    z-index: -1;
+                    top: 50%;
+                    right: 20px;
+                    translate: 0 -50%;
+
+                    color: #1a1a1a;
+                    font-size: 90px;
+                    line-height: 1.55;
+                    font-weight: 300;
+                    font-style: italic;
+                    letter-spacing: -6px;
+                }
+            }
+        }
+    }
+
     // .cards__item
     &__item {
         flex: 1 0 calc(25% - $gap * 3 / 4);
@@ -135,9 +165,12 @@ $borderRaius: 20 + px;
 
         &_highlighted{
             color: $primaryColor;
-            font-size: clamp(30px, 7vw, 50px);
             opacity: 0.8;
             line-height: 1.3;
+        }
+
+        &_bigger {
+            font-size: clamp(30px, 7vw, 50px);
         }
     }
 
