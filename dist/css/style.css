@@ -816,6 +816,14 @@ button {
   max-width: 30px;
 }
 
+@keyframes text-fade-in {
+  from {
+    translate: 0 200%;
+  }
+  to {
+    translate: 0 0;
+  }
+}
 .hero {
   position: relative;
   margin-top: 120px;
@@ -835,6 +843,72 @@ button {
   .hero_about .hero__bg {
     height: 100%;
   }
+}
+.hero_datacenter {
+  margin-top: 0;
+  padding-top: 120px;
+  padding-bottom: 0;
+}
+.hero_datacenter .hero__text {
+  margin-bottom: 50vmax;
+}
+@media screen and (max-width: 767.98px) {
+  .hero_datacenter .hero__text {
+    margin-bottom: 60vmin;
+  }
+}
+.hero_datacenter .hero__bg {
+  top: unset;
+  bottom: 0;
+  left: calc(-1 * (100vw - 100%) / 2);
+  width: 100vw;
+  translate: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 991.98px) {
+  .hero_datacenter .hero__bg {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .hero_datacenter .hero__bg {
+    bottom: 30vmin;
+  }
+}
+.hero_datacenter .hero__bg-figure {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.hero_datacenter .hero__bg-img {
+  width: 100%;
+  position: relative;
+}
+.hero_datacenter .hero__bg-text {
+  position: relative;
+  z-index: -1;
+  width: 80%;
+  translate: 0 0;
+  animation: text-fade-in linear;
+  animation-timeline: view(-100px);
+}
+@media screen and (max-width: 767.98px) {
+  .hero_datacenter .hero__bg-text {
+    animation-timeline: view(0px);
+    animation-range-start: 0px;
+    animation-range-end: 800px;
+  }
+}
+.hero_datacenter .hero__bg-shade {
+  height: min(380px, 20vw);
 }
 .hero__title {
   text-align: center;
