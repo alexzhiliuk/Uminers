@@ -839,26 +839,28 @@ button {
 }
 @media (max-width: 479.98px) {
   .banner__content {
-    flex-direction: column-reverse;
-    padding-bottom: 20%;
+    gap: 2vw;
   }
 }
 .banner__image {
   position: absolute;
   z-index: 1;
-  left: 0;
+  left: 5%;
+  height: 100%;
+  bottom: -10px;
 }
 @media (max-width: 767.98px) {
   .banner__image {
     height: 100%;
-    bottom: -10px;
   }
 }
 @media (max-width: 479.98px) {
   .banner__image {
-    height: 60%;
-    bottom: -10px;
-    left: 20%;
+    /* top:5vw; */
+    top: 50%;
+    transform: translate(0%, -50%);
+    height: auto;
+    width: 32vw;
   }
 }
 .banner__text {
@@ -873,7 +875,7 @@ button {
 @media (max-width: 479.98px) {
   .banner__text {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
   }
 }
 .banner__title {
@@ -892,13 +894,16 @@ button {
 }
 @media (max-width: 479.98px) {
   .banner__price {
-    font-size: 50px;
-    position: relative;
-    top: 40px;
+    font-size: 6vw;
   }
 }
 .banner__button {
-  font-size: clamp(12px, 2vw, 16px);
+  font-size: clamp(10px, 2vw, 16px);
+}
+@media (max-width: 479.98px) {
+  .banner__button {
+    padding: 10px 20px;
+  }
 }
 
 .hero {
