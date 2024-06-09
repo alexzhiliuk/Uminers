@@ -145,6 +145,12 @@ button {
             background: white;
             color: $primaryColor;
         }
+        
+        &_black{
+            color: $primaryColor;
+            background-color: black;
+            @extend .btn__main;
+        }
     }
 
     // .btn__arrow
