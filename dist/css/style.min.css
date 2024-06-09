@@ -409,6 +409,17 @@ button {
   background: white;
   color: #00c1ad;
 }
+.btn__black {
+  font-size: 16px;
+  color: #00c1ad;
+  background-color: black;
+  padding: 16px 32px;
+  border-radius: 26px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
 .btn__arrow {
   height: 50px;
   width: 50px;
@@ -814,6 +825,86 @@ button {
   translate: 50%;
   right: 50%;
   max-width: 30px;
+}
+
+.banner__content {
+  background: #00c1ad;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: nowrap;
+  border-radius: 50px;
+  gap: 40px;
+}
+@media (max-width: 767.98px) {
+  .banner__content {
+    padding: 20px;
+  }
+}
+@media (max-width: 479.98px) {
+  .banner__content {
+    flex-direction: column-reverse;
+    padding-bottom: 20%;
+  }
+}
+.banner__image {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+}
+@media (max-width: 767.98px) {
+  .banner__image {
+    height: 100%;
+    bottom: -10px;
+  }
+}
+@media (max-width: 479.98px) {
+  .banner__image {
+    height: 60%;
+    bottom: -10px;
+    left: 20%;
+  }
+}
+.banner__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  gap: 20px;
+  width: 70%;
+}
+@media (max-width: 479.98px) {
+  .banner__text {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.banner__title {
+  font-size: clamp(18px, 2vw, 24px);
+}
+.banner__price {
+  font-size: clamp(30px, 5vw, 35px);
+  position: relative;
+  top: 10px;
+  font-weight: 700;
+  color: white;
+  z-index: 2;
+  background: #00c1ad;
+  white-space: nowrap;
+  transform: rotate(5deg);
+}
+@media (max-width: 479.98px) {
+  .banner__price {
+    font-size: 50px;
+    position: relative;
+    top: 40px;
+  }
+}
+.banner__button {
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .hero {
