@@ -4,6 +4,6 @@ window.addEventListener('scroll', () => {
     const graphicPosition = container.getBoundingClientRect();
     console.log(graphicPosition);
     const scrollProgress = ((window.innerHeight - graphicPosition.top)-300) / container.offsetHeight;
-    graphicLine.style.width = `${50 * scrollProgress}%`;
+    graphicLine.style.width = `${50 * scrollProgress / 4}%`;
 });
 

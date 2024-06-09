@@ -1240,7 +1240,7 @@ button {
 .progress .progressBar__line_progress {
   background-color: #00c1ad;
   height: 7%;
-  width: 100vw;
+  width: 0px;
   position: absolute;
   top: 51.5%;
   left: calc(-1 * (100vw - 100%) / 2);
