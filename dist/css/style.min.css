@@ -848,6 +848,7 @@ button {
   left: 5%;
   height: 100%;
   bottom: -10px;
+  user-select: none;
 }
 @media (max-width: 767.98px) {
   .banner__image {

@@ -26,6 +26,7 @@
         left: 5%;
         height: 100%;
         bottom: -10px;
+        user-select: none;
 
         @media(max-width:$breakpoint768) {
             height: 100%;
