@@ -1,4 +1,5 @@
 .banner {
+    margin-bottom: -80px;
     &__content {
         background: $primaryColor;
         display: flex;
@@ -47,7 +48,7 @@
         justify-content: space-between;
         align-items: center;
         z-index: 2;
-        gap: 20px;
+        gap: min(2vw, 20px);
         width: 70%;
 
         @media (max-width:$breakpoint480) {
@@ -78,6 +79,7 @@
 
     &__button {
         font-size: clamp(10px, 2vw, 16px);
+        height: unset;
 
         @media(max-width: $breakpoint480) {
             padding: 10px 20px;
