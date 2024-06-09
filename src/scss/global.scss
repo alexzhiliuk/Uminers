@@ -11,14 +11,17 @@
     align-items: center;
     justify-content: center;
 
-    svg, img {
+    svg,
+    img {
         width: 60%;
         rotate: -45deg;
         transition: $calmTransition;
     }
 
     &:hover {
-        svg, img {
+
+        svg,
+        img {
             rotate: 0deg;
         }
     }
@@ -112,12 +115,14 @@ button {
 }
 
 .btn {
-    
+
     display: flex;
 
     &:hover {
         .btn__arrow {
-            svg, img {
+
+            svg,
+            img {
                 rotate: 0deg;
             }
         }
@@ -137,8 +142,8 @@ button {
         align-items: center;
 
         &_inverted {
-            background:white;
-            color:$primaryColor;
+            background: white;
+            color: $primaryColor;
         }
     }
 
@@ -155,7 +160,7 @@ button {
     }
 }
 
-.highlighted{
+.highlighted {
     color: $primaryColor;
 }
 
@@ -187,6 +192,7 @@ button {
 
 .hover-up {
     transition: $calmTransition;
+
     &:hover {
         translate: 0 -10px;
     }
@@ -214,15 +220,16 @@ button {
 
         svg {
             width: 60%;
+
             path {
                 fill: $white;
             }
         }
 
         &:hover {
-            
+
             scale: 1.05;
-            
+
         }
 
         // .slider-nav__btn_prev
@@ -233,8 +240,7 @@ button {
         }
 
         // .slider-nav__btn_next
-        &_next {
-        }
+        &_next {}
     }
 }
 
@@ -243,7 +249,30 @@ button {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
+    }
+}
+
+//Animation-on-scroll
+
+.animate-on-scroll {
+    opacity: 0;
+}
+
+.animated {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translateY(0);
     }
 }

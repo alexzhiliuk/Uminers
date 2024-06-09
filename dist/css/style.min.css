@@ -391,7 +391,8 @@ button {
 .btn {
   display: flex;
 }
-.btn:hover .btn__arrow svg, .btn:hover .btn__arrow img {
+.btn:hover .btn__arrow svg,
+.btn:hover .btn__arrow img {
   rotate: 0deg;
 }
 .btn__main {
@@ -422,12 +423,14 @@ button {
   justify-content: center;
   border-color: #FFF;
 }
-.btn__arrow svg, .btn__arrow img {
+.btn__arrow svg,
+.btn__arrow img {
   width: 60%;
   rotate: -45deg;
   transition: all 0.2s ease-in-out;
 }
-.btn__arrow:hover svg, .btn__arrow:hover img {
+.btn__arrow:hover svg,
+.btn__arrow:hover img {
   rotate: 0deg;
 }
 .btn__arrow svg path {
@@ -501,6 +504,24 @@ button {
   }
   100% {
     opacity: 1;
+  }
+}
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animated {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(0);
   }
 }
 .header {
@@ -1174,12 +1195,14 @@ button {
   justify-content: center;
   border-color: #000;
 }
-.card__arrow svg, .card__arrow img {
+.card__arrow svg,
+.card__arrow img {
   width: 60%;
   rotate: -45deg;
   transition: all 0.2s ease-in-out;
 }
-.card__arrow:hover svg, .card__arrow:hover img {
+.card__arrow:hover svg,
+.card__arrow:hover img {
   rotate: 0deg;
 }
 .card__arrow svg path {
