@@ -18,5 +18,9 @@
         @media (max-width: $breakpoint768) {
             text-align: center;
         }
+
+        &_centered {
+            text-align: center;
+        }
     }
 }
