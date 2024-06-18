@@ -1,6 +1,6 @@
 @mixin arrow {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     aspect-ratio: 1;
     border-radius: 50%;
     border-width: 1px;
@@ -13,7 +13,7 @@
 
     svg,
     img {
-        width: 60%;
+        width: 50%;
         rotate: -45deg;
         transition: $calmTransition;
     }
@@ -32,8 +32,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 1px solid $white;
+    border: 1px solid rgba($color: $white, $alpha: .4);
     transition: $calmTransition;
+
+    svg {
+        width: 60%;
+        height: auto;
+    }
 
     &:hover {
         background-color: $primaryColor;
@@ -97,7 +102,7 @@ button {
 }
 
 .section-title {
-    font-size: clamp(30px, 7vw, 50px);
+    font-size: clamp(30px, 7vw, 64px);
     font-weight: 600;
     letter-spacing: -2px;
     color: $white;
@@ -105,12 +110,23 @@ button {
     &_centered {
         text-align: center;
     }
+
+    &_sm {
+        font-size: clamp(30px, 7vw, 50px);
+        font-weight: 500;
+    }
+
+    &_thin {
+        line-height: .9;
+        font-weight: 500;
+    }
 }
 
 .section-subtitle {
-    font-size: clamp(18px, 4vw, 30px);
-    font-weight: 400;
+    font-size: clamp(18px, 4vw, 38px);
+    font-weight: 300;
     letter-spacing: -2px;
+    line-height: 1.2;
     color: #c1c1c1;
 }
 
@@ -130,16 +146,17 @@ button {
 
     // .btn__main
     &__main {
-        @extend .hover-up;
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: 500;
         color: $white;
         background-color: $primaryColor;
         padding: 16px 32px;
-        border-radius: 26px;
+        border-radius: 30px;
         text-align: center;
-        height: 50px;
+        height: 60px;
         display: flex;
         align-items: center;
+        justify-content: center;
 
         &_inverted {
             background: white;
@@ -171,16 +188,16 @@ button {
 }
 
 .see-all {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.55;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.5px;
     color: $primaryColor;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 16px;
 
     span {
         flex-shrink: 0;
@@ -214,8 +231,8 @@ button {
     &__btn {
 
         flex-shrink: 0;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         background-color: $primaryColor;
         transition: $calmTransition;

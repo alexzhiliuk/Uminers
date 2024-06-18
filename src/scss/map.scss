@@ -1,26 +1,27 @@
 .map{
     color:white;
     &__title{
-        max-width: 70%;
+        max-width: 80%;
         @media (max-width: $breakpoint992) {
             max-width: 100%;
         }
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     &__subtitle{
-        font-size: clamp(18px, 5vw, 30px);
-        max-width: 50%;
+        max-width: 840px;
         @media (max-width: $breakpoint992) {
             max-width: 100%;
         }
     }
     &__content{
-        background: url('../../img/map.png');
+        background: url('../img/map.png');
         background-position: -$containerPadding top;
         background-repeat: no-repeat;
         background-size: contain;
         min-height: 607px;
         position: relative;
+        width: 100vw;
+        margin-left: calc(-1 * (100vw - 100%) / 2);
         @media (max-width:$breakpoint992) {
             min-height: 400px;
         }
@@ -37,17 +38,14 @@
         right: 5%;
         top: 55%;
         width: fit-content;
-        padding: 30px 25px;
+        padding: 25px 30px;
         border-radius: 20px;
-        border-color: #5b5b5b;
-        border: solid 1px #ffffff;
+        border: solid 1px rgba($color: #fff, $alpha: .4);
+
         display: flex;
         flex-direction: column;
         gap: 10px;
-        font-size: clamp(12px,1.3vw,20px);
-        line-height: 1.6;
-        font-weight: 400;
-        opacity: 0.8;
+
         @media (max-width: $breakpoint1366) {
             top:85%;
         }
@@ -61,6 +59,13 @@
             border-radius: 3000px;
             box-shadow: 0px 0px 10px 3px rgba(0, 210, 178, 1);
             background-color: $primaryColor;
+        }
+
+        .text {
+            font-size: clamp(12px, 2vw, 24px);
+            line-height: 1.6;
+            font-weight: 300;
+            opacity: .8;
         }
     }
     &__legendItem{

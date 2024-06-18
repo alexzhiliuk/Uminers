@@ -1,16 +1,31 @@
 .banner {
     margin-bottom: -80px;
+    margin-top: 90px;
+    max-width: 1200px;
+    height: 80px;
+
+    @media (max-width:$breakpoint992) {
+        height: unset;
+    }
+
     &__content {
         background: $primaryColor;
+        padding: 20px;
+        position: relative;
+        border-radius: 50px;
+        overflow: hidden;
+        height: 100%;
+
         display: flex;
-        padding: 30px;
         justify-content: space-between;
         align-items: center;
-        position: relative;
         flex-wrap: nowrap;
-        overflow: hidden;
-        border-radius: 50px;
-        gap: 40px;
+        gap: 20px;
+
+        @media (max-width:$breakpoint992) {
+            border-radius: 100px;
+        }
+    
 
         @media(max-width:$breakpoint768) {
             padding: 20px;
@@ -35,21 +50,26 @@
 
         @media (max-width:$breakpoint480) {
             /* top:5vw; */
-            top: 50%;
-            transform: translate(0%, -50%);
-            height: auto;
-            width: 32vw;
+            // top: 50%;
+            // transform: translate(0%, -50%);
+            // height: auto;
+            // width: 32vw;
         }
     }
 
     &__text {
+        flex-grow: 1;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         z-index: 2;
         gap: min(2vw, 20px);
-        width: 70%;
+        text-align: center;
+
+        @media (max-width:$breakpoint992) {
+            flex-wrap: wrap;
+            text-align: left;
+        }
 
         @media (max-width:$breakpoint480) {
             flex-direction: column;
@@ -58,7 +78,10 @@
     }
 
     &__title {
-        font-size: clamp(18px, 2vw, 24px);
+        color: #000000;
+        line-height: 0.9;
+        font-weight: 600;
+        font-size: clamp(18px, 3vw, 36px);
     }
 
     &__price {
@@ -78,11 +101,12 @@
     }
 
     &__button {
-        font-size: clamp(10px, 2vw, 16px);
         height: unset;
+        white-space: nowrap;
 
         @media(max-width: $breakpoint480) {
             padding: 10px 20px;
+            font-size: 16px;
         }
     }
 }

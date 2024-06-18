@@ -67,7 +67,7 @@ $borderRaius: 20 + px;
 
 .card {
 
-    $cardPadding: 20 + px;
+    $cardPadding: 25 + px;
 
     background-color: $backgroundCardColor;
     border-radius: $borderRaius;
@@ -153,9 +153,10 @@ $borderRaius: 20 + px;
     // .card__title
     &__title {
         color: $white;
-        font-size: 36px;
-        font-weight: 600;
+        font-size: 46px;
+        font-weight: 500;
         letter-spacing: -2px;
+        line-height: .9;
 
         &_with_arrow {
             display: flex;
@@ -170,20 +171,21 @@ $borderRaius: 20 + px;
         }
 
         &_bigger {
-            font-size: clamp(30px, 7vw, 50px);
+            font-size: clamp(30px, 7vw, 64px);
+            letter-spacing: -0.06rem;
         }
     }
 
     // .card__text
     &__text {
         color: #f1f1f1;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.2;
-        font-weight: 600;
+        font-weight: 500;
         opacity: 0.8;
 
         &_bigger{
-            font-size: clamp(20px, 1.6vw, 24px);
+            font-size: clamp(20px, 2vw, 28px);
             line-height: 1;
             font-weight: 400;
             letter-spacing: -1px;

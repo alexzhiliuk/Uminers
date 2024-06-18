@@ -41,6 +41,13 @@
     // .miner-card__btn
     &__btn {
         margin-top: auto;
+
+        .btn__main {
+            color: $black;
+            max-width: 200px;
+            min-width: fit-content;
+            width: 100%;
+        }
     }
 
     // .miner-card__img
@@ -59,14 +66,15 @@
     // .specification__value
     &__value {
         color: $white;
-        font-size: clamp(20px, 2vw, 30px);
+        font-size: clamp(20px, 3vw, 38px);
     }
 
     // .specification__caption
     &__caption {
         color: $white;
         opacity: .6;
-        font-size: clamp(16px, 1vw, 22px);
+        font-size: clamp(16px, 2vw, 22px);
+        font-weight: 300;
     }
 }
 

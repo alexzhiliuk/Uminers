@@ -4,15 +4,15 @@
     &__heading {
         max-width: 430px;
 
-        @media (max-width:$breakpoint768) {
+        @media (max-width:$breakpoint992) {
             max-width: max(90%, 400px);
         }
     }
 
     &__content {
-        max-width: 50%;
+        max-width: 45%;
 
-        @media (max-width:$breakpoint768) {
+        @media (max-width:$breakpoint992) {
             max-width: 100%;
         }
 
@@ -28,8 +28,9 @@
 
     &__points {
         color: #ffffff;
-        font-size: clamp(12px, 2vw, 30px);
+        font-size: clamp(12px, 2vw, 20px);
         line-height: 1.2;
+        font-weight: 300;
         opacity: 0.8;
     }
 
@@ -41,9 +42,9 @@
 
     .circle {
         margin-top: min(.5vw, 10px);
-        width: min(1.5vw, 15px);
+        width: max(0.01vw, 10px);
+        height: max(0.01vw, 10px);
         flex-shrink: 0;
-        height: min(1.5vw, 15px);
         border-radius: 3px;
         background-color: $primaryColor;
         transform: rotate(45deg);
@@ -55,7 +56,7 @@
 
     $authorHeight: 60vmin;
 
-    @media (max-width:$breakpoint768) {
+    @media (max-width:$breakpoint992) {
         margin-top: 100vmin;
     }
 
@@ -68,20 +69,21 @@
         background-color: $backgroundCardColor;
         padding: $contentPadding+px;
         display: flex;
-        gap: 30px;
+        gap: 40px;
         align-items: flex-start;
-        @media (max-width:$breakpoint768) {
+
+        @media (max-width:$breakpoint992) {
             flex-direction: column-reverse;
-            gap: 0px;
+            gap: 10px;
         }
     }
 
     &__quotes {
         color: #ffffff;
         font-size: 60px;
-        line-height: 1.2;
+        line-height: 1;
         opacity: 0.8;
-        @media (max-width:$breakpoint768) {
+        @media (max-width:$breakpoint992) {
             order: 2;
             line-height: 0.5; 
         }
@@ -89,10 +91,11 @@
 
     &__quote {
         color: #ffffff;
-        font-size: clamp(12px, 3vw, 24px);
+        font-size: clamp(12px, 3vw, 30px);
         line-height: 1.2;
+        font-weight: 400;
         opacity: 0.8;
-        @media (max-width:$breakpoint768) {
+        @media (max-width:$breakpoint992) {
             order: 1;
         }
     }
@@ -103,8 +106,8 @@
         border-radius: 20px;
         border-color: #5a5a5a;
         border-style: solid;
-        text-align: center;
-        @media (max-width:$breakpoint768) {
+        
+        @media (max-width:$breakpoint992) {
             order: 3;
             padding: 20px;
             margin-bottom: 20px;
@@ -114,29 +117,25 @@
 
     &__title {
         white-space: nowrap;
-        font-size: clamp(20px, 2.4vw, 40px);
-        line-height: 1.2;
-        font-weight: 500;
-        letter-spacing: -1px;
-        opacity: 0.8;
     }
 
     &__subtitle {
         color: #cecece;
-        font-size: clamp(14px, 1.4vw,20px);
+        font-size: clamp(14px, 2vw,24px);
         line-height: 1.2;
         opacity: 0.8;
+        margin-top: 8px;
     }
 
     &__portrait{
         display: block;
-        height: min(600px, 40vw);
+        height: min(800px, 60vw);
         position: absolute;
         right: 5%;
         bottom: 100%;
         translate: 0 10%;
         
-        @media (max-width:$breakpoint768) {
+        @media (max-width:$breakpoint992) {
             right: 50%;
             height: 100vmin;
             translate: 50% 10%;
