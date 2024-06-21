@@ -13,6 +13,7 @@ $borderRaius: 20 + px;
         gap: $gap;
         @media (max-width: $breakpoint992) {
             flex-direction: column;
+            flex-wrap: nowrap;
         }
     }
 

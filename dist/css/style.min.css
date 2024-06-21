@@ -1082,6 +1082,7 @@ button {
 @media (max-width: 991.98px) {
   .cards_column {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
 .cards_counted {
@@ -1572,8 +1573,7 @@ button {
   background-size: contain;
   min-height: 607px;
   position: relative;
-  width: 100vw;
-  margin-left: calc(-1 * (100vw - 100%) / 2);
+  width: 100%;
   max-width: 1440px;
   margin: 0;
 }
@@ -1662,9 +1662,22 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 479.98px) {
+  .miner-card__title {
+    font-size: 54px;
+    line-height: 1;
+  }
 }
 .miner-card__icon {
-  height: 50px;
+  height: 70px;
+}
+@media screen and (max-width: 479.98px) {
+  .miner-card__icon {
+    height: 60px;
+  }
 }
 .miner-card__icon img {
   height: 100%;
@@ -1675,9 +1688,23 @@ button {
   gap: clamp(20px, 3vw, 40px);
   max-width: 60%;
   margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 767.98px) {
+  .miner-card__specifications {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 479.98px) {
+  .miner-card__specifications {
+    max-width: 70%;
+  }
 }
 .miner-card__btn {
   margin-top: auto;
+  position: relative;
+  z-index: 1;
 }
 .miner-card__btn .btn__main, .miner-card__btn .btn__main_black {
   color: #000;
@@ -1685,10 +1712,24 @@ button {
   min-width: fit-content;
   width: 100%;
 }
+@media screen and (max-width: 767.98px) {
+  .miner-card__btn .btn__main, .miner-card__btn .btn__main_black {
+    max-width: fit-content;
+  }
+}
 .miner-card__img {
   position: absolute;
   bottom: 0;
   right: 0;
+  width: 88%;
+  height: 91%;
+  z-index: 0;
+}
+.miner-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 .specification {

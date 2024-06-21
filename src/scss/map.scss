@@ -20,8 +20,7 @@
         background-size: contain;
         min-height: 607px;
         position: relative;
-        width: 100vw;
-        margin-left: calc(-1 * (100vw - 100%) / 2);
+        width: 100%;
         max-width: calc(1400px + 2* 20px);
         margin: 0;
         @media (max-width:$breakpoint992) {
