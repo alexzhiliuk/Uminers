@@ -104,7 +104,7 @@ button {
 .section-title {
     font-size: clamp(30px, 7vw, 64px);
     font-weight: 600;
-    letter-spacing: -2px;
+    letter-spacing: -0.03rem;
     color: $white;
 
     &_centered {
@@ -125,7 +125,7 @@ button {
 .section-subtitle {
     font-size: clamp(18px, 4vw, 38px);
     font-weight: 300;
-    letter-spacing: -2px;
+    letter-spacing: -0.06rem;
     line-height: 1.2;
     color: #c1c1c1;
 }
