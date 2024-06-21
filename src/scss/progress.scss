@@ -29,7 +29,6 @@
             flex-direction: column;
             justify-content: center;
             gap:10px;
-            height: 145px;
 
             &__heading {
                 color: $primaryColor;
@@ -37,7 +36,7 @@
                 line-height: 1.3;
                 letter-spacing: -2px;
                 opacity: 0.8;
-                height:40px;
+                height: clamp(20px, 3vw, 52px);
             }
 
             &__text {
@@ -46,14 +45,25 @@
                 line-height: 1.3;
                 font-weight: 400;
                 opacity: 0.8;
-                height:40px;
+                height: clamp(20px, 3vw, 52px);
             }
 
             &__point {
-                width: 40px;
-                height: 40px;
-                background-color: $primaryColor;
-                border-radius: 50%;
+                height: clamp(20px, 3vw, 52px);
+                width: clamp(20px, 3vw, 52px);
+                position: relative;
+                flex-shrink: 0;
+
+                &::before {
+                    content: '';
+                    background-color: $primaryColor;
+                    border-radius: 50%;
+                    width: 77%;
+                    height: 77%;
+                    position: absolute;
+                    left: 50%; top: 50%;
+                    translate: -50% -50%;
+                }
             }
         }
 
