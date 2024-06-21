@@ -1557,6 +1557,8 @@ button {
   position: relative;
   width: 100vw;
   margin-left: calc(-1 * (100vw - 100%) / 2);
+  max-width: 1440px;
+  margin: 0;
 }
 @media (max-width: 991.98px) {
   .map__content {
