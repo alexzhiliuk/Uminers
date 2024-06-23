@@ -8,6 +8,7 @@ import * as accordeon from './modules/accordeon.js'
 import * as reviewsSlider from './modules/reviews.js'
 import * as tabsFilter from './modules/tabsFilter.js'
 import * as catalogGrid from './modules/catalogGrid.js'
+import * as rangeInput from './modules/rangeInput.js'
 
 
 flsFunctions.isWebp()

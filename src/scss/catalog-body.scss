@@ -43,6 +43,28 @@
               transition: all 0.3s ease-in-out;  
             }
         }
+
+
+        &__item {
+            a {
+                                
+                font-family: $primaryFont;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: -0.02em;
+
+                color: #9D9D9D;
+            }
+
+            &_active {
+                a {
+                    font-weight: 400;
+                    color: $white;
+                }
+            }
+        }
     }
 
     &__content {

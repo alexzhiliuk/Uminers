@@ -1,7 +1,7 @@
 .filter {
-    width: 25vw;
+    flex: 0 0 316px;
     color: white;
-    padding: 30px 22px;
+    padding: 30px 22px 10px;
     border: 1px solid #3f3f3f;
     border-radius: 10px;
     font-size: 16px;
@@ -9,10 +9,14 @@
 
     .heading {
         font-weight: 500;
+        
     }
 
     hr {
-        border: 1px solid #3f3f3f;
+        border: none;
+        outline: none;
+        background: #3F3F3F;
+        height: 1px;
     }
 
     &__group {
@@ -46,14 +50,14 @@
     }
 
     &__reset {
-        color: #3f3f3f;
+        color: #9D9D9D;
     }
 
     &__tabs {
         display: inline-flex;
         padding: 3px;
         gap: 3px;
-        border-radius: 3px;
+        border-radius: 8px;
         background-color: #3f3f3f;
     }
 
@@ -68,6 +72,14 @@
             transition: all 120ms ease-in-out;
         }
     }
+
+    &__numbers {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 //раскрытие менюшек
@@ -78,27 +90,58 @@
     cursor: pointer;
     transition: all 120ms ease-out;
 
+    &.active {
+        .options__heading {
+            font-weight: 600;
+        }
+    }
+
     &__item{
         display: flex;
         gap: 5px;
         align-items: center;
-    }
 
-    &__item label {
-        display: flex;
-        gap: 3px;
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+
+            input[type="checkbox"] {
+                appearance: none;
+                -webkit-appearance: none;
+                border: 1px solid #222222;
+                width: 25px;
+                height: 25px;
+                border-radius: 5px;
+
+                &:checked {
+                    background-color: $brightPrimaryColor;
+                    position: relative;
+
+                    &::before {
+                        content: url(../img/checkbox-tik.svg);
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        translate: -50% -50%;
+                    }
+                }
+            }
+        }
     }
 
     &__items {
         display: grid;
         grid-template-rows: 0fr;
         overflow: hidden;
+        margin-top: 0;
+        transition: all 120ms ease-in-out;
     }
 
     &__itemsWrapper {
         display: flex;
         flex-direction: column;
-        gap:5px;
+        gap: 10px;
         overflow: hidden;
         transition: 0.5s ease all;
     }
@@ -107,8 +150,7 @@
 .active .options__items {
     grid-template-rows: 1fr;
     grid-template-columns: auto;
-    transition: all 120ms ease-in-out;
-    padding-top: 5px;
+    margin-top: 12px;
     gap: 10px;
     padding-bottom: 10px;
 }
