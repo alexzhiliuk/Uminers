@@ -16,8 +16,6 @@
         border: 1px solid #3f3f3f;
     }
 
-    &__form {
-    }
     &__group{
         display: flex;
         flex-direction: column;
@@ -41,6 +39,32 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    &__submit{
+        color:#000;
+    }
+
+    &__reset{
+        color:#3f3f3f;
+    }
+
+    &__tabs{
+        display: inline-flex;
+        padding: 3px;
+        gap:3px;
+        border-radius: 3px;
+        background-color: #3f3f3f;
+    }
+    &__tab{
+        background-color: inherit;
+        color:white;
+        padding: 2px 5px;
+        border-radius: 6px;
+        &.active{
+            background-color: $primaryColor;
+            transition: all 120ms ease-in-out;
+        }
     }
 }
 

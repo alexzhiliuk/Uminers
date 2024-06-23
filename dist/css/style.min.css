@@ -2480,6 +2480,29 @@ button {
   flex-direction: column;
   gap: 10px;
 }
+.filter__submit {
+  color: #000;
+}
+.filter__reset {
+  color: #3f3f3f;
+}
+.filter__tabs {
+  display: inline-flex;
+  padding: 3px;
+  gap: 3px;
+  border-radius: 3px;
+  background-color: #3f3f3f;
+}
+.filter__tab {
+  background-color: inherit;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 6px;
+}
+.filter__tab.active {
+  background-color: #27a699;
+  transition: all 120ms ease-in-out;
+}
 
 .options {
   padding: 0 15px;
