@@ -1,0 +1,61 @@
+.catalog {
+    color: white;
+
+    &__category {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.86px;
+        letter-spacing: -0.02em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #222;
+        padding: 9px 20px;
+        border-radius: 34px;
+        margin-bottom: 20px;
+    }
+
+    .categories{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.86px;
+        letter-spacing: -0.02em;
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.5vw;
+        &__view{
+            display: flex;
+            gap: 0.8vw;
+            & .basic *{
+                fill: #3f3f3f;
+            }
+            & .active *{
+                fill: $primaryColor;
+            }
+        }
+    }
+
+    &__content{
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    &__items{
+        width:100%;
+    }
+
+    &__cards{
+        gap: 20px;
+        &_grid{
+            @extend .catalog__cards;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &_rows{
+            @extend .catalog__cards;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
