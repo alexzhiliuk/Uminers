@@ -1,0 +1,120 @@
+
+.product-banner {
+
+    border-radius: 20px;
+    border: 1px solid $brightPrimaryColor;
+    padding: 40px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    
+
+
+    // .product-banner__info
+    &__info {
+    }
+
+    // .product-banner__title
+    &__title {
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+
+        color: #FFFFFF;
+
+    }
+
+    // .product-banner__list
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 680px;
+        gap: 10px;
+        margin-top: 30px;
+
+        li {
+            flex: 0 0 calc(50% - 10px / 2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            font-family: $primaryFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.375;
+
+            color: #FFFFFF;
+
+            span {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 2px;
+                rotate: 45deg;
+                background-color: $brightPrimaryColor;
+            }
+
+        }
+    }
+
+    // .product-banner__btns
+    &__btns {
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+    }
+
+    // .product-banner__cards
+    &__cards {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+    }
+
+    // .product-banner__card
+    &__card {
+        border-radius: 20px;
+        background-color: #222222;
+        padding: 25px;
+        flex: 0 0 260px;
+        aspect-ratio: 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .product-banner__card-title
+    &__card-title {
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+
+        color: $brightPrimaryColor;
+
+    }
+
+    // .product-banner__card-text
+    &__card-text {
+        margin-top: auto;
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+
+        color: #FFFFFF;
+
+
+    }
+}
