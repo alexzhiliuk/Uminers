@@ -137,3 +137,55 @@
         transform: translateY(0%);
     }
 }
+
+
+.product-promo {
+
+
+    // .product-promo__content
+    &__content {
+        padding: 40px 50px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    // .product-promo__textContent
+
+    &__textContent {
+    }
+
+    // .product-promo__text
+
+    &__text {
+    }
+
+    // .product-promo__title
+
+    &__title {
+    }
+
+    // .product-promo__subtitle
+    &__subtitle {
+
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+
+        color: #FFFFFF;
+
+        margin-top: 15px;
+    }
+
+    // .product-promo__btn
+
+    &__btn {
+    }
+}
+

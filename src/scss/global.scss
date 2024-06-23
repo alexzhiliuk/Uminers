@@ -169,6 +169,12 @@ button {
         background-color: unset;
         color: #9D9D9D;
     }
+
+    // .btn_white
+    &_white {
+        background-color: $white;
+        color: $brightPrimaryColor;
+    }
 }
 
 .btn-round {
