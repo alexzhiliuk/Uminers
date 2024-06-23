@@ -1,0 +1,100 @@
+<aside class="filter">
+    <form action="" class="filter__form">
+        <div class="filter__group switchBlock">
+            <span class="heading">Категории</span>
+            <div class="options">
+                <span class="options__heading">Производители</span>
+                <div class="options__items">
+
+                    <ul class="options__itemsWrapper">
+                        <li class="options__item"><label for="Bitmain"><input type="checkbox" name="Bitmain"
+                                    id="">Bitmain</label>
+                        </li>
+                        <li class="options__item"><label for="MicroBT"><input type="checkbox" name="MicroBT"
+                                    id="">MicroBT</label>
+                        </li>
+                        <li class="options__item"><label for="Innosilicon"><input type="checkbox" name="Innosilicon"
+                                    id="">Innosilicon</label>
+                        </li>
+                        <li class="options__item"><label for="Canaan"><input type="checkbox" name="Canaan"
+                                    id="">Canaan</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Монеты</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Алгоритмы</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Система охлаждения</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="filter__group">
+            <label for="price" class="filter__numbers">
+                <span class="heading">Цена (&#8381;)</span>
+                <!--Санено решение-->
+            </label>
+            <label for="power" class="filter__numbers">
+                <span class="heading">Потребляемая мощность (ВТ)</span>
+                <!--Санено решение-->
+            </label>
+            <label for="hashrate" class="filter__numbers">
+                <span class="heading">Хэшрейт</span> <span class="filter__tabs">
+                    <button class="filter__tab">MH/s</button>
+                    <button class="filter__tab">GH/s</button>
+                    <button class="filter__tab">TH/s</button>
+                </span>
+                <!--Санено решение-->
+            </label>
+        </div>
+        <hr>
+        <div class="filter__group switchBlock">
+            <ul>
+                <li class="filter__switch">
+                    <span class="heading">В наличии</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="filter__switch">
+                    <span class="heading">Доступно в лизинг</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="filter__switch">
+                    <span class="heading">Быстрая доставка</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="filter__buttons">
+            <button type="submit" class="filter__submit btn-rounded">Применить фильтры</button>
+            <button type="reset" class="filter__reset btn-black">Сбросить</button>
+        </div>
+    </form>
+</aside>

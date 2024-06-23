@@ -4,7 +4,7 @@ import * as progress from './modules/progress.js'
 import * as graphic from './modules/graphic.js'
 import * as animateOnScroll from './modules/animationFadeInUp.js'
 import * as articlesSlider from './modules/articlesSlider.js'
-
+import * as accordeon from './modules/accordeon.js'
 
 flsFunctions.isWebp()
 
