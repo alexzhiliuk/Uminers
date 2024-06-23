@@ -58,13 +58,13 @@
     &__specification {
     }
 
-    // .miner-card__btn
-    &__btn {
+    // .miner-card__btn-round
+    &__btn-round {
         margin-top: auto;
         position: relative;
         z-index: 1;
 
-        .btn__main {
+        .btn-round__main {
             color: $black;
             max-width: 200px;
             min-width: fit-content;
