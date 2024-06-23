@@ -2596,6 +2596,12 @@ button {
   letter-spacing: -0.02em;
   color: #FFFFFF;
 }
+.product-banner__img {
+  flex: 0 1 505px;
+}
+.product-banner__img img {
+  width: 100%;
+}
 
 @font-face {
   font-family: "swiper-icons";

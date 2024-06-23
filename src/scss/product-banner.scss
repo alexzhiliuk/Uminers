@@ -115,6 +115,15 @@
 
         color: #FFFFFF;
 
-
     }
+
+    // .product-banner__img
+    &__img {
+        flex: 0 1 505px;
+
+        img {
+            width: 100%;
+        }
+    }
+
 }
