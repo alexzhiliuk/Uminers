@@ -384,6 +384,15 @@ button {
   font-size: clamp(30px, 7vw, 50px);
   font-weight: 500;
 }
+.section-title_40 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
 .section-title_thin {
   line-height: 0.9;
   font-weight: 500;
@@ -1342,6 +1351,11 @@ button {
 .m-90 {
   margin-top: 90px;
   margin-bottom: 90px;
+}
+
+.m-100 {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .progress {
@@ -2601,6 +2615,51 @@ button {
 }
 .product-banner__img img {
   width: 100%;
+}
+
+.reviews {
+  display: flex;
+  gap: 42px;
+  align-items: center;
+}
+.reviews__btn {
+  cursor: pointer;
+}
+.reviews__swiper {
+  flex-grow: 1;
+}
+
+.review {
+  border-radius: 10px;
+  background-color: #222222;
+  padding: 20px 5px 20px 25px;
+}
+.review__stars {
+  display: flex;
+  align-items: center;
+}
+.review__star_active path {
+  fill: #F23C00;
+}
+.review__name {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+.review__text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #B5B5B5;
+  margin-top: 10px;
 }
 
 @font-face {

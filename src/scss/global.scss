@@ -116,6 +116,19 @@ button {
         font-weight: 500;
     }
 
+    &_40 {
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+
+        color: #FFFFFF;
+
+    }
+
     &_thin {
         line-height: .9;
         font-weight: 500;
