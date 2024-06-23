@@ -159,6 +159,10 @@ $borderRaius: 20 + px;
         letter-spacing: -2px;
         line-height: .9;
 
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
         &_with_arrow {
             display: flex;
             gap: 20px;
@@ -238,5 +242,40 @@ $borderRaius: 20 + px;
                 width: 100%;
             }
         }
+    }
+}
+
+
+.product-card {
+    border-radius: 10px;
+    border: 1px solid #878787;
+    padding: 30px;
+
+    &__title {
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+
+        color: #FFFFFF;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__text {
+        margin-top: 10px;
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        
+        color: #9D9D9D;
+
     }
 }
