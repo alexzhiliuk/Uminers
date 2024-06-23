@@ -2510,6 +2510,11 @@ button {
   cursor: pointer;
   transition: all 120ms ease-out;
 }
+.options__item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
 .options__item label {
   display: flex;
   gap: 3px;
@@ -2520,12 +2525,16 @@ button {
   overflow: hidden;
 }
 .options__itemsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   overflow: hidden;
   transition: 0.5s ease all;
 }
 
 .active .options__items {
   grid-template-rows: 1fr;
+  grid-template-columns: auto;
   transition: all 120ms ease-in-out;
   padding-top: 5px;
   gap: 10px;
@@ -2589,6 +2598,40 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#firstCheckboxes {
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#firstCheckboxes ~ label {
+  position: relative;
+}
+
+#firstCheckboxes ~ label::before {
+  z-index: 1;
+  left: -1.55em;
+  top: -3px;
+  content: "";
+  position: absolute;
+  text-align: center;
+  color: white;
+  line-height: 1em;
+  width: 0.9em;
+  height: 0.9em;
+  border: 1px solid #3f3f3f;
+  border-radius: 0.25em;
+  margin: 0.25em;
+}
+
+#firstCheckboxes:checked ~ label::before {
+  content: url(../img/checkbox-tik.svg);
+  border: 1px solid #27a699;
+  background-color: #27a699;
 }
 
 .catalog {

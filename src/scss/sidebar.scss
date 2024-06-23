@@ -11,22 +11,23 @@
         font-weight: 500;
     }
 
-    hr{
+    hr {
         border: 1px solid #3f3f3f;
     }
 
-    &__group{
+    &__group {
         display: flex;
         flex-direction: column;
-        gap:10px;
+        gap: 10px;
         padding: 30px 0;
-        &.switchBlock{
+
+        &.switchBlock {
             padding: 0;
             padding-bottom: 30px;
         }
     }
 
-    &__switch{
+    &__switch {
         padding: 17.5px 0;
         display: flex;
         align-items: center;
@@ -34,33 +35,35 @@
         border-bottom: 1px solid #3f3f3f;
     }
 
-    &__buttons{
+    &__buttons {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
-    &__submit{
-        color:#000;
+    &__submit {
+        color: #000;
     }
 
-    &__reset{
-        color:#3f3f3f;
+    &__reset {
+        color: #3f3f3f;
     }
 
-    &__tabs{
+    &__tabs {
         display: inline-flex;
         padding: 3px;
-        gap:3px;
+        gap: 3px;
         border-radius: 3px;
         background-color: #3f3f3f;
     }
-    &__tab{
+
+    &__tab {
         background-color: inherit;
-        color:white;
+        color: white;
         padding: 2px 5px;
         border-radius: 6px;
-        &.active{
+
+        &.active {
             background-color: $primaryColor;
             transition: all 120ms ease-in-out;
         }
@@ -75,6 +78,12 @@
     cursor: pointer;
     transition: all 120ms ease-out;
 
+    &__item{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
     &__item label {
         display: flex;
         gap: 3px;
@@ -87,6 +96,9 @@
     }
 
     &__itemsWrapper {
+        display: flex;
+        flex-direction: column;
+        gap:5px;
         overflow: hidden;
         transition: 0.5s ease all;
     }
@@ -94,6 +106,7 @@
 
 .active .options__items {
     grid-template-rows: 1fr;
+    grid-template-columns: auto;
     transition: all 120ms ease-in-out;
     padding-top: 5px;
     gap: 10px;
@@ -159,4 +172,41 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+
+//кастомные флажки
+
+#firstCheckboxes {
+    opacity: 0;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#firstCheckboxes ~ label {
+    position: relative;
+}
+
+#firstCheckboxes ~ label::before {
+    z-index: 1;
+    left: -1.55em;
+    top:-3px;
+    content: '';
+    position: absolute;
+    text-align: center;
+    color: white;
+    line-height: 1em;
+    width: 0.9em;
+    height: 0.9em;
+    border: 1px solid #3f3f3f;
+    border-radius: 0.25em;
+    margin: 0.25em;
+}
+
+#firstCheckboxes:checked ~ label::before {
+    content: url(../img/checkbox-tik.svg);
+    border: 1px solid $primaryColor;
+    background-color: $primaryColor;
 }
