@@ -1,3 +1,4 @@
+try{
 const graphicLine = document.querySelector('.progressBar__line_progress');
 const container = document.querySelector('.progressBar')
 
@@ -28,3 +29,6 @@ progress();
 window.addEventListener('resize', () => {
     progress();
 })
+}catch{
+    console.clear()
+}

@@ -1,0 +1,128 @@
+<aside class="filter">
+    <form action="" class="filter__form">
+        <div class="filter__group switchBlock">
+            <span class="heading">Категории</span>
+            <div class="options active">
+                <span class="options__heading">Производители</span>
+                <div class="options__items">
+
+                    <ul class="options__itemsWrapper">
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="Bitmain">
+                                Bitmain
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                MicroBT
+                            </label>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Монеты</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Алгоритмы</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Система охлаждения</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="filter__group">
+            <label for="price" class="filter__numbers">
+                <span class="heading">Цена (&#8381;)</span>
+                <div class="double-range-input" data-value-gap="10000">
+                    <div class="double-range-input__values">
+                        <div class="double-range-input__min-value">80 000</div>
+                        <div class="double-range-input__max-value">490 500</div>
+                    </div>
+                    <div class="double-range-input__progress">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="500" min="0" max="600000" value="80000">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="500" min="0" max="600000" value="495000">
+                    </div>
+                </div>
+            </label>
+            <label for="power" class="filter__numbers">
+                <span class="heading">Потребляемая мощность (ВТ)</span>
+                <div class="double-range-input" data-value-gap="5000">
+                    <div class="double-range-input__values">
+                        <div class="double-range-input__min-value">205</div>
+                        <div class="double-range-input__max-value">40 500</div>
+                    </div>
+                    <div class="double-range-input__progress">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="0" max="60000" value="205">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="0" max="60000" value="40500">
+                    </div>
+                </div>
+            </label>
+            <label for="hashrate" class="filter__numbers">
+                <span class="heading">Хэшрейт</span> <span class="filter__tabs">
+                    <button class="filter__tab active">MH/s</button>
+                    <button class="filter__tab">GH/s</button>
+                    <button class="filter__tab">TH/s</button>
+                </span>
+                <div class="double-range-input" data-value-gap="500">
+                    <div class="double-range-input__values">
+                        <div class="double-range-input__min-value">1</div>
+                        <div class="double-range-input__max-value">9 500</div>
+                    </div>
+                    <div class="double-range-input__progress">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="1" max="9500" value="1">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="1" max="9500" value="9500">
+                    </div>
+                </div>
+            </label>
+        </div>
+        <hr>
+        <div class="filter__group switchBlock">
+            <ul>
+                <li class="filter__switch">
+                    <span class="heading">В наличии</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="filter__switch">
+                    <span class="heading">Доступно в лизинг</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="filter__switch">
+                    <span class="heading">Быстрая доставка</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="filter__buttons">
+            <button type="submit" class="filter__submit btn btn-round__main" style="height: 40px;">Применить фильтры</button>
+            <button type="reset" class="filter__reset btn btn-round__main_black">Сбросить</button>
+        </div>
+    </form>
+</aside>

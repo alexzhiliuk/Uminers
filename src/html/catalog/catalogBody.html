@@ -1,0 +1,47 @@
+<section class="catalog section container">
+    <h2 class="section-title">
+        ASIC-Майнеры
+        <span class="mini">375 товаров</span>
+    </h2>
+    <div class="section__body">
+        <div class="catalog__content">
+            @@include('./sidebar.html')
+            <div class="catalog__items">
+                <div class="catalog__category">
+                    <ul class="categories">
+                        <li class="categories__item"><a href="#">По популярности</a></li>
+                        <li class="categories__item categories__item_active"><a href="#">По рейтингу</a></li>
+                        <li class="categories__item"><a href="#">По новинкам</a></li>
+                        <li class="categories__item"><a href="#">По повышению цены</a></li>
+                        <li class="categories__item"><a href="#">По понижению цены</a></li>
+                    </ul>
+                    <div class="categories__view">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="activeSVG">
+                            <rect width="10" height="10" rx="2" fill="#3F3F3F" />
+                            <rect y="12" width="10" height="10" rx="2" fill="#3F3F3F" />
+                            <rect x="12" width="10" height="10" rx="2" fill="#3F3F3F" />
+                            <rect x="12" y="12" width="10" height="10" rx="2" fill="#3F3F3F" />
+                        </svg>
+                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="basicSVG">
+                            <rect width="22" height="5" rx="2.5" fill="#00C1AD" />
+                            <rect y="8" width="22" height="5" rx="2.5" fill="#00C1AD" />
+                            <rect y="16" width="22" height="5" rx="2.5" fill="#00C1AD" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="catalog__cards catalog__cards_grid">
+
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
