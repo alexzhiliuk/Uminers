@@ -2931,6 +2931,13 @@ input:checked + .slider:before {
 .catalog .card__bottomWrapper div > .card__subtitle {
   display: none;
 }
+.catalog__card_red .card__price {
+  color: #F23C00;
+}
+.catalog__card_red .card__buttons .btn {
+  background-color: #F23C00;
+  color: #FFF;
+}
 
 .catalog__cards_rows .card {
   position: relative;

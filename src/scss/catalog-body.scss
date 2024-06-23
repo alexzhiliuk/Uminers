@@ -92,6 +92,7 @@
         }
     }
 
+
     .card {
 
         &__top {
@@ -228,6 +229,26 @@
         &__bottomWrapper{
             & div > .card__subtitle{
                 display: none;
+            }
+        }
+    }
+
+    &__card {
+        &_red {
+            .card {
+                $red: #F23C00;
+                &__price {
+                    color: $red;
+                }
+
+                &__buttons {
+                    .btn {
+                        background-color: $red;
+                        color: $white;
+                    }
+                }
+
+                
             }
         }
     }
