@@ -435,6 +435,10 @@ button {
   background-color: unset;
   color: #9D9D9D;
 }
+.btn_white {
+  background-color: #FFF;
+  color: #00C1AD;
+}
 
 .btn-round {
   display: flex;
@@ -1623,6 +1627,24 @@ button {
   to {
     transform: translateY(0%);
   }
+}
+.product-promo__content {
+  padding: 40px 50px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.product-promo__subtitle {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-top: 15px;
 }
 .map {
   color: white;
