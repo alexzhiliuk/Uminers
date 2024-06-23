@@ -1,6 +1,10 @@
 .catalog {
     color: white;
 
+    svg{
+        cursor: pointer;
+    }
+
     &__category {
         font-size: 16px;
         font-weight: 400;
@@ -15,7 +19,7 @@
         margin-bottom: 20px;
     }
 
-    .categories{
+    .categories {
         font-size: 16px;
         font-weight: 400;
         line-height: 21.86px;
@@ -23,39 +27,242 @@
         display: flex;
         justify-content: flex-start;
         gap: 1.5vw;
-        &__view{
+
+        &__view {
             display: flex;
             gap: 0.8vw;
-            & .basic *{
+
+            & .basicSVG * {
                 fill: #3f3f3f;
             }
-            & .active *{
+
+            & .activeSVG * {
                 fill: $primaryColor;
+            }
+            & svg{
+              transition: all 0.3s ease-in-out;  
             }
         }
     }
 
-    &__content{
+    &__content {
         display: flex;
         align-items: flex-start;
         gap: 20px;
     }
 
-    &__items{
-        width:100%;
+    &__items {
+        width: 100%;
     }
 
-    &__cards{
+    &__cards {
         gap: 20px;
-        &_grid{
+        display: flex;
+
+        &_grid {
             @extend .catalog__cards;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            flex-wrap: wrap;
         }
-        &_rows{
+
+        &_rows {
             @extend .catalog__cards;
-            display: flex;
             flex-direction: column;
         }
     }
+
+    .card {
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__categories {
+            display: flex;
+            gap: 8px;
+        }
+
+        &__category {
+            padding: 5px 10px;
+            gap: 10px;
+            border-radius: 90px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16.39px;
+            letter-spacing: -0.02em;
+
+            &:nth-child(1) {
+                border: 1px solid $primaryColor;
+                color: $primaryColor;
+            }
+
+            &:nth-child(2) {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        &>img{
+            width:80%;
+            align-self: center;
+        }
+
+        &__subtitle {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16.39px;
+            letter-spacing: -0.02em;
+            opacity: 0.3;
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.02em;
+            display: flex;
+            justify-content: space-between;
+            span{
+                max-width: 69%;
+            }
+        }
+        &__characteristics {
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+        }
+        &__characteristic {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        &__characteristicName {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 17.39px;
+            letter-spacing: -0.02em;
+            text-align: left;
+            color: #B5B5B5;
+        }
+
+        &__characteristicBlank {
+            flex-grow: 1;
+            height:1px;
+            background: #3f3f3f;
+        }
+
+        &__characteristicValue {
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 17.39px;
+            letter-spacing: -0.02em;
+            text-align: left;
+        }
+
+        &__subPrice {
+            color: #B5B5B5;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        &__price {
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 54.64px;
+            letter-spacing: -0.02em;
+
+            .mini {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                letter-spacing: -0.02em;
+                color: #B5B5B5;
+            }
+        }
+
+        &__buttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-icon{
+                display: flex;
+                gap:13px;
+                align-items: center;
+            }
+        }
+
+        &__topWrapper{
+            & > .card__categories{
+                display: none;
+            }
+        }
+
+        &__bottomWrapper{
+            & div > .card__subtitle{
+                display: none;
+            }
+        }
+    }
+}
+.catalog__cards_rows{
+    .card{
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        & > img{
+            height:30%;
+            width: auto;
+        }
+        & > .card__top .card__categories{
+            display: none;
+        }
+        & > .card__subtitle{
+            display: none;
+        }
+        &__bottomWrapper{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            & div > .card__subtitle{
+                display: block;
+            }
+        }
+        &__topWrapper{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            & > .card__categories{
+                display: flex;
+            }
+        }
+        &__title{
+            & img{
+                position: absolute;
+                top:20px;
+                left: 20px;
+                z-index: 2;
+            }
+        }
+        &__like{
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    }
+}
+.basicSVG * {
+    stroke: #3f3f3f;
+}
+
+.activeSVG * {
+    fill: $primaryColor;
+    stroke: $primaryColor;
 }

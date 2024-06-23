@@ -2594,6 +2594,9 @@ input:checked + .slider:before {
 .catalog {
   color: white;
 }
+.catalog svg {
+  cursor: pointer;
+}
 .catalog__category {
   font-size: 16px;
   font-weight: 400;
@@ -2620,11 +2623,14 @@ input:checked + .slider:before {
   display: flex;
   gap: 0.8vw;
 }
-.catalog .categories__view .basic * {
+.catalog .categories__view .basicSVG * {
   fill: #3f3f3f;
 }
-.catalog .categories__view .active * {
+.catalog .categories__view .activeSVG * {
   fill: #27a699;
+}
+.catalog .categories__view svg {
+  transition: all 0.3s ease-in-out;
 }
 .catalog__content {
   display: flex;
@@ -2636,14 +2642,183 @@ input:checked + .slider:before {
 }
 .catalog__cards, .catalog__cards_rows, .catalog__cards_grid {
   gap: 20px;
+  display: flex;
 }
 .catalog__cards_grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
 }
 .catalog__cards_rows {
+  flex-direction: column;
+}
+.catalog .card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog .card__categories {
+  display: flex;
+  gap: 8px;
+}
+.catalog .card__category {
+  padding: 5px 10px;
+  gap: 10px;
+  border-radius: 90px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.39px;
+  letter-spacing: -0.02em;
+}
+.catalog .card__category:nth-child(1) {
+  border: 1px solid #27a699;
+  color: #27a699;
+}
+.catalog .card__category:nth-child(2) {
+  background-color: white;
+  color: black;
+}
+.catalog .card > img {
+  width: 80%;
+  align-self: center;
+}
+.catalog .card__subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.39px;
+  letter-spacing: -0.02em;
+  opacity: 0.3;
+}
+.catalog .card__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  display: flex;
+  justify-content: space-between;
+}
+.catalog .card__title span {
+  max-width: 69%;
+}
+.catalog .card__characteristics {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+}
+.catalog .card__characteristic {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+.catalog .card__characteristicName {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17.39px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #B5B5B5;
+}
+.catalog .card__characteristicBlank {
+  flex-grow: 1;
+  height: 1px;
+  background: #3f3f3f;
+}
+.catalog .card__characteristicValue {
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.39px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.catalog .card__subPrice {
+  color: #B5B5B5;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+}
+.catalog .card__price {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 54.64px;
+  letter-spacing: -0.02em;
+}
+.catalog .card__price .mini {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.86px;
+  letter-spacing: -0.02em;
+  color: #B5B5B5;
+}
+.catalog .card__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog .card__buttons-icon {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.catalog .card__topWrapper > .card__categories {
+  display: none;
+}
+.catalog .card__bottomWrapper div > .card__subtitle {
+  display: none;
+}
+
+.catalog__cards_rows .card {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.catalog__cards_rows .card > img {
+  height: 30%;
+  width: auto;
+}
+.catalog__cards_rows .card > .card__top .card__categories {
+  display: none;
+}
+.catalog__cards_rows .card > .card__subtitle {
+  display: none;
+}
+.catalog__cards_rows .card__bottomWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.catalog__cards_rows .card__bottomWrapper div > .card__subtitle {
+  display: block;
+}
+.catalog__cards_rows .card__topWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.catalog__cards_rows .card__topWrapper > .card__categories {
+  display: flex;
+}
+.catalog__cards_rows .card__title img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+.catalog__cards_rows .card__like {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.basicSVG * {
+  stroke: #3f3f3f;
+}
+
+.activeSVG * {
+  fill: #27a699;
+  stroke: #27a699;
 }
 
 .footer {
