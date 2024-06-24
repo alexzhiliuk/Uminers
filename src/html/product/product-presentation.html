@@ -12,22 +12,18 @@
                     </div>
                 </div>
                 <div class="card__image">
-
+                    <img src="@img/asic-product-big.png" alt="asic miner">
                 </div>
                 <div class="card__top">
                     <img src="@img/bitcoin-card-logo.png" alt="cryptocurrency 3d logo">
                     <div class="card__characteristics_big">
                         <div class="card__characteristic">
-                            <div class="card__characteristicValue"></div>
-                            <div class="card__characteristicName"></div>
+                            <div class="card__characteristicValue">1 443 ₽</div>
+                            <div class="card__characteristicName">Доход в день</div>
                         </div>
                         <div class="card__characteristic">
-                            <div class="card__characteristicValue"></div>
-                            <div class="card__characteristicName"></div>
-                        </div>
-                        <div class="card__characteristic">
-                            <div class="card__characteristicValue"></div>
-                            <div class="card__characteristicName"></div>
+                            <div class="card__characteristicValue">12,3 мес.</div>
+                            <div class="card__characteristicName">Срок окупаемости</div>
                         </div>
                     </div>
                 </div>
@@ -36,7 +32,16 @@
         <div class="product__description catalog">
             <h2 class="product__title section-title"><span class="mini">SKU: ANTL7</span>Bitmain Antminer S21 170 Th/s
             </h2>
-            <div class="product__comments"><!--Логика отзывов--></div>
+            <div class="product__comments">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10.049 2.92704C10.3483 2.00573 11.6518 2.00573 11.9511 2.92704L13.2452 6.90983C13.3791 7.32185 13.763 7.60081 14.1963 7.60081H18.384C19.3527 7.60081 19.7555 8.84043 18.9718 9.40983L15.5838 11.8713C15.2333 12.126 15.0867 12.5773 15.2206 12.9894L16.5147 16.9721C16.814 17.8935 15.7595 18.6596 14.9758 18.0902L11.5878 15.6287C11.2373 15.374 10.7628 15.374 10.4123 15.6287L7.02428 18.0902C6.24057 18.6596 5.18609 17.8935 5.48544 16.9721L6.77953 12.9894C6.91341 12.5773 6.76675 12.126 6.41626 11.8713L3.02829 9.40983C2.24458 8.84043 2.64735 7.60081 3.61607 7.60081H7.80384C8.23707 7.60081 8.62102 7.32185 8.7549 6.90983L10.049 2.92704Z"
+                        fill="#F23C00" />
+                </svg>
+
+                <span>4.9</span>
+                <span>19 отзывов</span>
+            </div>
             <a href="" class="product__auth">Авторизуйтесь, чтобы получить скидку <img src="" alt=""></a>
             <p class="product__paragraph">Antminer S21 произведен компанией Bitmain. Работает на алгоритме Scrypt,
                 обеспечивая максимальный хэшрейт 17,6 Гбит/с при энергопотреблении всего 3260 Вт.</p>
@@ -95,30 +100,41 @@
                 </a>
             </div>
             <form action="" class="product__form form">
-                <div class="product__hashrate">
-                    <snan class="form__title">Хешрейт, TH/s</span>
+                <div class="product__hashrate form__group">
+                    <span class="form__title">Хешрейт, TH/s</span>
                         <div class="form__tabs">
-                            <label for="hashrate" class="form__tab">
-                                <input type="radio" name="hashrate" id="">
+                            <label for="hashrate1" class="form__tab">
+                                <input type="radio" name="hashrate" id="hashrate1">
                                 168
                             </label>
-                            <label for="hashrate" class="form__tab">
-                                <input type="radio" name="hashrate" id="">
+                            <label for="hashrate2" class="form__tab">
+                                <input type="radio" name="hashrate" id="hashrate2">
                                 170
                             </label>
-                            <label for="hashrate" class="form__tab">
-                                <input type="radio" name="hashrate" id="">
+                            <label for="hashrate3" class="form__tab">
+                                <input type="radio" name="hashrate" id="hashrate3" disabled>
                                 172
                             </label>
-                            <label for="hashrate" class="form__tab">
-                                <input type="radio" name="hashrate" id="">
+                            <label for="hashrate4" class="form__tab">
+                                <input type="radio" name="hashrate" id="hashrate4">
                                 174
                             </label>
                         </div>
                 </div>
-                <div class="product__amount">
-                    <snan class="form__title">Количество товара</span>
-                        <!--инпут чекнуть как сделать-->
+                <div class="product__amount form__group">
+                    <span class="form__title">Количество товара</span>
+                        <div class="form__ammount">
+                            <div class="form__symbol_left">
+                                -
+                            </div>
+                            <input type="text" name="ammount">
+                            <div class=" form__symbol_right">
+                                +
+                            </div>
+                        </div>
+                        <span class="product__minAmmount">
+                            Минимум: 10 единиц
+                        </span>
                 </div>
             </form>
             <div class="card__bottomWrapper">
