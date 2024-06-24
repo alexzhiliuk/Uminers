@@ -126,6 +126,12 @@
                 color: black;
                 @extend .card__category;
             }
+
+            &_primary {
+                background-color: $primaryColor;
+                color: black;
+                @extend .card__category;
+            }
         }
 
         &>img{
@@ -223,6 +229,9 @@
         }
 
         &__topWrapper{
+            display: flex;
+            flex-direction: column;
+            gap:10px;            
             margin-bottom: 20px;
             & > .card__categories{
                 display: none;
@@ -253,8 +262,6 @@
                         color: $white;
                     }
                 }
-
-                
             }
         }
     }
@@ -285,9 +292,6 @@
             }
         }
         &__topWrapper{
-            display: flex;
-            flex-direction: column;
-            gap:10px;
             & > .card__categories{
                 display: flex;
                 margin-bottom: 10px;

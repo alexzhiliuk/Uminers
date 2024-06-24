@@ -188,6 +188,18 @@ button {
         background-color: $white;
         color: $brightPrimaryColor;
     }
+
+    &_outlined_primary{
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+        background-color: black;
+    }
+
+    &_outlined_black{
+        color: #B3B3B3;
+        border: 1px solid #B3B3B3;
+        background-color: black;
+    }
 }
 
 .btn-round {
@@ -225,6 +237,12 @@ button {
         
         &_black{
             color: $primaryColor;
+            background-color: black;
+            @extend .btn-round__main;
+        }
+        &_outlined{
+            color: $primaryColor;
+            border: 1px solid $primaryColor;
             background-color: black;
             @extend .btn-round__main;
         }

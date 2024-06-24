@@ -1,0 +1,44 @@
+.product {
+    &__content {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        font-family: Manrope;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        text-align: left;
+    }
+
+    &__auth {
+        display: flex;
+        overflow: clip;
+        padding: 10px 20px;
+        background-color: #222;
+        border-radius: 5px;
+        width: 100%;
+        justify-content: space-between;
+        color: $primaryColor;
+    }
+
+    &__calculations {
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 29.07px;
+        letter-spacing: -0.02em;
+        svg{
+            height: 1.3em;
+        }
+        .btn{
+            padding: 11px 12px;
+            gap:5px;
+        }
+    }
+}
