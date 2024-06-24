@@ -1,6 +1,6 @@
 try{
 const filters = document.querySelectorAll('.categories__view>svg');
-const likes = document.querySelectorAll('.card__top svg');
+const likes = document.querySelectorAll('.card__like svg');
 const grid = document.querySelector('.catalog__cards');
 
 filters.forEach(elem => {
