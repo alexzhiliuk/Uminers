@@ -1,7 +1,48 @@
 <section class="section container product">
     <div class="product__content">
         <div class="product__images catalog">
-            <aside class="product__gallery"><!--Swiper logic--></aside>
+            <aside class="product__gallery">
+                <div class="product__slider-btn" id="productSwiperPrev">
+                    <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M39 21L20.725 1.76316C20.3307 1.34816 19.6693 1.34816 19.275 1.76316L0.999997 21" stroke="#969696" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                        
+                </div>
+                <div class="product__slider swiper" id="productSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img product__gallery-img_active">
+                                <img src="@img/product/product-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="@img/product/product-2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="@img/product/product-3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="@img/product/product-4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="@img/product/product-1.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="product__slider-btn" id="productSwiperNext">
+                    <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L19.275 20.2368C19.6693 20.6518 20.3307 20.6518 20.725 20.2368L39 0.999999" stroke="#969696" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                        
+                </div>
+            </aside>
             <div class="product__image card">
                 <div class="card__top">
                     <div class="card__category_outlined">Новинка</div>
