@@ -1,0 +1,99 @@
+
+.tabs {
+
+    max-width: fit-content;
+
+    // .tabs__header
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        max-width: fit-content;
+
+        border-bottom: 1px solid #909090;
+    }
+
+    // .tabs__item
+    &__item {
+
+        padding: 10px;
+        cursor: pointer;
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+
+        color: #FFFFFF;
+
+        // .tabs__item_active
+        &_active {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                border-radius: 2px;
+                background-color: $brightPrimaryColor;
+                translate: 0 50%;
+            }
+        }
+    }
+
+    // .tabs__content
+    &__content {
+        margin-top: 30px;
+    }
+
+    // .tabs__body
+    &__body {
+    }
+
+    &__text {
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+
+        color: #FFFFFF;
+        max-width: 615px;
+    }
+}
+
+.specifications-table {
+
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.15;
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+        padding: 20px 0;
+        border-bottom: 1px solid #585858;
+    }
+
+    // .specifications-table__title
+    &__title {
+
+        color: #B5B5B5;
+        width: 300px;
+
+    }
+
+    // .specifications-table__value
+    &__value {
+        color: #fff;
+        
+    }
+}

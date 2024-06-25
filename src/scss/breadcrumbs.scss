@@ -1,0 +1,30 @@
+.breadcrumbs {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+
+    // .breadcrumbs__item
+    &__item {
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        color: #FFFFFF;
+
+        &:last-of-type {
+            color: #9D9D9D;
+        }
+
+
+    }
+
+    // .breadcrumbs__arrow
+    &__arrow {
+        display: flex;
+    }
+}
