@@ -9,6 +9,8 @@ import * as reviewsSlider from './modules/reviews.js'
 import * as tabsFilter from './modules/tabsFilter.js'
 import * as catalogGrid from './modules/catalogGrid.js'
 import * as rangeInput from './modules/rangeInput.js'
+import * as productForm from './modules/productForm.js'
+import * as productSlider from './modules/productSlider.js'
 import * as tabs from './modules/tabs.js'
 
 
