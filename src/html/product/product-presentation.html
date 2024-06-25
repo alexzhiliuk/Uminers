@@ -5,8 +5,9 @@
             <aside class="product__gallery">
                 <div class="product__slider-btn" id="productSwiperPrev">
                     <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M39 21L20.725 1.76316C20.3307 1.34816 19.6693 1.34816 19.275 1.76316L0.999997 21" stroke="#969696" stroke-width="2" stroke-linecap="round"/>
-                    </svg>                        
+                        <path d="M39 21L20.725 1.76316C20.3307 1.34816 19.6693 1.34816 19.275 1.76316L0.999997 21"
+                            stroke="#969696" stroke-width="2" stroke-linecap="round" />
+                    </svg>
                 </div>
                 <div class="product__slider swiper" id="productSwiper">
                     <div class="swiper-wrapper">
@@ -35,13 +36,14 @@
                                 <img src="@img/product/product-1.png" alt="">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="product__slider-btn" id="productSwiperNext">
                     <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L19.275 20.2368C19.6693 20.6518 20.3307 20.6518 20.725 20.2368L39 0.999999" stroke="#969696" stroke-width="2" stroke-linecap="round"/>
-                    </svg>                        
+                        <path d="M1 1L19.275 20.2368C19.6693 20.6518 20.3307 20.6518 20.725 20.2368L39 0.999999"
+                            stroke="#969696" stroke-width="2" stroke-linecap="round" />
+                    </svg>
                 </div>
             </aside>
             <div class="product__image card">
@@ -72,7 +74,18 @@
             </div>
         </div>
         <div class="product__description catalog">
-            <h2 class="product__title section-title"><span class="mini">SKU: ANTL7</span>Bitmain Antminer S21 170 Th/s
+            <h2 class="product__title section-title">
+                <div class="product__title-wrapper">
+                    <span class="mini">SKU: ANTL7</span>
+                    Bitmain Antminer S21 170 Th/s
+                </div>
+                <div class="card__like">
+                    <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="basicSVG">
+                        <path
+                            d="M3.45181 11.7224L12.353 20.3713C12.7133 20.7214 13.2867 20.7214 13.647 20.3713L22.5482 11.7224C24.5422 9.78487 24.8501 6.6924 23.2771 4.3998C20.9129 0.954049 15.7691 1.13345 13.6508 4.73553L13.2027 5.49748C13.1118 5.65206 12.8882 5.65206 12.7973 5.49748L12.3492 4.73553C10.2309 1.13344 5.08708 0.954049 2.72292 4.3998C1.14994 6.6924 1.45776 9.78487 3.45181 11.7224Z"
+                            stroke="#3F3F3F" stroke-width="2" />
+                    </svg>
+                </div>
             </h2>
             <div class="product__comments">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,39 +157,39 @@
             <form action="" class="product__form form">
                 <div class="product__hashrate form__group">
                     <span class="form__title">Хешрейт, TH/s</span>
-                        <div class="form__tabs">
-                            <label for="hashrate1" class="form__tab">
-                                <input type="radio" name="hashrate" id="hashrate1">
-                                168
-                            </label>
-                            <label for="hashrate2" class="form__tab">
-                                <input type="radio" name="hashrate" id="hashrate2">
-                                170
-                            </label>
-                            <label for="hashrate3" class="form__tab">
-                                <input type="radio" name="hashrate" id="hashrate3" disabled>
-                                172
-                            </label>
-                            <label for="hashrate4" class="form__tab">
-                                <input type="radio" name="hashrate" id="hashrate4">
-                                174
-                            </label>
-                        </div>
+                    <div class="form__tabs">
+                        <label for="hashrate1" class="form__tab">
+                            <input type="radio" name="hashrate" id="hashrate1">
+                            168
+                        </label>
+                        <label for="hashrate2" class="form__tab">
+                            <input type="radio" name="hashrate" id="hashrate2">
+                            170
+                        </label>
+                        <label for="hashrate3" class="form__tab">
+                            <input type="radio" name="hashrate" id="hashrate3" disabled>
+                            172
+                        </label>
+                        <label for="hashrate4" class="form__tab">
+                            <input type="radio" name="hashrate" id="hashrate4">
+                            174
+                        </label>
+                    </div>
                 </div>
                 <div class="product__amount form__group">
                     <span class="form__title">Количество товара</span>
-                        <div class="form__ammount">
-                            <div class="form__symbol_left">
-                                -
-                            </div>
-                            <input type="text" name="ammount">
-                            <div class=" form__symbol_right">
-                                +
-                            </div>
+                    <div class="form__ammount">
+                        <div class="form__symbol_left">
+                            -
                         </div>
-                        <span class="product__minAmmount">
-                            Минимум: 10 единиц
-                        </span>
+                        <input type="text" name="ammount">
+                        <div class=" form__symbol_right">
+                            +
+                        </div>
+                    </div>
+                    <span class="product__minAmmount">
+                        Минимум: 10 единиц
+                    </span>
                 </div>
             </form>
             <div class="card__bottomWrapper">

@@ -3279,14 +3279,18 @@ input:checked + .slider:before {
 }
 .product__title {
   display: flex;
-  flex-direction: column;
-  font-family: Manrope;
+  justify-content: space-between;
+  align-items: flex-start;
   font-size: 40px;
   font-weight: 500;
   line-height: 40px;
   letter-spacing: -0.02em;
   text-align: left;
+}
+.product__title-wrapper {
+  display: flex;
   max-width: 73%;
+  flex-direction: column;
 }
 .product__auth {
   display: flex;
