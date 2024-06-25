@@ -1,43 +1,45 @@
+
 .mobile-menu {
 
     position: fixed;
     z-index: $mobileMenuLayer;
     top: 0;
-    left: 100%;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0, 0, 0, .6);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    translate: 100%;
+    overflow-y: auto;
+    background: rgba(0, 0, 0);
 
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: 20px;
 
+    padding: 20px;
     transition: $calmTransition;
     opacity: 0;
 
     &_active {
-        left: 0;
+        translate: 0;
         opacity: 1;
     }
 
-    // .mobile-menu__inner
-    &__inner {
+    // .mobile-menu__header
+    &__header {
         display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        height: 100%;
-        padding: 40px 24px 24px;
-        max-width: fit-content;
-        background-color: #101010;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
     }
 
-    // .mobile-menu__logo
-    &__logo {
-        max-width: 120px;
+    // .mobile-menu__search
+    &__search {
+        flex: 0 1 100%;
+        @include search-input;
+    }
 
-        img {
-            width: 100%;
-        }
+    // .mobile-menu__close
+    &__close {
     }
 
     // .mobile-menu__nav
@@ -48,35 +50,65 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 15px;
     }
 
     // .mobile-menu__list-item
     &__list-item {
-        &:last-child {
-            margin-top: 16px;
-        }
     }
 
     // .mobile-menu__list-link
     &__list-link {
-
-        font-size: 20px;
+        font-style: normal;
         font-weight: 500;
-        color: $white;
+        font-size: 20px;
+        line-height: 27px;
+        color: #FFFFFF;
+    }
 
-        // .mobile-menu__list-link_active
-        &_active {
-            color: $primaryColor;
+    // .mobile-menu__icons
+    &__icons {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    // .mobile-menu__icon-wrpapper
+    &__icon-wrapper {
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+
         }
     }
 
-    // .mobile-menu__phone
-    &__phone {
-        font-size: 20px;
-        font-weight: 500;
-        color: $primaryColor;
-        margin-top: auto;
+    // .mobile-menu__icon
+    &__icon {
+        flex: 0 0 40px;
+    }
+
+    // .mobile-menu__contacts
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #9C9C9C;
+
     }
 
     // .mobile-menu__socials
@@ -85,59 +117,10 @@
         align-items: center;
         gap: 10px;
     }
-    
+
     // .mobile-menu__social
     &__social {
         display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background-color: $white;
-        border-radius: 50%;
-        height: 30px;
-        width: 30px;
-
-        svg {
-            path {
-                fill: #101010;
-            }
-        }
-    }
-
-    // .mobile-menu__close
-    &__close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-
-        width: 40px;
-        height: 40px;
-        background-color: unset;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &::before {
-            @include burger-line;
-            
-            content: '';
-            position: absolute;
-            rotate: 45deg;
-            translate: -50%;
-            left: 50%;
-            max-width: 30px;
-        }
-        &::after {
-            @include burger-line;
-            
-            content: '';
-            position: absolute;
-            rotate: -45deg;
-            translate: 50%;
-            right: 50%;
-            max-width: 30px;
-        }
     }
 }
 
