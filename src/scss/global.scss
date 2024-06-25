@@ -85,6 +85,20 @@ body {
     background-color: $black;
 }
 
+main {
+    padding-top: 140px;
+
+    @media screen and (max-width: $burgerBreakpoint) {
+        padding-top: 80px;
+    }
+
+    & > * {
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+}
+
 ul {
     list-style-type: none;
 }

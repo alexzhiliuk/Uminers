@@ -354,6 +354,18 @@ body {
   background-color: #000;
 }
 
+main {
+  padding-top: 140px;
+}
+@media screen and (max-width: 1365.98px) {
+  main {
+    padding-top: 80px;
+  }
+}
+main > *:first-of-type {
+  margin-top: 0;
+}
+
 ul {
   list-style-type: none;
 }
@@ -1079,7 +1091,6 @@ button {
 }
 .hero_about {
   margin-top: 0;
-  padding-top: 120px;
   padding-bottom: 0;
 }
 .hero_about .hero__bg {
@@ -1092,7 +1103,6 @@ button {
 }
 .hero_datacenter {
   margin-top: 0;
-  padding-top: 120px;
   padding-bottom: 0;
 }
 .hero_datacenter .hero__text {
@@ -2521,8 +2531,8 @@ button {
 
 .banner {
   margin-bottom: -80px;
-  margin-top: 90px;
   max-width: 1200px;
+  margin-top: 0;
   height: 80px;
 }
 @media (max-width: 991.98px) {
