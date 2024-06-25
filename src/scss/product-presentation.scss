@@ -97,15 +97,19 @@
     }
 
     &__title {
+        &-wrapper{
         display: flex;
+        max-width: 73%;
         flex-direction: column;
-        font-family: Manrope;
+    }
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
         font-size: 40px;
         font-weight: 500;
         line-height: 40px;
         letter-spacing: -0.02em;
         text-align: left;
-        max-width: 73%;
     }
 
     &__auth {
