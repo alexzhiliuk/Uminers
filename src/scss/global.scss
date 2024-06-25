@@ -47,8 +47,9 @@
 
 @mixin burger-line {
     display: flex;
-    height: 2px;
+    height: 3px;
     width: 100%;
+    border-radius: 2px;
     background-color: $white;
     transition: $calmTransition;
 }
