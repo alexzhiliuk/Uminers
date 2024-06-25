@@ -135,6 +135,11 @@
                 color: black;
                 @extend .card__category;
             }
+
+            &_red{
+                background-color: #F23C00;
+                @extend .card__category;
+            }
         }
 
         &>img{

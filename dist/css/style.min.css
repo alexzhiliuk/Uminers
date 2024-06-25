@@ -2840,7 +2840,7 @@ input:checked + .slider:before {
   gap: 8px;
   flex-wrap: wrap;
 }
-.catalog .card__category, .catalog .card__category_primary, .catalog .card__category_white, .catalog .card__category_outlined {
+.catalog .card__category, .catalog .card__category_red, .catalog .card__category_primary, .catalog .card__category_white, .catalog .card__category_outlined {
   padding: 5px 10px;
   gap: 10px;
   border-radius: 90px;
@@ -2861,6 +2861,9 @@ input:checked + .slider:before {
 .catalog .card__category_primary {
   background-color: #27a699;
   color: black;
+}
+.catalog .card__category_red {
+  background-color: #F23C00;
 }
 .catalog .card > img {
   width: 80%;
