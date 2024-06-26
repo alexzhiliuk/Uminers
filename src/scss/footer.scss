@@ -3,7 +3,7 @@
     background-color: $backgroundCardColor;
     border-radius: 40px 40px 0 0;
     padding-top: 40px;
-
+    overflow: clip;
 
     // .footer__row
     &__row {
@@ -15,6 +15,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         @media screen and (max-width: $breakpoint992) {
             align-items: flex-start;
         }
@@ -34,7 +35,7 @@
 
     // .footer__item-caption
     &__item-caption {
-        color: #404040;
+        color: #3F3F3F;
         font-size: 14px;
         line-height: 1.55;
         font-weight: 400;
@@ -72,7 +73,7 @@
 
     // .footer__text
     &__text {
-        color:#9D9D9D;
+        color: #9D9D9D;
         font-size: 16px;
         max-width: 432px;
     }
@@ -119,17 +120,35 @@
 
         li,
         a {
-            color: #8c8c8c;
+            color: rgba($color: #FFF, $alpha: .3);
             font-size: 16px;
             line-height: 1.55;
             font-weight: 300;
             padding: 16px 0;
+            position: relative;
+            z-index: 1;
         }
 
         a {
             &:hover {
                 color: $white;
             }
+        }
+
+        
+        position: relative;
+        .footer__gradient {
+            // opacity: .8;
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            left: 0;
+            bottom: 0;
+            width: 911px;
+            height: 911px;
+            translate: -45% 45%;
+            background-image: url(../img/background-gradient.png);
+            background-size: cover;
         }
     }
 }
