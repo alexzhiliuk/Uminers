@@ -11,21 +11,6 @@
         justify-content: space-between;
         gap: 20px;
 
-        &:nth-of-type(2) {
-            position: relative;
-                & .footer__gradient {
-                    position: absolute;
-                    left: calc((100vw - 100%)/2);
-                    bottom: 0;
-                    width: 911px;
-                    height: 911px;
-                    translate: -50% 50%;
-                    background-image: url(../img//background-gradient.png);
-                    background-size: cover;
-            }
-        }
-
-
         @media screen and (max-width: $breakpoint1200) {
             flex-direction: column;
             align-items: center;
@@ -50,7 +35,7 @@
 
     // .footer__item-caption
     &__item-caption {
-        color: #404040;
+        color: #3F3F3F;
         font-size: 14px;
         line-height: 1.55;
         font-weight: 400;
@@ -135,17 +120,35 @@
 
         li,
         a {
-            color: #8c8c8c;
+            color: rgba($color: #FFF, $alpha: .3);
             font-size: 16px;
             line-height: 1.55;
             font-weight: 300;
             padding: 16px 0;
+            position: relative;
+            z-index: 1;
         }
 
         a {
             &:hover {
                 color: $white;
             }
+        }
+
+        
+        position: relative;
+        .footer__gradient {
+            // opacity: .8;
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            left: 0;
+            bottom: 0;
+            width: 911px;
+            height: 911px;
+            translate: -45% 45%;
+            background-image: url(../img/background-gradient.png);
+            background-size: cover;
         }
     }
 }

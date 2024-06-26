@@ -653,6 +653,7 @@ button {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.35;
   background: none;
   color: #9C9C9C;
 }
@@ -1006,6 +1007,7 @@ button {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.35;
   background: none;
   color: #9C9C9C;
 }
@@ -3424,19 +3426,6 @@ input:checked + .slider:before {
   justify-content: space-between;
   gap: 20px;
 }
-.footer__row:nth-of-type(2) {
-  position: relative;
-}
-.footer__row:nth-of-type(2) .footer__gradient {
-  position: absolute;
-  left: calc((100vw - 100%) / 2);
-  bottom: 0;
-  width: 911px;
-  height: 911px;
-  translate: -50% 50%;
-  background-image: url(../img//background-gradient.png);
-  background-size: cover;
-}
 @media screen and (max-width: 1199.98px) {
   .footer__row {
     flex-direction: column;
@@ -3455,7 +3444,7 @@ input:checked + .slider:before {
   min-width: min(100%, 180px);
 }
 .footer__item-caption {
-  color: #404040;
+  color: #3F3F3F;
   font-size: 14px;
   line-height: 1.55;
   font-weight: 400;
@@ -3517,17 +3506,32 @@ input:checked + .slider:before {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  position: relative;
 }
 .footer__copy-list li,
 .footer__copy-list a {
-  color: #8c8c8c;
+  color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
   line-height: 1.55;
   font-weight: 300;
   padding: 16px 0;
+  position: relative;
+  z-index: 1;
 }
 .footer__copy-list a:hover {
   color: #FFF;
+}
+.footer__copy-list .footer__gradient {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  width: 911px;
+  height: 911px;
+  translate: -45% 45%;
+  background-image: url(../img/background-gradient.png);
+  background-size: cover;
 }
 
 .product-banner {
