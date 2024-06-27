@@ -1,0 +1,24 @@
+<section class="container m-90">
+    <h2 class="section-title section-title_thin" style="display: flex; align-items: center; gap: 10px;">
+        <svg width="18" height="50" viewBox="0 0 18 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_113_2020)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66022 45.8368L7 26L-0.100586 25.8775L4 5.5H13L10 19.5521H17.9394L4.66022 45.8368Z" fill="#F23C00"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_113_2020">
+            <rect width="18" height="50" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+        Предложение недели
+    </h2>
+    <div class="section__body catalog__cards catalog__cards_grid catalog">
+        @@include('../product/productCard.html')
+        @@include('../product/productCard.html')
+        @@include('../product/productCard.html')
+        @@include('../product/productCard.html')
+    </div>
+    <div class="btn-round" style="margin-top: 20px; display: flex; justify-content: center;">
+        <a href="catalog.html" class="btn-round__main">Перейти в каталог</a>
+    </div>
+</section>
