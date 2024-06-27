@@ -3810,6 +3810,14 @@ input:checked + .slider:before {
 .reviews__btn {
   cursor: pointer;
 }
+.reviews__btn.swiper-button-disabled {
+  opacity: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .reviews__btn {
+    display: none;
+  }
+}
 .reviews__swiper {
   flex-grow: 1;
 }
@@ -3818,6 +3826,11 @@ input:checked + .slider:before {
   border-radius: 10px;
   background-color: #222222;
   padding: 20px 5px 20px 25px;
+}
+@media screen and (max-width: 991.98px) {
+  .review.swiper-slide {
+    width: 300px;
+  }
 }
 .review__stars {
   display: flex;
