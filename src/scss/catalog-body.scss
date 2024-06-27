@@ -99,6 +99,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 10px;
         }
 
         &__categories {
@@ -144,6 +145,7 @@
 
         &>img{
             width:80%;
+            max-width: 228px;
             align-self: center;
         }
 
@@ -240,6 +242,10 @@
             font-weight: 500;
             line-height: 54.64px;
             letter-spacing: -0.02em;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 8px;
 
             .mini {
                 font-size: 16px;
@@ -247,6 +253,7 @@
                 line-height: 21.86px;
                 letter-spacing: -0.02em;
                 color: #B5B5B5;
+                margin-bottom: 4px;
             }
         }
 
