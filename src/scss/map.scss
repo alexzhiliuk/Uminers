@@ -1,5 +1,10 @@
 .map{
     color:white;
+
+    @media (max-width: $breakpoint992) {
+        padding-bottom: 60px;
+    }
+
     &__title{
         max-width: 80%;
         @media (max-width: $breakpoint992) {

@@ -478,7 +478,7 @@ button {
 .btn-round__main, .btn-round__main_outlined, .btn-round__main_black {
   font-size: 18px;
   font-weight: 500;
-  color: #FFF;
+  color: #000;
   background-color: #27a699;
   padding: 16px 32px;
   border-radius: 30px;
@@ -1928,6 +1928,11 @@ button {
 
 .map {
   color: white;
+}
+@media (max-width: 991.98px) {
+  .map {
+    padding-bottom: 60px;
+  }
 }
 .map__title {
   max-width: 80%;
@@ -4100,6 +4105,53 @@ input:checked + .slider:before {
 }
 .specifications-table__value {
   color: #fff;
+}
+
+.crypto {
+  width: 100%;
+  background-color: #222222;
+  border-radius: 15px;
+  padding: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 10px;
+}
+@media screen and (max-width: 575.98px) {
+  .crypto {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+  .crypto::-webkit-scrollbar {
+    display: none;
+  }
+}
+.crypto__item {
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+}
+.crypto__item img {
+  height: 45px;
+  width: auto;
+}
+.crypto__item_active {
+  color: #282828;
+  background-color: #00C1AD;
 }
 
 @font-face {
