@@ -1522,6 +1522,18 @@ button {
   margin-top: 130px;
   margin-bottom: 130px;
 }
+@media screen and (max-width: 767.98px) {
+  .section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
 .section_bg {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1561,10 +1573,34 @@ button {
   margin-top: 90px;
   margin-bottom: 90px;
 }
+@media screen and (max-width: 767.98px) {
+  .m-90 {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .m-90 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
 
 .m-100 {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+@media screen and (max-width: 767.98px) {
+  .m-100 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .m-100 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .progress {
@@ -3605,6 +3641,17 @@ input:checked + .slider:before {
   padding: 40px 50px;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+}
+@media screen and (max-width: 1199.98px) {
+  .product-banner {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .product-banner {
+    padding: 20px;
+  }
 }
 .product-banner__title {
   font-family: "Manrope";
@@ -3614,6 +3661,11 @@ input:checked + .slider:before {
   line-height: 100%;
   letter-spacing: -0.02em;
   color: #FFFFFF;
+}
+@media screen and (max-width: 575.98px) {
+  .product-banner__title {
+    font-size: 30px;
+  }
 }
 .product-banner__list {
   display: flex;
@@ -3634,7 +3686,13 @@ input:checked + .slider:before {
   line-height: 1.375;
   color: #FFFFFF;
 }
+@media screen and (max-width: 767.98px) {
+  .product-banner__list li {
+    flex: 0 0 100%;
+  }
+}
 .product-banner__list li span {
+  flex-shrink: 0;
   display: block;
   width: 10px;
   height: 10px;
@@ -3647,10 +3705,22 @@ input:checked + .slider:before {
   align-items: center;
   margin-top: 35px;
 }
+@media screen and (max-width: 767.98px) {
+  .product-banner__btns {
+    flex-direction: column;
+    align-items: unset;
+    gap: 10px;
+  }
+}
 .product-banner__cards {
   display: flex;
   gap: 20px;
   justify-content: flex-end;
+}
+@media screen and (max-width: 767.98px) {
+  .product-banner__cards {
+    flex-direction: column;
+  }
 }
 .product-banner__card {
   border-radius: 20px;
@@ -3661,6 +3731,18 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 1199.98px) {
+  .product-banner__card {
+    flex-grow: 1;
+    gap: 20px;
+    aspect-ratio: unset;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .product-banner__card {
+    flex: unset;
+  }
+}
 .product-banner__card-title {
   font-family: "Manrope";
   font-style: normal;
@@ -3669,6 +3751,11 @@ input:checked + .slider:before {
   line-height: 100%;
   letter-spacing: -0.02em;
   color: #00C1AD;
+}
+@media screen and (max-width: 575.98px) {
+  .product-banner__card-title {
+    font-size: 40px;
+  }
 }
 .product-banner__card-text {
   margin-top: auto;
