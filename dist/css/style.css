@@ -3963,8 +3963,16 @@ input:checked + .slider:before {
   align-items: center;
   gap: 8px;
   margin-bottom: 30px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.breadcrumbs::-webkit-scrollbar {
+  display: none;
 }
 .breadcrumbs__item {
+  flex-shrink: 0;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -3976,6 +3984,7 @@ input:checked + .slider:before {
   color: #9D9D9D;
 }
 .breadcrumbs__arrow {
+  flex-shrink: 0;
   display: flex;
 }
 
