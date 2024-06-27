@@ -659,6 +659,7 @@ button {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.35;
   background: none;
   color: #9C9C9C;
 }
@@ -1012,6 +1013,7 @@ button {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.35;
   background: none;
   color: #9C9C9C;
 }
@@ -3662,6 +3664,7 @@ input:checked + .slider:before {
   background-color: #262626;
   border-radius: 40px 40px 0 0;
   padding-top: 40px;
+  overflow: clip;
 }
 .footer__row {
   display: flex;
@@ -3686,7 +3689,7 @@ input:checked + .slider:before {
   min-width: min(100%, 180px);
 }
 .footer__item-caption {
-  color: #404040;
+  color: #3F3F3F;
   font-size: 14px;
   line-height: 1.55;
   font-weight: 400;
@@ -3748,17 +3751,32 @@ input:checked + .slider:before {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  position: relative;
 }
 .footer__copy-list li,
 .footer__copy-list a {
-  color: #8c8c8c;
+  color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
   line-height: 1.55;
   font-weight: 300;
   padding: 16px 0;
+  position: relative;
+  z-index: 1;
 }
 .footer__copy-list a:hover {
   color: #FFF;
+}
+.footer__copy-list .footer__gradient {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  width: 911px;
+  height: 911px;
+  translate: -45% 45%;
+  background-image: url(../img/background-gradient.png);
+  background-size: cover;
 }
 
 .product-banner {
