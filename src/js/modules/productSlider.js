@@ -4,16 +4,22 @@ Swiper.use([Autoplay, Navigation, Pagination]);
 
 
 const swiperHero = new Swiper('#productSwiper', {
-    slidesPerView: 4,
+    slidesPerView: 'auto',
     spaceBetween: 10,
     speed: 1500,
     freeMode: true,
-    direction: "vertical",
 
     navigation: {
         nextEl: '#productSwiperNext',
         prevEl: '#productSwiperPrev',
     },
+
+    breakpoints: {
+        1200: {
+            slidesPerView: 4,
+            direction: "vertical",
+        }
+    }
 
     
 });
