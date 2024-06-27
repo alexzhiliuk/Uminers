@@ -1421,9 +1421,21 @@ button {
   display: flex;
   justify-content: center;
 }
+.card__img_bottom img {
+  height: 100%;
+  width: 95%;
+  object-fit: contain;
+  object-position: center bottom;
+}
 .card__img_right {
   display: flex;
   justify-content: flex-end;
+}
+.card__img_right img {
+  height: 100%;
+  width: 95%;
+  object-fit: contain;
+  object-position: right bottom;
 }
 .card__img_full {
   width: 100%;
