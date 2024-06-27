@@ -41,3 +41,15 @@ likes.forEach(elem => {
 }catch{
     console.clear()
 }
+
+$(".categories__item").click(function() {
+    $(this).parent().find(".categories__item").removeClass("categories__item_active")
+    $(this).addClass("categories__item_active")
+})
+
+$(".filter__close").click(function() {
+    $(this).parents(".filter").removeClass("filter_active")
+})
+$(".catalog__open-filters").click(function() {
+    $(".filter").addClass("filter_active")
+})

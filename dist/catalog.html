@@ -530,6 +530,12 @@
     <div class="section__body">
         <div class="catalog__content">
             <aside class="filter">
+    <a href="javascript:void(0)" class="filter__close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2.00001L2 16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16 16L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>                
+    </a>
     <form action="" class="filter__form">
         <div class="filter__group switchBlock">
             <span class="heading">Категории</span>
@@ -558,7 +564,56 @@
                 <span class="options__heading">Монеты</span>
                 <div class="options__items">
                     <ul class="options__itemsWrapper">
-                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="Bitmain">
+                                Bitcoin
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Litecoin
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Ethereum Classic
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Kadena
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Dogecoin
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Kaspa
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Nervos
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Bitcoin cash
+                            </label>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -566,7 +621,36 @@
                 <span class="options__heading">Алгоритмы</span>
                 <div class="options__items">
                     <ul class="options__itemsWrapper">
-                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                SHA-256
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Scrypt
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                KHeavyHash
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                EtHash
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Kadena
+                            </label>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -574,7 +658,18 @@
                 <span class="options__heading">Система охлаждения</span>
                 <div class="options__items">
                     <ul class="options__itemsWrapper">
-                        <!--я хз ч тут должно быть по идее это всё в админке через http реквест делать-->
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Жидкостное охлаждение
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Воздушное охлаждение
+                            </label>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -619,8 +714,8 @@
                         <div class="double-range-input__max-value">9 500</div>
                     </div>
                     <div class="double-range-input__progress">
-                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="1" max="9500" value="1">
-                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="1" max="9500" value="9500">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="0" max="9500" value="1">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="0" max="9500" value="9500">
                     </div>
                 </div>
             </label>
@@ -680,10 +775,16 @@
                         </svg>
                     </div>
                 </div>
+                <a href="javascript:void(0)" class="catalog__open-filters btn">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 7.31543L12.5 7.31543M12.5 7.31543C12.5 8.69614 13.6193 9.81543 15 9.81543C16.3807 9.81543 17.5 8.69614 17.5 7.31543C17.5 5.93472 16.3807 4.81543 15 4.81543C13.6193 4.81543 12.5 5.93472 12.5 7.31543ZM7.5 13.9821L17.5 13.9821M7.5 13.9821C7.5 15.3628 6.38071 16.4821 5 16.4821C3.61929 16.4821 2.5 15.3628 2.5 13.9821C2.5 12.6014 3.61929 11.4821 5 11.4821C6.38071 11.4821 7.5 12.6014 7.5 13.9821Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Фильтры
+                </a>
 
                 <div class="catalog__cards catalog__cards_grid">
 
-                  <div class="catalog__card card cards__item_bigger">
+                  <div class="catalog__card card cards__item">
     <div class="card__top">
         <div class="card__categories">
             <div class="card__category_outlined">Новинка</div>
@@ -786,7 +887,7 @@
         </svg>
     </div>
 </div>
-                  <div class="catalog__card card cards__item_bigger">
+                  <div class="catalog__card card cards__item">
     <div class="card__top">
         <div class="card__categories">
             <div class="card__category_outlined">Новинка</div>
@@ -889,7 +990,7 @@
         </svg>
     </div>
 </div>
-                  <div class="catalog__card card cards__item_bigger">
+                  <div class="catalog__card card cards__item">
     <div class="card__top">
         <div class="card__categories">
             <div class="card__category_outlined">Новинка</div>
@@ -992,7 +1093,7 @@
         </svg>
     </div>
 </div>
-                  <div class="catalog__card card cards__item_bigger">
+                  <div class="catalog__card card cards__item">
     <div class="card__top">
         <div class="card__categories">
             <div class="card__category_outlined">Новинка</div>
@@ -1095,7 +1196,7 @@
         </svg>
     </div>
 </div>
-                  <div class="catalog__card card cards__item_bigger">
+                  <div class="catalog__card card cards__item">
     <div class="card__top">
         <div class="card__categories">
             <div class="card__category_outlined">Новинка</div>
@@ -1198,7 +1299,7 @@
         </svg>
     </div>
 </div>
-                  <div class="catalog__card card cards__item_bigger">
+                  <div class="catalog__card card cards__item">
     <div class="card__top">
         <div class="card__categories">
             <div class="card__category_outlined">Новинка</div>

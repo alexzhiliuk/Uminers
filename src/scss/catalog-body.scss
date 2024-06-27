@@ -13,10 +13,23 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
         background: #222;
         padding: 9px 20px;
         border-radius: 34px;
         margin-bottom: 20px;
+
+        @media screen and (max-width: $breakpoint992) {
+            border-radius: 10px;
+        }
+    }
+
+    &__open-filters {
+        margin-bottom: 20px;
+        
+        @media screen and (min-width: $breakpoint992) {
+            display: none;
+        }
     }
 
     .categories {
@@ -27,6 +40,11 @@
         display: flex;
         justify-content: flex-start;
         gap: 1.5vw;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $breakpoint992) {
+            gap: 10px;
+        }
 
         &__view {
             display: flex;
@@ -41,6 +59,10 @@
             }
             & svg{
               transition: all 0.3s ease-in-out;  
+            }
+
+            @media screen and (max-width: $breakpoint1200) {
+                display: none;
             }
         }
 
@@ -80,15 +102,19 @@
     &__cards {
         gap: 20px;
         display: flex;
+        flex-wrap: wrap;
 
         &_grid {
             @extend .catalog__cards;
-            flex-wrap: wrap;
         }
 
         &_rows {
             @extend .catalog__cards;
-            flex-direction: column;
+
+            @media screen and (min-width: $breakpoint1200) {
+                flex-direction: column;
+                flex-wrap: unset;
+            }
         }
     }
 
@@ -306,53 +332,56 @@
         }
     }
 }
-.catalog__cards_rows{
-    .card{
-        position: relative;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        & > img{
-            max-width: 169px;
+
+@media screen and (min-width: $breakpoint1200) {
+    .catalog__cards_rows{
+        .card{
             position: relative;
-            left:20px;
-        }
-        & > .card__top {
-            display: none;
-        }
-        & > .card__subtitle{
-            display: none;
-        }
-        &__bottomWrapper{
-            display: flex;
-            flex-direction: column;
-            gap:25px;
-            & div > .card__subtitle{
-                display: block;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            & > img{
+                max-width: 169px;
+                position: relative;
+                left:20px;
             }
-        }
-        &__topWrapper{
-            & > .card__categories{
+            & > .card__top {
+                display: none;
+            }
+            & > .card__subtitle{
+                display: none;
+            }
+            &__bottomWrapper{
                 display: flex;
-                margin-bottom: 10px;
+                flex-direction: column;
+                gap:25px;
+                & div > .card__subtitle{
+                    display: block;
+                }
             }
-        }
-        &__title{
-            span{
-                max-width: none;
+            &__topWrapper{
+                & > .card__categories{
+                    display: flex;
+                    margin-bottom: 10px;
+                }
             }
-            & img{
+            &__title{
+                span{
+                    max-width: none;
+                }
+                & img{
+                    position: absolute;
+                    top:20px;
+                    left: 20px;
+                    z-index: 2;
+                }
+            }
+            &__like{
+                display: block;
                 position: absolute;
-                top:20px;
-                left: 20px;
-                z-index: 2;
+                right: 20px;
+                top: 20px;
             }
-        }
-        &__like{
-            display: block;
-            position: absolute;
-            right: 20px;
-            top: 20px;
         }
     }
 }
