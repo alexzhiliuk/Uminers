@@ -1036,6 +1036,27 @@ button {
   line-height: 27px;
   color: #FFFFFF;
 }
+.mobile-menu__catalog {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mobile-menu__catalog-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.mobile-menu__catalog-item svg {
+  transition: all 0.2s ease-in-out;
+}
 .mobile-menu__icons {
   margin-top: 20px;
   display: flex;
@@ -1074,6 +1095,25 @@ button {
 }
 .mobile-menu__social {
   display: flex;
+}
+
+.mobile-menu-droplist {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  padding-left: 10px;
+}
+.mobile-menu-droplist_active {
+  grid-template-rows: 1fr;
+}
+.mobile-menu-droplist__inner {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
 @keyframes text-fade-in {
