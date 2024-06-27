@@ -7,8 +7,14 @@
 
     display: flex;
     justify-content: space-between;
-    
+    gap: 20px;
 
+    @media screen and (max-width: $breakpoint1200) {
+        flex-direction: column;
+    }
+    @media screen and (max-width: $breakpoint768) {
+        padding: 20px;
+    }
 
     // .product-banner__info
     &__info {
@@ -25,6 +31,10 @@
         letter-spacing: -0.02em;
 
         color: #FFFFFF;
+
+        @media screen and (max-width: $breakpoint576) {
+            font-size: 30px;
+        }
 
     }
 
@@ -50,7 +60,12 @@
 
             color: #FFFFFF;
 
+            @media screen and (max-width: $breakpoint768) {
+                flex: 0 0 100%;
+            }
+
             span {
+                flex-shrink: 0;
                 display: block;
                 width: 10px;
                 height: 10px;
@@ -67,6 +82,12 @@
         display: flex;
         align-items: center;
         margin-top: 35px;
+
+        @media screen and (max-width: $breakpoint768) {
+            flex-direction: column;
+            align-items: unset;
+            gap: 10px;
+        }
     }
 
     // .product-banner__cards
@@ -74,6 +95,10 @@
         display: flex;
         gap: 20px;
         justify-content: flex-end;
+
+        @media screen and (max-width: $breakpoint768) {
+            flex-direction: column;
+        }
     }
 
     // .product-banner__card
@@ -86,6 +111,16 @@
 
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: $breakpoint1200) {
+            flex-grow: 1;
+            gap: 20px;
+            aspect-ratio: unset;
+        }
+
+        @media screen and (max-width: $breakpoint768) {
+            flex: unset;
+        }
     }
 
     // .product-banner__card-title
@@ -99,6 +134,10 @@
         letter-spacing: -0.02em;
 
         color: $brightPrimaryColor;
+
+        @media screen and (max-width: $breakpoint576) {
+            font-size: 40px;
+        }
 
     }
 

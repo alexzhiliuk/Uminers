@@ -1,15 +1,36 @@
 .product {
 
+    &__content {
+        display: flex;
+        gap: 40px;
+
+        @media screen and (max-width: $breakpoint1200) {
+            flex-direction: column;
+        }
+    }
+
     &__images {
         display: flex;
         gap: 20px;
         flex-shrink: 0;
+
+        @media screen and (max-width: $breakpoint1200) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
     &__gallery {
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @media screen and (max-width: $breakpoint1200) {
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            gap: 15px;
+        }
 
 
         &-img {
@@ -32,17 +53,50 @@
             img {
                 width: 80px;
             }
+
+
+            @media screen and (max-width: $breakpoint1200) {
+                width: 80px;
+                height: 80px;
+
+                img {
+                    width: 60px;
+                }
+            }
         }
     }
 
     &__slider {
         height: calc(110px * 4 + 10px * 3);
 
+        @media screen and (max-width: $breakpoint1200) {
+            height: unset;
+
+            .swiper-slide {
+                width: fit-content;
+            }
+        }
+
         &-btn {
             cursor: pointer;
             display: flex;
             justify-content: center;
+
+            &.swiper-button-disabled {
+                opacity: 0;
+            }
+
+            @media screen and (max-width: $breakpoint1200) {
+                svg {
+                    rotate: -90deg;
+                }
+            }
+
+            @media screen and (max-width: $breakpoint992) {
+                display: none;
+            }
         }
+
     }
 
     &__image {
@@ -50,6 +104,15 @@
         max-width: 540px;
         width: 540px;
         justify-content: space-between;
+
+        @media screen and (max-width: $breakpoint1200) {
+            flex: unset;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $breakpoint480) {
+            padding: 15px;
+        }
 
         .card__image {
 
@@ -59,6 +122,10 @@
             img {
                 max-width: 386px;
                 width: 100%;
+
+                @media screen and (max-width: $breakpoint992) {
+                    max-width: 80%;
+                }
             }
         }
     }
@@ -91,17 +158,16 @@
         }
     }
 
-    &__content {
-        display: flex;
-        gap: 40px;
-    }
-
     &__title {
         &-wrapper{
-        display: flex;
-        max-width: 73%;
-        flex-direction: column;
-    }
+            display: flex;
+            max-width: 73%;
+            flex-direction: column;
+
+            @media screen and (max-width: $breakpoint1200) {
+                max-width: 100%;
+            }
+        }
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -125,6 +191,7 @@
 
     &__calculations {
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
         font-size: 16px;
         font-weight: 400;
@@ -176,6 +243,10 @@
         display: flex;
         gap: 6.06vw;
         padding: 20px 0;
+
+        @media screen and (max-width: $breakpoint576) {
+            flex-direction: column;
+        }
 
         &__tabs {
             display: flex;
@@ -259,6 +330,12 @@
         &__buttons {
             justify-content: flex-start;
             gap: 15px;
+
+            @media screen and (max-width: $breakpoint576) {
+                flex-direction: column;
+                align-items: unset;
+                justify-content: unset;
+            }
         }
 
         &___bottomWrapper {

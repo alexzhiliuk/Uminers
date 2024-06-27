@@ -251,6 +251,10 @@ $borderRaius: 20 + px;
     border: 1px solid #878787;
     padding: 30px;
 
+    @media screen and (max-width: $breakpoint768) {
+        padding: 20px;
+    }
+
     &__title {
 
         font-family: $primaryFont;

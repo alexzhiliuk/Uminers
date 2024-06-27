@@ -7,6 +7,36 @@
     font-size: 16px;
     font-weight: 400;
 
+    @media screen and (max-width: $breakpoint1200) {
+        flex: 0 0 286px;
+    }
+
+    @media screen and (max-width: $breakpoint992) {
+        position: fixed;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        z-index: $mobileMenuLayer;
+        background-color: $black;
+        overflow-y: auto;
+        display: none;
+
+        &_active {
+            display: block;
+
+            .filter__close {
+                display: flex;
+            }
+        }
+    }
+
+    &__close {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+
     .heading {
         font-weight: 500;
         
