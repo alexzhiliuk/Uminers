@@ -4283,6 +4283,61 @@ input:checked + .slider:before {
   width: 100%;
 }
 
+.cart-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 35px 50px;
+  border: 1px solid #9C9C9C;
+  border-radius: 10px;
+  gap: 40px;
+  align-items: flex-start;
+}
+.cart-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cart-form__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27.32px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.cart-form__name-wrapper {
+  display: flex;
+  gap: 1.39vw;
+}
+.cart-form__radioWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label-main {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.12px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 20px - 1.39vw);
+  gap: 5px;
+}
+
+.radio-label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.86px;
+  color: white;
+  cursor: pointer;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .input-main, .input-main_outlined {
   padding: 20px;
   border: none;
@@ -4300,6 +4355,54 @@ input:checked + .slider:before {
   line-height: 19.12px;
   letter-spacing: -0.02em;
   border: 1px solid #9C9C9C;
+}
+
+.radio-main {
+  appearance: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 0 0 1px #9C9C9C;
+  cursor: pointer;
+  border: 6px solid black;
+  transition: all 0.1s ease-in-out;
+}
+
+.radio-main:checked {
+  border: 6px solid black;
+  background-color: #27a699;
+  padding: 6px;
+  box-shadow: 0 0 0 1px #27a699;
+}
+
+label.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+label.radio-label input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #222222;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+label.radio-label input[type=checkbox]:checked {
+  background-color: #00C1AD;
+  position: relative;
+}
+label.radio-label input[type=checkbox]:checked::before {
+  content: url(../img/checkbox-tik.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+[for=address] {
+  width: 100%;
 }
 
 @font-face {
