@@ -651,7 +651,6 @@ button {
 .top-header__search {
   flex: 0 1 428px;
   position: relative;
-  border-bottom: 1px solid #3F3F3F;
 }
 .top-header__search input {
   width: 100%;
@@ -661,7 +660,17 @@ button {
   font-size: 14px;
   line-height: 1.35;
   background: none;
+  border-bottom: 1px solid #3F3F3F;
+  color: #fff;
+}
+.top-header__search input::placeholder {
   color: #9C9C9C;
+}
+.top-header__search input:active, .top-header__search input:focus, .top-header__search input:focus-visible {
+  border-bottom: 1px solid #FFF;
+}
+.top-header__search input:active + svg path, .top-header__search input:focus + svg path, .top-header__search input:focus-visible + svg path {
+  stroke: #FFF;
 }
 .top-header__search input::-webkit-search-decoration, .top-header__search input::-webkit-search-cancel-button, .top-header__search input::-webkit-search-results-button, .top-header__search input::-webkit-search-results-decoration {
   display: none;
@@ -1005,7 +1014,6 @@ button {
 .mobile-menu__search {
   flex: 0 1 100%;
   position: relative;
-  border-bottom: 1px solid #3F3F3F;
 }
 .mobile-menu__search input {
   width: 100%;
@@ -1015,7 +1023,17 @@ button {
   font-size: 14px;
   line-height: 1.35;
   background: none;
+  border-bottom: 1px solid #3F3F3F;
+  color: #fff;
+}
+.mobile-menu__search input::placeholder {
   color: #9C9C9C;
+}
+.mobile-menu__search input:active, .mobile-menu__search input:focus, .mobile-menu__search input:focus-visible {
+  border-bottom: 1px solid #FFF;
+}
+.mobile-menu__search input:active + svg path, .mobile-menu__search input:focus + svg path, .mobile-menu__search input:focus-visible + svg path {
+  stroke: #FFF;
 }
 .mobile-menu__search input::-webkit-search-decoration, .mobile-menu__search input::-webkit-search-cancel-button, .mobile-menu__search input::-webkit-search-results-button, .mobile-menu__search input::-webkit-search-results-decoration {
   display: none;
