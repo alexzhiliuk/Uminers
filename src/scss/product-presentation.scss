@@ -307,12 +307,27 @@
             max-width: 100px;
             background-color: #000;
             border: 2px solid #222;
-            color: #bcbcbc;
+            color: #FFF;
             text-align: center;
             font-size: 20px;
             font-weight: 400;
             line-height: 24.2px;
             letter-spacing: -0.02em;
+
+            &.invalid {
+                color: rgb(159, 44, 44);
+            }
+
+            &::placeholder {
+                color: #bcbcbc;
+            }
+
+            -moz-appearance: textfield;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
         }
 
         &__group{
@@ -356,6 +371,14 @@
 
         &__subtitle {
             margin-bottom: 15px;
+            margin-top: 15px;
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: -0.02em;
+            color: #9D9D9D;
+            opacity: 1;
         }
 
         &__image {
