@@ -976,9 +976,8 @@ button {
     height: 25px;
   }
   .bottom-header__icon_notification::before {
-    font-size: 6px;
-    width: 12px;
-    height: 12px;
+    bottom: -4px;
+    right: -5px;
   }
   .bottom-header__icon_desc {
     display: none;
