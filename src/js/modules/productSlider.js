@@ -8,6 +8,7 @@ const swiperHero = new Swiper('#productSwiper', {
     spaceBetween: 10,
     speed: 1500,
     freeMode: true,
+    loop: true,
 
     navigation: {
         nextEl: '#productSwiperNext',

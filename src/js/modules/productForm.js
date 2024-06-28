@@ -5,7 +5,6 @@ try {
     let plus = document.querySelector('.form__symbol_right')
     let input = document.querySelector('input[name="ammount"]')
 
-    input.value = 1;
 
     form.onsubmit = (e)=>{
         if(!input.value){
@@ -16,25 +15,45 @@ try {
 
     input.addEventListener('keypress', (event) => {
         if (!/\d/.test(event.key)) {
-        event.preventDefault();
+            event.preventDefault();
         }
     });
+
+    $(input).on("input", function() {
+        if (!$(this).val()) {
+            $(this).removeClass("invalid")
+            return
+        }
+        if (Number($(this).val()) < Number($(this).attr("min"))) {
+            $(this).addClass("invalid")
+        } else {
+            $(this).removeClass("invalid")
+        }
+    })
     
 
     minus.addEventListener('click', () => {
-        if (input.value>=2 && typeof +input.value === 'number') {
+        let minValue =  Number(input.getAttribute("min"))
+        if (input.value > minValue && typeof +input.value === 'number') {
             input.value = +input.value - 1;
         }else{
-            input.value = 1
+            input.value = minValue
         }
+        $(input).removeClass("invalid")
     })
 
     plus.addEventListener('click', () => {
+        let minValue =  Number(input.getAttribute("min"))
         if (input.value && typeof +input.value === 'number'){
-            input.value = +input.value + 1;
+            if (input.value < minValue) {
+                input.value = minValue
+            } else {
+                input.value = +input.value + 1;
+            }
         }else{
             input.value = 1;
         }
+        $(input).removeClass("invalid")
     })
 
     //input:radio
