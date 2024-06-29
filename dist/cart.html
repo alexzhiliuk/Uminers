@@ -513,7 +513,7 @@
 </div>
 
     <main>
-        <section class="section container cart" id="cart-first">
+        <section class="section container cart" >
     <div class="breadcrumbs">
         <a href="index.html" class="breadcrumbs__item">Главная</a>
         <div class="breadcrumbs__arrow">
@@ -526,7 +526,7 @@
     <h2 class="section-title">
         Корзина
     </h2>
-    <div class="section__body cart__content">
+    <div class="section__body cart__content form-disabled" id="cart-body">
         <div class="cart__body">
             <div class="cart-item">
     <div class="cart-item__wrapper">
@@ -714,11 +714,67 @@
         </svg>
     </div>
 </div>
+
+            <form action="" class="cart__form cart-form" onsubmit="">
+    <div class="cart-form__wrapper">
+        <h3 class="cart-form__title">
+            Контактные данные
+        </h3>
+        <div class="cart-form__name-wrapper">
+            <label for="" class="label-main">
+                Имя
+                <input type="text" class="input-main" placeholder="Ваше имя" required>
+            </label>
+            <label for="" class="label-main">
+                Фамилия
+                <input type="text" class="input-main" placeholder="Ваша фамилия" required>
+            </label>
         </div>
+        <label for="" class="label-main">
+            Элекстронная почта
+            <input type="email" class="input-main" placeholder="Ваш email" required>
+        </label>
+        <label for="" class="label-main">
+            Телефон
+            <input type="tel" class="input-main" placeholder="Ваш телефон" required>
+        </label>
+    </div>
+    <div class="cart-form__wrapper">
+        <h3 class="cart-form__title">
+            Доставка
+        </h3>
+        <div class="cart-form__radioWrapper" id="radio-wrapper">
+            <label for="ship1" class="radio-label">
+                <input type="radio" name="shipping" id="ship1" class="radio-main">
+                Самовывоз
+            </label>
+            <label for="ship2" class="radio-label">
+                <input type="radio" name="shipping" id="ship2" class="radio-main">
+                Доставка по адресу
+            </label>
+        </div>
+        <label for="address" class="label-main">
+            Адрес
+            <input type="text" class="input-main" placeholder="Адрес" id="address" disabled>
+        </label>
+        <label class="radio-label">
+            <input type="checkbox" name="" id="" class="checkbox-main">
+            Оформить заказ, как юридическое лицо
+        </label>
+    </div>
+    </div>
+</form>
+
             <div class="cart__submit cart-submit normal">
     <p class="cart-submit__ammount">Итого за 5 товаров</p>
     <p class="cart-submit__price">1 800 000 ₽</p>
     <input type="text" placeholder="Промокод" id="cart-promocode" class="input-main_outlined">
+    <label class="radio-label">
+        <input type="checkbox" name="" id="cart-policy" class="checkbox-main">
+        <span class="hidden" id="policy">
+        Я согласен на <a href="#" class="underlined">обработку персональных данных</a> и <a href="#" class="underlined">публичной офертой</a>
+    </span>
+    </label>
     <button type="button" id="cart-submit" class="btn btn__main">Перейти к оформлению</button>
 </div>
     </div>

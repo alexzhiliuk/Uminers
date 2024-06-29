@@ -1,4 +1,4 @@
-<form action="" class="cart__form cart-form">
+<form action="" class="cart__form cart-form" onsubmit="">
     <div class="cart-form__wrapper">
         <h3 class="cart-form__title">
             Контактные данные
@@ -6,27 +6,27 @@
         <div class="cart-form__name-wrapper">
             <label for="" class="label-main">
                 Имя
-                <input type="text" class="input-main" placeholder="Ваше имя">
+                <input type="text" class="input-main" placeholder="Ваше имя" required>
             </label>
             <label for="" class="label-main">
                 Фамилия
-                <input type="text" class="input-main" placeholder="Ваша фамилия">
+                <input type="text" class="input-main" placeholder="Ваша фамилия" required>
             </label>
         </div>
         <label for="" class="label-main">
             Элекстронная почта
-            <input type="email" class="input-main" placeholder="Ваша фамилия">
+            <input type="email" class="input-main" placeholder="Ваш email" required>
         </label>
         <label for="" class="label-main">
             Телефон
-            <input type="tel" class="input-main" placeholder="Ваша фамилия">
+            <input type="tel" class="input-main" placeholder="Ваш телефон" required>
         </label>
     </div>
     <div class="cart-form__wrapper">
         <h3 class="cart-form__title">
             Доставка
         </h3>
-        <div class="cart-form__radioWrapper">
+        <div class="cart-form__radioWrapper" id="radio-wrapper">
             <label for="ship1" class="radio-label">
                 <input type="radio" name="shipping" id="ship1" class="radio-main">
                 Самовывоз
@@ -38,7 +38,7 @@
         </div>
         <label for="address" class="label-main">
             Адрес
-            <input type="text" class="input-main" placeholder="Адрес" id="address">
+            <input type="text" class="input-main" placeholder="Адрес" id="address" disabled>
         </label>
         <label class="radio-label">
             <input type="checkbox" name="" id="" class="checkbox-main">

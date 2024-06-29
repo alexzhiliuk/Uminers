@@ -1,4 +1,4 @@
-<section class="section container cart" id="cart-first">
+<section class="section container cart" >
     <div class="breadcrumbs">
         <a href="index.html" class="breadcrumbs__item">Главная</a>
         <div class="breadcrumbs__arrow">
@@ -11,12 +11,14 @@
     <h2 class="section-title">
         Корзина
     </h2>
-    <div class="section__body cart__content">
+    <div class="section__body cart__content form-disabled" id="cart-body">
         <div class="cart__body">
             @@include('./cart-item.html')
             @@include('./cart-item.html')
             @@include('./cart-item.html')
-        </div>
+
+            @@include('./cart-form.html')
+
             @@include('./cart-submit.html',{
                 "class": "normal"
             })

@@ -13,7 +13,7 @@ import * as productForm from './modules/productForm.js'
 import * as productSlider from './modules/productSlider.js'
 import * as tabs from './modules/tabs.js'
 import * as headerCatalog from './modules/headerCatalog.js'
-
+import * as cartPage from './modules/cartPage.js'
 
 flsFunctions.isWebp()
 
