@@ -96,7 +96,7 @@ submit.addEventListener('click', (e) => {
         container.classList.add('form-active');
         submitBlock.classList.remove('normal');
         submitBlock.classList.add('final');
-        document.querySelector('.cart__body').classList.add('idk')
+        document.querySelector('.cart__body').classList.add('idk');
         submit.innerText = 'Оформить заказ';
         submit.type = 'submit'
         submit.disabled = true;
@@ -120,6 +120,9 @@ const observer = new MutationObserver((mutations) => {
         const emptyCartMessage = document.createElement('h3');
         emptyCartMessage.style.color = '#222'
         emptyCartMessage.textContent = 'Ваша корзина пуста';
+        emptyCartMessage.id = 'empty';
+        
+        
         cartBody.style.display = 'flex';
         cartBody.style.alignItems = 'center';
         cartBody.style.justifyContent = 'center';
@@ -127,7 +130,7 @@ const observer = new MutationObserver((mutations) => {
         cartBody.style.alignSelf = 'center'
         cartBody.appendChild(emptyCartMessage);
       }else if(form.checkVisibility()){
-        cartBody.children.item(1).remove();
+        cartBody.children.namedItem('empty').remove();
       }
     });
   });
