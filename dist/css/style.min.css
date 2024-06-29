@@ -3786,7 +3786,6 @@ input:checked + .slider:before {
 .footer__contacts {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 .footer__contact {
   display: flex;
@@ -3839,6 +3838,9 @@ input:checked + .slider:before {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  row-gap: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
   position: relative;
 }
 .footer__copy-list li,
@@ -3847,7 +3849,6 @@ input:checked + .slider:before {
   font-size: 16px;
   line-height: 1.55;
   font-weight: 300;
-  padding: 16px 0;
   position: relative;
   z-index: 1;
 }
