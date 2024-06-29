@@ -2,6 +2,7 @@ let submit = document.getElementById('cart-submit')
 let container = document.getElementById('cart-body')
 let submitBlock = document.querySelector('.cart-submit')
 let form = document.querySelector('form#cart-body')
+let formContent = document.querySelector('#cart-form')
 let radio = document.querySelector('#ship2')
 let radioWrapper = document.querySelector('#radio-wrapper')
 let submitTick = document.querySelector('#cart-policy')
@@ -70,21 +71,21 @@ function validateForm(event) {
     form.submit();
 }
 
-submitTick.addEventListener('input', ()=>{
-    if(submitTick.checked===true){
+submitTick.addEventListener('input', () => {
+    if (submitTick.checked === true) {
         submit.disabled = false;
     }
-    else{
+    else {
         submit.disabled = true;
     }
 })
 
-radioWrapper.addEventListener('input', ()=>{
-    if(radio.checked === true){
+radioWrapper.addEventListener('input', () => {
+    if (radio.checked === true) {
         document.getElementById('address').disabled = false;
         document.getElementById('address').focus();
 
-    }else{
+    } else {
         document.getElementById('address').value = '';
         document.getElementById('address').disabled = true;
     }
@@ -105,8 +106,8 @@ submit.addEventListener('click', (e) => {
     }
 })
 
-cartItems.forEach(item=>{
-    item.children.item(2).addEventListener('click',()=>{
+cartItems.forEach(item => {
+    item.children.item(2).addEventListener('click', () => {
         item.remove();
     })
 })
@@ -115,24 +116,29 @@ cartItems.forEach(item=>{
 
 const observer = new MutationObserver((mutations) => {
     mutations.forEach(() => {
-      const cartBody = document.querySelector('.cart__body');
-      if (cartBody.children.length <= 1 && !form.checkVisibility()) {
-        const emptyCartMessage = document.createElement('h3');
-        emptyCartMessage.style.color = '#222'
-        emptyCartMessage.textContent = 'Ваша корзина пуста';
-        emptyCartMessage.id = 'empty';
-        
-        
-        cartBody.style.display = 'flex';
-        cartBody.style.alignItems = 'center';
-        cartBody.style.justifyContent = 'center';
-        cartBody.style.height = '100%'
-        cartBody.style.alignSelf = 'center'
-        cartBody.appendChild(emptyCartMessage);
-      }else if(form.checkVisibility()){
-        cartBody.children.namedItem('empty').remove();
-      }
+        const cartBody = document.querySelector('.cart__body');
+        if (cartBody.children.length <= 1 && !formContent.checkVisibility()) {
+
+            const emptyCartMessage = document.createElement('h3');
+            emptyCartMessage.style.color = '#222'
+            emptyCartMessage.textContent = 'Ваша корзина пуста';
+            emptyCartMessage.id = 'empty';
+
+
+            cartBody.style.display = 'flex';
+            cartBody.style.alignItems = 'center';
+            cartBody.style.justifyContent = 'center';
+            cartBody.style.height = '100%'
+            cartBody.style.alignSelf = 'center'
+            cartBody.appendChild(emptyCartMessage);
+        } else if (formContent.checkVisibility()) {
+            try {
+                cartBody.children.namedItem('empty').remove();
+            } catch (e) {
+                console.log(e)
+            }
+        }
     });
-  });
-  
-  observer.observe(document.querySelector('.cart__body'), { attributes: true, childList: true, subtree: true });;
+});
+
+observer.observe(document.querySelector('.cart__body'), { attributes: true, childList: true, subtree: true });;
