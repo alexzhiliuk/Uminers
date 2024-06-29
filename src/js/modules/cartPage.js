@@ -101,6 +101,7 @@ submit.addEventListener('click', (e) => {
         submit.innerText = 'Оформить заказ';
         submit.type = 'submit'
         submit.disabled = true;
+        window.scrollTo(0, 0)
     } else {
         validateForm(e);
     }
