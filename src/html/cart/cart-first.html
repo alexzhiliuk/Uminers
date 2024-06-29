@@ -11,7 +11,7 @@
     <h2 class="section-title">
         Корзина
     </h2>
-    <div class="section__body cart__content form-disabled" id="cart-body">
+    <form action class="section__body cart__content form-disabled" id="cart-body">
         <div class="cart__body">
             @@include('./cart-item.html')
             @@include('./cart-item.html')
@@ -22,5 +22,6 @@
             @@include('./cart-submit.html',{
                 "class": "normal"
             })
-    </div>
+        </div>
+    </form>
 </section>
