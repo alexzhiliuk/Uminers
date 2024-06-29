@@ -61,7 +61,7 @@ function validateForm(event) {
         }
     }
     if (!shippingSelected) {
-        alert('Пожалуйста, выберите способ доставки.');
+        alert('Пожалуйста, выберите способ доставки.')
         return;
     }
 
@@ -69,7 +69,7 @@ function validateForm(event) {
         alert('Пожалуйста, укажите адрес доставки.');
         return;
     }
-
+    alert('форма отправлена!')
     form.submit();
 }
 
@@ -111,13 +111,14 @@ submit.addEventListener('click', (e) => {
         submit.innerText = 'Оформить заказ';
         submit.type = 'submit'
         window.scrollTo(0, 0)
+        console.log('ya_gay')
     } else {
         if(submit.classList.contains('disabled')){
             submitTick.classList.add('invalid')
         }
         else{
-            submitTick.classList.remove('invalid')
             validateForm(e);
+            submitTick.classList.remove('invalid')
         }
     }
 })
