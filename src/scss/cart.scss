@@ -19,11 +19,12 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            width: 100%;
         }
     }
 
     &__content.form-active {
-        
+
         @media (max-width:$breakpoint992) {
             display: flex;
             flex-direction: column;
@@ -35,13 +36,13 @@
             }
 
             @media (max-width:$breakpoint480) {
-                padding:20px;
+                padding: 20px;
             }
 
             &__name-wrapper {
                 @media (max-width:$breakpoint576) {
                     flex-direction: column;
-                    gap:20px;
+                    gap: 20px;
                 }
             }
 
@@ -51,10 +52,10 @@
                 }
             }
 
-            &__wrapper{
-            @media (max-width:$breakpoint992) {
-                width:100%;
-            }
+            &__wrapper {
+                @media (max-width:$breakpoint992) {
+                    width: 100%;
+                }
             }
         }
 
@@ -86,7 +87,7 @@
             gap: 10px;
             align-items: flex-start;
             border-radius: 10px 10px 10px 10px;
-            padding: 10px 20px;
+            padding: 20px 20px;
             width: 31%;
         }
 
@@ -124,6 +125,10 @@
                 gap: 20px;
             }
 
+            @media (max-width: $breakpoint768) {
+                width: 100%;
+            }
+
             &>img {
                 width: 130px;
 
@@ -138,6 +143,10 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+        }
+
+        @media (max-width: $breakpoint768) {
+            width: 100%;
         }
 
         &__characteristic {
@@ -180,6 +189,10 @@
             flex-direction: column;
             gap: 10px;
             margin-bottom: 20px;
+
+            @media (max-width: $breakpoint768) {
+                width: 100%;
+            }
         }
 
         &__bottomWrapper {
@@ -202,7 +215,7 @@
             white-space: nowrap;
 
             @media (max-width: $breakpoint1200) {
-                font-size: clamp(20px, 2.8vw, 40px);
+                font-size: clamp(30px, 3.8vw, 40px);
             }
         }
 
@@ -261,15 +274,17 @@
             line-height: 40px;
             letter-spacing: -0.02em;
             margin-bottom: 20px;
+            white-space: nowrap;
 
             @media (max-width: $breakpoint1200) {
-                font-size: clamp(20px, 2.8vw, 40px);
+                font-size: clamp(30px, 3.8vw, 40px);
             }
         }
 
         .input-main_outlined {
             margin-bottom: 10px;
             width: 100%;
+            padding: 15px 20px;
         }
 
         .radio-label {
@@ -314,11 +329,13 @@
     border-radius: 10px;
     gap: 40px;
     align-items: flex-start;
+    width:100%;
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        width:70%;
     }
 
     &__title {
@@ -348,7 +365,7 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    width: calc(50% - 20px - 1.39vw);
+    width: calc(50% - 1vw);
     gap: 5px;
 }
 
@@ -374,6 +391,7 @@
     font-weight: 500;
     line-height: 21.86px;
     letter-spacing: -0.02em;
+    transition: all 0.2s ease-in-out;
 
     &_outlined {
         @extend .input-main;
@@ -382,6 +400,18 @@
         line-height: 19.12px;
         letter-spacing: -0.02em;
         border: 1px solid #9C9C9C;
+    }
+}
+
+.input-main:focus {
+    color: #fff;
+}
+
+.input-main:disabled {
+    background: #111;
+
+    &::placeholder {
+        color: #222;
     }
 }
 

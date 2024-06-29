@@ -1,6 +1,6 @@
 //input:text
 try {
-    let form = document.querySelector('form.form')
+    let form = document.querySelector('.form')
 
 
     let inputs = document.querySelectorAll('.form__ammount');

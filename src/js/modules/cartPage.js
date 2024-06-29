@@ -5,8 +5,7 @@ let form = document.querySelector('form.cart-form')
 let radio = document.querySelector('#ship2')
 let radioWrapper = document.querySelector('#radio-wrapper')
 let submitTick = document.querySelector('#cart-policy')
-
-
+let cartItems = document.querySelectorAll('.cart-item')
 
 function validateForm(event) {
     event.preventDefault();
@@ -97,6 +96,7 @@ submit.addEventListener('click', (e) => {
         container.classList.add('form-active');
         submitBlock.classList.remove('normal');
         submitBlock.classList.add('final');
+        document.querySelector('.cart__body').classList.add('idk')
         submit.innerText = 'Оформить заказ';
         submit.type = 'submit'
         submit.disabled = true;
@@ -104,3 +104,32 @@ submit.addEventListener('click', (e) => {
         validateForm(e);
     }
 })
+
+cartItems.forEach(item=>{
+    item.children.item(2).addEventListener('click',()=>{
+        item.remove();
+    })
+})
+//
+
+
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach(() => {
+      const cartBody = document.querySelector('.cart__body');
+      if (cartBody.children.length <= 1 && !form.checkVisibility()) {
+        const emptyCartMessage = document.createElement('h3');
+        emptyCartMessage.style.color = '#222'
+        emptyCartMessage.textContent = 'Ваша корзина пуста';
+        cartBody.style.display = 'flex';
+        cartBody.style.alignItems = 'center';
+        cartBody.style.justifyContent = 'center';
+        cartBody.style.height = '100%'
+        cartBody.style.alignSelf = 'center'
+        cartBody.appendChild(emptyCartMessage);
+      }else if(form.checkVisibility()){
+        cartBody.children.item(1).remove();
+      }
+    });
+  });
+  
+  observer.observe(document.querySelector('.cart__body'), { attributes: true, childList: true, subtree: true });;
