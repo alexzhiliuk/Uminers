@@ -1,6 +1,6 @@
 @mixin search-input {
     position: relative;
-    border-bottom: 1px solid #3F3F3F;
+    // border-bottom: 1px solid #3F3F3F;
 
     input {
         width: 100%;
@@ -11,8 +11,25 @@
         font-size: 14px;
         line-height: 1.35;
         background: none;
+        border-bottom: 1px solid #3F3F3F;
 
-        color: #9C9C9C;
+        color: #fff;
+
+        &::placeholder {
+            color: #9C9C9C;
+        }
+
+        &:active,
+        &:focus,
+        &:focus-visible {
+            border-bottom: 1px solid #FFF;
+
+            & + svg {
+                path {
+                    stroke: #FFF;
+                }
+            }
+        }
 
         &::-webkit-search-decoration,
         &::-webkit-search-cancel-button,
@@ -458,9 +475,8 @@
 
             &_notification {
                 &::before {
-                    font-size: 6px;
-                    width: 12px;
-                    height: 12px;
+                    bottom: -4px;
+                    right: -5px;
                 }
             }
 

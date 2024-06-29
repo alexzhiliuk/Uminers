@@ -38,7 +38,7 @@ $(".double-range-input input[type='range']").on('input', function() {
             $(this).val(currentValue)
             
         }
-        console.log("work")
+
         $(this).parent().find(".double-range-input__progress-line").css("right", `${100 - currentValue / maxValue * 100 + 1}%`)
         $(this).parent().parent().find(".double-range-input__max-value").html(addSpaces(currentValue))
 
@@ -46,3 +46,22 @@ $(".double-range-input input[type='range']").on('input', function() {
     
 })
 
+
+$("[type='reset']").click(function(e) {
+    e.preventDefault()
+    $(this).parents("form")[0].reset()
+    $(this).parents("form").find(".double-range-input input[type='range']").each(function(i, el) {
+        console.log(el)
+        let currentValue = Number($(el).val())
+
+        if ($(el).hasClass("double-range-input__range_min")) {
+            $(el).parent().parent().find(".double-range-input__min-value").html(addSpaces(currentValue))
+    
+        } else if ($(this).hasClass("double-range-input__range_max")) {
+
+            $(el).parent().parent().find(".double-range-input__max-value").html(addSpaces(currentValue))
+    
+        }
+    })
+    
+})
