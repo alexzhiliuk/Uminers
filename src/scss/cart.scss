@@ -294,6 +294,7 @@
             margin-bottom: 10px;
             width: 100%;
             padding: 15px 20px;
+
         }
 
         .radio-label {
@@ -306,6 +307,9 @@
             input[type="checkbox"] {
                 appearance: none;
                 border: 1px solid #9C9C9C;
+                &:checked{
+                    border: 1px solid $primaryColor; 
+                }
             }
         }
 
@@ -471,6 +475,9 @@ label.radio-label {
                 left: 50%;
                 translate: -50% -50%;
             }
+        }
+        &.invalid{
+            border: 1px solid rgb(142, 19, 19);
         }
     }
 }

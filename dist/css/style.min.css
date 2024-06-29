@@ -4545,6 +4545,9 @@ input:checked + .slider:before {
   appearance: none;
   border: 1px solid #9C9C9C;
 }
+.cart-submit .radio-label input[type=checkbox]:checked {
+  border: 1px solid #27a699;
+}
 .cart-submit button.btn {
   width: 100%;
   font-size: 16px;
@@ -4693,6 +4696,9 @@ label.radio-label input[type=checkbox]:checked::before {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+}
+label.radio-label input[type=checkbox].invalid {
+  border: 1px solid rgb(142, 19, 19);
 }
 
 [for=address] {

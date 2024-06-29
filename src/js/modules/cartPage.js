@@ -8,6 +8,8 @@ let radioWrapper = document.querySelector('#radio-wrapper')
 let submitTick = document.querySelector('#cart-policy')
 let cartItems = document.querySelectorAll('.cart-item')
 
+//validating form #TODO: real validate
+
 function validateForm(event) {
     event.preventDefault();
 
@@ -73,10 +75,16 @@ function validateForm(event) {
 
 submitTick.addEventListener('input', () => {
     if (submitTick.checked === true) {
-        submit.disabled = false;
+        submit.classList.remove('disabled')
     }
     else {
-        submit.disabled = true;
+        submit.classList.add('disabled')
+    }
+    if(submit.classList.contains('disabled')){
+        submitTick.classList.add('invalid')
+    }
+    else{
+        submitTick.classList.remove('invalid')
     }
 })
 
@@ -91,6 +99,8 @@ radioWrapper.addEventListener('input', () => {
     }
 })
 
+//button handler
+
 submit.addEventListener('click', (e) => {
     if (submit.innerText === 'Перейти к оформлению') {
         container.classList.remove('form-disabled')
@@ -100,20 +110,28 @@ submit.addEventListener('click', (e) => {
         document.querySelector('.cart__body').classList.add('idk');
         submit.innerText = 'Оформить заказ';
         submit.type = 'submit'
-        submit.disabled = true;
         window.scrollTo(0, 0)
     } else {
-        validateForm(e);
+        if(submit.classList.contains('disabled')){
+            submitTick.classList.add('invalid')
+        }
+        else{
+            submitTick.classList.remove('invalid')
+            validateForm(e);
+        }
     }
 })
+
+//cart items deleting
 
 cartItems.forEach(item => {
     item.children.item(2).addEventListener('click', () => {
         item.remove();
     })
 })
-//
 
+
+//cart emptyness
 
 const observer = new MutationObserver((mutations) => {
     mutations.forEach(() => {
