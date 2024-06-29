@@ -10,36 +10,55 @@ try {
         let input = element.querySelector('input[name="ammount"]')
         console.log(element, minus, plus, input);
 
-        input.value = 1;
 
-        form.onsubmit = (e) => {
-            if (!input.value) {
+        form.onsubmit = (e)=>{
+            if(!input.value){
                 input.value = 1;
             }
             e.preventDefault();
         }
-
+    
         input.addEventListener('keypress', (event) => {
             if (!/\d/.test(event.key)) {
                 event.preventDefault();
             }
         });
-
-
-        minus.addEventListener('click', () => {
-            if (input.value >= 2 && typeof +input.value === 'number') {
-                input.value = +input.value - 1;
+    
+        $(input).on("input", function() {
+            if (!$(this).val()) {
+                $(this).removeClass("invalid")
+                return
+            }
+            if (Number($(this).val()) < Number($(this).attr("min"))) {
+                $(this).addClass("invalid")
             } else {
-                input.value = 1
+                $(this).removeClass("invalid")
             }
         })
-
+        
+    
+        minus.addEventListener('click', () => {
+            let minValue =  Number(input.getAttribute("min"))
+            if (input.value > minValue && typeof +input.value === 'number') {
+                input.value = +input.value - 1;
+            }else{
+                input.value = minValue
+            }
+            $(input).removeClass("invalid")
+        })
+    
         plus.addEventListener('click', () => {
-            if (input.value && typeof +input.value === 'number') {
-                input.value = +input.value + 1;
-            } else {
+            let minValue =  Number(input.getAttribute("min"))
+            if (input.value && typeof +input.value === 'number'){
+                if (input.value < minValue) {
+                    input.value = minValue
+                } else {
+                    input.value = +input.value + 1;
+                }
+            }else{
                 input.value = 1;
             }
+            $(input).removeClass("invalid")
         })
     })
 
