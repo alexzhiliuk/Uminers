@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <title>Карточка товара</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header container">
+    <div class="top-header">
+        <nav class="top-header__nav">
+            <ul class="top-header__list">
+                <li>
+                    <a href="#">Price list</a>
+                </li>
+                <li>
+                    <a href="#">Reviews</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+        <form class="top-header__search">
+            <input type="search" name="q" placeholder="Search">
+            <svg class="top-header__search-icon" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.28655 16.3809C4.26276 16.3809 1.00084 13.119 1.00084 9.09516C1.00084 5.07137 4.26276 1.80945 8.28655 1.80945C12.3103 1.80945 15.5723 5.07137 15.5723 9.09516C15.5723 13.119 12.3103 16.3809 8.28655 16.3809Z" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.0479 20.0476L13.3336 14.3333" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                  
+        </form>
+        <div class="top-header__contacts">
+            <a href="mailto:sales@uminers.com">sales@uminers.com</a>
+            <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
+            <div class="top-header__socials">
+                <a href="#" class="top-header__social">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8337 21.998C11.1139 22.0307 9.41109 21.6551 7.86661 20.9025L3.25821 21.8014L4.15163 17.2788C1.10835 11.6606 4.15163 3 12.6293 3C25.1285 3 25.0503 21.998 12.8337 21.998ZM12.6033 4.35484C5.07766 4.35484 2.55826 12.3153 5.64719 17.1037L5.07331 19.9993L8.02747 19.4245C9.28608 20.1851 10.8686 20.6432 12.7902 20.6432C23.2613 20.6454 23.3287 4.35484 12.6033 4.35484ZM7.64271 7.36704L10.4686 7.27629L11.3794 10.8395L10.6469 12.1749L13.038 14.474L14.3966 13.7804L17.9116 14.6966L17.6942 17.7585C17.6942 17.7585 14.6901 19.1695 10.5447 15.0531C6.39931 10.9367 7.64271 7.36704 7.64271 7.36704Z" fill="#9C9C9C"/>
+                    </svg>                        
+                </a>
+                <a href="#" class="top-header__social">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6972 18.0159L10.631 20.7241L9.76408 20.848L7.82415 13.8027L1 11.4403L22.009 3L23 3.02337L19.6899 22L13.6972 18.0159ZM18.9516 6.56586L9.3251 12.6484L10.4336 17.6326L10.7374 17.5602L11.8947 13.7139L19.5879 6.64531L18.9516 6.56586Z" fill="#9C9C9C"/>
+                    </svg>                        
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-header">
+        <a href="index.html" class="bottom-header__logo">
+            <img src="img/logo.svg" alt="Uminers">
+        </a>
+        <nav class="bottom-header__nav">
+            <ul class="bottom-header__list">
+                <li>
+                    <a href="javascript:void(0)" class="catalog-btn js-header-catalog-open">
+                        <img src="img/catalog-btn-icon.svg" alt="">
+                        <span>Catalog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Turnkey Mining</a>
+                </li>
+                <li>
+                    <a href="#">Hosting</a>
+                </li>
+                <li>
+                    <a href="#">Shipping</a>
+                </li>
+                <li>
+                    <a href="about.html">Company</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="bottom-header__icons">
+            <a href="#" class="bottom-header__icon bottom-header__icon_desc">
+                <svg width="26" height="35" viewBox="0 0 26 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="22.2222" height="32" rx="2.05729" fill="white"/>
+                    <rect x="4.66602" y="4.66675" width="16.8889" height="8.88889" rx="1.044" fill="#222222"/>
+                    <rect x="4.66602" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
+                    <rect x="4.66602" y="22.4443" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
+                    <path d="M4.66602 28.6667C4.66602 28.1758 5.06398 27.7778 5.5549 27.7778H8.22157C8.71249 27.7778 9.11046 28.1758 9.11046 28.6667V30.4445C9.11046 30.9354 8.71249 31.3334 8.22157 31.3334H5.5549C5.06399 31.3334 4.66602 30.9354 4.66602 30.4445V28.6667Z" fill="#222222"/>
+                    <rect x="11" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
+                    <rect x="10.8887" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
+                    <rect x="10.8887" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
+                    <rect x="17.1113" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
+                    <rect x="17.1113" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
+                    <rect x="17.1113" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
+                </svg>                    
+            </a>
+            <a href="#" class="bottom-header__icon bottom-header__icon_desc">
+                <svg width="42" height="35" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 33.5H34L34.0895 33.5C34.9551 33.5001 35.7488 33.5002 36.3944 33.4134C37.1054 33.3178 37.8568 33.0929 38.4749 32.4749C39.0929 31.8568 39.3178 31.1054 39.4134 30.3944C39.5002 29.7488 39.5001 28.9551 39.5 28.0895C39.5 28.0597 39.5 28.0299 39.5 28V13C39.5 12.9701 39.5 12.9403 39.5 12.9105C39.5001 12.0449 39.5002 11.2512 39.4134 10.6056C39.3178 9.89462 39.0929 9.14317 38.4749 8.52513C37.8568 7.90708 37.1054 7.68219 36.3944 7.5866C35.7488 7.4998 34.9551 7.49989 34.0895 7.49999C34.0597 7.5 34.0299 7.5 34 7.5H24C23.9855 7.5 23.971 7.5 23.9565 7.5C23.5279 7.49997 23.1342 7.49995 22.8036 7.52251C22.4483 7.54675 22.0576 7.60198 21.6606 7.76642C20.803 8.12165 20.1217 8.80301 19.7664 9.66061C19.602 10.0576 19.5468 10.4483 19.5225 10.8036C19.4999 11.1342 19.5 11.5279 19.5 11.9565C19.5 11.971 19.5 11.9855 19.5 12V27V28C19.5 28.0299 19.5 28.0597 19.5 28.0895C19.4999 28.9551 19.4998 29.7488 19.5866 30.3944C19.6822 31.1054 19.9071 31.8568 20.5251 32.4749C21.1432 33.0929 21.8946 33.3178 22.6056 33.4134C23.2512 33.5002 24.0449 33.5001 24.9105 33.5L25 33.5Z" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M8 27.5H17L17.0895 27.5C17.9551 27.5001 18.7488 27.5002 19.3944 27.4134C20.1054 27.3178 20.8568 27.0929 21.4749 26.4749C22.0929 25.8568 22.3178 25.1054 22.4134 24.3944C22.5002 23.7488 22.5001 22.9551 22.5 22.0895C22.5 22.0597 22.5 22.0299 22.5 22V7C22.5 6.97009 22.5 6.94026 22.5 6.91051C22.5001 6.04488 22.5002 5.25121 22.4134 4.60558C22.3178 3.89462 22.0929 3.14317 21.4749 2.52513C20.8568 1.90708 20.1054 1.68219 19.3944 1.5866C18.7488 1.4998 17.9551 1.49989 17.0895 1.49999C17.0597 1.5 17.0299 1.5 17 1.5H8C7.97008 1.5 7.94025 1.5 7.9105 1.49999C7.04487 1.49989 6.25121 1.4998 5.60558 1.5866C4.89462 1.68219 4.14317 1.90708 3.52513 2.52513C2.90708 3.14317 2.68219 3.89462 2.5866 4.60559C2.4998 5.25121 2.49989 6.04487 2.49999 6.9105C2.5 6.94025 2.5 6.97009 2.5 7V22C2.5 22.0299 2.5 22.0597 2.49999 22.0895C2.49989 22.9551 2.4998 23.7488 2.5866 24.3944C2.68219 25.1054 2.90708 25.8568 3.52513 26.4749C4.14317 27.0929 4.89462 27.3178 5.60558 27.4134C6.25121 27.5002 7.04488 27.5001 7.91051 27.5L8 27.5Z" fill="#222222" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M34.0121 22.868L26.2793 19.9484" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28.8993 18.7978L26.2793 19.9472L27.4288 22.559" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.48595 12.8823L16.2188 15.8019" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5988 16.9525L16.2188 15.8031L15.0692 13.1912" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                                        
+            </a>
+            <a href="#" class="bottom-header__icon bottom-header__icon_notification" data-notification="12">
+                <svg width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2029_158)">
+                    <path d="M4.75254 17.3973L17.9547 30.9287C18.0088 30.9841 18.0358 31.0118 18.0597 31.034C18.5893 31.5279 19.4107 31.5279 19.9403 31.034C19.9641 31.0118 19.9912 30.9841 20.0452 30.9287L20.0453 30.9287L33.2475 17.3973C36.0258 14.5498 36.4586 10.1565 34.2893 6.82154C30.7979 1.45383 22.8509 1.72448 19.7328 7.31728L19.2962 8.10022C19.1669 8.33224 18.8331 8.33224 18.7038 8.10022L18.2672 7.31728C15.1491 1.72448 7.2021 1.45383 3.71068 6.82154C1.54143 10.1565 1.97422 14.5498 4.75254 17.3973Z" stroke="white" stroke-width="3"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2029_158">
+                    <rect width="38" height="35" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>                                                           
+            </a>
+            <a href="#" class="bottom-header__icon bottom-header__icon_notification" data-notification="9">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.75 2.75011H6.23333C6.59934 2.74116 6.95714 2.85933 7.24582 3.08451C7.5345 3.30968 7.73623 3.62794 7.81667 3.98511L11.965 22.0984C12.0454 22.4556 12.2472 22.7739 12.5358 22.999C12.8245 23.2242 13.1823 23.3424 13.5483 23.3334H26.88C27.2417 23.344 27.5961 23.2303 27.8842 23.0114C28.1722 22.7924 28.3766 22.4814 28.4633 22.1301L31.25 10.6668" stroke="white" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.917 10.6666H15.417" stroke="white" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.3379 30.4584H15.4962" stroke="white" stroke-width="4.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.8379 30.4584H24.9962" stroke="white" stroke-width="4.75" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                                                                              
+            </a>
+            <a href="#" class="bottom-header__icon">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.4983 20.8572C20.7529 20.8572 23.3912 18.2188 23.3912 14.9643C23.3912 11.7098 20.7529 9.07144 17.4983 9.07144C14.2438 9.07144 11.6055 11.7098 11.6055 14.9643C11.6055 18.2188 14.2438 20.8572 17.4983 20.8572Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 29C8.99281 27.7785 10.3881 26.769 12.0519 26.0685C13.7156 25.368 15.5918 25 17.5 25C19.4082 25 21.2844 25.368 22.9481 26.0685C24.6119 26.769 26.0072 27.7785 27 29" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.4992 32.8214C25.961 32.8214 32.8206 25.9617 32.8206 17.4999C32.8206 9.03813 25.961 2.1785 17.4992 2.1785C9.03737 2.1785 2.17773 9.03813 2.17773 17.4999C2.17773 25.9617 9.03737 32.8214 17.4992 32.8214Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                                                                                              
+            </a>
+        </div>
+        <div class="bottom-header__burger">
+            <span></span>
+        </div>
+
+        <div class="catalog-header" style="display: none;">
+            <div class="catalog-header__inner">
+                <ul class="catalog-header__menu">
+                    <li>
+                        <a href="javascript:void(0)" class="active" data-tab-id="1">
+                            Производители
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                            </svg>                                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-tab-id="2">
+                            Монеты
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                            </svg>                                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-tab-id="3">
+                            Алгоритмы
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                            </svg>                                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-tab-id="4">
+                            Системы охлаждения
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                            </svg>                                
+                        </a>
+                    </li>
+                </ul>
+                <div class="catalog-header__body" data-tab-id="1">
+                    <div class="catalog-header__products">
+                        <div class="catalog-header__category">
+                            <img src="img/bitmain.png" alt="Bitmain">
+                            <a href="catalog.html">Смотреть все</a>
+                        </div>
+                        <div class="catalog-header__cards">
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="catalog-header__products">
+                        <div class="catalog-header__category">
+                            <img src="img/microbt.png" alt="Microbt">
+                            <a href="catalog.html">Смотреть все</a>
+                        </div>
+                        <div class="catalog-header__cards">
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu">
+    
+    <div class="mobile-menu__header">
+        <form class="mobile-menu__search">
+            <input type="search" name="q" placeholder="Search">
+            <svg class="mobile-menu__search-icon" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.28655 16.3809C4.26276 16.3809 1.00084 13.119 1.00084 9.09516C1.00084 5.07137 4.26276 1.80945 8.28655 1.80945C12.3103 1.80945 15.5723 5.07137 15.5723 9.09516C15.5723 13.119 12.3103 16.3809 8.28655 16.3809Z" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.0479 20.0476L13.3336 14.3333" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                  
+        </form>
+        <a href="javascript:void(0)" class="mobile-menu__close">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 2.00001L2 16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 16L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                
+        </a>
+    </div>
+
+    <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__list-item">
+                <a href="catalog.html" class="mobile-menu__list-link">Catalog</a>
+
+                <ul class="mobile-menu__catalog">
+                    <li>
+                        <span class="mobile-menu__catalog-item">
+                            Производители
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                            </svg>                                
+                        </span>
+                        <div class="mobile-menu-droplist">
+                            <ul class="mobile-menu-droplist__inner">
+                                <li>
+                                    <a href="#">Bitmain</a>
+                                </li>
+                                <li>
+                                    <a href="#">MicroBT</a>
+                                </li>
+                                <li>
+                                    <a href="#">Innosilicon</a>
+                                </li>
+                                <li>
+                                    <a href="#">Canaan</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="mobile-menu__catalog-item">
+                            Монеты
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                            </svg>                                
+                        </span>
+                        <div class="mobile-menu-droplist">
+                            <ul class="mobile-menu-droplist__inner">
+                                <li>
+                                    <a href="#">Bitcoin</a>
+                                </li>
+                                <li>
+                                    <a href="#">Litecoin</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ethereum Classic</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kadena</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dogecoin</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kaspa</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nervos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bitcoin cash</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="mobile-menu__catalog-item">
+                            Алгоритмы
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                            </svg>                                
+                        </span>
+                        <div class="mobile-menu-droplist">
+                            <ul class="mobile-menu-droplist__inner">
+                                <li>
+                                    <a href="#">SHA-256</a>
+                                </li>
+                                <li>
+                                    <a href="#">Scrypt</a>
+                                </li>
+                                <li>
+                                    <a href="#">KHeavyHash</a>
+                                </li>
+                                <li>
+                                    <a href="#">EtHash</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kadena</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="mobile-menu__catalog-item">
+                            Система охлаждения
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                            </svg>                                
+                        </span>
+                        <div class="mobile-menu-droplist">
+                            <ul class="mobile-menu-droplist__inner">
+                                <li>
+                                    <a href="#">Жидкостное охлаждение</a>
+                                </li>
+                                <li>
+                                    <a href="#">Воздушное охлаждение</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="#" class="mobile-menu__list-link">Turnkey Mining</a>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="#" class="mobile-menu__list-link">Hosting</a>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="#" class="mobile-menu__list-link">Хостинг</a>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="#" class="mobile-menu__list-link ">Shipping</a>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="about.html" class="mobile-menu__list-link">Company</a>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="#" class="mobile-menu__list-link">Blog</a>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="#" class="mobile-menu__list-link">Price list</a>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="#" class="mobile-menu__list-link">Reviews</a>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="contacts.html" class="mobile-menu__list-link">Contacts</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="mobile-menu__icons">
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon ">
+                <svg width="26" height="35" viewBox="0 0 26 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="22.2222" height="32" rx="2.05729" fill="white"/>
+                    <rect x="4.66602" y="4.66675" width="16.8889" height="8.88889" rx="1.044" fill="#000"/>
+                    <rect x="4.66602" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="4.66602" y="22.4443" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <path d="M4.66602 28.6667C4.66602 28.1758 5.06398 27.7778 5.5549 27.7778H8.22157C8.71249 27.7778 9.11046 28.1758 9.11046 28.6667V30.4445C9.11046 30.9354 8.71249 31.3334 8.22157 31.3334H5.5549C5.06399 31.3334 4.66602 30.9354 4.66602 30.4445V28.6667Z" fill="#222222"/>
+                    <rect x="11" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="10.8887" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="10.8887" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                </svg>
+            </div>
+            <span>Рассчитать доходность</span>                 
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon ">
+                <svg width="42" height="35" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 33.5H34L34.0895 33.5C34.9551 33.5001 35.7488 33.5002 36.3944 33.4134C37.1054 33.3178 37.8568 33.0929 38.4749 32.4749C39.0929 31.8568 39.3178 31.1054 39.4134 30.3944C39.5002 29.7488 39.5001 28.9551 39.5 28.0895C39.5 28.0597 39.5 28.0299 39.5 28V13C39.5 12.9701 39.5 12.9403 39.5 12.9105C39.5001 12.0449 39.5002 11.2512 39.4134 10.6056C39.3178 9.89462 39.0929 9.14317 38.4749 8.52513C37.8568 7.90708 37.1054 7.68219 36.3944 7.5866C35.7488 7.4998 34.9551 7.49989 34.0895 7.49999C34.0597 7.5 34.0299 7.5 34 7.5H24C23.9855 7.5 23.971 7.5 23.9565 7.5C23.5279 7.49997 23.1342 7.49995 22.8036 7.52251C22.4483 7.54675 22.0576 7.60198 21.6606 7.76642C20.803 8.12165 20.1217 8.80301 19.7664 9.66061C19.602 10.0576 19.5468 10.4483 19.5225 10.8036C19.4999 11.1342 19.5 11.5279 19.5 11.9565C19.5 11.971 19.5 11.9855 19.5 12V27V28C19.5 28.0299 19.5 28.0597 19.5 28.0895C19.4999 28.9551 19.4998 29.7488 19.5866 30.3944C19.6822 31.1054 19.9071 31.8568 20.5251 32.4749C21.1432 33.0929 21.8946 33.3178 22.6056 33.4134C23.2512 33.5002 24.0449 33.5001 24.9105 33.5L25 33.5Z" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M8 27.5H17L17.0895 27.5C17.9551 27.5001 18.7488 27.5002 19.3944 27.4134C20.1054 27.3178 20.8568 27.0929 21.4749 26.4749C22.0929 25.8568 22.3178 25.1054 22.4134 24.3944C22.5002 23.7488 22.5001 22.9551 22.5 22.0895C22.5 22.0597 22.5 22.0299 22.5 22V7C22.5 6.97009 22.5 6.94026 22.5 6.91051C22.5001 6.04488 22.5002 5.25121 22.4134 4.60558C22.3178 3.89462 22.0929 3.14317 21.4749 2.52513C20.8568 1.90708 20.1054 1.68219 19.3944 1.5866C18.7488 1.4998 17.9551 1.49989 17.0895 1.49999C17.0597 1.5 17.0299 1.5 17 1.5H8C7.97008 1.5 7.94025 1.5 7.9105 1.49999C7.04487 1.49989 6.25121 1.4998 5.60558 1.5866C4.89462 1.68219 4.14317 1.90708 3.52513 2.52513C2.90708 3.14317 2.68219 3.89462 2.5866 4.60559C2.4998 5.25121 2.49989 6.04487 2.49999 6.9105C2.5 6.94025 2.5 6.97009 2.5 7V22C2.5 22.0299 2.5 22.0597 2.49999 22.0895C2.49989 22.9551 2.4998 23.7488 2.5866 24.3944C2.68219 25.1054 2.90708 25.8568 3.52513 26.4749C4.14317 27.0929 4.89462 27.3178 5.60558 27.4134C6.25121 27.5002 7.04488 27.5001 7.91051 27.5L8 27.5Z" fill="#000000" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M34.0121 22.868L26.2793 19.9484" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28.8993 18.7978L26.2793 19.9472L27.4288 22.559" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.48595 12.8823L16.2188 15.8019" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5988 16.9525L16.2188 15.8031L15.0692 13.1912" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>         
+            </div>
+            <span>Сравнить модели</span>                                                
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon bottom-header__icon_notification" data-notification="12">
+                <svg width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2029_158)">
+                    <path d="M4.75254 17.3973L17.9547 30.9287C18.0088 30.9841 18.0358 31.0118 18.0597 31.034C18.5893 31.5279 19.4107 31.5279 19.9403 31.034C19.9641 31.0118 19.9912 30.9841 20.0452 30.9287L20.0453 30.9287L33.2475 17.3973C36.0258 14.5498 36.4586 10.1565 34.2893 6.82154C30.7979 1.45383 22.8509 1.72448 19.7328 7.31728L19.2962 8.10022C19.1669 8.33224 18.8331 8.33224 18.7038 8.10022L18.2672 7.31728C15.1491 1.72448 7.2021 1.45383 3.71068 6.82154C1.54143 10.1565 1.97422 14.5498 4.75254 17.3973Z" stroke="white" stroke-width="3"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2029_158">
+                    <rect width="38" height="35" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>        
+            </div>
+            <span>Избранное</span>                                                                    
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon bottom-header__icon_notification" data-notification="9">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.75 2.75011H6.23333C6.59934 2.74116 6.95714 2.85933 7.24582 3.08451C7.5345 3.30968 7.73623 3.62794 7.81667 3.98511L11.965 22.0984C12.0454 22.4556 12.2472 22.7739 12.5358 22.999C12.8245 23.2242 13.1823 23.3424 13.5483 23.3334H26.88C27.2417 23.344 27.5961 23.2303 27.8842 23.0114C28.1722 22.7924 28.3766 22.4814 28.4633 22.1301L31.25 10.6668" stroke="white" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.917 10.6666H15.417" stroke="white" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.3379 30.4584H15.4962" stroke="white" stroke-width="4.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.8379 30.4584H24.9962" stroke="white" stroke-width="4.75" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                     
+            </div>
+            <span>Корзина</span>                                                         
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.4983 20.8572C20.7529 20.8572 23.3912 18.2188 23.3912 14.9643C23.3912 11.7098 20.7529 9.07144 17.4983 9.07144C14.2438 9.07144 11.6055 11.7098 11.6055 14.9643C11.6055 18.2188 14.2438 20.8572 17.4983 20.8572Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 29C8.99281 27.7785 10.3881 26.769 12.0519 26.0685C13.7156 25.368 15.5918 25 17.5 25C19.4082 25 21.2844 25.368 22.9481 26.0685C24.6119 26.769 26.0072 27.7785 27 29" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.4992 32.8214C25.961 32.8214 32.8206 25.9617 32.8206 17.4999C32.8206 9.03813 25.961 2.1785 17.4992 2.1785C9.03737 2.1785 2.17773 9.03813 2.17773 17.4999C2.17773 25.9617 9.03737 32.8214 17.4992 32.8214Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span>Личный кабинет</span>                                                                                          
+        </a>
+    </div>
+
+    <div class="mobile-menu__contacts">
+        <div>
+            <a href="mailto:sales@uminers.com">sales@uminers.com</a><br>
+            <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
+        </div>
+        <div class="mobile-menu__socials">
+            <a href="#" class="mobile-menu__social">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8337 21.998C11.1139 22.0307 9.41109 21.6551 7.86661 20.9025L3.25821 21.8014L4.15163 17.2788C1.10835 11.6606 4.15163 3 12.6293 3C25.1285 3 25.0503 21.998 12.8337 21.998ZM12.6033 4.35484C5.07766 4.35484 2.55826 12.3153 5.64719 17.1037L5.07331 19.9993L8.02747 19.4245C9.28608 20.1851 10.8686 20.6432 12.7902 20.6432C23.2613 20.6454 23.3287 4.35484 12.6033 4.35484ZM7.64271 7.36704L10.4686 7.27629L11.3794 10.8395L10.6469 12.1749L13.038 14.474L14.3966 13.7804L17.9116 14.6966L17.6942 17.7585C17.6942 17.7585 14.6901 19.1695 10.5447 15.0531C6.39931 10.9367 7.64271 7.36704 7.64271 7.36704Z" fill="#9C9C9C"/>
+                </svg>                        
+            </a>
+            <a href="#" class="mobile-menu__social">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6972 18.0159L10.631 20.7241L9.76408 20.848L7.82415 13.8027L1 11.4403L22.009 3L23 3.02337L19.6899 22L13.6972 18.0159ZM18.9516 6.56586L9.3251 12.6484L10.4336 17.6326L10.7374 17.5602L11.8947 13.7139L19.5879 6.64531L18.9516 6.56586Z" fill="#9C9C9C"/>
+                </svg>                        
+            </a>
+        </div>
+    </div>
+</div>
+
+    <main>
+
+        <!--Product-->
+        <section class="section container product">
+    <div class="breadcrumbs">
+    <a href="index.html" class="breadcrumbs__item">Main</a>
+    <div class="breadcrumbs__arrow">
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.54889 1.00006L10.3634 5.81455C10.7754 6.22658 10.7754 6.89463 10.3634 7.30667L5.56055 12.1095" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+        </svg>            
+    </div>
+    <a href="catalog.html" class="breadcrumbs__item">Catalog</a>
+    <div class="breadcrumbs__arrow">
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.54889 1.00006L10.3634 5.81455C10.7754 6.22658 10.7754 6.89463 10.3634 7.30667L5.56055 12.1095" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+        </svg>            
+    </div>
+    <a href="#" class="breadcrumbs__item">Bitmain</a>
+    <div class="breadcrumbs__arrow">
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.54889 1.00006L10.3634 5.81455C10.7754 6.22658 10.7754 6.89463 10.3634 7.30667L5.56055 12.1095" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+        </svg>            
+    </div>
+    <a href="javascript:void(0)" class="breadcrumbs__item">Bitmain Antminer S21 195 Th/s</a>
+</div>
+    <div class="product__content">
+        <div class="product__images catalog">
+            <aside class="product__gallery">
+                <div class="product__slider-btn" id="productSwiperPrev">
+                    <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M39 21L20.725 1.76316C20.3307 1.34816 19.6693 1.34816 19.275 1.76316L0.999997 21"
+                            stroke="#969696" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="product__slider swiper" id="productSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img product__gallery-img_active">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-2.png" data-src="img/product/product-2-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-3.png" data-src="img/product/product-3-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-4.png" data-src="img/product/product-2-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__gallery-img">
+                                <img src="img/product/product-1.png" data-src="img/asic-product-big.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="product__slider-btn" id="productSwiperNext">
+                    <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L19.275 20.2368C19.6693 20.6518 20.3307 20.6518 20.725 20.2368L39 0.999999"
+                            stroke="#969696" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </aside>
+            <div class="product__image card">
+                <div class="card__top">
+                    <div class="card__category_outlined">NEW</div>
+                    <div class="card__categories">
+                        <div class="card__category_primary">In stock</div>
+                        <div class="card__category_white">Hosting from Uminers is available</div>
+                    </div>
+                </div>
+                <div class="card__image">
+                    <img src="img/asic-product-big.png" alt="asic miner">
+                </div>
+                <div class="card__top">
+                    <img src="img/bitcoin-card-logo.png" alt="cryptocurrency 3d logo">
+                    <div class="card__characteristics_big">
+                        <div class="card__characteristic">
+                            <div class="card__characteristicValue">15 USD</div>
+                            <div class="card__characteristicName">Income per day</div>
+                        </div>
+                        <div class="card__characteristic">
+                            <div class="card__characteristicValue">12,3 mon.</div>
+                            <div class="card__characteristicName">Payback period</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product__description catalog">
+            <h2 class="product__title section-title">
+                <div class="product__title-wrapper">
+                    <span class="mini">SKU: ANTL7</span>
+                    Bitmain Antminer S21 170 Th/s
+                </div>
+                <div class="card__like">
+                    <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="basicSVG">
+                        <path
+                            d="M3.45181 11.7224L12.353 20.3713C12.7133 20.7214 13.2867 20.7214 13.647 20.3713L22.5482 11.7224C24.5422 9.78487 24.8501 6.6924 23.2771 4.3998C20.9129 0.954049 15.7691 1.13345 13.6508 4.73553L13.2027 5.49748C13.1118 5.65206 12.8882 5.65206 12.7973 5.49748L12.3492 4.73553C10.2309 1.13344 5.08708 0.954049 2.72292 4.3998C1.14994 6.6924 1.45776 9.78487 3.45181 11.7224Z"
+                            stroke="#3F3F3F" stroke-width="2" />
+                    </svg>
+                </div>
+            </h2>
+            <div class="product__comments">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10.049 2.92704C10.3483 2.00573 11.6518 2.00573 11.9511 2.92704L13.2452 6.90983C13.3791 7.32185 13.763 7.60081 14.1963 7.60081H18.384C19.3527 7.60081 19.7555 8.84043 18.9718 9.40983L15.5838 11.8713C15.2333 12.126 15.0867 12.5773 15.2206 12.9894L16.5147 16.9721C16.814 17.8935 15.7595 18.6596 14.9758 18.0902L11.5878 15.6287C11.2373 15.374 10.7628 15.374 10.4123 15.6287L7.02428 18.0902C6.24057 18.6596 5.18609 17.8935 5.48544 16.9721L6.77953 12.9894C6.91341 12.5773 6.76675 12.126 6.41626 11.8713L3.02829 9.40983C2.24458 8.84043 2.64735 7.60081 3.61607 7.60081H7.80384C8.23707 7.60081 8.62102 7.32185 8.7549 6.90983L10.049 2.92704Z"
+                        fill="#F23C00" />
+                </svg>
+
+                <span class="product__comments-points">4.9</span>
+                <a href="#reviewsSection" class="product__comments-reviews">19 reviews</a>
+            </div>
+            <a href="#" class="product__auth">
+                Log in to get a discount
+            </a>
+            <p class="product__paragraph">Antminer S21  is Manufactured By Bitmain. And it's mining Scrypt algorithm which running maximum hashrate 
+                of 17.6Gh/s for a power consumption of only 3260W</p>
+            <div class="product__calculations">
+                <a href="" class="btn btn_outlined_primary">
+                    <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="18" height="25" rx="2.31445" fill="#00C1AD"/>
+                        <rect x="1.78369" y="2.7821" width="14.4323" height="6.16997" rx="1.1745" fill="black"/>
+                        <rect x="2" y="11" width="4" height="3" rx="1" fill="black"/>
+                        <rect x="2" y="16" width="4" height="3" rx="1" fill="black"/>
+                        <path d="M2 22C2 21.4477 2.44772 21 3 21H5C5.55228 21 6 21.4477 6 22V23C6 23.5523 5.55228 24 5 24H3C2.44772 24 2 23.5523 2 23V22Z" fill="black"/>
+                        <rect x="7" y="11" width="4" height="3" rx="1" fill="black"/>
+                        <rect x="7" y="16" width="4" height="3" rx="1" fill="black"/>
+                        <rect x="7" y="21" width="4" height="3" rx="1" fill="black"/>
+                        <rect x="12" y="11" width="4" height="3" rx="1" fill="black"/>
+                        <rect x="12" y="16" width="4" height="3" rx="1" fill="black"/>
+                        <rect x="12" y="21" width="4" height="3" rx="1" fill="black"/>
+                    </svg>                        
+                    Calculate
+                </a>
+                <a href="" class="btn btn_outlined_primary">
+                    <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.55163 20.646H10.9508C12.6251 20.646 13.4622 20.646 13.9824 20.1259C14.5025 19.6058 14.5025 18.7687 14.5025 17.0944V5.55163C14.5025 3.87737 14.5025 3.04025 13.9824 2.52012C13.4622 2 12.6251 2 10.9508 2H4.55163C2.87737 2 2.04025 2 1.52012 2.52012C1 3.04025 1 3.87737 1 5.55163V17.0944C1 18.7687 1 19.6058 1.52012 20.1259C2.04025 20.646 2.87737 20.646 4.55163 20.646Z" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M12.9702 20.646V20.6984C12.9702 22.3726 12.9702 23.2097 13.4903 23.7299C14.0104 24.25 14.8476 24.25 16.5218 24.25H22.921C24.5953 24.25 25.4324 24.25 25.9525 23.7299C26.4727 23.2097 26.4727 22.3726 26.4727 20.6984V9.15557C26.4727 7.48132 26.4727 6.64419 25.9525 6.12407C25.4324 5.60394 24.5953 5.60394 22.921 5.60394H14.7326" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M23.2942 16.7934L17.5498 14.6161" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.4952 13.7613L17.5498 14.6161L18.4046 16.5615" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.10475 10.8881L10.8491 13.0653" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.90373 13.9201L10.8491 13.0653L9.99432 11.12" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                                
+                    Compare
+                </a>
+                <!-- <a href="" class="btn btn_outlined_primary">
+                    <svg width="19" height="26" viewBox="0 0 19 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.125 14.125L12.875 14.125" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M6.125 9.625L10.625 9.625" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M6.125 18.625L10.625 18.625" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M17.375 14.125V19.2679C17.375 21.0861 17.375 21.9953 16.8101 22.5601C16.2453 23.125 15.3361 23.125 13.5179 23.125H5.48214C3.66387 23.125 2.75473 23.125 2.18987 22.5601C1.625 21.9953 1.625 21.0861 1.625 19.2679V6.73214C1.625 4.91387 1.625 4.00473 2.18987 3.43987C2.75473 2.875 3.66387 2.875 5.48214 2.875H8.375" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>                        
+
+                    КП для юр.лиц
+                </a> -->
+            </div>
+            <form action="" class="product__form form">
+                <div class="product__hashrate form__group">
+                    <span class="form__title">Hashrate, TH/s</span>
+                    <div class="form__tabs">
+                        <label for="hashrate1" class="form__tab active">
+                            <input type="radio" name="hashrate" id="hashrate1">
+                            168
+                        </label>
+                        <label for="hashrate2" class="form__tab">
+                            <input type="radio" name="hashrate" id="hashrate2">
+                            170
+                        </label>
+                        <label for="hashrate3" class="form__tab">
+                            <input type="radio" name="hashrate" id="hashrate3" disabled>
+                            172
+                        </label>
+                        <label for="hashrate4" class="form__tab">
+                            <input type="radio" name="hashrate" id="hashrate4">
+                            174
+                        </label>
+                    </div>
+                </div>
+                <div class="product__amount form__group">
+                    <span class="form__title">Quantity</span>
+                    <div class="form__ammount">
+                        <div class="form__symbol_left">
+                            -
+                        </div>
+                        <input type="number" inputmode="numeric" min="10" placeholder="10" value=10 name="ammount">
+                        <div class=" form__symbol_right">
+                            +
+                        </div>
+                    </div>
+                    <span class="product__minAmmount">
+                        Min: 10 items
+                    </span>
+                </div>
+            </form>
+            <div class="card__bottomWrapper">
+                <div>
+                    <span class="card__subPrice">3 600 USDT</span>
+                    <div class="card__price">
+                        <span>360 000 ₽</span>
+                        <span class="mini">(with VAT)</span>
+                        <div class="tooltip">
+                            <div class="tooltip__text">Found it cheaper?</div>
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="21" rx="10" fill="#00C1AD"/>
+                                <path d="M9.22727 16V7.27273H10.5682V16H9.22727ZM9.90909 5.81818C9.64773 5.81818 9.42235 5.72917 9.23295 5.55114C9.04735 5.37311 8.95455 5.15909 8.95455 4.90909C8.95455 4.65909 9.04735 4.44508 9.23295 4.26705C9.42235 4.08902 9.64773 4 9.90909 4C10.1705 4 10.3939 4.08902 10.5795 4.26705C10.7689 4.44508 10.8636 4.65909 10.8636 4.90909C10.8636 5.15909 10.7689 5.37311 10.5795 5.55114C10.3939 5.72917 10.1705 5.81818 9.90909 5.81818Z" fill="black"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                </div>
+                <p class="card__subtitle">Free shipping within 7 days with 100% prepayment</p>
+                <div class="card__buttons">
+                    <a href="" class="btn btn-main">Buy Now</a>
+                    <a href="" class="btn btn_outlined_black">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Banner -->
+        <section class="container m-90">
+    <div class="product-banner" >
+        <div class="product-banner__info">
+            <h2 class="product-banner__title">Place your equipment at our facility with a capacity of over 100 MW in Ethiopia.</h2>
+            <ul class="product-banner__list">
+                <li>
+                    <span></span>Duration from 12 to 60 months
+                </li>
+                <li>
+                    <span></span>Legal entity or individual entrepreneur
+                </li>
+                <li>
+                    <span></span>Minimum contribution 10%
+                </li>
+                <li>
+                    <span></span>The transaction value must be from $ 5000
+                </li>
+            </ul>
+            <div class="product-banner__btns">
+                <a href="#" class="btn">Order with placement</a>
+                <a href="#" class="btn btn_secondary">More details</a>
+            </div>
+        </div>
+        <div class="product-banner__img">
+            <img src="img/product/banner.png" alt="Эфиопия">
+        </div>
+    </div>
+</section>
+
+        <!-- Tabs -->
+        <section class="container m-90">
+    <div class="tabs">
+        <div class="tabs__header">
+            <div class="tabs__item tabs__item_active" data-tab-id="1">Specifications</div>
+            <div class="tabs__item" data-tab-id="2">Details</div>
+            <div class="tabs__item" data-tab-id="3">Overview</div>
+            <div class="tabs__item" data-tab-id="4">Delivery and payment</div>
+            <div class="tabs__item" data-tab-id="5">Warranty</div>
+        </div>
+        <div class="tabs__content">
+            <div class="tabs__body" data-tab-id="1">
+                <table class="specifications-table">
+                    <tbody>
+                        <tr>
+                            <td class="specifications-table__title">Manufacturer</td>
+                            <td class="specifications-table__value">Bitmain</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Model</td>
+                            <td class="specifications-table__value">Antminer S21 Pro 234Th/s</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Release date</td>
+                            <td class="specifications-table__value">July 2024</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Size w/o</td>
+                            <td class="specifications-table__value">400 X 195 X 290mm</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Size with</td>
+                            <td class="specifications-table__value">570 X 316 X 430mm</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Weight Net</td>
+                            <td class="specifications-table__value">15400g</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Weight Gross</td>
+                            <td class="specifications-table__value">17200g</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Noise level</td>
+                            <td class="specifications-table__value">75 db</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Fan(s)</td>
+                            <td class="specifications-table__value">4</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Power</td>
+                            <td class="specifications-table__value">3510 W</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Voltage</td>
+                            <td class="specifications-table__value">220-277</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Interface</td>
+                            <td class="specifications-table__value">Ethernet</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Storage Temp.</td>
+                            <td class="specifications-table__value">-20-70</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Temperature</td>
+                            <td class="specifications-table__value">0 - 45 °C</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">Humidity</td>
+                            <td class="specifications-table__value">10-90%</td>
+                        </tr>
+                        <tr>
+                            <td class="specifications-table__title">J/TH</td>
+                            <td class="specifications-table__value">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tabs__body tabs__text" data-tab-id="2" style="display: none;">
+                <p>Manufacturer Bitmain occupies one of the very first positions in the market for the production of mining equipment. The equipment has a very good price/quality ratio and is a leader in its field.</p>
+                <br>
+                <p>3 Phase AntPDU For Antminer S21/T21 is a power distribution unit designed for use with Antminer S21, T21 and other models. It provides stable and efficient power to your equipment with 86000W of power and 12 6-pin PCI-E connectors and 1 4-pin CPU connector.</p>
+                <br>
+                <p>The power supply has compact dimensions (width 30 cm, height 20 cm) and light weight (only 0.1 kg), which makes it convenient for transportation and installation. The power supply input voltage is 346-480 VAC and the frequency is 50/60 Hz.</p>
+                <br>
+                <p>AntPDU For Antminer S21/T21 is made of quality materials and meets safety standards. It ensures reliable and durable operation of your equipment, allowing you to get the maximum return on your mining investment.</p>
+            </div>
+            <div class="tabs__body tabs__text" data-tab-id="3" style="display: none;">
+                <p>Manufacturer Bitmain occupies one of the very first positions in the market for the production of mining equipment. The equipment has a very good price/quality ratio and is a leader in its field.</p>
+                <br>
+                <p>3 Phase AntPDU For Antminer S21/T21 is a power distribution unit designed for use with Antminer S21, T21 and other models. It provides stable and efficient power to your equipment with 86000W of power and 12 6-pin PCI-E connectors and 1 4-pin CPU connector.</p>
+                <br>
+                <p>The power supply has compact dimensions (width 30 cm, height 20 cm) and light weight (only 0.1 kg), which makes it convenient for transportation and installation. The power supply input voltage is 346-480 VAC and the frequency is 50/60 Hz.</p>
+                <br>
+                <p>AntPDU For Antminer S21/T21 is made of quality materials and meets safety standards. It ensures reliable and durable operation of your equipment, allowing you to get the maximum return on your mining investment.</p>
+            </div>
+            <div class="tabs__body tabs__text" data-tab-id="4" style="display: none;">
+                <p>Manufacturer Bitmain occupies one of the very first positions in the market for the production of mining equipment. The equipment has a very good price/quality ratio and is a leader in its field.</p>
+                <br>
+                <p>3 Phase AntPDU For Antminer S21/T21 is a power distribution unit designed for use with Antminer S21, T21 and other models. It provides stable and efficient power to your equipment with 86000W of power and 12 6-pin PCI-E connectors and 1 4-pin CPU connector.</p>
+                <br>
+                <p>The power supply has compact dimensions (width 30 cm, height 20 cm) and light weight (only 0.1 kg), which makes it convenient for transportation and installation. The power supply input voltage is 346-480 VAC and the frequency is 50/60 Hz.</p>
+                <br>
+                <p>AntPDU For Antminer S21/T21 is made of quality materials and meets safety standards. It ensures reliable and durable operation of your equipment, allowing you to get the maximum return on your mining investment.</p>
+            </div>
+            <div class="tabs__body tabs__text" data-tab-id="5" style="display: none;">
+                <p>Manufacturer Bitmain occupies one of the very first positions in the market for the production of mining equipment. The equipment has a very good price/quality ratio and is a leader in its field.</p>
+                <br>
+                <p>3 Phase AntPDU For Antminer S21/T21 is a power distribution unit designed for use with Antminer S21, T21 and other models. It provides stable and efficient power to your equipment with 86000W of power and 12 6-pin PCI-E connectors and 1 4-pin CPU connector.</p>
+                <br>
+                <p>The power supply has compact dimensions (width 30 cm, height 20 cm) and light weight (only 0.1 kg), which makes it convenient for transportation and installation. The power supply input voltage is 346-480 VAC and the frequency is 50/60 Hz.</p>
+                <br>
+                <p>AntPDU For Antminer S21/T21 is made of quality materials and meets safety standards. It ensures reliable and durable operation of your equipment, allowing you to get the maximum return on your mining investment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Cards -->
+        <section class="container m-100">
+    <div class="cards">
+        <div class="product-card cards__item">
+            <div class="product-card__title">
+                <div class="product-card__icon">
+                    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="26.3999" cy="26.5" r="17.5" stroke="#00C1AD" stroke-width="4"/>
+                        <path d="M8.8999 6.5L3.8999 11.5" stroke="#00C1AD" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M43.8999 6.5L48.8999 11.5" stroke="#00C1AD" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M18.8999 21.5L25.9231 26.1822C26.1929 26.362 26.5553 26.3057 26.7579 26.0526L31.3999 20.25" stroke="#00C1AD" stroke-width="4" stroke-linecap="round"/>
+                    </svg>                        
+                </div>
+                Direct <br>Supplies
+            </div>
+            <div class="product-card__text">
+                We have partnerships with all major mining equipment manufacturers.
+            </div>
+        </div>
+        <div class="product-card cards__item">
+            <div class="product-card__title">
+                <div class="product-card__icon">
+                    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M44.3549 11.7215L30.2076 5.65839C28.1593 4.78054 25.8407 4.78054 23.7924 5.65839L9.64508 11.7215C8.64708 12.1492 8 13.1305 8 14.2163V28.4742C8 33.7337 10.54 38.6694 14.8198 41.7264L23.8447 48.1728C25.7322 49.521 28.2678 49.521 30.1553 48.1728L39.1802 41.7264C43.46 38.6694 46 33.7337 46 28.4742V14.2163C46 13.1305 45.3529 12.1492 44.3549 11.7215ZM36.6115 21.746C37.2609 20.9342 37.1293 19.7496 36.3175 19.1002C35.5057 18.4508 34.3212 18.5824 33.6717 19.3942L24.1284 31.3234L20.1869 27.3819C19.4518 26.6468 18.26 26.6468 17.5249 27.3819C16.7898 28.117 16.7898 29.3088 17.5249 30.044L22.2099 34.729C23.3998 35.9189 25.36 35.8104 26.4112 34.4963L36.6115 21.746Z" fill="#00C1AD"/>
+                    </svg>                                        
+                </div>
+                Warranty up <br> to 12 months
+            </div>
+            <div class="product-card__text">
+                Since all our equipment comes directly from manufacturers, you will have an official warranty.
+            </div>
+        </div>
+        <div class="product-card cards__item">
+            <div class="product-card__title">
+                <div class="product-card__icon">
+                    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37.6875 25.1459V33.2709" stroke="#00C1AD" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M16.021 25.1459V33.2709" stroke="#00C1AD" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M24.146 6.1875V14.3125" stroke="#00C1AD" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M10.604 11.0625C10.604 8.37011 12.7866 6.1875 15.479 6.1875H32.8123C35.5047 6.1875 37.6873 8.37011 37.6873 11.0625V25.1458H15.479C12.7866 25.1458 10.604 22.9632 10.604 20.2708V11.0625Z" stroke="#00C1AD" stroke-width="4"/>
+                        <path d="M5.1875 30.0209C5.1875 27.3285 7.37011 25.1459 10.0625 25.1459H26.8542V46.8125H10.0625C7.37011 46.8125 5.1875 44.6299 5.1875 41.9375V30.0209Z" stroke="#00C1AD" stroke-width="4"/>
+                        <path d="M26.854 25.1459H43.6457C46.3381 25.1459 48.5207 27.3285 48.5207 30.0209V41.9375C48.5207 44.6299 46.3381 46.8125 43.6457 46.8125H26.854V25.1459Z" stroke="#00C1AD" stroke-width="4"/>
+                    </svg>                                             
+                </div>
+                Miners in Stock & Available for Order
+            </div>
+            <div class="product-card__text">
+                Even if we don’t have the items you need right now, we will deliver them within 1-2 weeks.
+            </div>
+        </div>
+        <div class="product-card cards__item">
+            <div class="product-card__title">
+                <div class="product-card__icon">
+                    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.50002 14.5833V14.5833C7.50002 11.5918 9.92514 9.16667 12.9167 9.16667L42.7857 9.16667C43.218 9.16667 43.4341 9.16667 43.6078 9.22746C43.919 9.33635 44.1637 9.58102 44.2725 9.8922C44.3333 10.0659 44.3333 10.2821 44.3333 10.7143V10.7143C44.3333 13.3077 44.3333 14.6044 43.9686 15.6468C43.3152 17.5139 41.8473 18.9819 39.9801 19.6352C38.9377 20 37.641 20 35.0476 20H33.5M7.50002 14.5833V14.5833C7.50002 17.5749 9.92514 20 12.9167 20L42.1667 20C44.2094 20 45.2308 20 45.8654 20.6346C46.5 21.2692 46.5 22.2906 46.5 24.3333L46.5 28.6667M7.50002 14.5833L7.50002 37.3333C7.50002 41.4188 7.50002 43.4616 8.76922 44.7308C10.0384 46 12.0812 46 16.1667 46L42.1667 46C44.2094 46 45.2308 46 45.8654 45.3654C46.5 44.7308 46.5 43.7094 46.5 41.6667L46.5 37.3333M46.5 37.3333H37.8333C35.7906 37.3333 34.7692 37.3333 34.1346 36.6987C33.5 36.0641 33.5 35.0428 33.5 33V33C33.5 30.9572 33.5 29.9359 34.1346 29.3013C34.7692 28.6667 35.7906 28.6667 37.8333 28.6667H46.5M46.5 37.3333L46.5 28.6667" stroke="#00C1AD" stroke-width="4"/>
+                    </svg>                                                
+                </div>
+                Full documentation. 100% legal
+            </div>
+            <div class="product-card__text">
+                You are purchasing equipment legally in compliance with the law and customs regulations.
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Promo -->
+        <section class="section product-promo container m-90">
+    <div class="product-promo__content " style="background: url(img/product/promo.png) center center / cover no-repeat;">
+        <div class="product-promo__textContent">
+            <div class="product-promo__text">
+                <h2 class="product-promo__title section-title section-title_40">
+                    Feel free to ask any questions
+                </h2>
+                <p class="product-promo__subtitle" >
+                    Our specialist will answer your questions
+                </p>
+            </div>
+        </div>
+        <a href="#" class="product-promo__btn btn btn_white">
+            Request a consultation
+        </a>
+    </div>
+</section>
+
+        <!-- Products -->
+        <section class="container m-90">
+    <h2 class="section-title section-title_40">Related Products</h2>
+    <div class="section__body catalog__cards catalog__cards_grid catalog">
+        <div class="catalog__card catalog__card_red card cards__item">
+    <div class="card__top">
+        <div class="card__categories">
+            <div class="card__category_red">Special offer</div>
+        </div>
+        <div class="card__like">
+            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="basicSVG">
+                <path
+                    d="M3.45181 11.7224L12.353 20.3713C12.7133 20.7214 13.2867 20.7214 13.647 20.3713L22.5482 11.7224C24.5422 9.78487 24.8501 6.6924 23.2771 4.3998C20.9129 0.954049 15.7691 1.13345 13.6508 4.73553L13.2027 5.49748C13.1118 5.65206 12.8882 5.65206 12.7973 5.49748L12.3492 4.73553C10.2309 1.13344 5.08708 0.954049 2.72292 4.3998C1.14994 6.6924 1.45776 9.78487 3.45181 11.7224Z"
+                    stroke="#3F3F3F" stroke-width="2" />
+            </svg>
+
+        </div>
+    </div>
+    <img src="img/asic-catalog.png" alt="asic miners catalog item">
+    <p class="card__subtitle">
+        Installation on hosting
+    </p>
+    <div class="card__topWrapper">
+        <h3 class="card__title">
+            <span>Bitmain Antminer S21 195 Th/s</span>
+            <img src="img/bitcoin-card-logo.png" alt="cryptocurrency 3d logo">
+        </h3>
+        <div class="card__categories">
+            <div class="card__category_outlined">NEW</div>
+            <div class="card__category_white">In stock</div>
+        </div>
+        <div class="card__characteristics">
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Payback</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">14,3 мес.</div>
+            </div>
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Hashrate</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">195 TH/s</div>
+            </div>
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Algorithm</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">SHA-256</div>
+            </div>
+        </div>
+    </div>
+    <div class="card__bottomWrapper">
+        <div>
+            <!-- <span class="card__subPrice">3 600 USDT</span> -->
+            <div class="card__price">
+                3 600 USD
+                <span class="mini">(with VAT)</span>
+            </div>
+        </div>
+        <div class="card__buttons">
+            <a href="" class="btn btn-main">Order</a>
+            <div class="card__buttons-icon">
+                <svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8 29.1921H15.7344C18.5628 29.1921 19.977 29.1921 20.8557 28.3135C21.7344 27.4348 21.7344 26.0206 21.7344 23.1921V8C21.7344 5.17157 21.7344 3.75736 20.8557 2.87868C19.977 2 18.5628 2 15.7344 2H8C5.17157 2 3.75736 2 2.87868 2.87868C2 3.75736 2 5.17157 2 8V23.1921C2 26.0206 2 27.4348 2.87868 28.3135C3.75736 29.1921 5.17157 29.1921 8 29.1921Z"
+                        stroke="#F23C00" stroke-width="3" stroke-linecap="round" />
+                    <path
+                        d="M19.4949 29.1921V29.1921C19.4949 31.3043 19.4949 32.3604 20.003 33.1184C20.2206 33.4431 20.4997 33.7221 20.8244 33.9398C21.5823 34.4479 22.6384 34.4479 24.7506 34.4479H33.2292C36.0577 34.4479 37.4719 34.4479 38.3506 33.5692C39.2292 32.6905 39.2292 31.2763 39.2292 28.4479V13.2557C39.2292 10.4273 39.2292 9.0131 38.3506 8.13442C37.4719 7.25574 36.0577 7.25574 33.2292 7.25574H22.0706"
+                        stroke="#F23C00" stroke-width="3" stroke-linecap="round" />
+                    <path d="M34.5845 23.571L26.1888 20.4011" stroke="#F23C00" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M29.0334 19.1519L26.1888 20.3998L27.4369 23.2355" stroke="#F23C00" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7.99898 14.9644L16.3946 18.1343" stroke="#F23C00" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M13.55 19.3835L16.3946 18.1357L15.1466 15.2999" stroke="#F23C00" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <svg width="25" height="36" viewBox="0 0 25 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="25" height="36" rx="2.31445" fill="#F23C00" />
+                    <rect x="3" y="3" width="19" height="10" rx="1.1745" fill="#222222" />
+                    <rect x="3" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="3" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <path
+                        d="M3 30C3 29.4477 3.44772 29 4 29H7C7.55228 29 8 29.4477 8 30V32C8 32.5523 7.55228 33 7 33H4C3.44772 33 3 32.5523 3 32V30Z"
+                        fill="#222222" />
+                    <rect x="10" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="10" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="10" y="29" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="29" width="5" height="4" rx="1" fill="#222222" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="catalog__card card cards__item">
+    <div class="card__top">
+        <div class="card__categories">
+            <div class="card__category_outlined">NEW</div>
+            <div class="card__category_white">In stock</div>
+        </div>
+        <div class="card__like">
+            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="basicSVG">
+                <path
+                    d="M3.45181 11.7224L12.353 20.3713C12.7133 20.7214 13.2867 20.7214 13.647 20.3713L22.5482 11.7224C24.5422 9.78487 24.8501 6.6924 23.2771 4.3998C20.9129 0.954049 15.7691 1.13345 13.6508 4.73553L13.2027 5.49748C13.1118 5.65206 12.8882 5.65206 12.7973 5.49748L12.3492 4.73553C10.2309 1.13344 5.08708 0.954049 2.72292 4.3998C1.14994 6.6924 1.45776 9.78487 3.45181 11.7224Z"
+                    stroke="#3F3F3F" stroke-width="2" />
+            </svg>
+
+        </div>
+    </div>
+    <img src="img/asic-catalog.png" alt="asic miners catalog item">
+    <p class="card__subtitle">
+        Installation on hosting
+    </p>
+    <div class="card__topWrapper">
+        <h3 class="card__title">
+            <span>Bitmain Antminer S21 195 Th/s</span>
+            <img src="img/bitcoin-card-logo.png" alt="cryptocurrency 3d logo">
+        </h3>
+        <div class="card__categories">
+            <div class="card__category_outlined">NEW</div>
+            <div class="card__category_white">In stock</div>
+        </div>
+        <div class="card__characteristics">
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Payback</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">14,3 мес.</div>
+            </div>
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Hashrate</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">195 TH/s</div>
+            </div>
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Algorithm</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">SHA-256</div>
+            </div>
+        </div>
+    </div>
+    <div class="card__bottomWrapper">
+        <div>
+            <!-- <span class="card__subPrice">3 600 USDT</span> -->
+            <div class="card__price">
+                3 600 USD
+                <span class="mini">(with VAT)</span>
+            </div>
+        </div>
+        <div class="card__buttons">
+            <a href="" class="btn btn-main">Order</a>
+            <div class="card__buttons-icon">
+                <svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8 29.1921H15.7344C18.5628 29.1921 19.977 29.1921 20.8557 28.3135C21.7344 27.4348 21.7344 26.0206 21.7344 23.1921V8C21.7344 5.17157 21.7344 3.75736 20.8557 2.87868C19.977 2 18.5628 2 15.7344 2H8C5.17157 2 3.75736 2 2.87868 2.87868C2 3.75736 2 5.17157 2 8V23.1921C2 26.0206 2 27.4348 2.87868 28.3135C3.75736 29.1921 5.17157 29.1921 8 29.1921Z"
+                        stroke="#00C1AD" stroke-width="3" stroke-linecap="round" />
+                    <path
+                        d="M19.4949 29.1921V29.1921C19.4949 31.3043 19.4949 32.3604 20.003 33.1184C20.2206 33.4431 20.4997 33.7221 20.8244 33.9398C21.5823 34.4479 22.6384 34.4479 24.7506 34.4479H33.2292C36.0577 34.4479 37.4719 34.4479 38.3506 33.5692C39.2292 32.6905 39.2292 31.2763 39.2292 28.4479V13.2557C39.2292 10.4273 39.2292 9.0131 38.3506 8.13442C37.4719 7.25574 36.0577 7.25574 33.2292 7.25574H22.0706"
+                        stroke="#00C1AD" stroke-width="3" stroke-linecap="round" />
+                    <path d="M34.5845 23.571L26.1888 20.4011" stroke="#00C1AD" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M29.0334 19.1519L26.1888 20.3998L27.4369 23.2355" stroke="#00C1AD" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7.99898 14.9644L16.3946 18.1343" stroke="#00C1AD" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M13.55 19.3835L16.3946 18.1357L15.1466 15.2999" stroke="#00C1AD" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <svg width="25" height="36" viewBox="0 0 25 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="25" height="36" rx="2.31445" fill="#00C1AD" />
+                    <rect x="3" y="3" width="19" height="10" rx="1.1745" fill="#222222" />
+                    <rect x="3" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="3" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <path
+                        d="M3 30C3 29.4477 3.44772 29 4 29H7C7.55228 29 8 29.4477 8 30V32C8 32.5523 7.55228 33 7 33H4C3.44772 33 3 32.5523 3 32V30Z"
+                        fill="#222222" />
+                    <rect x="10" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="10" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="10" y="29" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="29" width="5" height="4" rx="1" fill="#222222" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="catalog__card card cards__item">
+    <div class="card__top">
+        <div class="card__categories">
+            <div class="card__category_outlined">NEW</div>
+            <div class="card__category_white">In stock</div>
+        </div>
+        <div class="card__like">
+            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="basicSVG">
+                <path
+                    d="M3.45181 11.7224L12.353 20.3713C12.7133 20.7214 13.2867 20.7214 13.647 20.3713L22.5482 11.7224C24.5422 9.78487 24.8501 6.6924 23.2771 4.3998C20.9129 0.954049 15.7691 1.13345 13.6508 4.73553L13.2027 5.49748C13.1118 5.65206 12.8882 5.65206 12.7973 5.49748L12.3492 4.73553C10.2309 1.13344 5.08708 0.954049 2.72292 4.3998C1.14994 6.6924 1.45776 9.78487 3.45181 11.7224Z"
+                    stroke="#3F3F3F" stroke-width="2" />
+            </svg>
+
+        </div>
+    </div>
+    <img src="img/asic-catalog.png" alt="asic miners catalog item">
+    <p class="card__subtitle">
+        Installation on hosting
+    </p>
+    <div class="card__topWrapper">
+        <h3 class="card__title">
+            <span>Bitmain Antminer S21 195 Th/s</span>
+            <img src="img/bitcoin-card-logo.png" alt="cryptocurrency 3d logo">
+        </h3>
+        <div class="card__categories">
+            <div class="card__category_outlined">NEW</div>
+            <div class="card__category_white">In stock</div>
+        </div>
+        <div class="card__characteristics">
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Payback</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">14,3 мес.</div>
+            </div>
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Hashrate</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">195 TH/s</div>
+            </div>
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Algorithm</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">SHA-256</div>
+            </div>
+        </div>
+    </div>
+    <div class="card__bottomWrapper">
+        <div>
+            <!-- <span class="card__subPrice">3 600 USDT</span> -->
+            <div class="card__price">
+                3 600 USD
+                <span class="mini">(with VAT)</span>
+            </div>
+        </div>
+        <div class="card__buttons">
+            <a href="" class="btn btn-main">Order</a>
+            <div class="card__buttons-icon">
+                <svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8 29.1921H15.7344C18.5628 29.1921 19.977 29.1921 20.8557 28.3135C21.7344 27.4348 21.7344 26.0206 21.7344 23.1921V8C21.7344 5.17157 21.7344 3.75736 20.8557 2.87868C19.977 2 18.5628 2 15.7344 2H8C5.17157 2 3.75736 2 2.87868 2.87868C2 3.75736 2 5.17157 2 8V23.1921C2 26.0206 2 27.4348 2.87868 28.3135C3.75736 29.1921 5.17157 29.1921 8 29.1921Z"
+                        stroke="#00C1AD" stroke-width="3" stroke-linecap="round" />
+                    <path
+                        d="M19.4949 29.1921V29.1921C19.4949 31.3043 19.4949 32.3604 20.003 33.1184C20.2206 33.4431 20.4997 33.7221 20.8244 33.9398C21.5823 34.4479 22.6384 34.4479 24.7506 34.4479H33.2292C36.0577 34.4479 37.4719 34.4479 38.3506 33.5692C39.2292 32.6905 39.2292 31.2763 39.2292 28.4479V13.2557C39.2292 10.4273 39.2292 9.0131 38.3506 8.13442C37.4719 7.25574 36.0577 7.25574 33.2292 7.25574H22.0706"
+                        stroke="#00C1AD" stroke-width="3" stroke-linecap="round" />
+                    <path d="M34.5845 23.571L26.1888 20.4011" stroke="#00C1AD" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M29.0334 19.1519L26.1888 20.3998L27.4369 23.2355" stroke="#00C1AD" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7.99898 14.9644L16.3946 18.1343" stroke="#00C1AD" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M13.55 19.3835L16.3946 18.1357L15.1466 15.2999" stroke="#00C1AD" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <svg width="25" height="36" viewBox="0 0 25 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="25" height="36" rx="2.31445" fill="#00C1AD" />
+                    <rect x="3" y="3" width="19" height="10" rx="1.1745" fill="#222222" />
+                    <rect x="3" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="3" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <path
+                        d="M3 30C3 29.4477 3.44772 29 4 29H7C7.55228 29 8 29.4477 8 30V32C8 32.5523 7.55228 33 7 33H4C3.44772 33 3 32.5523 3 32V30Z"
+                        fill="#222222" />
+                    <rect x="10" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="10" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="10" y="29" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="29" width="5" height="4" rx="1" fill="#222222" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="catalog__card card cards__item">
+    <div class="card__top">
+        <div class="card__categories">
+            <div class="card__category_outlined">NEW</div>
+            <div class="card__category_white">In stock</div>
+        </div>
+        <div class="card__like">
+            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="basicSVG">
+                <path
+                    d="M3.45181 11.7224L12.353 20.3713C12.7133 20.7214 13.2867 20.7214 13.647 20.3713L22.5482 11.7224C24.5422 9.78487 24.8501 6.6924 23.2771 4.3998C20.9129 0.954049 15.7691 1.13345 13.6508 4.73553L13.2027 5.49748C13.1118 5.65206 12.8882 5.65206 12.7973 5.49748L12.3492 4.73553C10.2309 1.13344 5.08708 0.954049 2.72292 4.3998C1.14994 6.6924 1.45776 9.78487 3.45181 11.7224Z"
+                    stroke="#3F3F3F" stroke-width="2" />
+            </svg>
+
+        </div>
+    </div>
+    <img src="img/asic-catalog.png" alt="asic miners catalog item">
+    <p class="card__subtitle">
+        Installation on hosting
+    </p>
+    <div class="card__topWrapper">
+        <h3 class="card__title">
+            <span>Bitmain Antminer S21 195 Th/s</span>
+            <img src="img/bitcoin-card-logo.png" alt="cryptocurrency 3d logo">
+        </h3>
+        <div class="card__categories">
+            <div class="card__category_outlined">NEW</div>
+            <div class="card__category_white">In stock</div>
+        </div>
+        <div class="card__characteristics">
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Payback</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">14,3 мес.</div>
+            </div>
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Hashrate</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">195 TH/s</div>
+            </div>
+            <div class="card__characteristic">
+                <div class="card__characteristicName">Algorithm</div>
+                <div class="card__characteristicBlank"></div>
+                <div class="card__characteristicValue">SHA-256</div>
+            </div>
+        </div>
+    </div>
+    <div class="card__bottomWrapper">
+        <div>
+            <!-- <span class="card__subPrice">3 600 USDT</span> -->
+            <div class="card__price">
+                3 600 USD
+                <span class="mini">(with VAT)</span>
+            </div>
+        </div>
+        <div class="card__buttons">
+            <a href="" class="btn btn-main">Order</a>
+            <div class="card__buttons-icon">
+                <svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8 29.1921H15.7344C18.5628 29.1921 19.977 29.1921 20.8557 28.3135C21.7344 27.4348 21.7344 26.0206 21.7344 23.1921V8C21.7344 5.17157 21.7344 3.75736 20.8557 2.87868C19.977 2 18.5628 2 15.7344 2H8C5.17157 2 3.75736 2 2.87868 2.87868C2 3.75736 2 5.17157 2 8V23.1921C2 26.0206 2 27.4348 2.87868 28.3135C3.75736 29.1921 5.17157 29.1921 8 29.1921Z"
+                        stroke="#00C1AD" stroke-width="3" stroke-linecap="round" />
+                    <path
+                        d="M19.4949 29.1921V29.1921C19.4949 31.3043 19.4949 32.3604 20.003 33.1184C20.2206 33.4431 20.4997 33.7221 20.8244 33.9398C21.5823 34.4479 22.6384 34.4479 24.7506 34.4479H33.2292C36.0577 34.4479 37.4719 34.4479 38.3506 33.5692C39.2292 32.6905 39.2292 31.2763 39.2292 28.4479V13.2557C39.2292 10.4273 39.2292 9.0131 38.3506 8.13442C37.4719 7.25574 36.0577 7.25574 33.2292 7.25574H22.0706"
+                        stroke="#00C1AD" stroke-width="3" stroke-linecap="round" />
+                    <path d="M34.5845 23.571L26.1888 20.4011" stroke="#00C1AD" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M29.0334 19.1519L26.1888 20.3998L27.4369 23.2355" stroke="#00C1AD" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7.99898 14.9644L16.3946 18.1343" stroke="#00C1AD" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M13.55 19.3835L16.3946 18.1357L15.1466 15.2999" stroke="#00C1AD" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <svg width="25" height="36" viewBox="0 0 25 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="25" height="36" rx="2.31445" fill="#00C1AD" />
+                    <rect x="3" y="3" width="19" height="10" rx="1.1745" fill="#222222" />
+                    <rect x="3" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="3" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <path
+                        d="M3 30C3 29.4477 3.44772 29 4 29H7C7.55228 29 8 29.4477 8 30V32C8 32.5523 7.55228 33 7 33H4C3.44772 33 3 32.5523 3 32V30Z"
+                        fill="#222222" />
+                    <rect x="10" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="10" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="10" y="29" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="17" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="23" width="5" height="4" rx="1" fill="#222222" />
+                    <rect x="17" y="29" width="5" height="4" rx="1" fill="#222222" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+        <!-- Reviews -->
+        <section class="container m-100" id="reviewsSection">
+    <h2 class="section-title section-title_40 section-title_centered">
+        19 reviews for <span class="highlighted">Bitmain Antminer S21 170 Th/s</span>
+    </h2>
+    <div class="section__body">
+        <div class="reviews">
+            <div class="reviews__btn reviews__btn_prev" id="reviewsSliderPrev">
+                <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 39L1.76316 20.725C1.34816 20.3307 1.34816 19.6693 1.76316 19.275L21 0.999999" stroke="#969696" stroke-width="2" stroke-linecap="round"/>
+                </svg>                    
+            </div>
+            <div class="reviews__swiper swiper" id="reviewsSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide review">
+                        <div class="review__stars">
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                                                              
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                        
+                        </div>
+                        <div class="review__name">
+                            Kingsley Davis
+                        </div>
+                        <div class="review__text">
+                            Got my third Antminer S21 miner from here. Great product, lowest price, and fast shipping! Will be buying more miners soon.
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__stars">
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                                                              
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                        
+                        </div>
+                        <div class="review__name">
+                            Kingsley Davis
+                        </div>
+                        <div class="review__text">
+                            Got my third Antminer S21 miner from here. Great product, lowest price, and fast shipping! Will be buying more miners soon.
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__stars">
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                                                              
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                        
+                        </div>
+                        <div class="review__name">
+                            Kingsley Davis
+                        </div>
+                        <div class="review__text">
+                            Got my third Antminer S21 miner from here. Great product, lowest price, and fast shipping! Will be buying more miners soon.
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__stars">
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                                                              
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                        
+                        </div>
+                        <div class="review__name">
+                            Kingsley Davis
+                        </div>
+                        <div class="review__text">
+                            Got my third Antminer S21 miner from here. Great product, lowest price, and fast shipping! Will be buying more miners soon.
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__stars">
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                                                              
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                        
+                        </div>
+                        <div class="review__name">
+                            Kingsley Davis
+                        </div>
+                        <div class="review__text">
+                            Got my third Antminer S21 miner from here. Great product, lowest price, and fast shipping! Will be buying more miners soon.
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__stars">
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                                                              
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                        
+                        </div>
+                        <div class="review__name">
+                            Kingsley Davis
+                        </div>
+                        <div class="review__text">
+                            Got my third Antminer S21 miner from here. Great product, lowest price, and fast shipping! Will be buying more miners soon.
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__stars">
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                                                              
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg class="review__star review__star_active" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0488 2.92707C10.3482 2.00576 11.6516 2.00576 11.951 2.92707L13.2451 6.90986C13.3789 7.32188 13.7629 7.60084 14.1961 7.60084H18.3839C19.3526 7.60084 19.7554 8.84046 18.9717 9.40986L15.5837 11.8714C15.2332 12.126 15.0865 12.5774 15.2204 12.9894L16.5145 16.9722C16.8139 17.8935 15.7594 18.6596 14.9757 18.0902L11.5877 15.6287C11.2372 15.3741 10.7626 15.3741 10.4121 15.6287L7.02414 18.0902C6.24042 18.6596 5.18594 17.8935 5.4853 16.9722L6.77939 12.9894C6.91326 12.5774 6.7666 12.126 6.41611 11.8714L3.02815 9.40986C2.24443 8.84046 2.64721 7.60084 3.61593 7.60084H7.8037C8.23692 7.60084 8.62088 7.32188 8.75475 6.90986L10.0488 2.92707Z" fill="#9D9D9D"/>
+                            </svg>                                                                                                                        
+                        </div>
+                        <div class="review__name">
+                            Kingsley Davis
+                        </div>
+                        <div class="review__text">
+                            Got my third Antminer S21 miner from here. Great product, lowest price, and fast shipping! Will be buying more miners soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__btn reviews__btn_next" id="reviewsSliderNext">
+                <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.999998 39L20.2368 20.725C20.6518 20.3307 20.6518 19.6693 20.2368 19.275L0.999999 0.999999" stroke="#969696" stroke-width="2" stroke-linecap="round"/>
+                </svg>                                        
+            </div>
+        </div>
+    </div>
+</section>
+        
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+    <div class="footer__row container">
+        <div class="footer__col">
+            <div class="footer__item">
+                <div class="footer__item-caption">Контакты</div>
+                <div class="footer__contacts">
+                    <div class="footer__contact">
+                        <img src="img/footer_phone.png" alt="Phone icon">
+                        <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
+                    </div>
+                    <div class="footer__contact">
+                        <img src="img/footer_mail.png" alt="Mail icon">
+                        <a href="mailto:sales@uminers.com">sales@uminers.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="footer__item-caption">Офисы</div>
+                <p class="footer__text">
+                    Room 2004-2006, Nimble Plaza Tower A, Panyu Dadao North 330, Nancun Town, Guangzhou, China
+                    <br> <br>
+                    The Broadway, Unit 04-05, 16th Floor, 54-62 Lockhart Rd, Wan Chai, Hong Kong
+                </p>
+            </div>
+        </div>
+        <div class="footer__col">
+            <div class="footer__navWrapper">
+                <div class="footer__item">
+                    <div class="footer__item-caption">Навигация</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li>
+                                <a href="#" class="footer__list-item">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Каталог</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Дата-центр</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-caption">Производители</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li>
+                                <a href="#" class="footer__list-item">Bitmain</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">WhatsMiner</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">CanaanIce</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">River</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Jasminer</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Elphapex</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Goldshell</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-caption">Алгоритмы</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li>
+                                <a href="#" class="footer__list-item">SHA-256</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">ScryptX11</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Equihash</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Handshake</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Eaglesong</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">BLAKE2s</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">ЕtchashLyra</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">2REv2k</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">HeavyHash</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Blake3Kadena</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-caption">Монеты</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li>
+                                <a href="#" class="footer__list-item">Bitcoin (BTC)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Bitcoin Cash (BCH)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Litecoin (LTC)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Dogecoin (DOGE)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Dashcoin (DASH)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">ZCash ZenCash (ZEN) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Handshake (HNS) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Etherium Classic (ETC) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Nervos (CKB) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Kaspa (KAS) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Alephium Kadena (KDA)</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__row footer__copy">
+        <ul class="container footer__copy-list">
+            <li>
+                © 2024 Uminers
+            </li>
+            <li>
+                <a href="#">Политика конфиденциальности</a>
+            </li>
+            <div class="footer__gradient">
+                <img src="img/background-gradient.png" alt="footer colorfull gradient background">
+            </div>
+        </ul>
+    </div>
+
+</footer>
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

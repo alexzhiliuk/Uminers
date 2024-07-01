@@ -12,10 +12,6 @@
 
         cursor: pointer;
 
-        &.swiper-button-disabled {
-            opacity: 0;
-        }
-
         @media screen and (max-width: $breakpoint992) {
             display: none;
         }

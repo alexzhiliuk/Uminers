@@ -1,0 +1,260 @@
+<aside class="filter">
+    <a href="javascript:void(0)" class="filter__close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2.00001L2 16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16 16L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>                
+    </a>
+    <form action="" class="filter__form">
+        <div class="filter__group switchBlock">
+            <span class="heading">Categories</span>
+            <div class="options active">
+                <span class="options__heading">Manufacturers</span>
+                <div class="options__items">
+
+                    <ul class="options__itemsWrapper">
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="Bitmain">
+                                Bitmain
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                MicroBT
+                            </label>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Coins</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="btc">
+                                Bitcoin
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="ltc">
+                                Litecoin
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="eth">
+                                Ethereum Classic
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="kad">
+                                Kadena
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="doge">
+                                Dogecoin
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="kaspa">
+                                Kaspa
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Nervos
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="MicroBT">
+                                Bitcoin cash
+                            </label>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Algorithms</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="sha256">
+                                SHA-256
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="scrypt">
+                                Scrypt
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="kheavyhash">
+                                KHeavyHash
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="ethash">
+                                EtHash
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="algkadeba">
+                                Kadena
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Cooling system</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="liquid">
+                                Жидкостное охлаждение
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="air">
+                                Воздушное охлаждение
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="options">
+                <span class="options__heading">Ready filters</span>
+                <div class="options__items">
+                    <ul class="options__itemsWrapper">
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="forHome">
+                                Miners for home
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="budgetMiners">
+                                Budget miners
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="afterHalfing">
+                                After halfing
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="powerful">
+                                Powerful
+                            </label>
+                        </li>
+                        <li class="options__item">
+                            <label>
+                                <input type="checkbox" name="profitable">
+                                Profitable
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="filter__group">
+            <label for="price" class="filter__numbers">
+                <span class="heading">Price (USD)</span>
+                <div class="double-range-input" data-value-gap="10000">
+                    <div class="double-range-input__values">
+                        <div class="double-range-input__min-value">80 000</div>
+                        <div class="double-range-input__max-value">490 500</div>
+                    </div>
+                    <div class="double-range-input__progress">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="500" min="0" max="600000" value="80000">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="500" min="0" max="600000" value="495000">
+                    </div>
+                </div>
+            </label>
+            <label for="power" class="filter__numbers">
+                <span class="heading">Power Consumption (W)</span>
+                <div class="double-range-input" data-value-gap="5000">
+                    <div class="double-range-input__values">
+                        <div class="double-range-input__min-value">205</div>
+                        <div class="double-range-input__max-value">40 500</div>
+                    </div>
+                    <div class="double-range-input__progress">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="0" max="60000" value="205">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="0" max="60000" value="40500">
+                    </div>
+                </div>
+            </label>
+            <label for="hashrate" class="filter__numbers">
+                <span class="heading">Hashrate</span> <span class="filter__tabs">
+                    <button class="filter__tab active">MH/s</button>
+                    <button class="filter__tab">GH/s</button>
+                    <button class="filter__tab">TH/s</button>
+                </span>
+                <div class="double-range-input" data-value-gap="500">
+                    <div class="double-range-input__values">
+                        <div class="double-range-input__min-value">1</div>
+                        <div class="double-range-input__max-value">9 500</div>
+                    </div>
+                    <div class="double-range-input__progress">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="0" max="9500" value="1">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="0" max="9500" value="9500">
+                    </div>
+                </div>
+            </label>
+        </div>
+        <hr>
+        <div class="filter__group switchBlock">
+            
+            <label class="filter__switch">
+                <span class="heading">In stock</span>
+                <div class="switch">
+                    <input type="checkbox" name="instock">
+                    <span class="slider round"></span>
+                </div>
+            </label>
+            <label class="filter__switch">
+                <span class="heading">Fast delivery</span>
+                <div class="switch">
+                    <input type="checkbox" name="quickDelivery">
+                    <span class="slider round"></span>
+                </div>
+            </label>
+            <label class="filter__switch">
+                <span class="heading">Installation on hosting</span>
+                <div class="switch">
+                    <input type="checkbox" name="hostingInstall">
+                    <span class="slider round"></span>
+                </div>
+            </label>
+            
+        </div>
+        <div class="filter__buttons">
+            <button type="submit" class="filter__submit btn btn-round__main" style="height: 40px;">Apply filters</button>
+            <button type="reset" class="filter__reset btn btn-round__main_black">Reset</button>
+        </div>
+    </form>
+</aside>

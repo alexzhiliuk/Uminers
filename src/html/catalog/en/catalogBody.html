@@ -1,0 +1,54 @@
+<section class="catalog section container">
+    @@include('breadcrumbs.html')
+    <h2 class="section-title">
+        ASIC Miners
+        <span class="mini">375 items</span>
+    </h2>
+    <div class="section__body">
+        <div class="catalog__content">
+            @@include('./sidebar.html')
+            <div class="catalog__items">
+                <div class="catalog__category">
+                    <ul class="categories">
+                        <li class="categories__item"><a href="#">By popularity</a></li>
+                        <li class="categories__item categories__item_active"><a href="#">By average rating</a></li>
+                        <li class="categories__item"><a href="#">By latest</a></li>
+                        <li class="categories__item"><a href="#">By price: low to high</a></li>
+                        <li class="categories__item"><a href="#">By price: high to low</a></li>
+                    </ul>
+                    <div class="categories__view">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="activeSVG">
+                            <rect width="10" height="10" rx="2" fill="#3F3F3F" />
+                            <rect y="12" width="10" height="10" rx="2" fill="#3F3F3F" />
+                            <rect x="12" width="10" height="10" rx="2" fill="#3F3F3F" />
+                            <rect x="12" y="12" width="10" height="10" rx="2" fill="#3F3F3F" />
+                        </svg>
+                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="basicSVG">
+                            <rect width="22" height="5" rx="2.5" fill="#00C1AD" />
+                            <rect y="8" width="22" height="5" rx="2.5" fill="#00C1AD" />
+                            <rect y="16" width="22" height="5" rx="2.5" fill="#00C1AD" />
+                        </svg>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="catalog__open-filters btn">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 7.31543L12.5 7.31543M12.5 7.31543C12.5 8.69614 13.6193 9.81543 15 9.81543C16.3807 9.81543 17.5 8.69614 17.5 7.31543C17.5 5.93472 16.3807 4.81543 15 4.81543C13.6193 4.81543 12.5 5.93472 12.5 7.31543ZM7.5 13.9821L17.5 13.9821M7.5 13.9821C7.5 15.3628 6.38071 16.4821 5 16.4821C3.61929 16.4821 2.5 15.3628 2.5 13.9821C2.5 12.6014 3.61929 11.4821 5 11.4821C6.38071 11.4821 7.5 12.6014 7.5 13.9821Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Filters
+                </a>
+
+                <div class="catalog__cards catalog__cards_grid">
+
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+                  @@include('./catalogCard-grid.html')
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
