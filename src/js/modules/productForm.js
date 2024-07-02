@@ -8,8 +8,6 @@ try {
         let minus = element.querySelector('.form__symbol_left')
         let plus = element.querySelector('.form__symbol_right')
         let input = element.querySelector('input[name="ammount"]')
-        console.log(element, minus, plus, input);
-
 
         form.onsubmit = (e)=>{
             if(!input.value){
