@@ -194,6 +194,22 @@
                 max-width: 69%;
             }
         }
+        &__crypto {
+            display: flex;
+            height: 40px;
+
+            img {
+                height: 100%; 
+                width: auto;
+                flex-shrink: 0;
+                margin-right: -15px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
         &__characteristics {
             display: flex;
             flex-direction: column;
@@ -344,10 +360,11 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
             & > img{
                 max-width: 169px;
                 position: relative;
-                left:20px;
+                margin-left: 40px;
             }
             & > .card__top {
                 display: none;
@@ -355,6 +372,7 @@
             & > .card__subtitle{
                 display: none;
             }
+
             &__bottomWrapper{
                 display: flex;
                 flex-direction: column;
@@ -363,23 +381,42 @@
                     display: block;
                 }
             }
+
             &__topWrapper{
                 & > .card__categories{
                     display: flex;
                     margin-bottom: 10px;
                 }
             }
+
             &__title{
                 span{
                     max-width: none;
                 }
-                & img{
-                    position: absolute;
-                    top:20px;
-                    left: 20px;
-                    z-index: 2;
+
+            }
+
+            &__crypto {
+                position: absolute;
+                top:20px;
+                left: 20px;
+                z-index: 2;
+                flex-direction: column;
+                height: unset;
+                width: 40px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin-right: 0;
+                    margin-top: -15px;
+    
+                    &:first-child {
+                        margin-top: 0;
+                    }
                 }
             }
+
             &__like{
                 display: block;
                 position: absolute;

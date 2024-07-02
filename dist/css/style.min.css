@@ -3275,6 +3275,19 @@ input:checked + .slider:before {
 .catalog .card__title span {
   max-width: 69%;
 }
+.catalog .card__crypto {
+  display: flex;
+  height: 40px;
+}
+.catalog .card__crypto img {
+  height: 100%;
+  width: auto;
+  flex-shrink: 0;
+  margin-right: -15px;
+}
+.catalog .card__crypto img:last-child {
+  margin-right: 0;
+}
 .catalog .card__characteristics, .catalog .card__characteristics_big {
   display: flex;
   flex-direction: column;
@@ -3395,11 +3408,12 @@ input:checked + .slider:before {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
   }
   .catalog__cards_rows .card > img {
     max-width: 169px;
     position: relative;
-    left: 20px;
+    margin-left: 40px;
   }
   .catalog__cards_rows .card > .card__top {
     display: none;
@@ -3422,11 +3436,23 @@ input:checked + .slider:before {
   .catalog__cards_rows .card__title span {
     max-width: none;
   }
-  .catalog__cards_rows .card__title img {
+  .catalog__cards_rows .card__crypto {
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 2;
+    flex-direction: column;
+    height: unset;
+    width: 40px;
+  }
+  .catalog__cards_rows .card__crypto img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-top: -15px;
+  }
+  .catalog__cards_rows .card__crypto img:first-child {
+    margin-top: 0;
   }
   .catalog__cards_rows .card__like {
     display: block;
