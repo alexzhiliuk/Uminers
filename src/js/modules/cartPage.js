@@ -188,7 +188,11 @@ try {
                 cartBody.style.alignSelf = 'center'
                 cartBody.appendChild(emptyCartMessage);
             } else if (formContent.checkVisibility()) {
-                cartBody.children.namedItem('empty').remove();
+                try {
+                    cartBody.children.namedItem('empty').remove();
+                } catch {
+
+                }
             }
         });
     });

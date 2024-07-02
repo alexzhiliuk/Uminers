@@ -527,7 +527,7 @@
 
     <main>
         <section class="section container cart" >
-    <div class="breadcrumbs">
+    <div class="breadcrumbs" data-next="Checkout">
         <a href="index.html" class="breadcrumbs__item">Main</a>
         <div class="breadcrumbs__arrow">
             <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -536,7 +536,7 @@
         </div>
         <a href="javascript:void(0)" class="breadcrumbs__item">Cart</a>
     </div>
-    <h2 class="section-title">
+    <h2 class="section-title cart__title" data-innertext="Checkout">
         Cart
     </h2>
     <form action class="section__body cart__content form-disabled" id="cart-body">
@@ -736,11 +736,11 @@
         <div class="cart-form__name-wrapper">
             <label for="" class="label-main">
                 Имя
-                <input type="text" class="input-main" placeholder="First name" required>
+                <input type="text" class="input-main" placeholder="First name" name="name" required>
             </label>
             <label for="" class="label-main">
                 Фамилия
-                <input type="text" class="input-main" placeholder="Last name" required>
+                <input type="text" class="input-main" placeholder="Last name" name="surname" required>
             </label>
         </div>
         <label for="" class="label-main">
@@ -788,7 +788,7 @@
         I agree to the <a href="#" class="underlined">processing of personal data</a> and <a href="#" class="underlined">the public offer</a>
     </span>
     </label>
-    <button type="button" id="cart-submit" class="btn btn__main disabled">Перейти к оформлению</button>
+    <button type="button" id="cart-submit" class="btn btn__main disabled inherit" data-innertext="Checkout">Go to checkout</button>
 </div>
         </div>
     </form>
