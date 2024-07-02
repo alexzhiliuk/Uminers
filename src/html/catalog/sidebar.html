@@ -36,49 +36,49 @@
 
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="Bitmain">
+                                <input type="checkbox" name="Bitcoin">
                                 Bitcoin
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Litecoin">
                                 Litecoin
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Ethereum Classic">
                                 Ethereum Classic
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Kadena">
                                 Kadena
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Dogecoin">
                                 Dogecoin
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Kaspa">
                                 Kaspa
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Nervos">
                                 Nervos
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Bitcoin cash">
                                 Bitcoin cash
                             </label>
                         </li>
@@ -92,31 +92,31 @@
                     <ul class="options__itemsWrapper">
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="SHA-256">
                                 SHA-256
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Scrypt">
                                 Scrypt
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="KHeavyHash">
                                 KHeavyHash
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="EtHash">
                                 EtHash
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="Kadena">
                                 Kadena
                             </label>
                         </li>
@@ -129,13 +129,13 @@
                     <ul class="options__itemsWrapper">
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="fluid-cooling">
                                 Жидкостное охлаждение
                             </label>
                         </li>
                         <li class="options__item">
                             <label>
-                                <input type="checkbox" name="MicroBT">
+                                <input type="checkbox" name="air-cooling">
                                 Воздушное охлаждение
                             </label>
                         </li>
@@ -149,12 +149,12 @@
                 <span class="heading">Цена (&#8381;)</span>
                 <div class="double-range-input" data-value-gap="10000">
                     <div class="double-range-input__values">
-                        <div class="double-range-input__min-value">80 000</div>
-                        <div class="double-range-input__max-value">490 500</div>
+                        <div class="double-range-input__min-value" id="price-min">80 000</div>
+                        <div class="double-range-input__max-value" id="price-max">490 500</div>
                     </div>
                     <div class="double-range-input__progress">
-                        <input class="double-range-input__range double-range-input__range_min" type="range" step="500" min="0" max="600000" value="80000">
-                        <input class="double-range-input__range double-range-input__range_max" type="range" step="500" min="0" max="600000" value="495000">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="500" min="0" max="600000" value="80000" name="price-min">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="500" min="0" max="600000" value="495000" name="price-max">
                     </div>
                 </div>
             </label>
@@ -162,12 +162,12 @@
                 <span class="heading">Потребляемая мощность (ВТ)</span>
                 <div class="double-range-input" data-value-gap="5000">
                     <div class="double-range-input__values">
-                        <div class="double-range-input__min-value">205</div>
-                        <div class="double-range-input__max-value">40 500</div>
+                        <div class="double-range-input__min-value" id="power-min">205</div>
+                        <div class="double-range-input__max-value" id="power-max">40 500</div>
                     </div>
                     <div class="double-range-input__progress">
-                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="0" max="60000" value="205">
-                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="0" max="60000" value="40500">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="0" max="60000" value="205" name="power-min">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="0" max="60000" value="40500" name="power-max">
                     </div>
                 </div>
             </label>
@@ -179,12 +179,12 @@
                 </span>
                 <div class="double-range-input" data-value-gap="500">
                     <div class="double-range-input__values">
-                        <div class="double-range-input__min-value">1</div>
-                        <div class="double-range-input__max-value">9 500</div>
+                        <div class="double-range-input__min-value" id="hashrate-min">1</div>
+                        <div class="double-range-input__max-value" id="hashrate-max">9 500</div>
                     </div>
                     <div class="double-range-input__progress">
-                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="0" max="9500" value="1">
-                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="0" max="9500" value="9500">
+                        <input class="double-range-input__range double-range-input__range_min" type="range" step="5" min="0" max="9500" value="1" name="hashrate-min">
+                        <input class="double-range-input__range double-range-input__range_max" type="range" step="5" min="0" max="9500" value="9500" name="hashrate-max">
                     </div>
                 </div>
             </label>
@@ -195,21 +195,21 @@
             <label class="filter__switch">
                 <span class="heading">В наличии</span>
                 <div class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" name="available">
                     <span class="slider round"></span>
                 </div>
             </label>
             <label class="filter__switch">
                 <span class="heading">Доступно в лизинг</span>
                 <div class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" name="lizingAvailable">
                     <span class="slider round"></span>
                 </div>
             </label>
             <label class="filter__switch">
                 <span class="heading">Быстрая доставка</span>
                 <div class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" name="fastShipping">
                     <span class="slider round"></span>
                 </div>
             </label>
