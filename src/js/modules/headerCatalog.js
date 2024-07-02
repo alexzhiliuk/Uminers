@@ -5,6 +5,7 @@ $(".js-header-catalog-open").click(function() {
 
 $(".catalog-header__menu a").click(function() {
     let tabId = $(this).attr("data-tab-id")
+    if (!tabId) { return }
     $(this).parents(".catalog-header__menu").find("a").removeClass("active")
     $(this).addClass("active")
 
