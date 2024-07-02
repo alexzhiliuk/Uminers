@@ -7,12 +7,14 @@ $(window).scroll(function(event){
 
     if ($(this).scrollTop() != 0) {
         
-        let moveheight = $(".top-header").outerHeight() - 15
+        let moveheight = $(".top-header").outerHeight()
         $(".header").css("translate", `0 -${moveheight}px`)
+        $(".bottom-header").css("margin-top", "15px")
 
     } else {
         
         $(".header").css("translate","")
+        $(".bottom-header").css("margin-top", "")
     }
 
 });

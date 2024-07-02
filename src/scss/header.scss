@@ -68,6 +68,7 @@
     justify-content: space-between;
     gap: 24px;
     padding: 15px 0;
+    background-color: #000;
 
     color: #9C9C9C;
 
@@ -139,6 +140,7 @@
     padding: 10px 20px;
 
     position: relative;
+    transition: $calmTransition;
 
     // .bottom-header__logo
     &__logo {

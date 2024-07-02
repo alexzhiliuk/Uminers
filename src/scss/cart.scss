@@ -114,14 +114,6 @@
             }
         }
 
-        &:last-of-type {
-            border-radius: 0px 0px 10px 10px;
-
-            @media (max-width: $breakpoint768) {
-                border-radius: 10px 10px 10px 10px;
-            }
-        }
-
         &__wrapper {
             display: flex;
             gap: 2.77vw;
