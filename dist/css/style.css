@@ -2303,16 +2303,12 @@ button {
 }
 .miner__img {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   translate: -50% -50%;
   width: 100%;
   max-width: 40%;
-  scale: 1.2;
-  animation: miner-fade-in linear;
-  animation-timeline: view(-200px);
-  animation-range-start: -200px;
-  animation-range-end: 1000px;
+  scale: 0.8;
 }
 @media screen and (max-width: 479.98px) {
   .miner__img {
