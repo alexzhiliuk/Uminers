@@ -1,0 +1,13 @@
+.contacts-section {
+    
+    @media screen and (min-width: $breakpoint768) {
+        .card {
+            flex-grow: 0;
+        }
+    }
+    @media screen and (max-width: $breakpoint768) {
+        .cards {
+            flex-direction: column;
+        }
+    }
+}

@@ -4,6 +4,7 @@
     &__content {
         background-color: rgba($color: #272727, $alpha: 0.5);
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border-radius: 30px;
         padding: 40px;
         @media (max-width:$breakpoint768) {

@@ -7,7 +7,7 @@ const progress = () => {
         if (graphicLine && container) {
             window.addEventListener('scroll', () => {
                 const graphicPosition = container.getBoundingClientRect();
-                const scrollProgress = ((window.innerHeight - graphicPosition.top) - 150) / container.offsetHeight;
+                const scrollProgress = ((window.innerHeight - graphicPosition.top) + 150) / container.offsetHeight;
                 graphicLine.style.width = `${65 * scrollProgress / 4}%`;
             });
         }
@@ -17,7 +17,7 @@ const progress = () => {
         if (graphicLine && container) {
             window.addEventListener('scroll', () => {
                 const graphicPosition = container.getBoundingClientRect();
-                const scrollProgress = ((window.innerHeight - graphicPosition.top) - 150) / container.offsetHeight;
+                const scrollProgress = ((window.innerHeight - graphicPosition.top) + 150) / container.offsetHeight;
                 graphicLine.style.width = `${65 * scrollProgress / 4}%`;
             });
         }

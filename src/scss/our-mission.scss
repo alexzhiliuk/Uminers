@@ -2,7 +2,7 @@
     color: white;
 
     &__heading {
-        max-width: 430px;
+        max-width: 530px;
 
         @media (max-width:$breakpoint992) {
             max-width: max(90%, 400px);
@@ -91,9 +91,9 @@
 
     &__quote {
         color: #ffffff;
-        font-size: clamp(12px, 3vw, 30px);
+        font-size: clamp(12px, 3vw, 26px);
         line-height: 1.2;
-        font-weight: 400;
+        font-weight: 300;
         opacity: 0.8;
         @media (max-width:$breakpoint992) {
             order: 1;
