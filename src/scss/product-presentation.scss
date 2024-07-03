@@ -251,6 +251,12 @@
         }
     }
 
+    &__paragraph {
+        @media screen and (max-width: $breakpoint1200) {
+            max-width: 600px;
+        }
+    }
+
     &__hashrate {
         input[type="radio"] {
             display: none;
@@ -278,7 +284,9 @@
 
     .form {
         display: flex;
+        flex-wrap: wrap;
         gap: 6.06vw;
+        row-gap: 20px;
         padding: 20px 0;
 
         @media screen and (max-width: $breakpoint576) {

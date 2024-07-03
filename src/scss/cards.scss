@@ -64,6 +64,23 @@ $borderRaius: 20 + px;
             flex: 1 0 calc(66.66% - $gap / 2);
         }
     }
+
+    &_slider {
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        & > * {
+            flex-shrink: 0;
+
+        }
+    }
 }
 
 .card {
