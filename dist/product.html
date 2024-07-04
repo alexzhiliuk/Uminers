@@ -567,6 +567,113 @@
     </div>
 </div>
 
+
+    <!-- Popup -->
+    <section class="popup" data-popup-id="1" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">КП для юр. лиц</h2>
+        <p class="popup-form__subtitle">
+            Заполните форму ниже и мы свяжемся с вами
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Компания
+                    <input type="text" class="input-main" placeholder="ООО Криптобратство" name="company" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Электронная почта
+                    <input type="email" class="input-main" placeholder="poshta@mail.ru" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>
+    <section class="popup" data-popup-id="2" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Нашли дешевле?</h2>
+        <p class="popup-form__subtitle">
+            Заполните форму и получите скидку
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Ссылка на товар дешевле
+                    <input type="url" class="input-main" placeholder="https://..." name="url" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Электронная почта
+                    <input type="email" class="input-main" placeholder="poshta@mail.ru" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>
+    <section class="popup" data-popup-id="3" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Задать вопрос</h2>
+        <p class="popup-form__subtitle">
+            Заполните форму ниже и мы свяжемся с вами
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Имя
+                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Электронная почта
+                    <input type="email" class="input-main" placeholder="poshta@mail.ru" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>
     <main>
 
         <!--Product-->
@@ -759,7 +866,7 @@
                     </svg>                                                
                     Сравнить
                 </a>
-                <a href="" class="btn btn_outlined_primary">
+                <a href="javascript:void(0)" class="btn btn_outlined_primary js-popup-open" data-popup-id="1">
                     <svg width="19" height="26" viewBox="0 0 19 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.125 14.125L12.875 14.125" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round"/>
                         <path d="M6.125 9.625L10.625 9.625" stroke="#00C1AD" stroke-width="1.5" stroke-linecap="round"/>
@@ -814,7 +921,7 @@
                     <div class="card__price">
                         <span>360 000 ₽</span>
                         <span class="mini">(с НДС)</span>
-                        <div class="tooltip">
+                        <div class="tooltip js-popup-open" data-popup-id="2">
                             <div class="tooltip__text">Нашли дешевле?</div>
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="20" height="21" rx="10" fill="#00C1AD"/>
@@ -1099,7 +1206,7 @@
                 </p>
             </div>
         </div>
-        <a href="#" class="product-promo__btn btn btn_white">
+        <a href="javascript:void(0)" class="product-promo__btn btn btn_white js-popup-open" data-popup-id="3">
             Задать вопрос
         </a>
     </div>

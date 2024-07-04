@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const queryParams = getQueryParams();
 
     Object.keys(queryParams).forEach(name => {
-            console.log(name)
+            
         const input = document.querySelector(`input[name="${name}"]`);
         if (input) {
             if (input.type === 'checkbox') {

@@ -15,6 +15,8 @@ import * as tabs from './modules/tabs.js'
 import * as headerCatalog from './modules/headerCatalog.js'
 import * as cartPage from './modules/cartPage.js'
 import * as filtersSaving from './modules/saveFilterOptions.js'
+import * as phoneMask from './modules/phoneMask.js'
+import * as popup from './modules/popup.js'
 
 flsFunctions.isWebp()
 

@@ -4473,6 +4473,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
 }
 .tooltip__text {
   font-weight: 400;
@@ -4951,6 +4952,101 @@ label.radio-label input[type=checkbox].invalid {
 
 .underlined {
   text-decoration: underline solid;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup-form {
+  background-color: #222222;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 652px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 50px 60px;
+  position: relative;
+}
+@media screen and (max-width: 575.98px) {
+  .popup-form {
+    padding: 60px 20px 20px;
+  }
+}
+.popup-form .input-main, .popup-form .input-main_outlined {
+  background-color: #373737;
+}
+.popup-form__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.popup-form__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  text-align: center;
+}
+@media screen and (max-width: 575.98px) {
+  .popup-form__title {
+    font-size: 30px;
+  }
+}
+.popup-form__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin: 10px;
+}
+@media screen and (max-width: 575.98px) {
+  .popup-form__subtitle {
+    font-size: 16px;
+  }
+}
+.popup-form__inputs {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+.popup-form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.popup-form__row > * {
+  flex: 1 0 calc(50% - 10px);
+}
+.popup-form__submit {
+  margin-top: 40px;
+  height: 60px;
+  max-width: 300px;
+  width: 100%;
+}
+@media screen and (max-width: 575.98px) {
+  .popup-form__submit {
+    max-width: 100%;
+  }
 }
 
 @font-face {
