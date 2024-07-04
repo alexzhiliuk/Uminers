@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
         const input = document.querySelector(`input[name="${name}"]`);
         if (input) {
-            if (input.type === 'checkbox') {
+            if (input.type === 'checkbox' || input.type === 'radio') {
                 input.checked = queryParams[name] === 'true';
             } else {
                 try{
@@ -37,6 +37,11 @@ document.querySelector('.filter__form').addEventListener('submit', function (eve
     const filters = {};
 
     document.querySelectorAll('.filter__form input[type="checkbox"]').forEach(input => {
+        if (input.checked)
+            filters[input.name] = input.checked;
+    });
+
+    document.querySelectorAll('.filter__form input[type="radio"]').forEach(input => {
         if (input.checked)
             filters[input.name] = input.checked;
     });
