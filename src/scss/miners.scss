@@ -140,13 +140,17 @@
 
 .miner {
 
-    margin-bottom: -200px;
+    margin-bottom: max(-40vw, -600px);
 
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: -1;
+
+    @media screen and (max-width: $breakpoint768) {
+        margin-bottom: -50vw;
+    }
 
     // .miner__bg
     &__bg {

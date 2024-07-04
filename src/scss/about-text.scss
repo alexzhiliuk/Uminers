@@ -58,6 +58,7 @@
 
     &__illustration{
         width:20%;
+        max-width: 230px;
         img{
             width:100%;
             object-fit: cover;
@@ -84,6 +85,7 @@
     &__image{
         border-radius:clamp(20px, 2vw, 30px);
         overflow: hidden;
+
         img{
             width: 100%;
             display: block;

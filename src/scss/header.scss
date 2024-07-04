@@ -70,6 +70,7 @@
 .header-droplist {
 
     position: relative;
+    z-index: 7;
 
     &:hover {
         .header-droplist__list {
@@ -81,8 +82,8 @@
     &__wrapper {
         position: absolute;
         top: 100%;
-        left: 50%;
-        translate: -50%;
+        left: 0;
+        translate: -15px;
         padding-top: 24px;
     }
 

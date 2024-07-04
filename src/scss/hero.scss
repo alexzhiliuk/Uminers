@@ -171,13 +171,13 @@
 
         // .hero__item_border
         &_border {
-            backdrop-filter: blur(10px);
+            // backdrop-filter: blur(10px);
             overflow: hidden;
             border-radius: 12px;
 
             padding: 20px;
             max-width: 461px;
-            background: url(../img/hero-item-2.png) 0 0 / 100% 100% no-repeat;
+            // background: url(../img/hero-item-2.png) 0 0 / 100% 100% no-repeat;
 
             @media screen and (max-width: $breakpoint992) {
                 background: unset;
@@ -187,7 +187,7 @@
             }
 
             .hero__item-btn-round {
-                gap: 30px;
+                // gap: 30px;
                 align-items: center;
                 text-wrap: nowrap;
 
