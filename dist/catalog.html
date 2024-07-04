@@ -25,37 +25,6 @@
 
     <!-- Header -->
     <header class="header container">
-    <div class="top-header">
-        <nav class="top-header__nav">
-            <ul class="top-header__list">
-                <li>
-                    <a href="#">Прайс-лист</a>
-                </li>
-                <li>
-                    <a href="#">Отзывы</a>
-                </li>
-                <li>
-                    <a href="contacts.html">Контакты</a>
-                </li>
-                <li>
-                    <a href="about.html">О компании</a>
-                </li>
-                <li>
-                    <a href="#">Доставка</a>
-                </li>
-            </ul>
-        </nav>
-        <form class="top-header__search">
-            <input type="search" name="q" placeholder="Поиск">
-            <svg class="top-header__search-icon" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.28655 16.3809C4.26276 16.3809 1.00084 13.119 1.00084 9.09516C1.00084 5.07137 4.26276 1.80945 8.28655 1.80945C12.3103 1.80945 15.5723 5.07137 15.5723 9.09516C15.5723 13.119 12.3103 16.3809 8.28655 16.3809Z" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M19.0479 20.0476L13.3336 14.3333" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                  
-        </form>
-        <div class="top-header__contacts">
-            <a href="mailto:sales@uminers.com">sales@uminers.com</a>
-        </div>
-    </div>
     <div class="bottom-header">
         <a href="index.html" class="bottom-header__logo">
             <img src="img/logo.svg" alt="Uminers">
@@ -69,13 +38,49 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Лизинг</a>
+                    <div class="bottom-header__droplist header-droplist">
+                        <a href="#">О нас</a>
+                        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                        </svg>          
+                        <div class="header-droplist__wrapper">
+                            <ul class="header-droplist__list">
+                                <li>
+                                    <a href="about.html">О Uminers</a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">Контакты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Доставка и оплата</a>
+                                </li>
+                            </ul> 
+                        </div>       
+                    </div>
                 </li>
                 <li>
-                    <a href="#">Майнинг под ключ</a>
-                </li>
-                <li>
-                    <a href="#">Хостинг</a>
+                    <div class="bottom-header__droplist header-droplist">
+                        <a href="#">Майнинг</a>
+                        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                        </svg>          
+                        <div class="header-droplist__wrapper">
+                            <ul class="header-droplist__list">
+                                <li>
+                                    <a href="catalog.html">Оборудование</a>
+                                </li>
+                                <li>
+                                    <a href="#">Майнинг под ключ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Хостинг</a>
+                                </li>
+                                <li>
+                                    <a href="#">Лизинг</a>
+                                </li>
+                            </ul> 
+                        </div>       
+                    </div>
                 </li>
                 <li>
                     <div class="bottom-header__droplist header-droplist">
@@ -85,9 +90,6 @@
                         </svg>          
                         <div class="header-droplist__wrapper">
                             <ul class="header-droplist__list">
-                                <li>
-                                    <a href="#">Обзоры</a>
-                                </li>
                                 <li>
                                     <a href="#">Гайды</a>
                                 </li>
@@ -103,59 +105,22 @@
                 </li>
             </ul>
         </nav>
-        <div class="bottom-header__contacts">
-            <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
-            <div class="bottom-header__socials">
-                <a href="#" class="top-header__social">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8337 21.998C11.1139 22.0307 9.41109 21.6551 7.86661 20.9025L3.25821 21.8014L4.15163 17.2788C1.10835 11.6606 4.15163 3 12.6293 3C25.1285 3 25.0503 21.998 12.8337 21.998ZM12.6033 4.35484C5.07766 4.35484 2.55826 12.3153 5.64719 17.1037L5.07331 19.9993L8.02747 19.4245C9.28608 20.1851 10.8686 20.6432 12.7902 20.6432C23.2613 20.6454 23.3287 4.35484 12.6033 4.35484ZM7.64271 7.36704L10.4686 7.27629L11.3794 10.8395L10.6469 12.1749L13.038 14.474L14.3966 13.7804L17.9116 14.6966L17.6942 17.7585C17.6942 17.7585 14.6901 19.1695 10.5447 15.0531C6.39931 10.9367 7.64271 7.36704 7.64271 7.36704Z" fill="#FFF"/>
-                    </svg>                        
-                </a>
-                <a href="#" class="top-header__social">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6972 18.0159L10.631 20.7241L9.76408 20.848L7.82415 13.8027L1 11.4403L22.009 3L23 3.02337L19.6899 22L13.6972 18.0159ZM18.9516 6.56586L9.3251 12.6484L10.4336 17.6326L10.7374 17.5602L11.8947 13.7139L19.5879 6.64531L18.9516 6.56586Z" fill="#FFF"/>
-                    </svg>                        
-                </a>
-            </div>
-        </div>
         <div class="bottom-header__icons">
-            <a href="#" class="bottom-header__icon bottom-header__icon_desc">
-                <svg width="26" height="35" viewBox="0 0 26 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="22.2222" height="32" rx="2.05729" fill="white"/>
-                    <rect x="4.66602" y="4.66675" width="16.8889" height="8.88889" rx="1.044" fill="#222222"/>
-                    <rect x="4.66602" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
-                    <rect x="4.66602" y="22.4443" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
-                    <path d="M4.66602 28.6667C4.66602 28.1758 5.06398 27.7778 5.5549 27.7778H8.22157C8.71249 27.7778 9.11046 28.1758 9.11046 28.6667V30.4445C9.11046 30.9354 8.71249 31.3334 8.22157 31.3334H5.5549C5.06399 31.3334 4.66602 30.9354 4.66602 30.4445V28.6667Z" fill="#222222"/>
-                    <rect x="11" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
-                    <rect x="10.8887" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
-                    <rect x="10.8887" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
-                    <rect x="17.1113" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
-                    <rect x="17.1113" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
-                    <rect x="17.1113" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#222222"/>
-                </svg>                    
-            </a>
-            <a href="#" class="bottom-header__icon bottom-header__icon_desc">
-                <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.40283 19.4565L18.6437 19.4565" stroke="white" stroke-width="2.92597" stroke-linecap="round"/>
-                    <path d="M8.40283 12.6294L15.2301 12.6294" stroke="white" stroke-width="2.92597" stroke-linecap="round"/>
-                    <path d="M8.40283 26.2838L15.2301 26.2838" stroke="white" stroke-width="2.92597" stroke-linecap="round"/>
-                    <path d="M25.4708 19.4564V27.259C25.4708 30.0177 25.4708 31.397 24.6138 32.254C23.7569 33.111 22.3775 33.111 19.6189 33.111H7.42738C4.66875 33.111 3.28943 33.111 2.43244 32.254C1.57544 31.397 1.57544 30.0177 1.57544 27.259V8.24024C1.57544 5.48161 1.57544 4.1023 2.43244 3.2453C3.28943 2.38831 4.66875 2.38831 7.42737 2.38831H11.8163" stroke="white" stroke-width="2.92597" stroke-linecap="round"/>
-                    <path d="M23.7642 2.38831L23.7642 12.6292" stroke="white" stroke-width="2.92597" stroke-linecap="round"/>
-                    <path d="M28.8845 7.50891L18.6436 7.50891" stroke="white" stroke-width="2.92597" stroke-linecap="round"/>
-                </svg>                                                       
-            </a>
-            <a href="#" class="bottom-header__icon bottom-header__icon_notification" data-notification="12">
-                <svg width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_2029_158)">
-                    <path d="M4.75254 17.3973L17.9547 30.9287C18.0088 30.9841 18.0358 31.0118 18.0597 31.034C18.5893 31.5279 19.4107 31.5279 19.9403 31.034C19.9641 31.0118 19.9912 30.9841 20.0452 30.9287L20.0453 30.9287L33.2475 17.3973C36.0258 14.5498 36.4586 10.1565 34.2893 6.82154C30.7979 1.45383 22.8509 1.72448 19.7328 7.31728L19.2962 8.10022C19.1669 8.33224 18.8331 8.33224 18.7038 8.10022L18.2672 7.31728C15.1491 1.72448 7.2021 1.45383 3.71068 6.82154C1.54143 10.1565 1.97422 14.5498 4.75254 17.3973Z" stroke="white" stroke-width="3"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_2029_158">
-                    <rect width="38" height="35" fill="white"/>
-                    </clipPath>
-                    </defs>
-                </svg>                                                           
-            </a>
+            <div class="bottom-header__contacts">
+                <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
+                <div class="bottom-header__socials">
+                    <a href="#" class="bottom-header__social">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8337 21.998C11.1139 22.0307 9.41109 21.6551 7.86661 20.9025L3.25821 21.8014L4.15163 17.2788C1.10835 11.6606 4.15163 3 12.6293 3C25.1285 3 25.0503 21.998 12.8337 21.998ZM12.6033 4.35484C5.07766 4.35484 2.55826 12.3153 5.64719 17.1037L5.07331 19.9993L8.02747 19.4245C9.28608 20.1851 10.8686 20.6432 12.7902 20.6432C23.2613 20.6454 23.3287 4.35484 12.6033 4.35484ZM7.64271 7.36704L10.4686 7.27629L11.3794 10.8395L10.6469 12.1749L13.038 14.474L14.3966 13.7804L17.9116 14.6966L17.6942 17.7585C17.6942 17.7585 14.6901 19.1695 10.5447 15.0531C6.39931 10.9367 7.64271 7.36704 7.64271 7.36704Z" fill="#FFF"/>
+                        </svg>                        
+                    </a>
+                    <a href="#" class="bottom-header__social">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6972 18.0159L10.631 20.7241L9.76408 20.848L7.82415 13.8027L1 11.4403L22.009 3L23 3.02337L19.6899 22L13.6972 18.0159ZM18.9516 6.56586L9.3251 12.6484L10.4336 17.6326L10.7374 17.5602L11.8947 13.7139L19.5879 6.64531L18.9516 6.56586Z" fill="#FFF"/>
+                        </svg>                        
+                    </a>
+                </div>
+            </div>
             <a href="cart.html" class="bottom-header__icon bottom-header__icon_notification" data-notification="9">
                 <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.75 2.75011H6.23333C6.59934 2.74116 6.95714 2.85933 7.24582 3.08451C7.5345 3.30968 7.73623 3.62794 7.81667 3.98511L11.965 22.0984C12.0454 22.4556 12.2472 22.7739 12.5358 22.999C12.8245 23.2242 13.1823 23.3424 13.5483 23.3334H26.88C27.2417 23.344 27.5961 23.2303 27.8842 23.0114C28.1722 22.7924 28.3766 22.4814 28.4633 22.1301L31.25 10.6668" stroke="white" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -170,6 +135,21 @@
                     <path d="M8 29C8.99281 27.7785 10.3881 26.769 12.0519 26.0685C13.7156 25.368 15.5918 25 17.5 25C19.4082 25 21.2844 25.368 22.9481 26.0685C24.6119 26.769 26.0072 27.7785 27 29" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M17.4992 32.8214C25.961 32.8214 32.8206 25.9617 32.8206 17.4999C32.8206 9.03813 25.961 2.1785 17.4992 2.1785C9.03737 2.1785 2.17773 9.03813 2.17773 17.4999C2.17773 25.9617 9.03737 32.8214 17.4992 32.8214Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>                                                                                              
+            </a>
+            <div class="bottom-header__lang bottom-header__droplist">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 13C24 19.0751 19.0751 24 13 24V26C20.1797 26 26 20.1797 26 13H24ZM13 24C6.92487 24 2 19.0751 2 13H0C0 20.1797 5.8203 26 13 26V24ZM2 13C2 6.92487 6.92487 2 13 2V0C5.8203 0 0 5.8203 0 13H2ZM13 2C19.0751 2 24 6.92487 24 13H26C26 5.8203 20.1797 0 13 0V2ZM13 24C12.606 24 12.1518 23.8217 11.6515 23.338C11.1464 22.8497 10.6459 22.0948 10.2038 21.0845C9.32106 19.0667 8.75 16.2091 8.75 13H6.75C6.75 16.4183 7.3542 19.5608 8.37153 21.8861C8.87955 23.0473 9.51029 24.0498 10.2614 24.7759C11.0173 25.5067 11.9443 26 13 26V24ZM8.75 13C8.75 9.79086 9.32106 6.93334 10.2038 4.91554C10.6459 3.90515 11.1464 3.15028 11.6515 2.66197C12.1518 2.17831 12.606 2 13 2V0C11.9443 0 11.0173 0.493262 10.2614 1.22407C9.51029 1.95023 8.87955 2.95271 8.37153 4.1139C7.3542 6.43924 6.75 9.58173 6.75 13H8.75ZM13 26C14.0557 26 14.9827 25.5067 15.7386 24.7759C16.4897 24.0498 17.1204 23.0473 17.6285 21.8861C18.6458 19.5608 19.25 16.4183 19.25 13H17.25C17.25 16.2091 16.6789 19.0667 15.7962 21.0845C15.3541 22.0948 14.8536 22.8497 14.3485 23.338C13.8482 23.8217 13.394 24 13 24V26ZM19.25 13C19.25 9.58173 18.6458 6.43924 17.6285 4.1139C17.1204 2.95271 16.4897 1.95023 15.7386 1.22407C14.9827 0.493262 14.0557 0 13 0V2C13.394 2 13.8482 2.17831 14.3485 2.66197C14.8536 3.15028 15.3541 3.90515 15.7962 4.91554C16.6789 6.93334 17.25 9.79086 17.25 13H19.25ZM1 14.4444H22.3333V12.4444H1V14.4444Z" fill="white"/>
+                </svg>
+                RU
+                <!-- <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                </svg>   -->
+            </div>
+            <a href="javascript:void(0)" class="bottom-header__search js-search-open">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.28606 16.3809C5.26227 16.3809 2.00035 13.119 2.00035 9.09516C2.00035 5.07137 5.26227 1.80945 9.28606 1.80945C13.3099 1.80945 16.5718 5.07137 16.5718 9.09516C16.5718 13.119 13.3099 16.3809 9.28606 16.3809Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.0476 20.0475L14.3333 14.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
             </a>
         </div>
         <div class="bottom-header__burger">
@@ -283,6 +263,23 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="search-header" style="display: none;">
+            <a href="javascript:void(0)" class="search-header__close">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2.00001L2 16" stroke="#585858" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 16L2 2" stroke="#585858" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </a>
+            <form class="search-header__wrapper">
+                <input type="search" class="search-header__input" placeholder="Поиск" name="q">
+                <button type="submit" class="search-header__icon">
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.8577 25.6095C8.41969 25.6095 3.20061 20.3904 3.20061 13.9523C3.20061 7.51425 8.41969 2.29517 14.8577 2.29517C21.2958 2.29517 26.5149 7.51425 26.5149 13.9523C26.5149 20.3904 21.2958 25.6095 14.8577 25.6095Z" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M32.0762 31.4761L22.9333 22.3333" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </button>
+            </form>
         </div>
     </div>
 </header>
@@ -419,28 +416,40 @@
                 </ul>
             </li>
             <li class="mobile-menu__list-item">
-                <a href="#" class="mobile-menu__list-link">Контейнеры</a>
-            </li>
-            <li class="mobile-menu__list-item">
                 <a href="#" class="mobile-menu__list-link">Майнинг-фермы</a>
             </li>
             <li class="mobile-menu__list-item">
                 <a href="#" class="mobile-menu__list-link">Хостинг</a>
             </li>
             <li class="mobile-menu__list-item">
-                <a href="#" class="mobile-menu__list-link ">Доставка</a>
-            </li>
-            <li class="mobile-menu__list-item">
                 <a href="about.html" class="mobile-menu__list-link">О компании</a>
             </li>
             <li class="mobile-menu__list-item">
-                <a href="#" class="mobile-menu__list-link">Блог</a>
-            </li>
-            <li class="mobile-menu__list-item">
-                <a href="#" class="mobile-menu__list-link">Прайс лист</a>
-            </li>
-            <li class="mobile-menu__list-item">
-                <a href="#" class="mobile-menu__list-link">Отзывы</a>
+                <a href="#" class="mobile-menu__list-link">
+                    Блог
+                    <ul class="mobile-menu__catalog">
+                        <li>
+                            <a href="#" class="mobile-menu__catalog-item">
+                                Обзоры                              
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__catalog-item">
+                                Гайды                               
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__catalog-item">
+                                Статьи                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__catalog-item">
+                                Новости
+                            </a>
+                        </li>
+                    </ul>
+                </a>
             </li>
             <li class="mobile-menu__list-item">
                 <a href="contacts.html" class="mobile-menu__list-link">Контакты</a>
@@ -449,7 +458,7 @@
     </nav>
 
     <div class="mobile-menu__icons">
-        <a href="#" class="mobile-menu__icon-wrapper">
+        <!-- <a href="#" class="mobile-menu__icon-wrapper">
             <div class="mobile-menu__icon ">
                 <svg width="26" height="35" viewBox="0 0 26 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="2" y="2" width="22.2222" height="32" rx="2.05729" fill="white"/>
@@ -494,7 +503,7 @@
                 </svg>        
             </div>
             <span>Избранное</span>                                                                    
-        </a>
+        </a> -->
         <a href="cart.html" class="mobile-menu__icon-wrapper">
             <div class="mobile-menu__icon bottom-header__icon_notification" data-notification="9">
                 <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -521,7 +530,7 @@
     <div class="mobile-menu__contacts">
         <div>
             <a href="mailto:sales@uminers.com">sales@uminers.com</a><br>
-            <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
+            <a href="tel:+88004444852">+8 (800) 444-48-52</a>
         </div>
         <div class="mobile-menu__socials">
             <a href="#" class="mobile-menu__social">

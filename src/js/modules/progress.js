@@ -34,21 +34,23 @@ window.addEventListener('resize', () => {
 }
 
 
-$(window).scroll(function() {
-    let minerSection = $(".miner")[0],
-        top = minerSection.getBoundingClientRect().top,
-        height = minerSection.getBoundingClientRect().height,
-        startGap = 300,
-        trackHeight = height / 2,
-        minScale = 0.8, maxScale = 1.2,
-        minTop = 30, maxTop = 50
-
-    if (top <= 0 + startGap && top > -1 * trackHeight + startGap) {
-        let percentage = Math.abs(top - startGap) / trackHeight,
-            scaleDelta = maxScale - minScale,
-            topDelta = maxTop - minTop
-
-        $(".miner__img").css("scale", `${minScale + scaleDelta * percentage}`).css("top", `${minTop + topDelta * percentage}%`)
-    }
+if ($(".miner").length) {
+    $(window).scroll(function() {
+        let minerSection = $(".miner")[0],
+            top = minerSection.getBoundingClientRect().top,
+            height = minerSection.getBoundingClientRect().height,
+            startGap = 300,
+            trackHeight = height / 2,
+            minScale = 0.8, maxScale = 1.2,
+            minTop = 30, maxTop = 50
     
-})
+        if (top <= 0 + startGap && top > -1 * trackHeight + startGap) {
+            let percentage = Math.abs(top - startGap) / trackHeight,
+                scaleDelta = maxScale - minScale,
+                topDelta = maxTop - minTop
+    
+            $(".miner__img").css("scale", `${minScale + scaleDelta * percentage}`).css("top", `${minTop + topDelta * percentage}%`)
+        }
+        
+    })
+}

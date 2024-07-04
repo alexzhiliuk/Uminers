@@ -1,5 +1,14 @@
 $(".js-header-catalog-open").click(function() {
     $(".catalog-header").toggle()
+    $(".search-header").hide()
+})
+
+$(".js-search-open").click(function() {
+    $(".search-header").toggle()
+    $(".catalog-header").hide()
+})
+$(".search-header__close").click(function() {
+    $(".search-header").hide()
 })
 
 
@@ -22,6 +31,5 @@ $(".mobile-menu__catalog-item").click(function() {
     let droplist = $(this).parent().find(".mobile-menu-droplist")
     droplist.parents(".mobile-menu__catalog").find(".mobile-menu-droplist").removeClass("mobile-menu-droplist_active")
     droplist.addClass("mobile-menu-droplist_active")
-
 
 })

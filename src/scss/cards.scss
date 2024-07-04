@@ -132,7 +132,7 @@ $borderRaius: 20 + px;
 
     // .card__img
     &__img {
-        height: 156px;
+        height: clamp(106px, 15vw, 156px);
 
         img {
             height: 100%;
@@ -185,7 +185,7 @@ $borderRaius: 20 + px;
     // .card__title
     &__title {
         color: $white;
-        font-size: 46px;
+        font-size: clamp(36px, 7vw, 46px);
         font-weight: 500;
         letter-spacing: -2px;
         line-height: .9;

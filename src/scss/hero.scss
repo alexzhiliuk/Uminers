@@ -205,6 +205,10 @@
                 font-weight: 400;
                 padding-right: 8px;
                 margin-top: 16px;
+
+                @media screen and (max-width: $breakpoint992) {
+                    text-align: center;
+                }
             }
         }
     }

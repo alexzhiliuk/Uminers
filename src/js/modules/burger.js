@@ -1,23 +1,23 @@
-$(window).scroll(function(event){
+// $(window).scroll(function(event){
 
-    if (window.outerWidth < 1366) {
-        $(".header").css("translate","")
-        return
-    }
+//     if (window.outerWidth < 1366) {
+//         $(".header").css("translate","")
+//         return
+//     }
 
-    if ($(this).scrollTop() != 0) {
+//     if ($(this).scrollTop() != 0) {
         
-        let moveheight = $(".top-header").outerHeight()
-        $(".header").css("translate", `0 -${moveheight}px`)
-        $(".bottom-header").css("margin-top", "15px")
+//         let moveheight = $(".top-header").outerHeight()
+//         $(".header").css("translate", `0 -${moveheight}px`)
+//         $(".bottom-header").css("margin-top", "15px")
 
-    } else {
+//     } else {
         
-        $(".header").css("translate","")
-        $(".bottom-header").css("margin-top", "")
-    }
+//         $(".header").css("translate","")
+//         $(".bottom-header").css("margin-top", "")
+//     }
 
-});
+// });
 
 $(window).resize(function(){
 
