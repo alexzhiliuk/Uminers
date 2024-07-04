@@ -210,9 +210,18 @@
             </label>
             <label for="hashrate" class="filter__numbers">
                 <span class="heading">Хэшрейт</span> <span class="filter__tabs">
-                    <button class="filter__tab active">MH/s</button>
-                    <button class="filter__tab">GH/s</button>
-                    <button class="filter__tab">TH/s</button>
+                    <label class="filter__tab active">
+                        MH/s
+                        <input type="radio" name="hashrate-type" checked hidden>
+                    </label>
+                    <label class="filter__tab">
+                        GH/s
+                        <input type="radio" name="hashrate-type" hidden>
+                    </label>
+                    <label class="filter__tab">
+                        TH/s
+                        <input type="radio" name="hashrate-type" hidden>
+                    </label>
                 </span>
                 <div class="double-range-input" data-value-gap="500">
                     <div class="double-range-input__values">

@@ -3059,6 +3059,7 @@ button {
   color: white;
   padding: 2px 5px;
   border-radius: 6px;
+  cursor: pointer;
 }
 .filter__tab.active {
   background-color: #00C1AD;
@@ -4095,6 +4096,25 @@ input:checked + .slider:before {
   translate: -45% 45%;
   background-image: url(../img/background-gradient.png);
   background-size: cover;
+}
+
+.product-banners__pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.product-banners__pagination .swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background: #222222;
+  border-radius: 4px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.product-banners__pagination .swiper-pagination-bullet-active {
+  background-color: #00C1AD;
 }
 
 .product-banner {
