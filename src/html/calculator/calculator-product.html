@@ -22,9 +22,12 @@
             </div>
             <script>
                 document.querySelector('.calculator__slider-body').style.marginTop = `${document.querySelector('.calculator__image-title').offsetHeight - 80}px`;
+                if (window.innerWidth < 576) {
+                    document.querySelector('.calculator__slider-body').style.marginTop = `${document.querySelector('.calculator__image-title').offsetHeight}px`;
+                }
             </script>
             <div class="calculator__characteristics">
-                <img src="@img/bitcoin-card-logo.png" alt="3d bitcoin cryptocurrency icon icon">
+                <img src="@img/bitcoin-calculator.png" alt="3d bitcoin cryptocurrency icon icon">
                 <div class="calculator__characteristics-body">
                     <div class="calculator__characteristic">
                         <h3 class="calculator__characteristic-title">
@@ -130,9 +133,11 @@
                     </div>
                     <div class="terms__item">
                         <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7474 4.50258L12.0628 1.20919C10.9502 0.732354 9.69078 0.732353 8.57816 1.20919L0.89358 4.50258C0.351483 4.73491 0 5.26795 0 5.85773V13.6024C0 16.4592 1.37969 19.1402 3.70442 20.8008L8.60659 24.3023C9.63185 25.0346 11.0091 25.0346 12.0344 24.3023L16.9366 20.8008C19.2613 19.1402 20.641 16.4592 20.641 13.6024V5.85773C20.641 5.26795 20.2895 4.73491 19.7474 4.50258ZM15.5238 9.93365C15.8688 9.50239 15.7988 8.87309 15.3676 8.52809C14.9363 8.18308 14.307 8.253 13.962 8.68426L8.76254 15.1836L6.60386 13.0249C6.21333 12.6344 5.58017 12.6344 5.18964 13.0249C4.79912 13.4154 4.79912 14.0486 5.18964 14.4391L7.74334 16.9928C8.37551 17.625 9.41682 17.5673 9.97531 16.8692L15.5238 9.93365Z" fill="#00C1AD"/>
-                            </svg>
-                            
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.7474 4.50258L12.0628 1.20919C10.9502 0.732354 9.69078 0.732353 8.57816 1.20919L0.89358 4.50258C0.351483 4.73491 0 5.26795 0 5.85773V13.6024C0 16.4592 1.37969 19.1402 3.70442 20.8008L8.60659 24.3023C9.63185 25.0346 11.0091 25.0346 12.0344 24.3023L16.9366 20.8008C19.2613 19.1402 20.641 16.4592 20.641 13.6024V5.85773C20.641 5.26795 20.2895 4.73491 19.7474 4.50258ZM15.5238 9.93365C15.8688 9.50239 15.7988 8.87309 15.3676 8.52809C14.9363 8.18308 14.307 8.253 13.962 8.68426L8.76254 15.1836L6.60386 13.0249C6.21333 12.6344 5.58017 12.6344 5.18964 13.0249C4.79912 13.4154 4.79912 14.0486 5.18964 14.4391L7.74334 16.9928C8.37551 17.625 9.41682 17.5673 9.97531 16.8692L15.5238 9.93365Z"
+                                fill="#00C1AD" />
+                        </svg>
+
 
                         <p class="terms__text">
                             Гарантия от производителя 1 год
@@ -146,11 +151,14 @@
                         </svg>
 
                         <p class="terms__text">
-                            От 100 устройств – бесплатный ремонт мелких поломок 
+                            От 100 устройств – бесплатный ремонт мелких поломок
                         </p>
                     </div>
                 </div>
                 <button type="submit" class="btn btn__main-rounded">Получить подробный расчет</button>
+                <script>
+
+                </script>
             </div>
         </form>
     </div>

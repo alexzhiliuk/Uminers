@@ -24,6 +24,9 @@ powerRangeInput.addEventListener('input', function() {
   
   powerRangeValue.innerHTML = value;
   powerRangeValue.style.left = `calc(${percent}% - ${powerRangeValue.offsetWidth/2}px)`;
+  if (window.innerWidth < 480) {
+    document.querySelector('button[type="submit"]').textContent = "Подробный расчет"
+}
 });
 }catch{
 
