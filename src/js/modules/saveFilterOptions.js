@@ -64,9 +64,10 @@ try {
         window.location.href = `${window.location.origin}${window.location.pathname}?${paramsString}`;
     });
 } catch (error) {
-    console.error(error);
+    //console.error(error);
 }
 
+try{
 document.querySelector('.filter__tab').addEventListener('click', function (event) {
     const selectedTab = event.target.closest('.filter__tab');
     if (selectedTab) {
@@ -76,3 +77,6 @@ document.querySelector('.filter__tab').addEventListener('click', function (event
         }
     }
 });
+}catch{
+
+}
