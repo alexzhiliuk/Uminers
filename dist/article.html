@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-    <title>About us</title>
+    <title>Статья</title>
 </head>
 
 <body>
@@ -567,372 +567,230 @@
     </div>
 </div>
 
+    <section class="popup" data-popup-id="3" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Задать вопрос</h2>
+        <p class="popup-form__subtitle">
+            Заполните форму ниже и мы свяжемся с вами
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Имя
+                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Электронная почта
+                    <input type="email" class="input-main" placeholder="poshta@mail.ru" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>
     <main>
 
-        <!-- Hero -->
-        <section class="hero hero_about container">
-    <h1 class="section-title hero__title">
-        Крупнейший поставщик <br> <span>оборудования для майнинга</span>
-    </h1>
-    <p class="hero__text">
-        Официальный дистрибьютор ведущих производителей, включая BITMAIN и MicroBT
-    </p>
-    <div class="progress">
-        <div class="section__body section__body_centered">
-            <div class="cards_column">
-                <div class="cards__item cards__item_bigger card card_outline">
-                    <h3 class="card__title_highlighted card__title_bigger">
-                        3500
-                    </h3>
-                    <p class="card__text_bigger">
-                        компаний и частных инвесторов по всему миру
-                    </p>
+        <!-- Article -->
+        <section class="container article mb-90">
+    <div class="breadcrumbs">
+    <a href="index.html" class="breadcrumbs__item">Главная</a>
+    <div class="breadcrumbs__arrow">
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.54889 1.00006L10.3634 5.81455C10.7754 6.22658 10.7754 6.89463 10.3634 7.30667L5.56055 12.1095" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+        </svg>            
+    </div>
+    <a href="blog.html" class="breadcrumbs__item">Статьи</a>
+    <div class="breadcrumbs__arrow">
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.54889 1.00006L10.3634 5.81455C10.7754 6.22658 10.7754 6.89463 10.3634 7.30667L5.56055 12.1095" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+        </svg>            
+    </div>
+    <a href="#" class="breadcrumbs__item">Раздел</a>
+    <div class="breadcrumbs__arrow">
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.54889 1.00006L10.3634 5.81455C10.7754 6.22658 10.7754 6.89463 10.3634 7.30667L5.56055 12.1095" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+        </svg>            
+    </div>
+    <a href="javascript:void(0)" class="breadcrumbs__item">CEO Uminers: Дешевая «розетка» в России закончилась</a>
+</div>
+    <div class="article__header">
+        <div class="article__date">03.10.2024</div>
+        <h1 class="article__title section-title section-title_40">CEO Uminers: Дешевая «розетка» в России закончилась</h1>
+        <div class="article__row">
+            <div class="article__author">
+                <div class="article__author-img">
+                    <img src="img/blog/article/avatar.png" alt="">
                 </div>
-    
-                <div class="cards__item cards__item_bigger card card_outline">
-                    <h3 class="card__title_highlighted card__title_bigger">
-                        14 лет
-                    </h3>
-                    <p class="card__text_bigger">
-                        опыта в международных экономических операциях
-                    </p>
-                </div>
-    
-                <div class="cards__item cards__item_bigger card card_outline">
-                    <h3 class="card__title_highlighted card__title_bigger">
-                        5000+
-                    </h3>
-                    <p class="card__text_bigger">
-                        устройств продаем каждый месяц
-                    </p>
+                <div class="article__author-name">
+                    Автор — Константинопольский А. Г.
                 </div>
             </div>
-            <p class="progress__text">
-                К 2025 году планируем расширить собственные мощности до 350 МВт
-            </p>
-            <div class="progress__bar progressBar">
-    
-                <div class="progressBar__point point">
-                    <h3 class="point__heading">45 МВт</h3>
-                    <div class="point__point"></div>
-                    <p class="point__text">2023</p>
-                </div>
-    
-                <div class="progressBar__point point">
-                    <h3 class="point__heading">200 МВт</h3>
-                    <div class="point__point"></div>
-                    <p class="point__text">2024</p>
-                </div>
-    
-                <div class="progressBar__point point">
-                    <h3 class="point__heading">350 МВт</h3>
-                    <div class="point__point"></div>
-                    <p class="point__text">2025</p>
-                </div>
-    
-                <div class="progressBar__line_bg"></div>
-                <div class="progressBar__line_progress"></div>
+            <div class="article__time">7 минут чтения</div>
+            <div class="article__share">
+                <svg width="29" height="31" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0382 23.4631C14.0382 23.4631 12.6942 23.2278 12.961 21.6189C13.0738 20.9371 13.3748 19.1066 13.6826 17.2078C5.95033 16.3181 3.99077 24.663 9.02818 30.4375L8.00223 31C-6.75776 22.1813 1.09417 4.89169 13.8707 6.54497C13.6518 4.79624 13.4398 3.07818 13.3303 2.20893C13.0636 0.0340882 14.541 0 14.541 0L29 12.9025L14.0382 23.4631Z" fill="#00C1AD"/>
+                </svg>                
             </div>
         </div>
     </div>
+    <div class="article__body">
+        <div class="article__content">
+            <img src="img/blog/article/img-1.png" alt="">
+            <h2>Заголовок в четыре слова</h2>
+            <p>В мае власти Китая <a href="#">запретили</a> майнинг на территории страны. С того момента доля России в хешрейте биткоина <a href="#">увеличилась</a> с 7,2% до 11,2%. Однако китайские майнеры все еще <a href="#">генерируют</a> 20% совокупного хешрейта.</p>
+            <p>Мы поговорили с Батыром Хыдыровым — основателем и CEO компании Uminers, которая занимается поставками майнингового оборудования по всему миру.</p>
+            <p>Он рассказал об отношении китайских регуляторов к майнерам, влиянии дефицита полупроводников на индустрию и перспективах майнинга в России.</p>
+            <p>ForkLog: Здравствуйте, Батыр! Расскажите о себе. Как вы попали в криптоиндустрию?</p>
+            <p><strong>Батыр Хыдыров</strong>: Здравствуйте! В 2017 в <a href="#">Uasia Group</a> — родительскую компанию Uminers — поступил запрос на поставку майнеров. Это были Ibelink, которые обслуживали сеть криптовалюты Dash.</p>
+            <p>Мы занимались экспортом товаров из Китая. Майнинг казался чем-то диким и непонятным. Но именно этот заказ стал началом истории Uminers.</p>
+            <p>Меня всегда интересовали новые технологии, поэтому я начал искать информацию о майнинге: производителях оборудования, принципах работы и технических особенностях ASIC-устройств.</p>
 
-    <div class="hero__bg">
-        <video muted loop autoplay playsinline class="hero__bg-video">
-            <source src="files/video/about-hero-bg.mp4" type="video/mp4">
-        </video>
-        <div class="hero__bg-shade"></div>
+            <h3>Подзаголовок в четыре слова</h3>
+            <p>В мае власти Китая <a href="#">запретили</a> майнинг на территории страны. С того момента доля России в хешрейте биткоина <a href="#">увеличилась</a> с 7,2% до 11,2%. Однако китайские майнеры все еще <a href="#">генерируют</a> 20% совокупного хешрейта.</p>
+            <p>Мы поговорили с Батыром Хыдыровым — основателем и CEO компании Uminers, которая занимается поставками майнингового оборудования по всему миру.</p>
+            <p>Он рассказал об отношении китайских регуляторов к майнерам, влиянии дефицита полупроводников на индустрию и перспективах майнинга в России.</p>
+            <p>ForkLog: Здравствуйте, Батыр! Расскажите о себе. Как вы попали в криптоиндустрию?</p>
+            <p><strong>Батыр Хыдыров</strong>: Здравствуйте! В 2017 в <a href="#">Uasia Group</a> — родительскую компанию Uminers — поступил запрос на поставку майнеров. Это были Ibelink, которые обслуживали сеть криптовалюты Dash.</p>
+            <p>Мы занимались экспортом товаров из Китая. Майнинг казался чем-то диким и непонятным. Но именно этот заказ стал началом истории Uminers.</p>
+            <p>Меня всегда интересовали новые технологии, поэтому я начал искать информацию о майнинге: производителях оборудования, принципах работы и технических особенностях ASIC-устройств.</p>
+            
+            <p>Батыр Хыдыров: <a href="#">Uminers</a> тесно сотрудничает с компанией MicroBT — одним из крупнейших производителей майнингового оборудования наряду с Canaan и Bitmain. С последними у нас тоже очень теплые партнерские отношения.</p>
+            <p>Сейчас наша статистика поставок выглядит так:</p>
+            <br>
+            <ul>
+                <li>50% — Bitmain;</li>
+                <li>40% — MicroBT;</li>
+                <li>10% — Canaan, GoldShell и другие.</li>
+            </ul>
+            <p>Подчеркну, что на основании этих цифр не стоит делать вывод о качестве производимого оборудования: это просто предпочтения наших клиентов.</p>
+        </div>
+        <aside class="article__sidebar article-sidebar">
+            <div class="article-sidebar__title">
+                Содержание
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Тезис один в пару слов или строчек</a>
+                </li>
+                <li>
+                    <a href="#">Тезис один в пару слов или строчек</a>
+                </li>
+                <li>
+                    <a href="#">Тезис один в пару слов или строчек</a>
+                </li>
+                <li>
+                    <a href="#">Тезис один в пару слов или строчек</a>
+                </li>
+            </ul>
+        </aside>
     </div>
 </section>
 
-        <!-- Miner -->
-        <section class="container section miner">
-    <div class="miner__bg">
-        <img src="img/miner-bg.png" alt="">
-        <img src="img/miner-bg.png" alt="">
-        <img src="img/miner-bg.png" alt="">
-    </div>
-    <img class="miner__img" src="img/miner.png" alt="Miner image">
-</section>
-      
-        <!-- About Text -->
-        <section class="section container aboutText">
-    <div class="aboutText__content">
-        <div class="aboutText__item">
-            <div class="aboutText__textContent">
-                <span class="aboutText__subtitle text_small">{ Корни и развитие }</span>
-                <p class="aboutText__text">
-                    Uminers, ведущий международный поставщик оборудования для майнинга криптовалют, был основан в 2017 году как ответвление UASIA GROUP, которая начала свою деятельность еще в 2010 году. Первоначальный запрос на поставку майнеров для криптовалюты Dash открыл новый горизонт для компании и послужил началом для Uminers.
+        <!-- Banner -->
+        <section class="section product-promo container m-90">
+    <div class="product-promo__content " style="background: url(img/product/promo.png) center center / cover no-repeat;">
+        <div class="product-promo__textContent">
+            <div class="product-promo__text">
+                <h2 class="product-promo__title section-title section-title_40">
+                    Нужна консультация по крипте?
+                </h2>
+                <p class="product-promo__subtitle" >
+                    Наши специалисты готовы ответить на ваши вопросы
                 </p>
             </div>
-            <div class="aboutText__illustration">
-                <h4 class="highlighted aboutText__illustrationHeading">
-                    2017 г.
-                </h4>
-                <p class="highlighted aboutText__illustrationSubtitle text_small">
-                    основание компании
-                </p>
-            </div>
         </div>
-        <div class="aboutText__item">
-            <div class="aboutText__textContent">
-                <span class="aboutText__subtitle text_small">{ Первые шаги на мировой арене }</span>
-                <p class="aboutText__text">
-                    Ключевым моментом стало участие в форуме World Digital Mining Summit (WDMS) в 2018 году в Грузии, где были установлены контакты с ведущими производителями майнингового оборудования, включая Bitmain и Whatsminer. Это событие заложило фундамент для успешного развития компании.
-                </p>
-            </div>
-            <div class="aboutText__illustration">
-                <img src="img/globe-3d-icon.png" alt="worldwide globe 3d illustration">
-            </div>
-        </div>
-        <div class="aboutText__image">
-            <img src="img/about-team.png" alt="uminers team in persons">
-        </div>
-    </div>
-</section>
-
-        <!-- Map -->
-        <section class="container section map">
-    <h2 class="section-title section-title_thin map__title animate-on-scroll">
-
-        <span class="highlighted">Uminers активно работает в 8 странах</span>
-         и расширяет свое присутствие практически на все континенты
-    </h2>
-    <p class="section-subtitle map__subtitle animate-on-scroll">
-        Основной офис в Гуанчжоу, Китай. Подразделения в России, ОАЭ, Эфиопии, Сингапуре, США, Омане
-    </p>
-    <div class="map__content section__body">
-        <div class="map__legend">
-            <div class="map__legendItem">
-                <div class="dot"></div>
-                <span class="text">
-                    — Страны присутствия
-                </span>
-            </div>
-            <div class="map__legendItem">
-                <div class="dot" style="background-color: #fff;   box-shadow: 0px 0px 10px 3px #fff;"></div>
-                <span class="text">
-                     — Страны расширения
-                </span>
-            </div>
-        </div>
-    </div>  
-</section>
-
-        <!--Our-mision-->
-        <section class="section container ourMission">
-    <h2 class="section-title ourMission__heading">
-        Наша миссия — <span class="highlighted"> сделать майнинг проще</span>
-    </h2>
-    <div class="section__body ourMission__content">
-        <p class="ourMission__text">
-            За 7 лет нам удалось создать целую экосистему, охватывающую все потребности криптоинвесторов.
-        </p>
-        <ul class="ourMission__points">
-            <li class="ourMission__point">
-                <div class="circle"></div>
-                Надежность и прозрачность – принципы, которых мы придерживаемся с первого дня существования компании.
-            </li>
-            <li class="ourMission__point">
-                <div class="circle"></div>
-                Это обеспечило нам успешный выход на рынки Северной Америки и Европы.
-            </li>
-            <li class="ourMission__point">
-                <div class="circle"></div>
-                Сейчас мы активно развиваем сотрудничество с африканскими странами.
-            </li>
-        </ul>
-    </div>
-</section>
-<section class="section container headQuote">
-    <div class="headQuote__content">
-        <div class="headQuote__quotes">
-            ❝
-        </div>
-        <p class="headQuote__quote">
-            Мы в Uminers глубоко верим в потенциал технологий майнинга и криптовалют. Нами движет желание лидировать индустрию майнинга, устанавливать новые стандарты, предлагать самые инновационные и привлекательные решения на рынке. Это стремление вдохновляло нас с самого начала.
-        </p>
-        <div class="headQuote__author">
-            <img src="img/CEO.png" alt="Batyr Khyrdov portrait" class="headQuote__portrait">
-            <h3 class="highlighted headQuote__title section-title section-title_sm">
-                Батыр Хыдыров
-            </h3>
-            <p class="headQuote__subtitle">
-                Uminers Founder and CEO
-            </p>
-        </div>
-    </div>
-</section>
-
-
-        <!--Graphic-->
-        <section class="container section graphic">
-    <div class="section__header">
-        <h2 class="section-title section-title_sm">Выручка майнинговых компаний в мире</h2>
-        <div class="graphic__legend">
-            <div class="graphic__color"></div>
-            США и Европа
-        </div>
-    </div>
-    <div class="graphic__body section__body">
-        <img src="img/graphic2.svg" alt="graphic about revenue of mining companies">
-        <div class="graphic__lineWrapper">
-            <img src="img/graphic-line.svg" alt="line for a graphic">
-        </div>
+        <a href="javascript:void(0)" class="product-promo__btn btn btn_white js-popup-open" data-popup-id="3">
+            Задать вопрос
+        </a>
     </div>
 </section>
         
-        <!-- Contacts -->
-        <section class="container section contacts-section">
-    <div class="section__header">
-        <h2 class="section-title">Головной офис <br> находится в Китае</h2>
-        <p class="section-subtitle">Подразделения расположены в России, <br> ОАЭ, Эфиопии, Сингапуре, США, Омане</p>
-    </div>
-    <div class="section__body cards">
-        <div class="card cards__item cards__item_half">
-            <div class="card__img card__img_full">
-                <img src="img/map-1.png" alt="Hong Kong Map">
-            </div>
-            <h3 class="card__title card__title_highlighted card__title_bigger">Гонконг</h3>
-            <ul class="card__list">
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/location.png" alt="Location icon">
-                    </div>
-                    <span>The Broadway, Unit 04-05, 16th Floor, 54-62 Lockhart Rd, Wan Chai, Hong Kong</span>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_phone.png" alt="Location icon">
-                    </div>
-                    <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_mail.png" alt="Location icon">
-                    </div>
-                    <a href="mailto:sales@uminers.com">sales@uminers.com</a>
-                </li>
-            </ul>
+        <!-- Nav -->
+        <section class="container articles-nav mb-90">
+    <a href="#" class="articles-nav__item articles-nav__item_prev">
+        <div class="articles-nav__subtitle">
+            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.94666 0.999887L1.6945 6.25205C1.245 6.70155 1.245 7.43033 1.6945 7.87982L6.93395 13.1193" stroke="#9D9D9D" stroke-width="1.53468" stroke-linecap="round"/>
+            </svg>                
+            Читать предыдущую статью
         </div>
-        <div class="card cards__item cards__item_half">
-            <div class="card__img card__img_full">
-                <img src="img/map-2.png" alt="Hong Kong Map">
-            </div>
-            <h3 class="card__title card__title_highlighted card__title_bigger">Китай, Гуанчжоу</h3>
-            <ul class="card__list">
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/location.png" alt="Location icon">
-                    </div>
-                    <span>Room 2004-2006, Nimble Plaza Tower A, Panyu Dadao North 330, Nancun Town, Guangzhou, China</span>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_phone.png" alt="Location icon">
-                    </div>
-                    <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_mail.png" alt="Location icon">
-                    </div>
-                    <a href="mailto:sales@uminers.com">sales@uminers.com</a>
-                </li>
-            </ul>
+        <div class="articles-nav__title">
+            Заголовок в четыре слова следующей статьи
         </div>
-    </div>
+    </a>
+    <a href="#" class="articles-nav__item articles-nav__item_next">
+        <div class="articles-nav__subtitle">
+            Читать следующую статью
+            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.05334 0.999887L11.3055 6.25205C11.755 6.70155 11.755 7.43033 11.3055 7.87982L6.06605 13.1193" stroke="#9D9D9D" stroke-width="1.53468" stroke-linecap="round"/>
+            </svg>            
+        </div>
+        <div class="articles-nav__title">
+            Заголовок в четыре слова следующей статьи
+        </div>
+    </a>
 </section>
-<section class="container section contacts-section">
+
+        <!-- Articles -->
+        <section class="container articles mb-90">
     <div class="section__header">
-        <h2 class="section-title">Офис компании <br> в Москве</h2>
-        
+        <h2 class="section-title section-title_40">Читать также</h2>
     </div>
-    <div class="section__body cards">
-        <div class="card cards__item cards__item_half">
-            <div class="card__img card__img_full">
-                <img src="img/map-3.png" alt="Moscow Map">
+    <div class="section__body articles__wrapper">
+
+        <a href="article.html" class="article-card">
+            <div class="article-card__cover">
+                <img src="img/blog/article-cover-1.png" alt="">
             </div>
-            <h3 class="card__title card__title_highlighted card__title_bigger">Москва</h3>
-            <ul class="card__list">
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/location.png" alt="Location icon">
-                    </div>
-                    <span>Москва, Ленинская слобода, 19, БЦ «Омега Плаза», 2 этаж</span>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_phone.png" alt="Phone icon">
-                    </div>
-                    <a href="tel:+78004444852">+7 (800) 444 48 52</a>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_mail.png" alt="Mail icon">
-                    </div>
-                    <a href="mailto:sales@uminers.com">sales@uminers.com</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-<section class="container section contacts-section">
-    <div class="section__header">
-        <h2 class="section-title">Наши филиалы <br>в других странах</h2>
-    </div>
-    <div class="section__body cards">
-        <div class="card cards__item cards__item_half">
-            <div class="card__img card__img_full">
-                <img src="img/map-oae.jpeg" alt="Abu Dhabi, UAE Map">
+            <div class="article-card__details">
+                <div class="article-card__time">7 минут чтения</div>
+                <div class="article-card__date">03.10.2024</div>
             </div>
-            <h3 class="card__title card__title_highlighted card__title_bigger">Абу-Даби, ОАЭ</h3>
-            <ul class="card__list">
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/location.png" alt="Location icon">
-                    </div>
-                    <span>Tamouh Tower, Al Reem Island Abu Dhabi, UAE</span>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_phone.png" alt="Location icon">
-                    </div>
-                    <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_mail.png" alt="Location icon">
-                    </div>
-                    <a href="mailto:sales@uminers.com">sales@uminers.com</a>
-                </li>
-            </ul>
-        </div>
-        <div class="card cards__item cards__item_half">
-            <div class="card__img card__img_full">
-                <img src="img/map-eth.jpeg" alt="Ethiopia Map">
+            <h2 class="article-card__title">Crypto Winter: new opportunities for miners</h2>
+            <p class="article-card__text">
+                Мы поговорили с Батыром Хыдыровым — основателем и CEO компании Uminers, которая занимается поставками майнингового оборудования по всему миру.
+            </p>
+        </a>
+        <a href="article.html" class="article-card">
+            <div class="article-card__cover">
+                <img src="img/blog/article-cover-2.png" alt="">
             </div>
-            <h3 class="card__title card__title_highlighted card__title_bigger">Эфиопия</h3>
-            <ul class="card__list">
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/location.png" alt="Location icon">
-                    </div>
-                    <span>ICT Park (Ethiopian IT Park), Addis Abeda, Uminers Ethio Data Center PLC</span>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_phone.png" alt="Location icon">
-                    </div>
-                    <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
-                </li>
-                <li class="card__list-item">
-                    <div class="card__list-icon">
-                        <img src="img/footer_mail.png" alt="Location icon">
-                    </div>
-                    <a href="mailto:sales@uminers.com">sales@uminers.com</a>
-                </li>
-            </ul>
-        </div>
+            <div class="article-card__details">
+                <div class="article-card__time">7 минут чтения</div>
+                <div class="article-card__date">03.10.2024</div>
+            </div>
+            <h2 class="article-card__title">Crypto Winter: new opportunities for miners</h2>
+            <p class="article-card__text">
+                Мы поговорили с Батыром Хыдыровым — основателем и CEO компании Uminers, которая занимается поставками майнингового оборудования по всему миру.
+            </p>
+        </a>
+        <a href="article.html" class="article-card">
+            <div class="article-card__cover">
+                <img src="img/blog/article-cover-3.png" alt="">
+            </div>
+            <div class="article-card__details">
+                <div class="article-card__time">7 минут чтения</div>
+                <div class="article-card__date">03.10.2024</div>
+            </div>
+            <h2 class="article-card__title">Crypto Winter: new opportunities for miners</h2>
+            <p class="article-card__text">
+                Мы поговорили с Батыром Хыдыровым — основателем и CEO компании Uminers, которая занимается поставками майнингового оборудования по всему миру.
+            </p>
+        </a>
     </div>
 </section>
 

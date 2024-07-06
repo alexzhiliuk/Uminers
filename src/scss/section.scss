@@ -70,6 +70,13 @@
     &__body {
         margin-top: 40px;
 
+        @media screen and (max-width: $breakpoint768) {
+            margin-top: 30px;
+        }
+        @media screen and (max-width: $breakpoint576) {
+            margin-top: 20px;
+        }
+
         &_centered {
             display: flex;
             flex-direction: column;
@@ -91,6 +98,18 @@
     }
     @media screen and (max-width: $breakpoint576) {
         margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.mb-90 {
+    margin-bottom: 90px;
+    scroll-margin: 90px;
+
+    @media screen and (max-width: $breakpoint768) {
+        margin-bottom: 70px;
+    }
+    @media screen and (max-width: $breakpoint576) {
         margin-bottom: 40px;
     }
 }
