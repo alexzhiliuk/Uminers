@@ -2,7 +2,7 @@
     color: #eee;
 
     &__title {
-        font-size: clamp(25px,6vw,50px);
+        font-size: clamp(25px, 6vw, 50px);
         font-weight: 600;
         letter-spacing: -0.02em;
 
@@ -14,38 +14,43 @@
         padding: 30px 32px;
         display: flex;
         gap: 4.1vw;
+
         @media (max-width:$breakpoint1200) {
             flex-direction: column;
-        }   
+        }
     }
 
-    &__slider{
+    &__slider {
         background-color: #272727;
         border-radius: 20px;
         padding: 20px 32px;
-        min-width:57%;
+        min-width: 57%;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gaP:20px;
+        gaP: 20px;
+
         @media (max-width:$breakpoint576) {
             padding: 20px 20px;
         }
-        svg{
+
+        svg {
             @media (max-width:$breakpoint576) {
                 width: 15px;
             }
         }
-        &-body{
-            width:100%;
+
+        &-body {
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             z-index: 2;
-            gap:20px;
-            img{
+            gap: 20px;
+
+            img {
                 max-width: 472px;
                 width: 100%;
                 min-width: 0;
@@ -55,70 +60,90 @@
 
     &__image-title {
         z-index: 1;
-        color:#585858;
+        color: #585858;
         font-size: 100px;
         font-weight: 600;
         line-height: 100px;
         letter-spacing: -0.02em;
         position: absolute;
         top: 20px;
-        left:32px;
+        left: 32px;
+
         @media (max-width:$breakpoint576) {
             font-size: 60px;
             line-height: 1;
         }
+
         @media (max-width:$breakpoint480) {
             font-size: 40px;
         }
     }
 
-    &__characteristics{
+    &__characteristics {
+
+        .card__crypto {
+            display: flex;
+            height: 40px;
+
+            @media (max-width:$breakpoint576) {
+                height: 46px;
+            }
+
+            @media (max-width:$breakpoint480) {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        .card__crypto img {
+            height: 100%;
+            width: auto;
+            flex-shrink: 0;
+            margin-right: -15px;
+        }
+
         display: flex;
         justify-content: space-between;
         width: 100%;
         align-items: center;
+
         @media (max-width:$breakpoint480) {
             justify-content: center;
         }
-        img{
-            @media (max-width:$breakpoint576) {
-                height: 46px;
-            }
-            @media (max-width:$breakpoint480) {
-                position: absolute;
-                top:20px;
-                right:20px;
-            }
-        }
     }
 
-    &__characteristics-body{
+    &__characteristics-body {
         display: flex;
-        gap:2.9vw;
+        gap: 2.9vw;
     }
 
-    &__characteristic{
-        &-title{
+    &__characteristic {
+        &-title {
             font-size: 32px;
             font-weight: 400;
             line-height: 45px;
             letter-spacing: -0.02em;
             white-space: nowrap;
+
             @media (max-width:$breakpoint768) {
                 font-size: 20px;
                 line-height: 24px;
             }
+
             @media (max-width:$breakpoint576) {
                 font-size: 16px;
                 line-height: 20px;
             }
         }
-        &-subtitle{
+
+        &-subtitle {
             font-size: 16px;
             font-weight: 400;
             line-height: 21.86px;
             letter-spacing: -0.02em;
-            color:#B5B5B5;
+            color: #B5B5B5;
+
             @media (max-width:$breakpoint576) {
                 font-size: 12px;
                 line-height: 20px;
@@ -144,12 +169,19 @@
             letter-spacing: -0.01em;
             width: 100%;
         }
+
+        select {
+            width: 100%;
+            appearance: none;
+            cursor: pointer;
+        }
+
     }
 }
 
 .calculations {
     display: flex;
-    gap:50px;
+    gap: 50px;
     border: 1px solid #00C1AD;
     border-radius: 10px;
     padding: 20px 20px 13px;
@@ -182,9 +214,10 @@
         letter-spacing: -0.01em;
         color: #B5B5B5;
     }
+
     @media (max-width:$breakpoint480) {
         flex-direction: column;
-        gap:20px;
+        gap: 20px;
     }
 }
 
@@ -192,8 +225,9 @@
     background: #272727;
     border-radius: 15px;
     padding: 24px 30px 30px;
+
     @media (max-width:$breakpoint576) {
-        padding:20px;       
+        padding: 20px;
     }
 
     &__title {
@@ -216,20 +250,25 @@
         gap: 15px;
         align-items: flex-start;
         max-width: 187px;
+
         @media (max-width: $breakpoint1300) {
-            max-width: none;   
+            max-width: none;
         }
+
         @media (max-width: $breakpoint1200) {
-            max-width: 187px;   
+            max-width: 187px;
         }
+
         @media (max-width:$breakpoint576) {
-            max-width: none;   
+            max-width: none;
         }
-        svg{
+
+        svg {
             flex-shrink: 0;
-        @media (max-width: $breakpoint1300) {
-            width: 24px;
-        }
+
+            @media (max-width: $breakpoint1300) {
+                width: 24px;
+            }
         }
     }
 
@@ -242,9 +281,23 @@
 
     button[type="submit"] {
         width: 100%;
+
         @media (max-width:$breakpoint480) {
             font-size: 12px;
             line-height: 1.2;
         }
+    }
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+
+    svg {
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        pointer-events: none;
+        cursor: pointer;
     }
 }

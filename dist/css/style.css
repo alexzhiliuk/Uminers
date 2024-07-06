@@ -4591,21 +4591,31 @@ input:checked + .slider:before {
   width: 100%;
   align-items: center;
 }
-@media (max-width: 479.98px) {
-  .calculator__characteristics {
-    justify-content: center;
-  }
+.calculator__characteristics .card__crypto {
+  display: flex;
+  height: 40px;
 }
 @media (max-width: 575.98px) {
-  .calculator__characteristics img {
+  .calculator__characteristics .card__crypto {
     height: 46px;
   }
 }
 @media (max-width: 479.98px) {
-  .calculator__characteristics img {
+  .calculator__characteristics .card__crypto {
     position: absolute;
     top: 20px;
     right: 20px;
+  }
+}
+.calculator__characteristics .card__crypto img {
+  height: 100%;
+  width: auto;
+  flex-shrink: 0;
+  margin-right: -15px;
+}
+@media (max-width: 479.98px) {
+  .calculator__characteristics {
+    justify-content: center;
   }
 }
 .calculator__characteristics-body {
@@ -4660,6 +4670,11 @@ input:checked + .slider:before {
   line-height: 22px;
   letter-spacing: -0.01em;
   width: 100%;
+}
+.calculator form select {
+  width: 100%;
+  appearance: none;
+  cursor: pointer;
 }
 
 .calculations {
@@ -4767,6 +4782,18 @@ input:checked + .slider:before {
     font-size: 12px;
     line-height: 1.2;
   }
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+.select-wrapper svg {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .cart {

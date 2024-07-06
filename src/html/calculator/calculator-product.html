@@ -27,7 +27,11 @@
                 }
             </script>
             <div class="calculator__characteristics">
-                <img src="@img/bitcoin-calculator.png" alt="3d bitcoin cryptocurrency icon icon">
+                <div class="card__crypto">
+                    <img src="@img/btc-card-icon.png" alt="cryptocurrency 3d logo">
+                    <img src="@img/ltc-card-icon.png" alt="cryptocurrency 3d logo">
+                    <img src="@img/doge-card-icon.png" alt="cryptocurrency 3d logo">
+                </div>
                 <div class="calculator__characteristics-body">
                     <div class="calculator__characteristic">
                         <h3 class="calculator__characteristic-title">
@@ -53,12 +57,19 @@
         <form class="calculator__calculator">
             <label for="" class="label-main">
                 Самые эффективные модели майнеров
-                <select name="" id="" class="input-main">
-                    <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
-                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
-                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
-                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
-                </select>
+                <div class="select-wrapper">
+                    <select name="" id="" class="input-main">
+                            <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
+                            <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                            <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                            <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                    </select>
+                    <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L7.77046 8.22183C8.16554 8.64324 8.83446 8.64324 9.22954 8.22183L16 1"
+                            stroke="#969696" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+
+                </div>
             </label>
             <label for="" class="label-main">
                 Стоимость электроэнергии

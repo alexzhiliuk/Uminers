@@ -28,6 +28,8 @@ powerRangeInput.addEventListener('input', function() {
     document.querySelector('button[type="submit"]').textContent = "Подробный расчет"
 }
 });
-}catch{
 
+
+}catch(e){
+  console.error(e)
 }
