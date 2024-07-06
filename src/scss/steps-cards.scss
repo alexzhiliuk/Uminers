@@ -1,0 +1,35 @@
+.steps-cards {
+    $gap: 18px;
+
+    &__content {
+        display: flex;
+        gap: $gap;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex: 1 calc(100% - 80% - $gap);
+        min-width: 215px;
+    }
+
+    &__text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27.32px;
+        letter-spacing: -0.02em;
+        color: #EDEDED;
+    }
+
+    &__image {
+        width: 60px;
+        height: 60px;
+    }
+
+    &__mini {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.12px;
+        letter-spacing: -0.02em;
+        color: $primaryColor;
+    }
+}

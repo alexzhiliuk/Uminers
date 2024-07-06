@@ -1,0 +1,77 @@
+.calculator-promo {
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27.32px;
+        letter-spacing: -0.02em;
+        margin-top: 10px;
+    }
+
+    &__content {
+        position: relative;
+        border-radius: 20px;
+        display: flex;
+        padding: 50px 60px;
+        flex-direction: column;
+        gap: 30px;
+        z-index: 2;
+        overflow: hidden;
+
+        &>img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+
+            @media (max-width:$breakpoint992) {
+                width: auto;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 63px;
+        flex-wrap: wrap;
+
+        @media (max-width:$breakpoint768) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        max-width: 371px;
+        z-index: 2;
+
+        @media (max-width:$breakpoint992) {
+            max-width: 300px;
+        }
+
+    }
+
+    &__number {
+        background-color: #B2B2B2;
+        background-image: linear-gradient(180deg, #B2B2B2 0%, #616161 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40.98px;
+        letter-spacing: -0.02em;
+    }
+
+    &__text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27.32px;
+        letter-spacing: -0.02em;
+        color: #ededed;
+    }
+}
