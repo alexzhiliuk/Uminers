@@ -30,6 +30,6 @@ powerRangeInput.addEventListener('input', function() {
 });
 
 
-}catch(e){
-  console.error(e)
+}catch{
+  
 }
