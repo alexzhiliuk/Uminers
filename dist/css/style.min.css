@@ -1390,6 +1390,45 @@ button {
 .hero_datacenter .hero__bg-shade {
   height: min(380px, 20vw);
 }
+.hero_blog .hero__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  row-gap: 0.2em;
+}
+.hero_blog .hero__title span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(60px, 10vw, 100px);
+  line-height: clamp(60px, 9vw, 90px);
+  letter-spacing: -0.03em;
+  background: linear-gradient(91.61deg, #00C1AD 15.2%, #005B52 87.36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.hero_blog .hero__img {
+  display: flex;
+  justify-content: center;
+}
+.hero_blog .hero__img img {
+  max-width: 568px;
+  width: 80%;
+}
+.hero_blog .hero__bg {
+  width: 80%;
+}
+.hero_blog .hero__bg img {
+  width: 100%;
+}
+@media screen and (max-width: 479.98px) {
+  .hero_blog .hero__bg {
+    width: 100%;
+  }
+}
 .hero__title {
   text-align: center;
   color: #00C1AD;
