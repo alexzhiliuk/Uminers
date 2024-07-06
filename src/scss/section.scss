@@ -95,6 +95,18 @@
     }
 }
 
+.mb-90 {
+    margin-bottom: 90px;
+    scroll-margin: 90px;
+
+    @media screen and (max-width: $breakpoint768) {
+        margin-bottom: 70px;
+    }
+    @media screen and (max-width: $breakpoint576) {
+        margin-bottom: 40px;
+    }
+}
+
 .m-100 {
     margin-top: 100px;
     margin-bottom: 100px;

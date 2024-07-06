@@ -107,6 +107,8 @@
 
     &_blog {
 
+        padding-bottom: 0;
+
         .hero {
             &__title {
                 display: flex;
@@ -143,13 +145,26 @@
 
             &__bg {
                 width: 80%;
+                height: 100%;
 
                 img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: contain;
                 }
 
                 @media screen and (max-width: $breakpoint480) {
                     width: 100%;
+                }
+
+                .hero__shade {
+                    width: 100%;
+                    height: 174px;
+
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
                 }
             }
         }

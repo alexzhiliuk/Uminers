@@ -15,3 +15,12 @@ $(".crypto__item").click(function() {
     $(".js-crypto-tab-body").hide()
     $(`.js-crypto-tab-body[data-tab-id=${tabId}]`).show()
 })
+
+$(".articles__tab").click(function() {
+    let tabId = $(this).attr("data-tab-id")
+    $(this).parent().find(".articles__tab").removeClass("articles__tab_active")
+    $(this).addClass("articles__tab_active")
+
+    $(".articles__wrapper").hide()
+    $(`.articles__wrapper[data-tab-id=${tabId}]`).show()
+})
