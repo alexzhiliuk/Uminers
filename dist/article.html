@@ -567,6 +567,41 @@
     </div>
 </div>
 
+    <section class="popup" data-popup-id="3" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Задать вопрос</h2>
+        <p class="popup-form__subtitle">
+            Заполните форму ниже и мы свяжемся с вами
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Имя
+                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Электронная почта
+                    <input type="email" class="input-main" placeholder="poshta@mail.ru" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>
     <main>
 
         <!-- Article -->
@@ -662,6 +697,100 @@
                 </li>
             </ul>
         </aside>
+    </div>
+</section>
+
+        <!-- Banner -->
+        <section class="section product-promo container m-90">
+    <div class="product-promo__content " style="background: url(img/product/promo.png) center center / cover no-repeat;">
+        <div class="product-promo__textContent">
+            <div class="product-promo__text">
+                <h2 class="product-promo__title section-title section-title_40">
+                    Нужна консультация по крипте?
+                </h2>
+                <p class="product-promo__subtitle" >
+                    Наши специалисты готовы ответить на ваши вопросы
+                </p>
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="product-promo__btn btn btn_white js-popup-open" data-popup-id="3">
+            Задать вопрос
+        </a>
+    </div>
+</section>
+        
+        <!-- Nav -->
+        <section class="container articles-nav mb-90">
+    <a href="#" class="articles-nav__item articles-nav__item_prev">
+        <div class="articles-nav__subtitle">
+            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.94666 0.999887L1.6945 6.25205C1.245 6.70155 1.245 7.43033 1.6945 7.87982L6.93395 13.1193" stroke="#9D9D9D" stroke-width="1.53468" stroke-linecap="round"/>
+            </svg>                
+            Читать предыдущую статью
+        </div>
+        <div class="articles-nav__title">
+            Заголовок в четыре слова следующей статьи
+        </div>
+    </a>
+    <a href="#" class="articles-nav__item articles-nav__item_next">
+        <div class="articles-nav__subtitle">
+            Читать следующую статью
+            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.05334 0.999887L11.3055 6.25205C11.755 6.70155 11.755 7.43033 11.3055 7.87982L6.06605 13.1193" stroke="#9D9D9D" stroke-width="1.53468" stroke-linecap="round"/>
+            </svg>            
+        </div>
+        <div class="articles-nav__title">
+            Заголовок в четыре слова следующей статьи
+        </div>
+    </a>
+</section>
+
+        <!-- Articles -->
+        <section class="container articles mb-90">
+    <div class="section__header">
+        <h2 class="section-title section-title_40">Читать также</h2>
+    </div>
+    <div class="section__body articles__wrapper">
+
+        <a href="article.html" class="article-card">
+            <div class="article-card__cover">
+                <img src="img/blog/article-cover-1.png" alt="">
+            </div>
+            <div class="article-card__details">
+                <div class="article-card__time">7 минут чтения</div>
+                <div class="article-card__date">03.10.2024</div>
+            </div>
+            <h2 class="article-card__title">Crypto Winter: new opportunities for miners</h2>
+            <p class="article-card__text">
+                Мы поговорили с Батыром Хыдыровым — основателем и CEO компании Uminers, которая занимается поставками майнингового оборудования по всему миру.
+            </p>
+        </a>
+        <a href="article.html" class="article-card">
+            <div class="article-card__cover">
+                <img src="img/blog/article-cover-2.png" alt="">
+            </div>
+            <div class="article-card__details">
+                <div class="article-card__time">7 минут чтения</div>
+                <div class="article-card__date">03.10.2024</div>
+            </div>
+            <h2 class="article-card__title">Crypto Winter: new opportunities for miners</h2>
+            <p class="article-card__text">
+                Мы поговорили с Батыром Хыдыровым — основателем и CEO компании Uminers, которая занимается поставками майнингового оборудования по всему миру.
+            </p>
+        </a>
+        <a href="article.html" class="article-card">
+            <div class="article-card__cover">
+                <img src="img/blog/article-cover-3.png" alt="">
+            </div>
+            <div class="article-card__details">
+                <div class="article-card__time">7 минут чтения</div>
+                <div class="article-card__date">03.10.2024</div>
+            </div>
+            <h2 class="article-card__title">Crypto Winter: new opportunities for miners</h2>
+            <p class="article-card__text">
+                Мы поговорили с Батыром Хыдыровым — основателем и CEO компании Uminers, которая занимается поставками майнингового оборудования по всему миру.
+            </p>
+        </a>
     </div>
 </section>
 
