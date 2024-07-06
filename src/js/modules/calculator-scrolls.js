@@ -1,3 +1,4 @@
+try{
 document.querySelectorAll('.scroll-link-calculator').forEach(item => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
@@ -6,3 +7,7 @@ document.querySelectorAll('.scroll-link-calculator').forEach(item => {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     });
   });
+}
+catch{
+    
+}
