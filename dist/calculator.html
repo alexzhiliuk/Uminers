@@ -577,14 +577,23 @@
                 S19K <br>PRO
             </h3>
             <div class="calculator__slider-body">
-                <div class="slider-left">
+                <div class="slider-left calculator__slider-nav" id="calculatorSliderPrev">
                     <svg width="29" height="53" viewBox="0 0 29 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M28 0.999998L1.76978 25.773C1.35194 26.1676 1.35194 26.8324 1.76978 27.227L28 52"
                             stroke="#969696" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </div>
-                <img src="img/asic-product-big.png" alt="">
-                <div class="slider-right">
+                <div class="calculator__images swiper" id="calculatorSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/asic-product-big.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/asic-product-big.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-right calculator__slider-nav" id="calculatorSliderNext">
                     <svg width="29" height="53" viewBox="0 0 29 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 52L27.2302 27.227C27.6481 26.8324 27.6481 26.1676 27.2302 25.773L0.999999 1"
                             stroke="#969696" stroke-width="2" stroke-linecap="round" />

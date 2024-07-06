@@ -13,10 +13,13 @@
         border-radius: 20px;
         padding: 30px 32px;
         display: flex;
-        gap: 4.1vw;
+        gap: min(4.1vw, 60px);
 
         @media (max-width:$breakpoint1200) {
             flex-direction: column;
+        }
+        @media (max-width:$breakpoint768) {
+            padding: 15px;
         }
     }
 
@@ -55,6 +58,22 @@
                 width: 100%;
                 min-width: 0;
             }
+        }
+
+        &-nav {
+            cursor: pointer;
+        }
+    }
+
+    &__images {
+
+        max-width: 572px;
+        width: 100%;
+        min-width: 0;
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
         }
     }
 
@@ -188,6 +207,10 @@
     margin-top: 15px;
     margin-bottom: 10px;
 
+    @media (max-width:$breakpoint1200) {
+        max-width: fit-content;
+    }
+
     &__item {
         display: flex;
         gap: 8px;
@@ -218,6 +241,7 @@
     @media (max-width:$breakpoint480) {
         flex-direction: column;
         gap: 20px;
+        max-width: 100%;
     }
 }
 
@@ -256,11 +280,11 @@
         }
 
         @media (max-width: $breakpoint1200) {
-            max-width: 187px;
+            flex: 1 0 calc(50% - 20px / 2);
         }
 
         @media (max-width:$breakpoint576) {
-            max-width: none;
+            flex: 0 0 100%;
         }
 
         svg {
