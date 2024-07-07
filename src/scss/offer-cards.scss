@@ -36,6 +36,12 @@
             height: 100%;
             max-width: none;
         }
+
+        @media screen and (max-width: $breakpoint768) {
+            svg {
+                height: 50px;
+            }
+        }
     }
 
     &__heading {
