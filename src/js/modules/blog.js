@@ -54,3 +54,17 @@ $(window).resize(function() {
     sidebarMove()
 })
 sidebarMove()
+
+
+$(".article__share-icon").click(function(e) {
+    $(this).parents(".article__share").toggleClass("article__share_active")
+})
+
+$(".share__copy-link").click(function(){
+    navigator.clipboard.writeText(window.location.href);
+    let $notification =  $(this).parents(".share").find(".share__notification")
+    $notification.fadeIn()
+    setTimeout(() => {
+        $notification.fadeOut()
+    }, 2000)
+})

@@ -6006,6 +6006,68 @@ label.radio-label input[type=checkbox].invalid {
 }
 .article__share {
   margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (max-width: 575.98px) {
+  .article__share-icon {
+    scale: 1 -1;
+  }
+}
+.article__share .share {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #222222;
+  padding: 10px 20px;
+  position: absolute;
+  right: calc(100% + 20px);
+  top: 50%;
+  translate: 0 -50%;
+}
+.article__share .share__item {
+  display: flex;
+}
+.article__share .share__notification {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #00C1AD;
+}
+@media screen and (max-width: 575.98px) {
+  .article__share .share__notification {
+    bottom: calc(100% + 10px);
+    left: unset;
+    right: calc(100% + 10px);
+    width: max-content;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .article__share .share {
+    flex-direction: column;
+    padding: 10px;
+    right: 50%;
+    translate: 50%;
+    top: calc(100% + 10px);
+  }
+}
+.article__share_active .article__share-icon {
+  scale: -1 1;
+}
+@media screen and (max-width: 575.98px) {
+  .article__share_active .article__share-icon {
+    scale: 1 -1;
+    rotate: 90deg;
+  }
+}
+.article__share_active .share {
+  display: flex;
 }
 .article__body {
   display: flex;
@@ -6080,6 +6142,7 @@ label.radio-label input[type=checkbox].invalid {
     flex: unset;
     width: 100%;
     margin-top: 20px;
+    position: static;
   }
 }
 .article-sidebar__title {

@@ -233,6 +233,77 @@
     // .article__share
     &__share {
         margin-left: auto;
+        position: relative;
+        cursor: pointer;
+
+        &-icon {
+            @media screen and (max-width: $breakpoint576) {
+                scale: 1 -1;
+            }
+        }
+
+        .share {
+            
+            display: none;
+            align-items: center;
+            gap: 10px;
+
+            border-radius: 5px;
+            background: #222222;
+            padding: 10px 20px;
+
+            position: absolute;
+            right: calc(100% + 20px);
+            top: 50%;
+            translate: 0 -50%;
+
+            &__item {
+                display: flex;
+            }
+
+            &__notification {
+                display: none;
+                position: absolute;
+                bottom: calc(100% + 5px);
+                left: 0;
+                                
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: $primaryColor;
+
+                @media screen and (max-width: $breakpoint576) {
+                    bottom: calc(100% + 10px);
+                    left: unset; right: calc(100% + 10px);
+                    width: max-content;
+                }
+
+            }
+
+            @media screen and (max-width: $breakpoint576) {
+                flex-direction: column;
+                padding: 10px;
+                right: 50%;
+                translate: 50%;
+                top: calc(100% + 10px);
+            }
+        }
+
+        &_active {
+            .article__share-icon {
+                scale: -1 1;
+
+                @media screen and (max-width: $breakpoint576) {
+                    scale: 1 -1;
+                    rotate: 90deg;
+                }
+            }
+
+            .share {
+                display: flex;
+            }
+        }
     }
 
     // .article__body
@@ -334,6 +405,7 @@
         flex: unset;
         width: 100%;
         margin-top: 20px;
+        position: static;
     }
 
     // .article-sidebar__title
