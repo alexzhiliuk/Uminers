@@ -20,6 +20,7 @@ import * as popup from './modules/popup.js'
 import * as bannersSlider from './modules/bannersSlider.js'
 import * as rangeValuesCalculator from './modules/rangeValueCalculator.js'
 import * as calculatorSlider from './modules/calculatorSlider.js'
+import * as blog from './modules/blog.js'
 
 flsFunctions.isWebp()
 
