@@ -6068,10 +6068,6 @@ label.radio-label input[type=checkbox].invalid {
   list-style: decimal;
   padding-left: 1.25em;
 }
-.article__sidebar {
-  flex: 0 0 316px;
-}
-
 .article-sidebar {
   border: 1px solid #3D3D3D;
   border-radius: 10px;
@@ -6081,7 +6077,9 @@ label.radio-label input[type=checkbox].invalid {
 }
 @media screen and (max-width: 991.98px) {
   .article-sidebar {
-    display: none;
+    flex: unset;
+    width: 100%;
+    margin-top: 20px;
   }
 }
 .article-sidebar__title {
@@ -6093,6 +6091,8 @@ label.radio-label input[type=checkbox].invalid {
   color: #FFFFFF;
 }
 .article-sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -6100,6 +6100,11 @@ label.radio-label input[type=checkbox].invalid {
 }
 .article-sidebar ul li {
   padding-left: 10px;
+}
+@media screen and (max-width: 991.98px) {
+  .article-sidebar ul li {
+    padding-left: 0;
+  }
 }
 .article-sidebar ul a {
   font-style: normal;
