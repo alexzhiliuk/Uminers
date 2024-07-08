@@ -5559,6 +5559,10 @@ input:checked + .slider:before {
   border: 1px solid #9C9C9C;
 }
 
+select.input-main, select.input-main_outlined {
+  padding-right: 40px;
+}
+
 .input-main:focus, .input-main_outlined:focus {
   color: #fff;
 }
@@ -5662,6 +5666,11 @@ label.radio-label input[type=checkbox].invalid {
   padding: 40px 50px 60px;
   position: relative;
 }
+.popup-form_table {
+  margin: auto 0;
+  width: 100%;
+  max-width: 1100px;
+}
 @media screen and (max-width: 575.98px) {
   .popup-form {
     padding: 60px 20px 20px;
@@ -5728,6 +5737,97 @@ label.radio-label input[type=checkbox].invalid {
   .popup-form__submit {
     max-width: 100%;
   }
+}
+.popup-form__body {
+  width: 100%;
+  margin-top: 40px;
+}
+.popup-form__table-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 50px;
+  width: 100%;
+}
+.popup-form__table-item:first-of-type {
+  margin-bottom: 20px;
+}
+.popup-form__table-item:first-of-type .popup-form__characteristic-value {
+  border: 0px;
+  padding: 0;
+}
+@media (max-width: 991.98px) {
+  .popup-form__table-item:first-of-type .popup-form__characteristic-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.popup-form__table-item:last-child {
+  margin-top: 25px;
+}
+.popup-form__table-item:last-child .btn {
+  padding: 20px 30px;
+  height: auto;
+}
+@media (max-width: 991.98px) {
+  .popup-form__table-item:last-child .btn {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    padding: 25px 10px;
+  }
+}
+.popup-form__table-item:last-child .popup-form__characteristic-value {
+  border: 0px;
+  padding: 0;
+}
+@media (max-width: 991.98px) {
+  .popup-form__table-item {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 25px;
+  }
+  .popup-form__table-item * {
+    line-height: 1.375;
+  }
+}
+.popup-form__characteristic {
+  width: 130px;
+  color: #B5B5b5;
+}
+.popup-form__characteristic-wrapper {
+  display: flex;
+  flex-grow: 1;
+  gap: 45px;
+  color: #FFFFFF;
+}
+@media (max-width: 991.98px) {
+  .popup-form__characteristic-wrapper {
+    line-height: 1;
+  }
+}
+@media (max-width: 575.98px) {
+  .popup-form__characteristic-wrapper {
+    gap: 20px;
+  }
+}
+.popup-form__characteristic-value {
+  flex: 1 0;
+  border-bottom: 1px solid #585858;
+  padding: 0 0 0 28px;
+}
+@media (max-width: 991.98px) {
+  .popup-form__characteristic-value {
+    padding: 0 0 10px 0;
+  }
+}
+.popup-form__characteristic-value select {
+  width: 100%;
+  appearance: none;
+  cursor: pointer;
 }
 
 .articles__tabs {
