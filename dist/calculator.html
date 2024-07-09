@@ -567,6 +567,42 @@
     </div>
 </div>
 
+    <section class="popup" data-popup-id="3" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Задать вопрос</h2>
+        <p class="popup-form__subtitle">
+            Заполните форму ниже и мы свяжемся с вами
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Имя
+                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Электронная почта
+                    <input type="email" class="input-main" placeholder="poshta@mail.ru" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>
+
     <main>
 
         <!-- Hero -->
@@ -640,19 +676,19 @@
                         <h3 class="calculator__characteristic-title">
                             120 TH/s
                         </h3>
-                        <p class="calculator__characteristic-subtitle">Hashrate</p>
+                        <p class="calculator__characteristic-subtitle">Хэшрейт</p>
                     </div>
                     <div class="calculator__characteristic">
                         <h3 class="calculator__characteristic-title">
                             SHA-256
                         </h3>
-                        <p class="calculator__characteristic-subtitle">Algorithm</p>
+                        <p class="calculator__characteristic-subtitle">Алгоритм</p>
                     </div>
                     <div class="calculator__characteristic">
                         <h3 class="calculator__characteristic-title">
-                            2760 W/h
+                            2760 Вт/ч
                         </h3>
-                        <p class="calculator__characteristic-subtitle">Consumption</p>
+                        <p class="calculator__characteristic-subtitle">Потребление</p>
                     </div>
                 </div>
             </div>
@@ -860,7 +896,7 @@
                     stroke-linecap="round" stroke-linejoin="round" />
             </svg>
             <h3 class="offer-cards__heading">
-                Оплата только за электроэнергию от 5 ₽ за кВт
+                Оплата только за электроэнергию: от 5 ₽ за кВт
             </h3>
         </div>
         <div class="offer-cards__item card card_outline">
@@ -913,11 +949,11 @@
             </svg>
             <div class="offer-cards__text-wrapper">
 
-            <h3 class="offer-cards__heading">
+            <h3 class="offer-cards__heading" style="max-width: 430px;">
                 Возможность провести ремонт в рамках дата-центра* или сертифицированного сервисного центра
             </h3>
             <p class="offer-cards__text-gray">
-                Не включено в стоимость хостинга
+                *Не включено в стоимость хостинга
             </p>
             </div>
         </div>
@@ -1037,7 +1073,7 @@
                     </svg>
 
                 </div>
-                Деверсификация <br>портфеля
+                Диверсификация <br>портфеля
             </div>
             <div class="product-card__text">
                 Рынок криптовалют не зависит напрямую от традиционных финансовых рынков, что позволяет диверсифицировать портфель и снизить риски
@@ -1053,7 +1089,7 @@
                     </svg>
 
                 </div>
-                Пасивный<br> доход
+                Пассивный<br> доход
             </div>
             <div class="product-card__text">
                 При выборе Uminers в качестве партнера для майнинга под ключ, вы не участвуете в операционных процессах заработка – мы делаем это за вас
@@ -1073,7 +1109,7 @@
         </div>
         <div class="steps-cards__item card">
             <img src="img/Group 1948753887card-number-1.png" alt="" class="steps-cards__image">
-            <p class="steps-cards__text">Оформите заказ удобным способом или просто <a href="#" class="highlighted underlined">свяжитесь с нами</a></p>
+            <p class="steps-cards__text">Оформите заказ удобным способом или просто <a href="javascript:void(0)" class="highlighted underlined js-popup-open" data-popup-id="3">свяжитесь с нами</a></p>
         </div>
         <div class="steps-cards__item card">
             <img src="img/Group 1948753887card-number-2.png" alt="" class="steps-cards__image">

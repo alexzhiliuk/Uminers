@@ -5052,11 +5052,8 @@ input:checked + .slider:before {
   padding: 20px 20px 13px;
   margin-top: 15px;
   margin-bottom: 10px;
-}
-@media (max-width: 1199.98px) {
-  .calculations {
-    max-width: fit-content;
-  }
+  max-width: fit-content;
+  align-self: center;
 }
 .calculations__item {
   display: flex;
@@ -5135,11 +5132,7 @@ input:checked + .slider:before {
 }
 .terms__item svg {
   flex-shrink: 0;
-}
-@media (max-width: 1299.98px) {
-  .terms__item svg {
-    width: 24px;
-  }
+  width: 24px;
 }
 .terms__text {
   font-size: 14px;
