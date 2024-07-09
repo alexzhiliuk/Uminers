@@ -5735,6 +5735,11 @@ label.radio-label input[type=checkbox].invalid {
   width: 100%;
   margin-top: 40px;
 }
+@media (max-width: 991.98px) {
+  .popup-form__body {
+    margin-top: 0;
+  }
+}
 .popup-form__table-item {
   width: 100%;
   display: flex;
@@ -5788,7 +5793,7 @@ label.radio-label input[type=checkbox].invalid {
   }
 }
 .popup-form__characteristic {
-  width: 130px;
+  width: 200px;
   color: #B5B5b5;
 }
 .popup-form__characteristic-wrapper {
