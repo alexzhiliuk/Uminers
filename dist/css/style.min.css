@@ -4334,7 +4334,13 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  justify-content: space-between;
   min-width: min(100%, 180px);
+}
+.footer__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .footer__item-caption {
   color: #3F3F3F;
