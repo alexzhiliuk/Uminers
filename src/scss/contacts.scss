@@ -1,5 +1,8 @@
 .contacts-section {
-    
+
+    &:first-child{
+        margin-top: 60px;
+    }
     @media screen and (min-width: $breakpoint768) {
         .card {
             flex-grow: 0;

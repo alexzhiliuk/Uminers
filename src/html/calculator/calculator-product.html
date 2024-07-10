@@ -1,5 +1,5 @@
 <section class="section container calculator" id="calculator">
-    <h2 class="section-title calculator__title">Рассчитайте окупаемость ASIC-майнера</h2>
+    <h2 class="section-title calculator__title">Рассчитайте окупаемость инвестиций в майнинг</h2>
     <div class="section__body calculator__content">
         <div class="calculator__slider">
             <h3 class="calculator__image-title">
@@ -65,7 +65,7 @@
         </div>
         <form class="calculator__calculator">
             <label for="" class="label-main">
-                Самые эффективные модели майнеров
+                Выберите ASIC-майнер
                 <div class="select-wrapper">
                     <select name="" id="" class="input-main">
                             <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
@@ -81,11 +81,11 @@
                 </div>
             </label>
             <label for="" class="label-main">
-                Стоимость электроэнергии
-                <input type="text" placeholder="30 232 ₽" class="input-main" pattern="[0-9]*">
+                Стоимость электроэнергии (₽/КВт)
+                <input type="text" placeholder="5,5 ₽" class="input-main" pattern="[0-9]*">
             </label>
             <label for="" class="lable-main">
-                Количество
+                Количество устройств
                 <div class="double-range-input__progress">
                     <input class="double-range-input__range double-range-input__range_min" id="quantity-range"
                         type="range" step="5" min="0" max="400" value="1" name="quantity">
@@ -175,7 +175,7 @@
                         </p>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-round__main">Получить подробный расчет</button>
+                <button type="button" class="btn btn-round__main js-popup-open" data-popup-id="5">Получить подробный расчет</button>
             </div>
         </form>
     </div>

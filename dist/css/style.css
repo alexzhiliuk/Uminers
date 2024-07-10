@@ -1227,6 +1227,10 @@ button {
   flex-direction: column;
   gap: 10px;
 }
+.mobile-menu__catalog_main {
+  margin-left: 0;
+  margin-top: 0;
+}
 .mobile-menu__catalog-item {
   display: flex;
   align-items: center;
@@ -2908,6 +2912,9 @@ button {
   }
 }
 
+.contacts-section:first-child {
+  margin-top: 60px;
+}
 @media screen and (min-width: 767.98px) {
   .contacts-section .card {
     flex-grow: 0;
@@ -4327,7 +4334,13 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  justify-content: space-between;
   min-width: min(100%, 180px);
+}
+.footer__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .footer__item-caption {
   color: #3F3F3F;
