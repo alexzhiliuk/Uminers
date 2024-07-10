@@ -5163,11 +5163,11 @@ input:checked + .slider:before {
   line-height: 18px;
   letter-spacing: -0.01em;
 }
-.terms button[type=submit] {
+.terms button[type=button] {
   width: 100%;
 }
 @media (max-width: 479.98px) {
-  .terms button[type=submit] {
+  .terms button[type=button] {
     font-size: 12px;
     line-height: 1.2;
   }
