@@ -626,6 +626,41 @@
         <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
     </form>
 </section>
+    <section class="popup" data-popup-id="5" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Получить расчет</h2>
+        <p class="popup-form__subtitle">
+            Заполните форму ниже и мы свяжемся с вами
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Имя
+                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Электронная почта
+                    <input type="email" class="input-main" placeholder="poshta@mail.ru" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>
 
     <main>
 
@@ -642,7 +677,7 @@
     <p class="hero__text">
         Мы возьмем на себя все операционные процессы: от помощи в подборе оборудования до размещения и обслуживания в нашем дата-центре
     </p>
-    <a href="index.html" class="btn hero__btn">Рассчитать окупаемость</a>
+    <a href="#calculator" class="btn hero__btn scroll-link-calculator">Рассчитать окупаемость</a>
     <div class="hero__img">
         <img src="img/thanks/hero-img.png" alt="">
     </div>
@@ -719,7 +754,7 @@
         </div>
         <form class="calculator__calculator">
             <label for="" class="label-main">
-                Самые эффективные модели майнеров
+                Выберите ASIC-майнер
                 <div class="select-wrapper">
                     <select name="" id="" class="input-main">
                             <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
@@ -736,7 +771,7 @@
             </label>
             <label for="" class="label-main">
                 Стоимость электроэнергии (₽/КВт)
-                <input type="text" placeholder="30 232 ₽" class="input-main" pattern="[0-9]*">
+                <input type="text" placeholder="5,5 ₽" class="input-main" pattern="[0-9]*">
             </label>
             <label for="" class="lable-main">
                 Количество устройств
@@ -829,7 +864,7 @@
                         </p>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-round__main">Получить подробный расчет</button>
+                <button type="button" class="btn btn-round__main js-popup-open" data-popup-id="5">Получить подробный расчет</button>
             </div>
         </form>
     </div>
