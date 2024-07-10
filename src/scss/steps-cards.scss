@@ -1,5 +1,7 @@
 .steps-cards {
     $gap: 18px;
+    position: relative;
+    z-index: 2;
 
     &__content {
         display: flex;
@@ -8,8 +10,11 @@
     }
 
     &__item {
+        &_smaller{
+            flex: 1 calc(16.7% - $gap);
+        }
         flex: 1 calc(100% - 80% - $gap);
-        min-width: 215px;
+        min-width: 209px;
     }
 
     &__text {
@@ -32,4 +37,9 @@
         letter-spacing: -0.02em;
         color: $primaryColor;
     }
+}
+.flex-column-30{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
 }

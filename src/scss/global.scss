@@ -198,6 +198,15 @@ button {
     padding-left: 30px;
     padding-right: 30px;
 
+    &_33{
+        width:33%;
+        align-self: center;
+        justify-self: center;
+        @media (max-width:$breakpoint768) {
+            width: 100%;
+        }
+    }
+
     // .btn_secondary
     &_secondary {
         background-color: unset;
