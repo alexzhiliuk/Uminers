@@ -450,6 +450,16 @@ button {
   padding-left: 30px;
   padding-right: 30px;
 }
+.btn_33 {
+  width: 33%;
+  align-self: center;
+  justify-self: center;
+}
+@media (max-width: 767.98px) {
+  .btn_33 {
+    width: 100%;
+  }
+}
 .btn_secondary {
   background-color: unset;
   color: #9D9D9D;
@@ -6243,6 +6253,10 @@ label.radio-label input[type=checkbox].invalid {
   color: #00C1AD;
 }
 
+.steps-cards {
+  position: relative;
+  z-index: 2;
+}
 .steps-cards__content {
   display: flex;
   gap: 18px;
@@ -6250,7 +6264,10 @@ label.radio-label input[type=checkbox].invalid {
 }
 .steps-cards__item {
   flex: 1 calc(20% - 18px);
-  min-width: 215px;
+  min-width: 209px;
+}
+.steps-cards__item_smaller {
+  flex: 1 calc(16.7% - 18px);
 }
 .steps-cards__text {
   font-size: 20px;
@@ -6269,6 +6286,12 @@ label.radio-label input[type=checkbox].invalid {
   line-height: 19.12px;
   letter-spacing: -0.02em;
   color: #00C1AD;
+}
+
+.flex-column-30 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .offer-cards {
@@ -6434,6 +6457,182 @@ label.radio-label input[type=checkbox].invalid {
   line-height: 27.32px;
   letter-spacing: -0.02em;
   color: #ededed;
+}
+
+.leazing-hero {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+.leazing-hero > img {
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  width: 130%;
+  top: -50%;
+  left: -15%;
+  z-index: 1;
+}
+@media (max-width: 991.98px) {
+  .leazing-hero > img {
+    transform: rotate(90deg);
+    top: 20%;
+    left: -45%;
+    width: 200%;
+  }
+}
+.leazing-hero__title {
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  background-color: #00C1AD;
+  background-image: linear-gradient(91.61deg, #00C1AD 15.2%, #005B52 87.36%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: clamp(30px, 6vw, 60px);
+  font-weight: 600;
+  margin-top: 80px;
+  line-height: 1.1;
+}
+.leazing-hero__subtitle {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.48px;
+  max-width: 900px;
+}
+@media (max-width: 575.98px) {
+  .leazing-hero__subtitle {
+    max-width: none;
+    text-align: center;
+  }
+}
+.leazing-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+@media (max-width: 575.98px) {
+  .leazing-hero__content {
+    align-items: stretch;
+  }
+}
+.leazing-hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.leazing-hero__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 575.98px) {
+  .leazing-hero__cards {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.leazing-hero__cards .section-title {
+  display: block;
+}
+
+.card-opacity {
+  padding: 20px 40px;
+  border-radius: 15px;
+  background: rgba(0, 193, 173, 0.3);
+  backdrop-filter: blur(5px);
+  gap: 0;
+}
+@media (max-width: 575.98px) {
+  .card-opacity {
+    flex-grow: 1;
+  }
+}
+.card-opacity__title {
+  color: #00C1AD;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.64px;
+}
+@media (max-width: 575.98px) {
+  .card-opacity__title {
+    font-size: 25px;
+  }
+}
+.card-opacity__subtitle {
+  color: #EDEDED;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.leasing-advantages {
+  position: relative;
+  z-index: 2;
+}
+.leasing-advantages > * {
+  position: relative;
+  z-index: 2;
+}
+.leasing-advantages > img {
+  display: block;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  width: 130%;
+  transform: rotate(180deg);
+  top: 0%;
+  left: -15%;
+  z-index: 1;
+}
+@media (max-width: 991.98px) {
+  .leasing-advantages > img {
+    transform: rotate(90deg);
+    top: 80%;
+    left: -45%;
+    width: 200%;
+  }
+}
+.leasing-advantages > img.big-bg {
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  width: 130%;
+  transform: rotate(180deg);
+  top: 0%;
+  left: -15%;
+  z-index: 1;
+}
+@media (max-width: 991.98px) {
+  .leasing-advantages > img.big-bg {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.card_outlined {
+  border: 1px solid #00C1AD;
+}
+.card_outlined__text {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+.card_bg-blur {
+  background: rgba(0, 193, 173, 0.1);
 }
 
 @font-face {
