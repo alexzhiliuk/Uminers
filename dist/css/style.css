@@ -1557,7 +1557,7 @@ button {
 .hero_calculator {
   padding-top: 150px;
   padding-bottom: 200px;
-  margin-bottom: -200px;
+  margin-bottom: -100px;
 }
 @media screen and (max-width: 991.98px) {
   .hero_calculator {
@@ -1648,10 +1648,9 @@ button {
 .hero_calculator .hero__img {
   pointer-events: none;
   position: absolute;
-  top: 50%;
   right: -60px;
-  translate: 0 -50%;
   width: 60%;
+  bottom: 50px;
   z-index: -2;
 }
 .hero_calculator .hero__img img {
@@ -1675,6 +1674,11 @@ button {
   height: 174px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
+@media screen and (min-width: 1393px) {
+  .hero_calculator .hero__shade {
+    bottom: 39px;
+  }
+}
 @media screen and (max-width: 1199.98px) and (min-width: 991.98px) {
   .hero_calculator .hero__shade {
     height: 300px;
@@ -1682,6 +1686,38 @@ button {
 }
 @media screen and (max-width: 991.98px) {
   .hero_calculator .hero__shade {
+    height: unset;
+    aspect-ratio: 992/50;
+    bottom: 0;
+  }
+}
+.hero_calculator .hero__shade_top {
+  position: absolute;
+  top: 50px;
+  transform: rotate(180deg);
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 174px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+@media screen and (min-width: 1393px) {
+  .hero_calculator .hero__shade_top {
+    top: 39px;
+  }
+}
+@media screen and (max-width: 1276px) and (min-width: 1199.98px) {
+  .hero_calculator .hero__shade_top {
+    top: 100px;
+  }
+}
+@media screen and (max-width: 1199.98px) and (min-width: 991.98px) {
+  .hero_calculator .hero__shade_top {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .hero_calculator .hero__shade_top {
     height: unset;
     aspect-ratio: 992/50;
     bottom: 0;
@@ -1696,6 +1732,12 @@ button {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+@media screen and (max-width: 1199.98px) {
+  .hero_calculator .hero__bg {
+    width: 100%;
+    height: 100%;
+  }
 }
 @media screen and (max-width: 479.98px) {
   .hero_calculator .hero__bg {

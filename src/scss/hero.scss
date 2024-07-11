@@ -281,7 +281,7 @@
 
         padding-top: 150px;
         padding-bottom: 200px;
-        margin-bottom: -200px;
+        margin-bottom: -100px;
 
         @media screen and (max-width: $breakpoint992) {
             padding-top: 10vw;
@@ -376,10 +376,9 @@
             &__img {
                 pointer-events: none;
                 position: absolute;
-                top: 50%;
                 right: -60px;
-                translate: 0 -50%;
                 width: 60%;
+                bottom: 50px;
                 z-index: -2;
 
                 img {
@@ -405,6 +404,10 @@
                 height: 174px;
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 
+                @media screen and (min-width: 1393px) {
+                    bottom:39px;
+                }
+
                 @media screen and (max-width: $breakpoint1200) and (min-width: $breakpoint992) {
                     height: 300px;
                 }
@@ -413,6 +416,34 @@
                     height: unset;
                     aspect-ratio: 992 / 50;
                     bottom: 0;
+                }
+
+                &_top{
+                    position: absolute;
+                    top:50px;
+                    transform: rotate(180deg);
+                    z-index: -1;
+                    left: 0;
+                    
+                    width: 100%;
+                    height: 174px;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+                    @media screen and (min-width: 1393px) {
+                        top:39px;
+                    }
+    
+                    @media screen and (max-width: 1276px) and (min-width:$breakpoint1200) {
+                        top:100px;
+                    }
+                    @media screen and (max-width: $breakpoint1200) and (min-width: $breakpoint992) {
+                        height: 300px;
+                    }
+    
+                    @media screen and (max-width: $breakpoint992) {
+                        height: unset;
+                        aspect-ratio: 992 / 50;
+                        bottom: 0;
+                    }
                 }
 
             }
@@ -426,6 +457,11 @@
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
+                }
+
+                @media screen and (max-width: $breakpoint1200) {
+                    width: 100%;
+                    height: 100%;
                 }
 
                 @media screen and (max-width: $breakpoint480) {
