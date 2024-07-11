@@ -2,6 +2,39 @@
     position: relative;
     z-index: 2;
     overflow:visible;
+    .btc-bg{
+        position: absolute;
+        z-index: 1;
+        right:10%;
+        width:25%;
+        bottom:0;
+        img{
+            width:100%;
+            z-index: 1;
+        };
+        @media (max-width:$breakpoint1100) {
+            width:50%;
+        }
+        @media (max-width:$breakpoint768) {
+            width:100%;
+            right: -40%;
+        }
+    }
+
+    .shadow{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 174px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    }
+
+    button{
+        z-index: 2;
+    }
+
     &>img{
         display: block;
         user-select: none;
@@ -12,9 +45,9 @@
         left:-15%;
         z-index: 1;
         @media (max-width:$breakpoint992) {
-            transform: rotate(90deg);
+            transform: rotate(-60deg);
             top:20%;
-            left:-45%;
+            left:-80%;
             width:200%;
         }
     }
@@ -43,6 +76,7 @@
             max-width: none;
             text-align: center;
         }
+        z-index: 2;
     }
 
     &__content{
@@ -84,6 +118,7 @@
     background: rgba(0, 193, 173, 0.30);
     backdrop-filter: blur(5px);
     gap: 0;
+    z-index: 2;
     @media (max-width: $breakpoint576) {
         flex-grow: 1;
     }
