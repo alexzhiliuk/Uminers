@@ -1559,6 +1559,14 @@ button {
   padding-bottom: 200px;
   margin-bottom: -100px;
 }
+.hero_calculator#calculator-hero {
+  margin-top: -75px;
+}
+@media (max-width: 992px) {
+  .hero_calculator#calculator-hero {
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .hero_calculator {
     padding-top: 10vw;
@@ -3788,7 +3796,12 @@ input:checked + .slider:before {
 .catalog .card__category_red {
   background-color: #F23C00;
 }
-.catalog .card > img {
+.catalog .card > a {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.catalog .card > a > img {
   width: 80%;
   max-width: 228px;
   align-self: center;
