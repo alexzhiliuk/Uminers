@@ -325,7 +325,7 @@
         letter-spacing: -0.01em;
     }
 
-    button[type="submit"] {
+    button[type="button"] {
         width: 100%;
 
         @media (max-width:$breakpoint480) {

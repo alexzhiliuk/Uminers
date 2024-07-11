@@ -18,12 +18,82 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-    <title>Калькулятор</title>
+    <title>Calculator</title>
 </head>
 
 <body>
 
     <!-- Header -->
+    <section class="popup" data-popup-id="3" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Ask a question</h2>
+        <p class="popup-form__subtitle">
+            Fill out the form below and we will contact you
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    First name
+                    <input type="text" class="input-main" placeholder="Your first name" name="name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Phone number
+                    <input type="tel" class="input-main" placeholder="+86 (020) 8488 8242" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Email
+                    <input type="email" class="input-main" placeholder="email@gmail.com" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Submit</button>
+    </form>
+</section>
+    <section class="popup" data-popup-id="5" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Get a calculation</h2>
+        <p class="popup-form__subtitle">
+            Fill out the form below and we will contact you
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Name
+                    <input type="text" class="input-main" placeholder="Your name" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Phone number
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    E-mail
+                    <input type="email" class="input-main" placeholder="your.mail@gmail.com" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Send</button>
+    </form>
+</section>
     <header class="header container">
     <div class="bottom-header">
         <a href="en-index.html" class="bottom-header__logo">
@@ -665,7 +735,7 @@
     </div>
     <p class="hero__text">
         We will take care of all operational processes: from helping you select equipment to placement and maintenance in our data center    </p>
-    <a href="index.html" class="btn hero__btn">Calculate profitability</a>
+    <a href="#calculator" class="btn hero__btn scroll-link-calculator">Calculate profitability</a>
     <div class="hero__img">
         <img src="img/thanks/hero-img.png" alt="">
     </div>
@@ -676,7 +746,7 @@
 </section>
 
         <section class="section container calculator" id="calculator">
-    <h2 class="section-title calculator__title">Calculate the profitability of an ASIC miner</h2>
+    <h2 class="section-title calculator__title">Calculate the profitability of investment in mining</h2>
     <div class="section__body calculator__content">
         <div class="calculator__slider">
             <h3 class="calculator__image-title">
@@ -742,7 +812,7 @@
         </div>
         <form class="calculator__calculator">
             <label for="" class="label-main">
-                Most profitable ASIC miners
+                Select an ASIC miner
                 <div class="select-wrapper">
                     <select name="" id="" class="input-main">
                             <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
@@ -759,10 +829,10 @@
             </label>
             <label for="" class="label-main">
                 The cost of electricity
-                <input type="text" placeholder="$ 3000" class="input-main" pattern="[0-9]*">
+                <input type="text" placeholder="$ 1,5" class="input-main" pattern="[0-9]*">
             </label>
             <label for="" class="lable-main">
-                Quantity
+                Number of devices
                 <div class="double-range-input__progress">
                     <input class="double-range-input__range double-range-input__range_min" id="quantity-range"
                         type="range" step="5" min="0" max="400" value="1" name="quantity">
@@ -852,7 +922,7 @@
                         </p>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-round__main">Get a detailed calculation</button>
+                <button type="button" class="btn btn-round__main js-popup-open" data-popup-id="5">Get a detailed calculation</button>
             </div>
         </form>
     </div>

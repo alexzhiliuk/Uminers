@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-    <title>Карточка товара</title>
+    <title>Product card</title>
 </head>
 
 <body>
@@ -857,6 +857,41 @@
                 </div>
             </div>
         </div>
+    </form>
+</section>
+    <section class="popup" data-popup-id="7" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Leave a request for leasing</h2>
+        <p class="popup-form__subtitle">
+            Fill out the form below and we will contact you
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Name
+                    <input type="text" class="input-main" placeholder="Your name" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Phone number
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    E-mail
+                    <input type="email" class="input-main" placeholder="your.mail@gmail.com" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
     </form>
 </section>
     <section class="popup" data-popup-id="2" style="display: none;">

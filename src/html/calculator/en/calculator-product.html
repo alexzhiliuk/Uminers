@@ -1,5 +1,5 @@
 <section class="section container calculator" id="calculator">
-    <h2 class="section-title calculator__title">Calculate the profitability of an ASIC miner</h2>
+    <h2 class="section-title calculator__title">Calculate the profitability of investment in mining</h2>
     <div class="section__body calculator__content">
         <div class="calculator__slider">
             <h3 class="calculator__image-title">
@@ -65,7 +65,7 @@
         </div>
         <form class="calculator__calculator">
             <label for="" class="label-main">
-                Most profitable ASIC miners
+                Select an ASIC miner
                 <div class="select-wrapper">
                     <select name="" id="" class="input-main">
                             <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
@@ -82,10 +82,10 @@
             </label>
             <label for="" class="label-main">
                 The cost of electricity
-                <input type="text" placeholder="$ 3000" class="input-main" pattern="[0-9]*">
+                <input type="text" placeholder="$ 1,5" class="input-main" pattern="[0-9]*">
             </label>
             <label for="" class="lable-main">
-                Quantity
+                Number of devices
                 <div class="double-range-input__progress">
                     <input class="double-range-input__range double-range-input__range_min" id="quantity-range"
                         type="range" step="5" min="0" max="400" value="1" name="quantity">
@@ -175,7 +175,7 @@
                         </p>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-round__main">Get a detailed calculation</button>
+                <button type="button" class="btn btn-round__main js-popup-open" data-popup-id="5">Get a detailed calculation</button>
             </div>
         </form>
     </div>
