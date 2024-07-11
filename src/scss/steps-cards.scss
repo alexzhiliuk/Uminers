@@ -9,6 +9,27 @@
         flex-wrap: wrap;
     }
 
+    .top-wrapper{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .enum{
+        font-size: clamp(30px,6vw ,50px);
+        line-height: 0.8;
+        letter-spacing: -0.03em;
+        background-color: #00C1AD;
+        background-image: linear-gradient(180deg, #B2B2B2 0%, #616161 100%);
+        opacity: 0.2;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-weight: 600;
+    }
+
     &__item {
         &_smaller{
             flex: 1 calc(16.7% - $gap);
