@@ -2,45 +2,45 @@
 <html lang="en">
 
 @@include('html/head.html',{
-    "title": "Избранное"
+    "title": "Favourites"
 })
 
 <body>
 
     <!-- Header -->
-    @@include('html/header.html')
+    @@include('html/en/header.html')
 
     <main>
         <section class="catalog section container">
             <div class="breadcrumbs" data-next="Оформление заказа">
-                <a href="index.html" class="breadcrumbs__item">Главная</a>
+                <a href="index.html" class="breadcrumbs__item">Main</a>
                 <div class="breadcrumbs__arrow">
                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.54889 1.00006L10.3634 5.81455C10.7754 6.22658 10.7754 6.89463 10.3634 7.30667L5.56055 12.1095" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
                     </svg>            
                 </div>
-                <a href="javascript:void(0)" class="breadcrumbs__item">Избранное</a>
+                <a href="javascript:void(0)" class="breadcrumbs__item">Favourites</a>
             </div>
             <h2 class="section-title">
-                Избранное
-                <span class="mini">8 товаров</span>
+                Favourites
+                <span class="mini">8 products</span>
             </h2>
             <div class="section__body favourites-container">
-                @@include('html/product/productCard.html')
-                @@include('html/product/productCard.html')
-                @@include('html/product/productCard.html')
-                @@include('html/product/productCard.html')
-                @@include('html/product/productCard.html')
-                @@include('html/product/productCard.html')
-                @@include('html/product/productCard.html')
-                @@include('html/product/productCard.html')
+                @@include('html/product/en/productCard.html')
+                @@include('html/product/en/productCard.html')
+                @@include('html/product/en/productCard.html')
+                @@include('html/product/en/productCard.html')
+                @@include('html/product/en/productCard.html')
+                @@include('html/product/en/productCard.html')
+                @@include('html/product/en/productCard.html')
+                @@include('html/product/en/productCard.html')
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    @@include('html/footer.html')
+    @@include('html/en/footer.html')
 
     <script src="js/app.min.js"></script>
 </body>
