@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-    <title>Доставка</title>
+    <title>Корзина</title>
 </head>
 
 <body>
@@ -700,254 +700,272 @@
 </div>
 
     <main>
-
-        <!-- Hero -->
-        <section class="container section hero_delievery">
-    <h1 class="hero_delievery__title">Майнинг оборудование<br> <span
-            class="hero_delievery__title_highlighted">с доставкой
-            по всей России</span></h1>
-    <div class="hero_delievery__card">
-        <svg width="40" height="42" viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <section class="section container cart" >
+    <div class="breadcrumbs" data-next="Оформление заказа">
+        <a href="index.html" class="breadcrumbs__item">Главная</a>
+        <div class="breadcrumbs__arrow">
+            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.54889 1.00006L10.3634 5.81455C10.7754 6.22658 10.7754 6.89463 10.3634 7.30667L5.56055 12.1095" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+            </svg>            
+        </div>
+        <a href="javascript:void(0)" class="breadcrumbs__item">Корзина</a>
+    </div>
+    <h2 class="section-title cart__title" data-innertext="Оформление заказа">
+        Корзина
+    </h2>
+    <form action class="section__body cart__content form-disabled" id="cart-body">
+        <div class="cart__body">
+            <div class="cart-item">
+    <div class="cart-item__wrapper">
+        <img src="img/asic-catalog.png" alt="asic miner photo">
+        <div class="cart-item__topWrapper">
+            <h3 class="cart-item__title">
+                Bitmain Antminer S21 195 Th/s
+            </h3>
+            <div class="cart-item__characteristics">
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Доход в день</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">1 443 ₽</div>
+                </div>
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Окупаемость</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">14,3 мес.</div>
+                </div>
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Хэшрейт</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">195 TH/s</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-item__bottomWrapper product">
+        <div action="" class="form">
+            <div class="product__amount form__group">
+                <span class="form__title">Количество товара</span>
+                <div class="form__ammount">
+                    <div class="form__symbol_left">
+                        -
+                    </div>
+                    <input type="number" inputmode="numeric" min="10" placeholder="10" value=10 name="ammount">
+                    <div class=" form__symbol_right">
+                        +
+                    </div>
+                </div>
+                <span class="product__minAmmount">
+                    360 000 ₽/шт
+                </span>
+            </div>
+        </div>
+        <span class="cart-item__price">
+            720 000 ₽
+        </span>
+    </div>
+    <div class="cart-item__delete">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
-                d="M17.9351 2.69132C19.2304 2.02237 20.7696 2.02237 22.0649 2.69132L29.25 6.402L36.064 10.0526C37.5139 10.8294 38.4244 12.3353 38.4388 13.98L38.5 20.9999L38.4388 28.0199C38.4244 29.6646 37.5139 31.1705 36.064 31.9472L29.25 35.5979L22.0649 39.3086C20.7696 39.9775 19.2304 39.9775 17.9351 39.3086L10.75 35.5979L3.93596 31.9472C2.48613 31.1705 1.57559 29.6646 1.56124 28.0199L1.5 20.9999L1.56124 13.98C1.57559 12.3353 2.48613 10.8294 3.93596 10.0526L10.75 6.402L17.9351 2.69132Z"
-                stroke="#00C1AD" stroke-width="2.5" />
-            <path d="M20.2109 38.7499V21.2499M20.2109 21.2499L36.4609 12.4999M20.2109 21.2499L2.71094 12.4999"
-                stroke="#00C1AD" stroke-width="2.5" />
-            <path d="M11.25 6L30 16V23.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                d="M8.25 6.5502V5.7002C8.25 4.57303 8.69776 3.49201 9.49479 2.69499C10.2918 1.89796 11.3728 1.4502 12.5 1.4502C13.6272 1.4502 14.7082 1.89796 15.5052 2.69499C16.3022 3.49201 16.75 4.57303 16.75 5.7002V6.5502"
+                stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.2998 6.5498H22.6998" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M4.84961 6.5498H20.1496V21.8498C20.1496 22.3006 19.9704 22.7331 19.6517 23.0519C19.3329 23.3706 18.9005 23.5498 18.4496 23.5498H6.54961C6.09874 23.5498 5.66634 23.3706 5.34752 23.0519C5.02872 22.7331 4.84961 22.3006 4.84961 21.8498V6.5498Z"
+                stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.82129 11.6099V18.7555" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15.1787 11.6099V18.7555" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p class="hero_delievery__text">
-            Привезём оборудование из наличия или под заказ из Китая в срок от 7 дней
-        </p>
-
     </div>
-</section>
-
-        <section class="container">
-    <h2 class="section-title">О доставке</h2>
-    <div class="section__body delievery-cards">
-        <div class="flex-column-30">
-            <div class="cards cards_column">
-                <div class="card_outlined card card_row card_bg-blur cards__item_half">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 10.4167V13.75" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M16.668 10.4167V13.75" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M14.9987 36.6666H24.9987C33.332 36.6666 36.6654 33.3333 36.6654 25V15C36.6654 6.66665 33.332 3.33331 24.9987 3.33331H14.9987C6.66536 3.33331 3.33203 6.66665 3.33203 15V25C3.33203 33.3333 6.66536 36.6666 14.9987 36.6666Z"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10 26.6667V30" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M16.668 26.6667V30" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M23.332 12.0833H29.9987" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M23.332 28.3333H29.9987" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3.33203 20H36.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-
-                    <p class="card_outlined__text">
-                        Все оборудование, поставляемое в Uminers, является оригинальным и производится официальными
-                        заводами BITMAIN, MICROBT и др.
-                    </p>
+</div>
+            <div class="cart-item">
+    <div class="cart-item__wrapper">
+        <img src="img/asic-catalog.png" alt="asic miner photo">
+        <div class="cart-item__topWrapper">
+            <h3 class="cart-item__title">
+                Bitmain Antminer S21 195 Th/s
+            </h3>
+            <div class="cart-item__characteristics">
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Доход в день</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">1 443 ₽</div>
                 </div>
-                <div class="card_outlined card card_row card_bg-blur cards__item_half">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M5 16.6666C5 10.3813 5 7.23856 6.95262 5.28593C8.90524 3.33331 12.0479 3.33331 18.3333 3.33331H21.6667C27.9521 3.33331 31.0948 3.33331 33.0474 5.28593C35 7.23856 35 10.3813 35 16.6666V23.3333C35 29.6187 35 32.7614 33.0474 34.714C31.0948 36.6666 27.9521 36.6666 21.6667 36.6666H18.3333C12.0479 36.6666 8.90524 36.6666 6.95262 34.714C5 32.7614 5 29.6187 5 23.3333V16.6666Z"
-                            stroke="#00C1AD" stroke-width="2.5" />
-                        <path d="M13.332 20H26.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                        <path d="M13.332 13.3333H26.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                        <path d="M13.332 26.6667H21.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                    </svg>
-
-                    <p class="card_outlined__text">
-                        Мы осуществляем только легальные поставки и предоставляем потверждающие документы: ГТД и договор
-                        поставки.
-                    </p>
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Окупаемость</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">14,3 мес.</div>
                 </div>
-                <div class="card_outlined card card_row card_bg-blur cards__item_half">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16.6654 27.5L21.6654 29.1667C21.6654 29.1667 34.1654 26.6667 35.832 26.6667C37.4987 26.6667 37.4987 28.3333 35.832 30C34.1654 31.6667 28.332 36.6667 23.332 36.6667C18.332 36.6667 14.9987 34.1667 11.6654 34.1667C8.33203 34.1667 3.33203 34.1667 3.33203 34.1667"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M3.33203 24.1667C4.9987 22.5 8.33203 20 11.6654 20C14.9987 20 22.9154 23.3333 24.1654 25C25.4154 26.6667 21.6654 29.1667 21.6654 29.1667"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M13.332 15V8.33332C13.332 7.41285 14.0782 6.66666 14.9987 6.66666H34.9987C35.9192 6.66666 36.6654 7.41285 36.6654 8.33332V21.6667"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M29.1654 6.66666H20.832V14.1667H29.1654V6.66666Z" stroke="#00C1AD" stroke-width="2.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-
-                    <p class="card_outlined__text">
-                        При заказе оборудования из Китая — мы привозим его на наш склад в Москве, а затем оформляем
-                        доставку транспортной компанией по вашему адресу
-                    </p>
-                </div>
-                <div class="card_outlined card card_row card_bg-blur cards__item_half">
-
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M33.3346 16C33.3346 9.33332 30.668 6.66666 24.0013 6.66666H16.0013C9.33464 6.66666 6.66797 9.33332 6.66797 16V24C6.66797 30.6667 9.33464 33.3333 16.0013 33.3333"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M27.2513 13.3333C26.3346 12.1667 24.8013 11.6667 22.5013 11.6667H17.5013C13.3346 11.6667 11.668 13.3333 11.668 17.5V22.5C11.668 24.8 12.168 26.3333 13.318 27.25"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.3516 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M20 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M26.668 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M33.332 13.3333H36.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M13.3516 33.3333V36.6667" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3.33203 13.3333H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3.33203 20H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3.33203 26.6667H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M27.8492 30.9833C29.3128 30.9833 30.4992 29.7969 30.4992 28.3333C30.4992 26.8698 29.3128 25.6833 27.8492 25.6833C26.3857 25.6833 25.1992 26.8698 25.1992 28.3333C25.1992 29.7969 26.3857 30.9833 27.8492 30.9833Z"
-                            stroke="#00C1AD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M19.0156 29.1V27.55C19.0156 26.6333 19.7656 25.8833 20.6823 25.8833C22.2823 25.8833 22.9323 24.75 22.1323 23.3667C21.6656 22.5667 21.949 21.5333 22.749 21.0833L24.2656 20.2C24.9656 19.7833 25.8656 20.0333 26.2823 20.7333L26.3823 20.9C27.1823 22.2833 28.4823 22.2833 29.2823 20.9L29.3823 20.7333C29.799 20.0333 30.699 19.8 31.399 20.2L32.9156 21.0833C33.7156 21.55 33.999 22.5667 33.5323 23.3667C32.7323 24.75 33.3823 25.8833 34.9823 25.8833C35.899 25.8833 36.649 26.6333 36.649 27.55V29.1C36.649 30.0166 35.899 30.7666 34.9823 30.7666C33.3823 30.7666 32.7323 31.9 33.5323 33.2833C33.999 34.0833 33.7156 35.1167 32.9156 35.5667L31.399 36.45C30.699 36.8667 29.799 36.6167 29.3823 35.9167L29.2823 35.75C28.4823 34.3667 27.1823 34.3667 26.3823 35.75L26.2823 35.9167C25.8656 36.6167 24.9656 36.85 24.2656 36.45L22.749 35.5667C21.949 35.1 21.6656 34.0833 22.1323 33.2833C22.9323 31.9 22.2823 30.7666 20.6823 30.7666C19.7656 30.7833 19.0156 30.0333 19.0156 29.1Z"
-                            stroke="#00C1AD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-
-                    <p class="card_outlined__text">
-                        При размещении оборудования на нашем хостинге — мы самостоятельно доставим его до дата-центра
-                        в Красноярске, подключим и настроим
-                    </p>
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Хэшрейт</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">195 TH/s</div>
                 </div>
             </div>
-            <a class="btn btn_33 btn-round__main">Перейти в каталог</a>
         </div>
-        <img src="../../img/delievery-cards-bg.png" alt="colorfull gradient backgroud" class="bg">
     </div>
-</section>
-        <section class="section container payment">
-    <h2 class="section-title">Способы оплаты</h2>
-    <div class="section__body cards">
-        <div class="card cards__item_bigger card_row payment__item">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M14.9987 31.6667C10.3172 31.6667 7.97639 31.6667 6.2949 30.5431C5.56696 30.0567 4.94196 29.4317 4.45557 28.7038C3.33203 27.0223 3.33203 24.6815 3.33203 20C3.33203 15.3185 3.33203 12.9777 4.45557 11.2962C4.94196 10.5683 5.56696 9.94326 6.2949 9.45687C7.97639 8.33333 10.3172 8.33333 14.9987 8.33333L24.9987 8.33333C29.6802 8.33333 32.021 8.33333 33.7025 9.45687C34.4304 9.94326 35.0554 10.5683 35.5418 11.2962C36.6654 12.9777 36.6654 15.3185 36.6654 20C36.6654 24.6815 36.6654 27.0223 35.5418 28.7038C35.0554 29.4317 34.4304 30.0567 33.7025 30.5431C32.021 31.6667 29.6802 31.6667 24.9987 31.6667H14.9987Z"
-                    stroke="#00C1AD" stroke-width="2.5" />
-                <path d="M15 15C12.2386 15 10 17.2386 10 20C10 22.7614 12.2386 25 15 25" stroke="#00C1AD"
-                    stroke-width="2.5" />
-                <path d="M25 15C27.7614 15 30 17.2386 30 20C30 22.7614 27.7614 25 25 25" stroke="#00C1AD"
-                    stroke-width="2.5" />
-                <path d="M15 8.33333V30.8333" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M25 8.33333V30.8333" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-            </svg>
+    <div class="cart-item__bottomWrapper product">
+        <div action="" class="form">
+            <div class="product__amount form__group">
+                <span class="form__title">Количество товара</span>
+                <div class="form__ammount">
+                    <div class="form__symbol_left">
+                        -
+                    </div>
+                    <input type="number" inputmode="numeric" min="10" placeholder="10" value=10 name="ammount">
+                    <div class=" form__symbol_right">
+                        +
+                    </div>
+                </div>
+                <span class="product__minAmmount">
+                    360 000 ₽/шт
+                </span>
+            </div>
+        </div>
+        <span class="cart-item__price">
+            720 000 ₽
+        </span>
+    </div>
+    <div class="cart-item__delete">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M8.25 6.5502V5.7002C8.25 4.57303 8.69776 3.49201 9.49479 2.69499C10.2918 1.89796 11.3728 1.4502 12.5 1.4502C13.6272 1.4502 14.7082 1.89796 15.5052 2.69499C16.3022 3.49201 16.75 4.57303 16.75 5.7002V6.5502"
+                stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.2998 6.5498H22.6998" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M4.84961 6.5498H20.1496V21.8498C20.1496 22.3006 19.9704 22.7331 19.6517 23.0519C19.3329 23.3706 18.9005 23.5498 18.4496 23.5498H6.54961C6.09874 23.5498 5.66634 23.3706 5.34752 23.0519C5.02872 22.7331 4.84961 22.3006 4.84961 21.8498V6.5498Z"
+                stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.82129 11.6099V18.7555" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15.1787 11.6099V18.7555" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+</div>
+            <div class="cart-item">
+    <div class="cart-item__wrapper">
+        <img src="img/asic-catalog.png" alt="asic miner photo">
+        <div class="cart-item__topWrapper">
+            <h3 class="cart-item__title">
+                Bitmain Antminer S21 195 Th/s
+            </h3>
+            <div class="cart-item__characteristics">
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Доход в день</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">1 443 ₽</div>
+                </div>
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Окупаемость</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">14,3 мес.</div>
+                </div>
+                <div class="cart-item__characteristic">
+                    <div class="cart-item__characteristicName">Хэшрейт</div>
+                    <div class="cart-item__characteristicBlank"></div>
+                    <div class="cart-item__characteristicValue">195 TH/s</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-item__bottomWrapper product">
+        <div action="" class="form">
+            <div class="product__amount form__group">
+                <span class="form__title">Количество товара</span>
+                <div class="form__ammount">
+                    <div class="form__symbol_left">
+                        -
+                    </div>
+                    <input type="number" inputmode="numeric" min="10" placeholder="10" value=10 name="ammount">
+                    <div class=" form__symbol_right">
+                        +
+                    </div>
+                </div>
+                <span class="product__minAmmount">
+                    360 000 ₽/шт
+                </span>
+            </div>
+        </div>
+        <span class="cart-item__price">
+            720 000 ₽
+        </span>
+    </div>
+    <div class="cart-item__delete">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M8.25 6.5502V5.7002C8.25 4.57303 8.69776 3.49201 9.49479 2.69499C10.2918 1.89796 11.3728 1.4502 12.5 1.4502C13.6272 1.4502 14.7082 1.89796 15.5052 2.69499C16.3022 3.49201 16.75 4.57303 16.75 5.7002V6.5502"
+                stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.2998 6.5498H22.6998" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M4.84961 6.5498H20.1496V21.8498C20.1496 22.3006 19.9704 22.7331 19.6517 23.0519C19.3329 23.3706 18.9005 23.5498 18.4496 23.5498H6.54961C6.09874 23.5498 5.66634 23.3706 5.34752 23.0519C5.02872 22.7331 4.84961 22.3006 4.84961 21.8498V6.5498Z"
+                stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.82129 11.6099V18.7555" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15.1787 11.6099V18.7555" stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+</div>
 
-            <div class="payment__text">
-                <h3 class="payment__title">
-                    Наличными
-                </h3>
-                <p class="payment__subtitle">
-                    Сотруднику компании в&nbsp;офисе в&nbsp;Москве
-                </p>
-            </div>
+            <div class="cart__form cart-form" id="cart-form">
+    <div class="cart-form__wrapper">
+        <h3 class="cart-form__title">
+            Контактные данные
+        </h3>
+        <div class="cart-form__name-wrapper">
+            <label for="" class="label-main">
+                Имя
+                <input type="text" class="input-main" placeholder="Ваше имя" name="name" required>
+            </label>
+            <label for="" class="label-main">
+                Фамилия
+                <input type="text" class="input-main" placeholder="Ваша фамилия"name="surname" required>
+            </label>
         </div>
-        <div class="card cards__item_bigger card_row payment__item">
-            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M3.33203 20.5C3.33203 14.2146 3.33203 11.0719 5.28465 9.11929C7.23727 7.16667 10.38 7.16667 16.6654 7.16667H23.332C29.6174 7.16667 32.7601 7.16667 34.7127 9.11929C36.6654 11.0719 36.6654 14.2146 36.6654 20.5C36.6654 26.7854 36.6654 29.9281 34.7127 31.8807C32.7601 33.8333 29.6174 33.8333 23.332 33.8333H16.6654C10.38 33.8333 7.23727 33.8333 5.28465 31.8807C3.33203 29.9281 3.33203 26.7854 3.33203 20.5Z"
-                    stroke="#00C1AD" stroke-width="2.5" />
-                <path d="M16.6667 27.1667H10" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M23.332 27.1667H20.832" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M3.33203 17.1667L36.6654 17.1667" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-            </svg>
+        <label for="" class="label-main">
+            Элекстронная почта
+            <input type="email" class="input-main" placeholder="Ваш email" required>
+        </label>
+        <label for="" class="label-main">
+            Телефон
+            <input type="tel" class="input-main" placeholder="Ваш телефон" required>
+        </label>
+    </div>
+    <div class="cart-form__wrapper">
+        <h3 class="cart-form__title">
+            Доставка
+        </h3>
+        <div class="cart-form__radioWrapper" id="radio-wrapper" >
+            <label for="ship1" class="radio-label">
+                <input type="radio" name="shipping" id="ship1" class="radio-main" required="true">
+                Самовывоз
+            </label>
+            <label for="ship2" class="radio-label">
+                <input type="radio" name="shipping" id="ship2" class="radio-main" required="true">
+                Доставка по адресу
+            </label>
+        </div>
+        <label for="address" class="label-main">
+            Адрес
+            <input type="text" class="input-main" placeholder="Адрес" id="address" disabled>
+        </label>
+        <label class="radio-label">
+            <input type="checkbox" name="" id="" class="checkbox-main">
+            Оформить заказ, как юридическое лицо
+        </label>
+    </div>
+    </div>
+</div>
 
-            <div class="payment__text">
-                <h3 class="payment__title">
-                    Банковской картой
-                </h3>
-            </div>
+            <div class="cart__submit cart-submit normal">
+    <p class="cart-submit__ammount">Итого за 5 товаров</p>
+    <p class="cart-submit__price">1 800 000 ₽</p>
+    <input type="text" placeholder="Промокод" id="cart-promocode" class="input-main_outlined">
+    <label class="radio-label">
+        <input type="checkbox" name="" id="cart-policy" class="checkbox-main" required>
+        <span class="hidden" id="policy">
+        Я согласен на <a href="#" class="underlined">обработку персональных данных</a> и <a href="#" class="underlined">публичной офертой</a>
+    </span>
+    </label>
+    <button type="button" id="cart-submit" class="btn btn__main disabled inherit" data-innertext="Оформить заказ">Перейти к оформлению</button>
+</div>
         </div>
-        <div class="card cards__item_bigger card_row payment__item">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M29.375 35C30.4443 34.0495 32.0557 34.0495 33.125 35C33.8515 35.6458 35 35.13 35 34.158V5.8417C35 4.86966 33.8515 4.35391 33.125 4.99971C32.0557 5.9502 30.4443 5.9502 29.375 4.99971C28.3057 4.04921 26.6943 4.04921 25.625 4.99971C24.5557 5.9502 22.9443 5.9502 21.875 4.99971C20.8057 4.04921 19.1943 4.04921 18.125 4.99971C17.0557 5.9502 15.4443 5.9502 14.375 4.99971C13.3057 4.04921 11.6943 4.04921 10.625 4.99971C9.55569 5.9502 7.94431 5.9502 6.875 4.99971C6.14848 4.35391 5 4.86966 5 5.8417V34.158C5 35.13 6.14848 35.6458 6.875 35C7.94431 34.0495 9.55569 34.0495 10.625 35C11.6943 35.9505 13.3057 35.9505 14.375 35C15.4443 34.0495 17.0557 34.0495 18.125 35C19.1943 35.9505 20.8057 35.9505 21.875 35C22.9443 34.0495 24.5557 34.0495 25.625 35C26.6943 35.9505 28.3057 35.9505 29.375 35Z"
-                    stroke="#00C1AD" stroke-width="2.5" />
-                <path d="M12.5 25.8333H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M12.5 20H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M12.5 14.1667H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-            </svg>
-
-            <div class="payment__text">
-                <h3 class="payment__title">
-                    Оплата по&nbsp;реквизитам
-                </h3>
-                <p class="payment__subtitle">
-                    Для юридических лиц
-                </p>
-            </div>
-        </div>
-    </div>
-    <img src="../../img/payment-bg.png" alt="colorfull gradient background" class="bg">
-</section>
-        <section class="section container promo_delievery">
-    <div class="promo_delievery__content">
-        <h2 class="promo_delievery__title">
-            Мы предоставляем лизинг<br>
-            майнингового оборудования
-        </h2>
-        <ul>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
-                    <circle cx="3" cy="3" r="3" fill="#00C1AD" />
-                </svg>
-                Срок от 12 до 60 месяцев
-            </li>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
-                    <circle cx="3" cy="3" r="3" fill="#00C1AD" />
-                </svg>
-                Доступно для ООО и ИП
-            </li>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
-                    <circle cx="3" cy="3" r="3" fill="#00C1AD" />
-                </svg>
-                Первый взнос — от 10%
-            </li>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
-                    <circle cx="3" cy="3" r="3" fill="#00C1AD" />
-                </svg>
-                Минимальная сумма - от 200.000₽
-            </li>
-        </ul>
-        <a href="leasing.html" class="btn btn-round__main">Узнать больше</a>
-    </div>
-</section>
-        <section class="section product-promo container m-90">
-    <div class="product-promo__content " style="background: url(img/product/promo.png) center center / cover no-repeat; position: relative; z-index: 2;">
-        <div class="product-promo__textContent">
-            <div class="product-promo__text">
-                <h2 class="product-promo__title section-title section-title_40">
-                    Возникли вопросы? Мы ответим
-                </h2>
-                <p class="product-promo__subtitle" >
-                    Наши специалисты готовы ответить на ваши вопросы
-                </p>
-            </div>
-        </div>
-        <a href="javascript:void(0)" class="product-promo__btn btn btn_white js-popup-open" data-popup-id="3">
-            Задать вопрос
-        </a>
-    </div>
+    </form>
 </section>
 
     </main>
@@ -1144,3 +1162,5 @@
 
     <script src="js/app.min.js"></script>
 </body>
+
+</html>
