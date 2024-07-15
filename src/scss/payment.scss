@@ -1,0 +1,30 @@
+.payment {
+    &__title {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.4px;
+    }
+
+    &__subtitle {
+        color: #B5B5B5;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.32px;
+    }
+
+    &__item {
+        border: 1px solid #B2B2B2;
+        background: linear-gradient(86deg, rgba(0, 0, 0, 0.50) 1.5%, rgba(113, 115, 114, 0.15) 98.5%);
+        backdrop-filter: blur(15px);
+        min-width: 313px;
+        @media (max-width:$breakpoint480) {
+            min-width: 280px;
+        }
+    }
+}
