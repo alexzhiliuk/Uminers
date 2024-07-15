@@ -2555,7 +2555,7 @@ button {
   border-radius: 20px;
   background: #000;
   background-image: url(../img/delievery-promo-bg.png);
-  backdrop-filter: opa;
+  background-blend-mode: multiply;
   background-position: center right;
   background-size: cover;
   padding: 40px;
