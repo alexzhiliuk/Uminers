@@ -1760,6 +1760,12 @@ button {
   padding-top: 150px;
   padding-bottom: 70px;
 }
+@media (max-width: 991.98px) {
+  .hero_delievery {
+    padding-top: 60px;
+    margin-bottom: 40px;
+  }
+}
 .hero_delievery__title {
   color: #FFF;
   font-family: Manrope;
@@ -2551,11 +2557,17 @@ button {
   line-height: normal;
   letter-spacing: -1px;
 }
+@media (max-width: 479.98px) {
+  .promo_delievery__title br {
+    display: none;
+  }
+}
 .promo_delievery__content {
+  z-index: 2;
+  position: relative;
   border-radius: 20px;
   background: #000;
   background-image: url(../img/delievery-promo-bg.png);
-  background-blend-mode: multiply;
   background-position: center right;
   background-size: cover;
   padding: 40px;
@@ -2563,13 +2575,34 @@ button {
   flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 767.98px) {
+  .promo_delievery__content {
+    background-position: left center;
+  }
+}
+.promo_delievery__content * {
+  z-index: 2;
+}
 .promo_delievery__content .btn {
   max-width: 250px;
+}
+@media (max-width: 767.98px) {
+  .promo_delievery__content .btn {
+    max-width: none;
+    width: 100%;
+  }
 }
 .promo_delievery ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 722px;
+}
+@media (max-width: 991.98px) {
+  .promo_delievery ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 .promo_delievery li {
   display: flex;
@@ -2581,6 +2614,14 @@ button {
   line-height: normal;
   letter-spacing: -0.4px;
   align-items: center;
+}
+@media (max-width: 991.98px) {
+  .promo_delievery li {
+    align-items: first baseline;
+  }
+}
+.promo_delievery li svg {
+  flex-shrink: 0;
 }
 
 @keyframes fade-out {
@@ -6839,6 +6880,28 @@ label.radio-label input[type=checkbox].invalid {
   }
 }
 
+.delievery-cards {
+  position: relative;
+  z-index: 2;
+}
+.delievery-cards * {
+  position: relative;
+  z-index: 2;
+}
+.delievery-cards .bg {
+  position: absolute;
+  z-index: 1;
+  top: -20%;
+  width: 113%;
+  height: auto;
+  left: -6.5%;
+}
+@media (max-width: 575.98px) {
+  .delievery-cards .bg {
+    top: 0px;
+  }
+}
+
 .card_outlined {
   border: 1px solid #00C1AD;
 }
@@ -6854,6 +6917,13 @@ label.radio-label input[type=checkbox].invalid {
   background: rgba(0, 193, 173, 0.1);
 }
 
+.payment {
+  z-index: 2;
+  position: relative;
+}
+.payment * {
+  z-index: 2;
+}
 .payment__title {
   color: #FFF;
   font-family: Manrope;
@@ -6881,6 +6951,14 @@ label.radio-label input[type=checkbox].invalid {
   .payment__item {
     min-width: 280px;
   }
+}
+.payment .bg {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 110%;
+  left: -5%;
 }
 
 @font-face {

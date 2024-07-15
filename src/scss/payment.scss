@@ -1,4 +1,10 @@
+
 .payment {
+    z-index: 2;
+    position: relative;
+    *{
+        z-index: 2;
+    }
     &__title {
         color: #FFF;
         font-family: Manrope;
@@ -26,5 +32,13 @@
         @media (max-width:$breakpoint480) {
             min-width: 280px;
         }
+    }
+    .bg{
+        position: absolute;
+        z-index: 1;
+        top:50%;
+        transform: translateY(-50%);
+        width:110%;
+        left:-5%;
     }
 }
