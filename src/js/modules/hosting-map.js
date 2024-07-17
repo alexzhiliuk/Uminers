@@ -1,26 +1,32 @@
-$(document).ready(function(){
-    $('.overlay-point').hover( function(){
-        $('.overlay-point__body').addClass('show');
-    }, function(){
-        $('.overlay-point__body').removeClass('show');
-    });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    const overlayPoints = document.querySelectorAll('.overlay-point');
-    const overlayPointMobiles = document.querySelectorAll('.overlay-point-mobile');
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth < 768) {
+        const overlayPoints = document.querySelectorAll('.overlay-point');
+        const overlayMobile = document.querySelectorAll('.overlay-point-mobile');
 
-    console.log(overlayPoints)
-    console.log(overlayPointMobiles)
-    overlayPoints.forEach(function(overlayPoint, index) {
-        overlayPoint.addEventListener('click', function() {
-            // Скрыть все overlay-point-mobile
-            overlayPointMobiles.forEach(function(overlayPointMobile) {
-                overlayPointMobile.classList.remove('show-popup');
+        overlayPoints.forEach((overlayPoint, index) => {
+            overlayPoint.addEventListener('click', function (e) {
+                overlayMobile.forEach(mobilePoint => {
+                    mobilePoint.classList.remove('slide-in')
+                    if (overlayPoint.dataset.country === mobilePoint.dataset.country) {
+                        console.log(overlayPoint.dataset.country)
+                        console.log(mobilePoint.dataset.country)
+                        e.stopPropagation();
+                        document.body.style.overflow = 'hidden';
+                        document.querySelector('html').style.overflow = 'hidden';
+                        mobilePoint.classList.add('slide-in');
+
+                        document.addEventListener('click', function (event) {
+                            if (!mobilePoint.contains(event.target) && !overlayPoint.contains(event.target)) {
+                                mobilePoint.classList.remove('slide-in');
+                                document.body.style.overflow = '';
+                                document.querySelector('html').style.overflow = '';
+                            }
+                        });
+                    }
+                })
+
             });
-
-            // Показать соответствующий overlay-point-mobile
-            overlayPointMobiles[index].classList.add('show-popup');
         });
-    });
+    }
 });

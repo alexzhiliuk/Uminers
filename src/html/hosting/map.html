@@ -4,20 +4,20 @@
     </h2>
     <div class="section__body hosting-map__body">
         <img src="@img/hosting-map-ru.png" class="hosting-map__bg" alt="world map with highlighted active regions">
-        <div class="hosting-map__overlay overlay-point">
+        <div class="hosting-map__overlay overlay-point" id="russia-overlay-point" data-country="russia">
             <div class="overlay-point__head">
                 <div class="overlay-point__wrapper">
-                    <img src="@img/russia.svg" alt="russoan flag icon" class="overlay-point__img">
+                    <img src="@img/russia.svg" alt="russian flag icon" class="overlay-point__img">
                     <div class="overlay-point__text">
                         <h3>Россия</h3>
-                        <p>Красноярск</p>
+                        <p id="none">Красноярск</p>
                     </div>
                 </div>
                 <p class="overlay-point__subtext">от 9Ct/kWh</p>
             </div>
             <div class="overlay-point__body">
                 <div class="overlay-point__characteristics_first">
-                    <h4 class="overlay-point__characteristics-title">Используемые типы энергетики</h4>
+                    <h4 class="overlay-point__characteristics-title" >Используемые типы энергетики</h4>
                     <div class="overlay-point__characteristics">
                         <span class="characteristic">Гидро</span>
                         <span class="characteristic">Ядерная</span>
@@ -55,10 +55,10 @@
                 </div>
             </div>
         </div>
-        <div class="hosting-map__overlay overlay-point">
+        <div class="hosting-map__overlay overlay-point" id="ethiopia-overlay-point" data-country="ethiopia">
             <div class="overlay-point__head">
                 <div class="overlay-point__wrapper">
-                    <img src="@img/ephiopia.svg" alt="russoan flag icon" class="overlay-point__img">
+                    <img src="@img/ephiopia.svg" alt="ethiopian flag icon" class="overlay-point__img">
                     <div class="overlay-point__text">
                         <h3>Эфиопия</h3>
                     </div>
@@ -107,10 +107,11 @@
             </div>
         </div>
     </div>
-    <div class="hosting-map__overlay overlay-point-mobile">
+
+    <div class="hosting-map__overlay overlay-point-mobile" data-country="russia">
         <div class="overlay-point-mobile__head">
-            <div class="overlay-point__wrapper">
-                <img src="@img/russia.svg" alt="russoan flag icon" class="overlay-point-mobile__img">
+            <div class="overlay-point-mobile__wrapper">
+                <img src="@img/russia.svg" alt="russian flag icon" class="overlay-point-mobile__img">
                 <div class="overlay-point__text">
                     <h3>Россия</h3>
                     <p>Красноярск</p>
@@ -123,6 +124,58 @@
                 <h4 class="overlay-point-mobile__characteristics-title">Используемые типы энергетики</h4>
                 <div class="overlay-point-mobile__characteristics">
                     <span class="characteristic">Гидро</span>
+                    <span class="characteristic">Ядерная</span>
+                </div>
+            </div>
+            <div class="overlay-point-mobile__characteistics_second">
+                <h4 class="overlay-point-mobile__characteristics-title">Характеристики</h4>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                            <circle cx="3" cy="3.5" r="3" fill="#00C1AD" />
+                        </svg>
+                        Мощность: N
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                            <circle cx="3" cy="3.5" r="3" fill="#00C1AD" />
+                        </svg>
+                        Вместимость: N
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                            <circle cx="3" cy="3.5" r="3" fill="#00C1AD" />
+                        </svg>
+                        Допустимый хешрейт: N
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                            <circle cx="3" cy="3.5" r="3" fill="#00C1AD" />
+                        </svg>
+                        Окупаемость:
+                    </li>
+                </ul>
+                <p class="date">Дата основания: 01.01.2001</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hosting-map__overlay overlay-point-mobile" data-country="ethiopia">
+        <div class="overlay-point-mobile__head">
+            <div class="overlay-point-mobile__wrapper">
+                <img src="@img/ephiopia.svg" alt="Ethiopia flag icon" class="overlay-point__img">
+                <div class="overlay-point__text">
+                    <h3>Эфиопия</h3>
+                </div>
+            </div>
+            <p class="overlay-point__subtext">от 9Ct/kWh</p>
+        </div>
+        <div class="overlay-point-mobile__body">
+            <div class="overlay-point-mobile__characteristics_first">
+                <h4 class="overlay-point-mobile__characteristics-title">Используемые типы энергетики</h4>
+                <div class="overlay-point-mobile__characteristics">
+                    <span class="characteristic">Гидро</span>
+                    <span class="characteristic">Ядерная</span>
                     <span class="characteristic">Ядерная</span>
                 </div>
             </div>
