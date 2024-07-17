@@ -185,3 +185,23 @@
         }
     }
 }
+
+.delievery-cards{
+    position: relative;
+    z-index: 2;
+    * {
+        position: relative;
+        z-index: 2;
+    }
+    .bg{
+        position: absolute;
+        z-index: 1;
+        top:-20%;
+        width: 113%;
+        height: auto;
+        left:-6.5%;
+        @media (max-width:$breakpoint576) {
+            top:0px;
+        }
+    }
+}

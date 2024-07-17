@@ -118,6 +118,16 @@ $borderRaius: 20 + px;
         }
     }
 
+    &_row{
+        flex-direction: row;
+        svg{
+            flex-shrink: 0;
+        }
+        @media (max-width:$breakpoint576) {
+            flex-direction: column;
+        }
+    }
+
     &_outline {
         background-color: unset;
         border: 1px solid #4d4d4d;

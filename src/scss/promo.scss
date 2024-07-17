@@ -15,6 +15,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         @media (max-width:$breakpoint768) {
             padding: 20px;
         }
@@ -39,7 +40,7 @@
         @media (max-width:$breakpoint992) {
             align-items: center;
             text-align: center;
-            width:100%;
+            width: 100%;
         }
 
         &_gap {
@@ -50,7 +51,8 @@
             }
         }
     }
-    &__text{
+
+    &__text {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -79,7 +81,7 @@
         justify-content: center;
 
         @media (max-width:$breakpoint992) {
-            width:100%;
+            width: 100%;
         }
 
         &_animated {
@@ -95,7 +97,7 @@
         }
     }
 
-    
+
     &__telegram {
         position: absolute;
         top: 50%;
@@ -125,6 +127,82 @@
         @media (max-width:$breakpoint992) {
             right: unset;
         }
+    }
+
+    &_delievery {
+        &__title {
+            color: #FFF;
+            font-size: clamp(25px, 5.5vw, 50px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: -1px;
+            @media (max-width:$breakpoint480) {
+                br{
+                    display: none;
+                }
+            }
+        }
+
+        &__content {
+            z-index: 2;
+            position: relative;
+            border-radius: 20px;
+            background: #000;
+            background-image: url(../img/delievery-promo-bg.png);
+            background-position: center right;
+            background-size: cover;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @media (max-width:$breakpoint768) {
+                background-position: left center;
+            }
+
+
+            * {
+                z-index: 2;
+            }
+
+            .btn {
+                max-width: 250px;
+            @media (max-width:$breakpoint768) {
+                max-width: none;
+                width:100%;
+            }
+            }
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 722px;
+            @media (max-width:$breakpoint992) {
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+            }
+        }
+
+        li {
+            display: flex;
+            gap: 15px;
+            color: #EDEDED;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.4px;
+            align-items: center;
+            @media (max-width:$breakpoint992) {
+                align-items: first baseline;
+            }
+            svg{
+                flex-shrink: 0;
+            }
+        }
+
     }
 }
 
@@ -161,16 +239,13 @@
     }
 
     // .product-promo__textContent
-    &__textContent {
-    }
+    &__textContent {}
 
     // .product-promo__text
-    &__text {
-    }
+    &__text {}
 
     // .product-promo__title
-    &__title {
-    }
+    &__title {}
 
     // .product-promo__subtitle
     &__subtitle {
@@ -191,4 +266,3 @@
         flex-shrink: 0;
     }
 }
-

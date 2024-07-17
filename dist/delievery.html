@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <title>Доставка</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header container">
+    <div class="bottom-header">
+        <a href="index.html" class="bottom-header__logo">
+            <img src="img/logo.svg" alt="Uminers">
+        </a>
+        <nav class="bottom-header__nav">
+            <ul class="bottom-header__list">
+                <li>
+                    <a href="javascript:void(0)" class="catalog-btn js-header-catalog-open">
+                        <img src="img/catalog-btn-icon.svg" alt="">
+                        <span>Каталог</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="bottom-header__droplist header-droplist">
+                        <a href="javascript:void(0)">Майнинг</a>
+                        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617"
+                                stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                        </svg>
+                        <div class="header-droplist__wrapper">
+                            <ul class="header-droplist__list">
+                                <li>
+                                    <a href="catalog.html">Оборудование</a>
+                                </li>
+                                <li>
+                                    <a href="calculator.html">Майнинг под ключ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Хостинг</a>
+                                </li>
+                                <li>
+                                    <a href="leasing.html">Лизинг</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bottom-header__droplist header-droplist">
+                        <a href="blog.html">Блог</a>
+                        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617"
+                                stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                        </svg>
+                        <div class="header-droplist__wrapper">
+                            <ul class="header-droplist__list">
+                                <li>
+                                    <a href="#">Гайды</a>
+                                </li>
+                                <li>
+                                    <a href="#">Статьи</a>
+                                </li>
+                                <li>
+                                    <a href="#">Новости</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bottom-header__droplist header-droplist">
+                        <a href="javascript:void(0)">О нас</a>
+                        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617"
+                                stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                        </svg>
+                        <div class="header-droplist__wrapper">
+                            <ul class="header-droplist__list">
+                                <li>
+                                    <a href="about.html">О Uminers</a>
+                                </li>
+                                <li>
+                                    <a href="#">Доставка и оплата</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="bottom-header__icons">
+            <div class="bottom-header__contacts">
+                <a href="tel:+88004444852">8 (800) 444-48-52</a>
+                <div class="bottom-header__socials">
+                    <a href="#" class="bottom-header__social">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.8337 21.998C11.1139 22.0307 9.41109 21.6551 7.86661 20.9025L3.25821 21.8014L4.15163 17.2788C1.10835 11.6606 4.15163 3 12.6293 3C25.1285 3 25.0503 21.998 12.8337 21.998ZM12.6033 4.35484C5.07766 4.35484 2.55826 12.3153 5.64719 17.1037L5.07331 19.9993L8.02747 19.4245C9.28608 20.1851 10.8686 20.6432 12.7902 20.6432C23.2613 20.6454 23.3287 4.35484 12.6033 4.35484ZM7.64271 7.36704L10.4686 7.27629L11.3794 10.8395L10.6469 12.1749L13.038 14.474L14.3966 13.7804L17.9116 14.6966L17.6942 17.7585C17.6942 17.7585 14.6901 19.1695 10.5447 15.0531C6.39931 10.9367 7.64271 7.36704 7.64271 7.36704Z"
+                                fill="#FFF" />
+                        </svg>
+                    </a>
+                    <a href="#" class="bottom-header__social">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.6972 18.0159L10.631 20.7241L9.76408 20.848L7.82415 13.8027L1 11.4403L22.009 3L23 3.02337L19.6899 22L13.6972 18.0159ZM18.9516 6.56586L9.3251 12.6484L10.4336 17.6326L10.7374 17.5602L11.8947 13.7139L19.5879 6.64531L18.9516 6.56586Z"
+                                fill="#FFF" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <a href="cart.html" class="bottom-header__icon bottom-header__icon_notification" data-notification="9">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.75 2.75011H6.23333C6.59934 2.74116 6.95714 2.85933 7.24582 3.08451C7.5345 3.30968 7.73623 3.62794 7.81667 3.98511L11.965 22.0984C12.0454 22.4556 12.2472 22.7739 12.5358 22.999C12.8245 23.2242 13.1823 23.3424 13.5483 23.3334H26.88C27.2417 23.344 27.5961 23.2303 27.8842 23.0114C28.1722 22.7924 28.3766 22.4814 28.4633 22.1301L31.25 10.6668"
+                        stroke="white" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M24.917 10.6666H15.417" stroke="white" stroke-width="3.16667" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M15.3379 30.4584H15.4962" stroke="white" stroke-width="4.75" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M24.8379 30.4584H24.9962" stroke="white" stroke-width="4.75" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+            <a href="#" class="bottom-header__icon">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.4983 20.8572C20.7529 20.8572 23.3912 18.2188 23.3912 14.9643C23.3912 11.7098 20.7529 9.07144 17.4983 9.07144C14.2438 9.07144 11.6055 11.7098 11.6055 14.9643C11.6055 18.2188 14.2438 20.8572 17.4983 20.8572Z"
+                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M8 29C8.99281 27.7785 10.3881 26.769 12.0519 26.0685C13.7156 25.368 15.5918 25 17.5 25C19.4082 25 21.2844 25.368 22.9481 26.0685C24.6119 26.769 26.0072 27.7785 27 29"
+                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M17.4992 32.8214C25.961 32.8214 32.8206 25.9617 32.8206 17.4999C32.8206 9.03813 25.961 2.1785 17.4992 2.1785C9.03737 2.1785 2.17773 9.03813 2.17773 17.4999C2.17773 25.9617 9.03737 32.8214 17.4992 32.8214Z"
+                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+            <div class="bottom-header__lang bottom-header__droplist header-droplist">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24 13C24 19.0751 19.0751 24 13 24V26C20.1797 26 26 20.1797 26 13H24ZM13 24C6.92487 24 2 19.0751 2 13H0C0 20.1797 5.8203 26 13 26V24ZM2 13C2 6.92487 6.92487 2 13 2V0C5.8203 0 0 5.8203 0 13H2ZM13 2C19.0751 2 24 6.92487 24 13H26C26 5.8203 20.1797 0 13 0V2ZM13 24C12.606 24 12.1518 23.8217 11.6515 23.338C11.1464 22.8497 10.6459 22.0948 10.2038 21.0845C9.32106 19.0667 8.75 16.2091 8.75 13H6.75C6.75 16.4183 7.3542 19.5608 8.37153 21.8861C8.87955 23.0473 9.51029 24.0498 10.2614 24.7759C11.0173 25.5067 11.9443 26 13 26V24ZM8.75 13C8.75 9.79086 9.32106 6.93334 10.2038 4.91554C10.6459 3.90515 11.1464 3.15028 11.6515 2.66197C12.1518 2.17831 12.606 2 13 2V0C11.9443 0 11.0173 0.493262 10.2614 1.22407C9.51029 1.95023 8.87955 2.95271 8.37153 4.1139C7.3542 6.43924 6.75 9.58173 6.75 13H8.75ZM13 26C14.0557 26 14.9827 25.5067 15.7386 24.7759C16.4897 24.0498 17.1204 23.0473 17.6285 21.8861C18.6458 19.5608 19.25 16.4183 19.25 13H17.25C17.25 16.2091 16.6789 19.0667 15.7962 21.0845C15.3541 22.0948 14.8536 22.8497 14.3485 23.338C13.8482 23.8217 13.394 24 13 24V26ZM19.25 13C19.25 9.58173 18.6458 6.43924 17.6285 4.1139C17.1204 2.95271 16.4897 1.95023 15.7386 1.22407C14.9827 0.493262 14.0557 0 13 0V2C13.394 2 13.8482 2.17831 14.3485 2.66197C14.8536 3.15028 15.3541 3.90515 15.7962 4.91554C16.6789 6.93334 17.25 9.79086 17.25 13H19.25ZM1 14.4444H22.3333V12.4444H1V14.4444Z"
+                        fill="white" />
+                </svg>
+                RU
+                <!-- <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
+                </svg>   -->
+
+                <div class="header-droplist__wrapper">
+                    <ul class="header-droplist__list">
+                        <li>
+                            <a href="en-index.html">English (EN)</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Русский (РУ)</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <a href="javascript:void(0)" class="bottom-header__search js-search-open">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.28606 16.3809C5.26227 16.3809 2.00035 13.119 2.00035 9.09516C2.00035 5.07137 5.26227 1.80945 9.28606 1.80945C13.3099 1.80945 16.5718 5.07137 16.5718 9.09516C16.5718 13.119 13.3099 16.3809 9.28606 16.3809Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20.0476 20.0475L14.3333 14.3333" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+        <div class="bottom-header__burger">
+            <span></span>
+        </div>
+
+        <div class="catalog-header" style="display: none;">
+            <div class="catalog-header__inner">
+                <ul class="catalog-header__menu">
+                    <li>
+                        <a href="javascript:void(0)" class="active" data-tab-id="1">
+                            Производители
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-tab-id="2">
+                            Монеты
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-tab-id="3">
+                            Алгоритмы
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-tab-id="4">
+                            Системы охлаждения
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-tab-id="5">
+                            Готовые фильтры
+                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54889 1.5L10.3634 6.31448C10.7754 6.72652 10.7754 7.39457 10.3634 7.80661L5.56055 12.6094"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="catalog-header__all-products">
+                        <a href="catalog.html">Все товары</a>
+                    </li>
+                </ul>
+                <div class="catalog-header__body" data-tab-id="1">
+                    <div class="catalog-header__products">
+                        <div class="catalog-header__category">
+                            <img src="img/bitmain.png" alt="Bitmain">
+                            <a href="catalog.html">Смотреть все</a>
+                        </div>
+                        <div class="catalog-header__cards">
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="catalog-header__products">
+                        <div class="catalog-header__category">
+                            <img src="img/microbt.png" alt="Microbt">
+                            <a href="catalog.html">Смотреть все</a>
+                        </div>
+                        <div class="catalog-header__cards">
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                            <a href="product.html" class="catalog-header-card">
+                                <div class="catalog-header-card__img">
+                                    <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
+                                </div>
+                                <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-header" style="display: none;">
+            <a href="javascript:void(0)" class="search-header__close">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2.00001L2 16" stroke="#585858" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 16L2 2" stroke="#585858" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+            <form class="search-header__wrapper">
+                <input type="search" class="search-header__input" placeholder="Поиск" name="q">
+                <button type="submit" class="search-header__icon">
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.8577 25.6095C8.41969 25.6095 3.20061 20.3904 3.20061 13.9523C3.20061 7.51425 8.41969 2.29517 14.8577 2.29517C21.2958 2.29517 26.5149 7.51425 26.5149 13.9523C26.5149 20.3904 21.2958 25.6095 14.8577 25.6095Z"
+                            stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M32.0762 31.4761L22.9333 22.3333" stroke="white" stroke-width="3.2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu">
+
+    <div class="mobile-menu__header">
+        <form class="mobile-menu__search">
+            <input type="search" name="q" placeholder="Search">
+            <svg class="mobile-menu__search-icon" width="21" height="22" viewBox="0 0 21 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8.28655 16.3809C4.26276 16.3809 1.00084 13.119 1.00084 9.09516C1.00084 5.07137 4.26276 1.80945 8.28655 1.80945C12.3103 1.80945 15.5723 5.07137 15.5723 9.09516C15.5723 13.119 12.3103 16.3809 8.28655 16.3809Z"
+                    stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.0479 20.0476L13.3336 14.3333" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </form>
+        <a href="javascript:void(0)" class="mobile-menu__close">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 2.00001L2 16" stroke="white" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M16 16L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+    </div>
+
+    <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__list-item">
+                <a href="catalog.html" class="mobile-menu__list-link">Каталог</a>
+
+                <ul class="mobile-menu__catalog">
+                    <li>
+                        <span class="mobile-menu__catalog-item">
+                            Производители
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        <div class="mobile-menu-droplist">
+                            <ul class="mobile-menu-droplist__inner">
+                                <li>
+                                    <a href="#">Bitmain</a>
+                                </li>
+                                <li>
+                                    <a href="#">MicroBT</a>
+                                </li>
+                                <li>
+                                    <a href="#">Innosilicon</a>
+                                </li>
+                                <li>
+                                    <a href="#">Canaan</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="mobile-menu__catalog-item">
+                            Монеты
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        <div class="mobile-menu-droplist">
+                            <ul class="mobile-menu-droplist__inner">
+                                <li>
+                                    <a href="#">Bitcoin</a>
+                                </li>
+                                <li>
+                                    <a href="#">Litecoin</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ethereum Classic</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kadena</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dogecoin</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kaspa</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nervos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bitcoin cash</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="mobile-menu__catalog-item">
+                            Алгоритмы
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        <div class="mobile-menu-droplist">
+                            <ul class="mobile-menu-droplist__inner">
+                                <li>
+                                    <a href="#">SHA-256</a>
+                                </li>
+                                <li>
+                                    <a href="#">Scrypt</a>
+                                </li>
+                                <li>
+                                    <a href="#">KHeavyHash</a>
+                                </li>
+                                <li>
+                                    <a href="#">EtHash</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kadena</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="mobile-menu__catalog-item">
+                            Система охлаждения
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
+                                    stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        <div class="mobile-menu-droplist">
+                            <ul class="mobile-menu-droplist__inner">
+                                <li>
+                                    <a href="#">Жидкостное охлаждение</a>
+                                </li>
+                                <li>
+                                    <a href="#">Воздушное охлаждение</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <ul class="mobile-menu__catalog mobile-menu__catalog_main">
+            <li class="mobile-menu__list-item">
+                <span class="mobile-menu__catalog-item mobile-menu__list-link">
+                    Майнинг
+                    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
+                            stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <div class="mobile-menu-droplist">
+                    <ul class="mobile-menu-droplist__inner">
+                        <li>
+                            <a href="catalog.html" class="mobile-menu__catalog-item">
+                                Оборудование
+                            </a>
+                        </li>
+                        <li>
+                            <a href="calculator.html" class="mobile-menu__catalog-item">
+                                Майнинг под ключ
+                            </a>
+                        </li>
+                        <li>
+                            <span class="mobile-menu__catalog-item">
+                                Хостинг
+                            </span>
+                        </li>
+                        <li>
+                            <a href="leasing" class="mobile-menu__catalog-item">
+                                Лизинг
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mobile-menu__list-item">
+                <span class="mobile-menu__catalog-item mobile-menu__list-link">
+                    Блог
+                    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
+                            stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <div class="mobile-menu-droplist">
+
+                    <ul class="mobile-menu-droplist__inner">
+                        <li>
+                            <span class="mobile-menu__catalog-item">
+                                Гайды
+                            </span>
+                        </li>
+                        <li>
+                            <span class="mobile-menu__catalog-item">
+                                Стастьи
+                            </span>
+                        </li>
+                        <li>
+                            <span class="mobile-menu__catalog-item">
+                                Новости
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mobile-menu__list-item">
+                <span class="mobile-menu__catalog-item mobile-menu__list-link">
+                    О нас
+                    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
+                            stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <div class="mobile-menu-droplist">
+
+                    <ul class="mobile-menu-droplist__inner">
+                        <li>
+                            <a href="about.html" class="mobile-menu__catalog-item">
+                                О Uminers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__catalog-item">
+                                Доставка
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+            <li class="mobile-menu__list-item">
+                <a href="contacts.html" class="mobile-menu__list-link">Контакты</a>
+            </li>
+            </ul>
+        </ul>
+    </nav>
+
+    <div class="mobile-menu__icons">
+        <!-- <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon ">
+                <svg width="26" height="35" viewBox="0 0 26 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="22.2222" height="32" rx="2.05729" fill="white"/>
+                    <rect x="4.66602" y="4.66675" width="16.8889" height="8.88889" rx="1.044" fill="#000"/>
+                    <rect x="4.66602" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="4.66602" y="22.4443" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <path d="M4.66602 28.6667C4.66602 28.1758 5.06398 27.7778 5.5549 27.7778H8.22157C8.71249 27.7778 9.11046 28.1758 9.11046 28.6667V30.4445C9.11046 30.9354 8.71249 31.3334 8.22157 31.3334H5.5549C5.06399 31.3334 4.66602 30.9354 4.66602 30.4445V28.6667Z" fill="#222222"/>
+                    <rect x="11" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="10.8887" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="10.8887" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                </svg>
+            </div>
+            <span>Рассчитать доходность</span>                 
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon ">
+                <svg width="42" height="35" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 33.5H34L34.0895 33.5C34.9551 33.5001 35.7488 33.5002 36.3944 33.4134C37.1054 33.3178 37.8568 33.0929 38.4749 32.4749C39.0929 31.8568 39.3178 31.1054 39.4134 30.3944C39.5002 29.7488 39.5001 28.9551 39.5 28.0895C39.5 28.0597 39.5 28.0299 39.5 28V13C39.5 12.9701 39.5 12.9403 39.5 12.9105C39.5001 12.0449 39.5002 11.2512 39.4134 10.6056C39.3178 9.89462 39.0929 9.14317 38.4749 8.52513C37.8568 7.90708 37.1054 7.68219 36.3944 7.5866C35.7488 7.4998 34.9551 7.49989 34.0895 7.49999C34.0597 7.5 34.0299 7.5 34 7.5H24C23.9855 7.5 23.971 7.5 23.9565 7.5C23.5279 7.49997 23.1342 7.49995 22.8036 7.52251C22.4483 7.54675 22.0576 7.60198 21.6606 7.76642C20.803 8.12165 20.1217 8.80301 19.7664 9.66061C19.602 10.0576 19.5468 10.4483 19.5225 10.8036C19.4999 11.1342 19.5 11.5279 19.5 11.9565C19.5 11.971 19.5 11.9855 19.5 12V27V28C19.5 28.0299 19.5 28.0597 19.5 28.0895C19.4999 28.9551 19.4998 29.7488 19.5866 30.3944C19.6822 31.1054 19.9071 31.8568 20.5251 32.4749C21.1432 33.0929 21.8946 33.3178 22.6056 33.4134C23.2512 33.5002 24.0449 33.5001 24.9105 33.5L25 33.5Z" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M8 27.5H17L17.0895 27.5C17.9551 27.5001 18.7488 27.5002 19.3944 27.4134C20.1054 27.3178 20.8568 27.0929 21.4749 26.4749C22.0929 25.8568 22.3178 25.1054 22.4134 24.3944C22.5002 23.7488 22.5001 22.9551 22.5 22.0895C22.5 22.0597 22.5 22.0299 22.5 22V7C22.5 6.97009 22.5 6.94026 22.5 6.91051C22.5001 6.04488 22.5002 5.25121 22.4134 4.60558C22.3178 3.89462 22.0929 3.14317 21.4749 2.52513C20.8568 1.90708 20.1054 1.68219 19.3944 1.5866C18.7488 1.4998 17.9551 1.49989 17.0895 1.49999C17.0597 1.5 17.0299 1.5 17 1.5H8C7.97008 1.5 7.94025 1.5 7.9105 1.49999C7.04487 1.49989 6.25121 1.4998 5.60558 1.5866C4.89462 1.68219 4.14317 1.90708 3.52513 2.52513C2.90708 3.14317 2.68219 3.89462 2.5866 4.60559C2.4998 5.25121 2.49989 6.04487 2.49999 6.9105C2.5 6.94025 2.5 6.97009 2.5 7V22C2.5 22.0299 2.5 22.0597 2.49999 22.0895C2.49989 22.9551 2.4998 23.7488 2.5866 24.3944C2.68219 25.1054 2.90708 25.8568 3.52513 26.4749C4.14317 27.0929 4.89462 27.3178 5.60558 27.4134C6.25121 27.5002 7.04488 27.5001 7.91051 27.5L8 27.5Z" fill="#000000" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M34.0121 22.868L26.2793 19.9484" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28.8993 18.7978L26.2793 19.9472L27.4288 22.559" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.48595 12.8823L16.2188 15.8019" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5988 16.9525L16.2188 15.8031L15.0692 13.1912" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>         
+            </div>
+            <span>Сравнить модели</span>                                                
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon bottom-header__icon_notification" data-notification="12">
+                <svg width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2029_158)">
+                    <path d="M4.75254 17.3973L17.9547 30.9287C18.0088 30.9841 18.0358 31.0118 18.0597 31.034C18.5893 31.5279 19.4107 31.5279 19.9403 31.034C19.9641 31.0118 19.9912 30.9841 20.0452 30.9287L20.0453 30.9287L33.2475 17.3973C36.0258 14.5498 36.4586 10.1565 34.2893 6.82154C30.7979 1.45383 22.8509 1.72448 19.7328 7.31728L19.2962 8.10022C19.1669 8.33224 18.8331 8.33224 18.7038 8.10022L18.2672 7.31728C15.1491 1.72448 7.2021 1.45383 3.71068 6.82154C1.54143 10.1565 1.97422 14.5498 4.75254 17.3973Z" stroke="white" stroke-width="3"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2029_158">
+                    <rect width="38" height="35" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>        
+            </div>
+            <span>Избранное</span>                                                                    
+        </a> -->
+        <a href="cart.html" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon bottom-header__icon_notification" data-notification="9">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.75 2.75011H6.23333C6.59934 2.74116 6.95714 2.85933 7.24582 3.08451C7.5345 3.30968 7.73623 3.62794 7.81667 3.98511L11.965 22.0984C12.0454 22.4556 12.2472 22.7739 12.5358 22.999C12.8245 23.2242 13.1823 23.3424 13.5483 23.3334H26.88C27.2417 23.344 27.5961 23.2303 27.8842 23.0114C28.1722 22.7924 28.3766 22.4814 28.4633 22.1301L31.25 10.6668"
+                        stroke="white" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M24.917 10.6666H15.417" stroke="white" stroke-width="3.16667" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M15.3379 30.4584H15.4962" stroke="white" stroke-width="4.75" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M24.8379 30.4584H24.9962" stroke="white" stroke-width="4.75" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <span>Корзина</span>
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.4983 20.8572C20.7529 20.8572 23.3912 18.2188 23.3912 14.9643C23.3912 11.7098 20.7529 9.07144 17.4983 9.07144C14.2438 9.07144 11.6055 11.7098 11.6055 14.9643C11.6055 18.2188 14.2438 20.8572 17.4983 20.8572Z"
+                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M8 29C8.99281 27.7785 10.3881 26.769 12.0519 26.0685C13.7156 25.368 15.5918 25 17.5 25C19.4082 25 21.2844 25.368 22.9481 26.0685C24.6119 26.769 26.0072 27.7785 27 29"
+                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M17.4992 32.8214C25.961 32.8214 32.8206 25.9617 32.8206 17.4999C32.8206 9.03813 25.961 2.1785 17.4992 2.1785C9.03737 2.1785 2.17773 9.03813 2.17773 17.4999C2.17773 25.9617 9.03737 32.8214 17.4992 32.8214Z"
+                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <span>Личный кабинет</span>
+        </a>
+    </div>
+
+    <div class="mobile-menu__contacts">
+        <div>
+            <a href="mailto:sales@uminers.com">sales@uminers.com</a><br>
+            <a href="tel:+88004444852">+8 (800) 444-48-52</a>
+        </div>
+        <div class="mobile-menu__socials">
+            <a href="#" class="mobile-menu__social">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.8337 21.998C11.1139 22.0307 9.41109 21.6551 7.86661 20.9025L3.25821 21.8014L4.15163 17.2788C1.10835 11.6606 4.15163 3 12.6293 3C25.1285 3 25.0503 21.998 12.8337 21.998ZM12.6033 4.35484C5.07766 4.35484 2.55826 12.3153 5.64719 17.1037L5.07331 19.9993L8.02747 19.4245C9.28608 20.1851 10.8686 20.6432 12.7902 20.6432C23.2613 20.6454 23.3287 4.35484 12.6033 4.35484ZM7.64271 7.36704L10.4686 7.27629L11.3794 10.8395L10.6469 12.1749L13.038 14.474L14.3966 13.7804L17.9116 14.6966L17.6942 17.7585C17.6942 17.7585 14.6901 19.1695 10.5447 15.0531C6.39931 10.9367 7.64271 7.36704 7.64271 7.36704Z"
+                        fill="#9C9C9C" />
+                </svg>
+            </a>
+            <a href="#" class="mobile-menu__social">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.6972 18.0159L10.631 20.7241L9.76408 20.848L7.82415 13.8027L1 11.4403L22.009 3L23 3.02337L19.6899 22L13.6972 18.0159ZM18.9516 6.56586L9.3251 12.6484L10.4336 17.6326L10.7374 17.5602L11.8947 13.7139L19.5879 6.64531L18.9516 6.56586Z"
+                        fill="#9C9C9C" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="container section hero_delievery">
+    <h1 class="hero_delievery__title">Майнинг оборудование<br> <span
+            class="hero_delievery__title_highlighted">с доставкой
+            по всей России</span></h1>
+    <div class="hero_delievery__card">
+        <svg width="40" height="42" viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.9351 2.69132C19.2304 2.02237 20.7696 2.02237 22.0649 2.69132L29.25 6.402L36.064 10.0526C37.5139 10.8294 38.4244 12.3353 38.4388 13.98L38.5 20.9999L38.4388 28.0199C38.4244 29.6646 37.5139 31.1705 36.064 31.9472L29.25 35.5979L22.0649 39.3086C20.7696 39.9775 19.2304 39.9775 17.9351 39.3086L10.75 35.5979L3.93596 31.9472C2.48613 31.1705 1.57559 29.6646 1.56124 28.0199L1.5 20.9999L1.56124 13.98C1.57559 12.3353 2.48613 10.8294 3.93596 10.0526L10.75 6.402L17.9351 2.69132Z"
+                stroke="#00C1AD" stroke-width="2.5" />
+            <path d="M20.2109 38.7499V21.2499M20.2109 21.2499L36.4609 12.4999M20.2109 21.2499L2.71094 12.4999"
+                stroke="#00C1AD" stroke-width="2.5" />
+            <path d="M11.25 6L30 16V23.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <p class="hero_delievery__text">
+            Привезём оборудование из наличия или под заказ из Китая в срок от 7 дней
+        </p>
+
+    </div>
+</section>
+
+        <section class="container">
+    <h2 class="section-title">О доставке</h2>
+    <div class="section__body delievery-cards">
+        <div class="flex-column-30">
+            <div class="cards cards_column">
+                <div class="card_outlined card card_row card_bg-blur cards__item_half">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 10.4167V13.75" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M16.668 10.4167V13.75" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M14.9987 36.6666H24.9987C33.332 36.6666 36.6654 33.3333 36.6654 25V15C36.6654 6.66665 33.332 3.33331 24.9987 3.33331H14.9987C6.66536 3.33331 3.33203 6.66665 3.33203 15V25C3.33203 33.3333 6.66536 36.6666 14.9987 36.6666Z"
+                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M10 26.6667V30" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M16.668 26.6667V30" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M23.332 12.0833H29.9987" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M23.332 28.3333H29.9987" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M3.33203 20H36.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                    <p class="card_outlined__text">
+                        Все оборудование, поставляемое в Uminers, является оригинальным и производится официальными
+                        заводами BITMAIN, MICROBT и др.
+                    </p>
+                </div>
+                <div class="card_outlined card card_row card_bg-blur cards__item_half">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5 16.6666C5 10.3813 5 7.23856 6.95262 5.28593C8.90524 3.33331 12.0479 3.33331 18.3333 3.33331H21.6667C27.9521 3.33331 31.0948 3.33331 33.0474 5.28593C35 7.23856 35 10.3813 35 16.6666V23.3333C35 29.6187 35 32.7614 33.0474 34.714C31.0948 36.6666 27.9521 36.6666 21.6667 36.6666H18.3333C12.0479 36.6666 8.90524 36.6666 6.95262 34.714C5 32.7614 5 29.6187 5 23.3333V16.6666Z"
+                            stroke="#00C1AD" stroke-width="2.5" />
+                        <path d="M13.332 20H26.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                        <path d="M13.332 13.3333H26.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                        <path d="M13.332 26.6667H21.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+
+                    <p class="card_outlined__text">
+                        Мы осуществляем только легальные поставки и предоставляем потверждающие документы: ГТД и договор
+                        поставки.
+                    </p>
+                </div>
+                <div class="card_outlined card card_row card_bg-blur cards__item_half">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.6654 27.5L21.6654 29.1667C21.6654 29.1667 34.1654 26.6667 35.832 26.6667C37.4987 26.6667 37.4987 28.3333 35.832 30C34.1654 31.6667 28.332 36.6667 23.332 36.6667C18.332 36.6667 14.9987 34.1667 11.6654 34.1667C8.33203 34.1667 3.33203 34.1667 3.33203 34.1667"
+                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M3.33203 24.1667C4.9987 22.5 8.33203 20 11.6654 20C14.9987 20 22.9154 23.3333 24.1654 25C25.4154 26.6667 21.6654 29.1667 21.6654 29.1667"
+                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M13.332 15V8.33332C13.332 7.41285 14.0782 6.66666 14.9987 6.66666H34.9987C35.9192 6.66666 36.6654 7.41285 36.6654 8.33332V21.6667"
+                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M29.1654 6.66666H20.832V14.1667H29.1654V6.66666Z" stroke="#00C1AD" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <p class="card_outlined__text">
+                        При заказе оборудования из Китая — мы привозим его на наш склад в Москве, а затем оформляем
+                        доставку транспортной компанией по вашему адресу
+                    </p>
+                </div>
+                <div class="card_outlined card card_row card_bg-blur cards__item_half">
+
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M33.3346 16C33.3346 9.33332 30.668 6.66666 24.0013 6.66666H16.0013C9.33464 6.66666 6.66797 9.33332 6.66797 16V24C6.66797 30.6667 9.33464 33.3333 16.0013 33.3333"
+                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M27.2513 13.3333C26.3346 12.1667 24.8013 11.6667 22.5013 11.6667H17.5013C13.3346 11.6667 11.668 13.3333 11.668 17.5V22.5C11.668 24.8 12.168 26.3333 13.318 27.25"
+                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M13.3516 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M20 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M26.668 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M33.332 13.3333H36.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M13.3516 33.3333V36.6667" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M3.33203 13.3333H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M3.33203 20H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M3.33203 26.6667H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M27.8492 30.9833C29.3128 30.9833 30.4992 29.7969 30.4992 28.3333C30.4992 26.8698 29.3128 25.6833 27.8492 25.6833C26.3857 25.6833 25.1992 26.8698 25.1992 28.3333C25.1992 29.7969 26.3857 30.9833 27.8492 30.9833Z"
+                            stroke="#00C1AD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M19.0156 29.1V27.55C19.0156 26.6333 19.7656 25.8833 20.6823 25.8833C22.2823 25.8833 22.9323 24.75 22.1323 23.3667C21.6656 22.5667 21.949 21.5333 22.749 21.0833L24.2656 20.2C24.9656 19.7833 25.8656 20.0333 26.2823 20.7333L26.3823 20.9C27.1823 22.2833 28.4823 22.2833 29.2823 20.9L29.3823 20.7333C29.799 20.0333 30.699 19.8 31.399 20.2L32.9156 21.0833C33.7156 21.55 33.999 22.5667 33.5323 23.3667C32.7323 24.75 33.3823 25.8833 34.9823 25.8833C35.899 25.8833 36.649 26.6333 36.649 27.55V29.1C36.649 30.0166 35.899 30.7666 34.9823 30.7666C33.3823 30.7666 32.7323 31.9 33.5323 33.2833C33.999 34.0833 33.7156 35.1167 32.9156 35.5667L31.399 36.45C30.699 36.8667 29.799 36.6167 29.3823 35.9167L29.2823 35.75C28.4823 34.3667 27.1823 34.3667 26.3823 35.75L26.2823 35.9167C25.8656 36.6167 24.9656 36.85 24.2656 36.45L22.749 35.5667C21.949 35.1 21.6656 34.0833 22.1323 33.2833C22.9323 31.9 22.2823 30.7666 20.6823 30.7666C19.7656 30.7833 19.0156 30.0333 19.0156 29.1Z"
+                            stroke="#00C1AD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                    <p class="card_outlined__text">
+                        При размещении оборудования на нашем хостинге — мы самостоятельно доставим его до дата-центра
+                        в Красноярске, подключим и настроим
+                    </p>
+                </div>
+            </div>
+            <a class="btn btn_33 btn-round__main">Перейти в каталог</a>
+        </div>
+        <img src="../../img/delievery-cards-bg.png" alt="colorfull gradient backgroud" class="bg">
+    </div>
+</section>
+        <section class="section container payment">
+    <h2 class="section-title">Способы оплаты</h2>
+    <div class="section__body cards">
+        <div class="card cards__item_bigger card_row payment__item">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.9987 31.6667C10.3172 31.6667 7.97639 31.6667 6.2949 30.5431C5.56696 30.0567 4.94196 29.4317 4.45557 28.7038C3.33203 27.0223 3.33203 24.6815 3.33203 20C3.33203 15.3185 3.33203 12.9777 4.45557 11.2962C4.94196 10.5683 5.56696 9.94326 6.2949 9.45687C7.97639 8.33333 10.3172 8.33333 14.9987 8.33333L24.9987 8.33333C29.6802 8.33333 32.021 8.33333 33.7025 9.45687C34.4304 9.94326 35.0554 10.5683 35.5418 11.2962C36.6654 12.9777 36.6654 15.3185 36.6654 20C36.6654 24.6815 36.6654 27.0223 35.5418 28.7038C35.0554 29.4317 34.4304 30.0567 33.7025 30.5431C32.021 31.6667 29.6802 31.6667 24.9987 31.6667H14.9987Z"
+                    stroke="#00C1AD" stroke-width="2.5" />
+                <path d="M15 15C12.2386 15 10 17.2386 10 20C10 22.7614 12.2386 25 15 25" stroke="#00C1AD"
+                    stroke-width="2.5" />
+                <path d="M25 15C27.7614 15 30 17.2386 30 20C30 22.7614 27.7614 25 25 25" stroke="#00C1AD"
+                    stroke-width="2.5" />
+                <path d="M15 8.33333V30.8333" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M25 8.33333V30.8333" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+
+            <div class="payment__text">
+                <h3 class="payment__title">
+                    Наличными
+                </h3>
+                <p class="payment__subtitle">
+                    Сотруднику компании в&nbsp;офисе в&nbsp;Москве
+                </p>
+            </div>
+        </div>
+        <div class="card cards__item_bigger card_row payment__item">
+            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M3.33203 20.5C3.33203 14.2146 3.33203 11.0719 5.28465 9.11929C7.23727 7.16667 10.38 7.16667 16.6654 7.16667H23.332C29.6174 7.16667 32.7601 7.16667 34.7127 9.11929C36.6654 11.0719 36.6654 14.2146 36.6654 20.5C36.6654 26.7854 36.6654 29.9281 34.7127 31.8807C32.7601 33.8333 29.6174 33.8333 23.332 33.8333H16.6654C10.38 33.8333 7.23727 33.8333 5.28465 31.8807C3.33203 29.9281 3.33203 26.7854 3.33203 20.5Z"
+                    stroke="#00C1AD" stroke-width="2.5" />
+                <path d="M16.6667 27.1667H10" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M23.332 27.1667H20.832" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M3.33203 17.1667L36.6654 17.1667" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+
+            <div class="payment__text">
+                <h3 class="payment__title">
+                    Банковской картой
+                </h3>
+            </div>
+        </div>
+        <div class="card cards__item_bigger card_row payment__item">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M29.375 35C30.4443 34.0495 32.0557 34.0495 33.125 35C33.8515 35.6458 35 35.13 35 34.158V5.8417C35 4.86966 33.8515 4.35391 33.125 4.99971C32.0557 5.9502 30.4443 5.9502 29.375 4.99971C28.3057 4.04921 26.6943 4.04921 25.625 4.99971C24.5557 5.9502 22.9443 5.9502 21.875 4.99971C20.8057 4.04921 19.1943 4.04921 18.125 4.99971C17.0557 5.9502 15.4443 5.9502 14.375 4.99971C13.3057 4.04921 11.6943 4.04921 10.625 4.99971C9.55569 5.9502 7.94431 5.9502 6.875 4.99971C6.14848 4.35391 5 4.86966 5 5.8417V34.158C5 35.13 6.14848 35.6458 6.875 35C7.94431 34.0495 9.55569 34.0495 10.625 35C11.6943 35.9505 13.3057 35.9505 14.375 35C15.4443 34.0495 17.0557 34.0495 18.125 35C19.1943 35.9505 20.8057 35.9505 21.875 35C22.9443 34.0495 24.5557 34.0495 25.625 35C26.6943 35.9505 28.3057 35.9505 29.375 35Z"
+                    stroke="#00C1AD" stroke-width="2.5" />
+                <path d="M12.5 25.8333H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M12.5 20H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M12.5 14.1667H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+
+            <div class="payment__text">
+                <h3 class="payment__title">
+                    Оплата по&nbsp;реквизитам
+                </h3>
+                <p class="payment__subtitle">
+                    Для юридических лиц
+                </p>
+            </div>
+        </div>
+    </div>
+    <img src="../../img/payment-bg.png" alt="colorfull gradient background" class="bg">
+</section>
+        <section class="section container promo_delievery">
+    <div class="promo_delievery__content">
+        <h2 class="promo_delievery__title">
+            Мы предоставляем лизинг<br>
+            майнингового оборудования
+        </h2>
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
+                    <circle cx="3" cy="3" r="3" fill="#00C1AD" />
+                </svg>
+                Срок от 12 до 60 месяцев
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
+                    <circle cx="3" cy="3" r="3" fill="#00C1AD" />
+                </svg>
+                Доступно для ООО и ИП
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
+                    <circle cx="3" cy="3" r="3" fill="#00C1AD" />
+                </svg>
+                Первый взнос — от 10%
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
+                    <circle cx="3" cy="3" r="3" fill="#00C1AD" />
+                </svg>
+                Минимальная сумма - от 200.000₽
+            </li>
+        </ul>
+        <a href="leasing.html" class="btn btn-round__main">Узнать больше</a>
+    </div>
+</section>
+        <section class="section product-promo container m-90">
+    <div class="product-promo__content " style="background: url(img/product/promo.png) center center / cover no-repeat; position: relative; z-index: 2;">
+        <div class="product-promo__textContent">
+            <div class="product-promo__text">
+                <h2 class="product-promo__title section-title section-title_40">
+                    Возникли вопросы? Мы ответим
+                </h2>
+                <p class="product-promo__subtitle" >
+                    Наши специалисты готовы ответить на ваши вопросы
+                </p>
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="product-promo__btn btn btn_white js-popup-open" data-popup-id="3">
+            Задать вопрос
+        </a>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+    <div class="footer__row container">
+        <div class="footer__col">
+            <div class="footer__item">
+                <div class="footer__item-caption">Контакты</div>
+                <div class="footer__contacts">
+                    <div class="footer__contact">
+                        <img src="img/footer_phone.png" alt="Phone icon">
+                        <a href="tel:88004444852">8 (800) 444-48-52</a>
+                    </div>
+                    <div class="footer__contact">
+                        <img src="img/footer_mail.png" alt="Mail icon">
+                        <a href="mailto:sales@uminers.com">sales@uminers.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__item-wrapper">
+                <div class="footer__item">
+                    <div class="footer__item-caption">Офис в Москве</div>
+                    <p class="footer__text">
+                        Москва, Ленинская слобода, 19, БЦ «Омега Плаза», 2 этаж
+                    </p>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-caption">Штаб-квартира в Китае</div>
+                    <p class="footer__text">
+                        Room 2004-2006, Nimble Plaza Tower A, Panyu Dadao North 330, Nancun Town, Guangzhou, China
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__col">
+            <div class="footer__navWrapper">
+                <div class="footer__item">
+                    <div class="footer__item-caption">Навигация</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li>
+                                <a href="catalog.html" class="footer__list-item">Каталог</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="footer__list-item">О Uminers</a>
+                            </li>
+                            <li>
+                                <a href="contacts.html" class="footer__list-item">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Доставка и оплата</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Майнинг под ключ</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Хостинг</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Лизинг</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Блог</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-caption">Производители</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li>
+                                <a href="#" class="footer__list-item">Bitmain</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">WhatsMiner</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">CanaanIce</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">River</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Jasminer</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Elphapex</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Goldshell</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-caption">Алгоритмы</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li>
+                                <a href="#" class="footer__list-item">SHA-256</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">ScryptX11</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Equihash</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Handshake</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Eaglesong</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">BLAKE2s</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">ЕtchashLyra</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">2REv2k</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">HeavyHash</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Blake3Kadena</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-caption">Монеты</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li>
+                                <a href="#" class="footer__list-item">Bitcoin (BTC)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Bitcoin Cash (BCH)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Litecoin (LTC)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Dogecoin (DOGE)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Dashcoin (DASH)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">ZCash ZenCash (ZEN) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Handshake (HNS) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Etherium Classic (ETC) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Nervos (CKB) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Kaspa (KAS) </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Alephium Kadena (KDA)</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__row footer__copy">
+        <ul class="container footer__copy-list">
+            <li>
+                © 2024 Uminers
+            </li>
+            <li>
+                <a href="#">Политика конфиденциальности</a>
+            </li>
+            <div class="footer__gradient">
+                <img src="img/background-gradient.png" alt="footer colorfull gradient background">
+            </div>
+        </ul>
+    </div>
+
+</footer>
+
+    <script src="js/app.min.js"></script>
+</body>

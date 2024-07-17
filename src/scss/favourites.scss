@@ -1,0 +1,14 @@
+.favourites-container{
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+    .catalog__card{
+        flex: 0 0 calc(25% - 20px* 3 / 4);
+        @media (max-width:$breakpoint1100) {
+            flex: 0 0 calc(50% - 20px);
+        }
+        @media (max-width:$breakpoint768) {
+            flex: 1 0 calc(50% - 20px);
+        }
+    }
+}
