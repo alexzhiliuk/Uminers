@@ -1,0 +1,240 @@
+.hosting-map {
+    .section__body {
+        position: relative;
+    }
+
+    &__bg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.overlay-point {
+    position: absolute;
+    display: inline-flex;
+    padding: 0.93vw 1.32vw;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    gap: 1.6vw;
+    border-radius: 0.7vw;
+    background: #1D1D1D;
+    color: #ededed;
+    top: 0;
+    left: 72%;
+    top: 19%;
+    transform-origin: top left;
+
+    &:hover {
+        .overlay-point__subtext {
+            display: none;
+        }
+    }
+
+    &__head {
+
+
+        img {
+            width: 2.12vw;
+            height: 2.12vw;
+        }
+
+        width: 100%;
+
+        h3 {
+            color: #FFF;
+            leading-trim: both;
+            text-edge: cap;
+            font-size: 1.2vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        p {
+            color: #9D9D9D;
+            font-family: Manrope;
+            font-size: 0.9vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 0.8vw;
+        margin-bottom: 0.4vw;
+        align-items: center;
+    }
+
+    &__body {
+        display: none;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        transition: opacity 0.3s, height 1s;
+    }
+
+    &__body.show {
+        display: flex;
+        gap:0.6vw;
+        flex-direction: column;
+        opacity: 1;
+        height: auto;
+        width: auto;
+        animation: slideDown 0.3s forwards;
+    }
+
+    &__characteristics-title {
+        color: #EDEDED;
+        font-size: 0.93vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 0.5vw;
+    }
+
+    li {
+        color: #FFF;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Manrope;
+        font-size: 0.8vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 183.333%;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+
+    svg {
+        height: 0.7em;
+    }
+
+    .date {
+        color: #EDEDED;
+        font-family: Manrope;
+        font-size: 0.93vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+
+    @keyframes slideDown {
+        from {
+            height: 0;
+        }
+
+        25% {
+            height: 25%
+        }
+
+        50% {
+            height: 50%
+        }
+
+        75% {
+            height: 75%
+        }
+
+        to {
+            height: 100%;
+        }
+    }
+
+    &__characteristics {
+        display: flex;
+        $gap: 0.27vw;
+        align-items: center;
+        gap: $gap;
+
+        .characteristic {
+            border-radius: 0.7vw;
+            background: #272727;
+            display: flex;
+            color: #FFF;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Manrope;
+            font-size: 0.8vw;
+            font-style: normal;
+            font-weight: 400;
+            /* 183.333% */
+            align-items: center;
+            justify-content: center;
+            padding: 0.57vw;
+            flex-basis: calc(50% - $gap);
+        }
+    }
+}
+
+
+.overlay-point-mobile {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); // Затемненный фон
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+
+    &.show-popup {
+        transform: translateY(0); // Выезжание снизу
+    }
+
+    .overlay-point-mobile__body {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+
+        .overlay-point-mobile__characteristics_first,
+        .overlay-point-mobile__characteistics_second {
+            margin-bottom: 20px;
+        }
+
+        .overlay-point-mobile__characteristics-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .characteristic {
+            display: inline-block;
+            background: #f2f2f2;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                color: #333;
+                margin-bottom: 10px;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .date {
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+        }
+    }
+}

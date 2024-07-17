@@ -495,7 +495,8 @@
         background-repeat: no-repeat;
         background-size: contain;
         padding-top: 150px;
-        padding-bottom:70px;
+        padding-bottom: 70px;
+
         @media (max-width:$breakpoint992) {
             padding-top: 60px;
             margin-bottom: 40px;
@@ -503,7 +504,6 @@
 
         &__title {
             color: #FFF;
-            font-family: Manrope;
             font-size: clamp(30px, 7vw, 60px);
             font-style: normal;
             font-weight: 600;
@@ -519,7 +519,8 @@
                 -webkit-text-fill-color: transparent;
                 font-style: normal;
             }
-            br{
+
+            br {
                 @media (max-width:$breakpoint480) {
                     display: none;
                 }
@@ -535,10 +536,13 @@
             background: linear-gradient(92deg, rgba(0, 193, 173, 0.10) 7.58%, rgba(22, 22, 22, 0.10) 92.42%);
             backdrop-filter: blur(15px);
             max-width: 611px;
-            svg{
+
+            svg {
                 height: 100%;
             }
+
             align-items: stretch;
+
             @media (max-width:$breakpoint480) {
                 flex-direction: column;
                 align-items: flex-start;
@@ -547,14 +551,67 @@
 
         &__text {
             color: #FFF;
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 110%;
-            /* 26.4px */
-            letter-spacing: -0.48px;
+            font-size: clamp(30px, 7vw, 60px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -1.2px;
+            margin-bottom: 30px;
         }
 
 
+    }
+
+    &_hosting {
+        background: url(../img/hosting-hero-bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-clip: padding-box;
+        padding-top: 150px;
+        padding-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:25px;
+
+        &__title {
+            color: #FFF;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 66px;
+            /* 110% */
+            letter-spacing: -1.2px;
+        }
+
+        &__subtitle {
+            color: #EDEDED;
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.4px;
+            max-width: 899px;
+        }
+
+        img{
+            max-width: 329px;
+        }
+
+        .button-block{
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            a{
+                white-space: nowrap;
+            }
+        }
     }
 
     // .hero__title
