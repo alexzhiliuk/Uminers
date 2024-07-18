@@ -755,7 +755,7 @@
     </h2>
     <div class="section__body hosting-map__body">
         <img src="img/hosting-map-ru.png" class="hosting-map__bg" alt="world map with highlighted active regions">
-        <div class="hosting-map__overlay overlay-point" id="russia-overlay-point" data-country="russia">
+        <div class="hosting-map__overlay overlay-point blink" id="russia-overlay-point" data-country="russia">
             <div class="overlay-point__head">
                 <div class="overlay-point__wrapper">
                     <img src="img/russia.svg" alt="russian flag icon" class="overlay-point__img">
@@ -861,7 +861,7 @@
         <div class="hosting-map__shadow"></div>
     </div>
 
-    <div class="hosting-map__overlay overlay-point-mobile" data-country="russia">
+    <div class="hosting-map__overlay overlay-point-popup" data-country="russia">
         <div class="overlay-point-mobile__head">
             <div class="overlay-point-mobile__wrapper">
                 <img src="img/russia.svg" alt="russian flag icon" class="overlay-point-mobile__img">
@@ -870,7 +870,6 @@
                     <p>Красноярск</p>
                 </div>
             </div>
-            <p class="overlay-point__subtext">от 9Ct/kWh</p>
         </div>
         <div class="overlay-point-mobile__body">
             <div class="overlay-point-mobile__characteristics_first">
@@ -918,7 +917,7 @@
           </svg></div>
     </div>
     
-    <div class="hosting-map__overlay overlay-point-mobile" data-country="ethiopia">
+    <div class="hosting-map__overlay overlay-point-popup" data-country="ethiopia">
         <div class="overlay-point-mobile__head">
             <div class="overlay-point-mobile__wrapper">
                 <img src="img/ephiopia.svg" alt="Ethiopia flag icon" class="overlay-point__img">
@@ -926,7 +925,6 @@
                     <h3>Эфиопия</h3>
                 </div>
             </div>
-            <p class="overlay-point__subtext">от 9Ct/kWh</p>
         </div>
         <div class="overlay-point-mobile__body">
             <div class="overlay-point-mobile__characteristics_first">
@@ -968,9 +966,14 @@
                 <p class="date">Дата основания: 01.01.2001</p>
             </div>
         </div>
-
+        <div class="cross">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+            <path d="M1 1L7 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 7L7 0.999999" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></div>
     </div>
     <div class="popup-shade"></div>
+
 </section>
 
         <section class="section container benefits-hosting">
@@ -1085,6 +1088,7 @@
             </svg>
         </div>
     </div>
+    <img src="../../img/hosting-benefits.png" alt="" class="bg">
 </section>
 
         <section class="section container hosting-steps">
@@ -1108,26 +1112,32 @@
             <div class="hosting-steps__point-wrapper">
                 <div class="hosting-steps__point">4</div>
             </div>
-            <div class="hosting-steps__bg-line">
+            <div class="hosting-steps__bg-line-wrapper">
+                <div class="hosting-steps__bg-line">
+                </div>
             </div>
         </div>
         <div class="hosting-steps__points">
             <div class="hosting-steps__point-wrapper">
                 <h3 class="hosting-steps__point-title">Заказ</h3>
-                <p class="hosting-steps__point-text">Выбираете хостинг-план, делаете заказ и заключаете договор об условиях хостинга, доставки и оплаты.</p>
+                <p class="hosting-steps__point-text">Выбираете хостинг-план, делаете заказ и заключаете договор
+                    об условиях хостинга, доставки и оплаты.</p>
             </div>
             <div class="hosting-steps__point-wrapper">
                 <h3 class="hosting-steps__point-title">Доставка</h3>
-                <p class="hosting-steps__point-text">Оборудование отправляется в дата-центр, проверяется и настраивается специалистами UMINERS.</p>
+                <p class="hosting-steps__point-text">Оборудование отправляется в дата-центр, проверяется и настраивается
+                    специалистами UMINERS.</p>
             </div>
             <div class="hosting-steps__point-wrapper">
                 <h3 class="hosting-steps__point-title">Запуск хостинга</h3>
-                <p class="hosting-steps__point-text">Оборудование устанавливается, мониторится и обслуживается нашей командой.</p>
+                <p class="hosting-steps__point-text">Оборудование устанавливается, мониторится и обслуживается нашей
+                    командой.</p>
             </div>
             <div class="hosting-steps__point-wrapper">
                 <h3 class="hosting-steps__point-title">Поддержка</h3>
-                <p class="hosting-steps__point-text">Круглосуточная поддержка включает обслуживание, устранение проблем и оптимизацию майнинга.</p>
-            </div> 
+                <p class="hosting-steps__point-text">Круглосуточная поддержка включает обслуживание, устранение проблем
+                    и оптимизацию майнинга.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -1174,7 +1184,7 @@
                 </p>
             </div>
         </div>
-        <img src="img/promo-calculator-bg.png" alt="futuristic background in green colors">
+        <img src="img/Rectangle 13933promo-calculator-bg.jpg" alt=".">
     </div>
 </section>
 
@@ -1246,6 +1256,7 @@
             </div>
         </div>
     </div>
+    <img src="../../img/hosting-why-us.png" alt="" class="bg">
 </section>
 
         <section class="section container">

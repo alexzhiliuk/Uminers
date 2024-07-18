@@ -1,23 +1,34 @@
 .hosting-steps {
-    .title{
+    .title {
         display: flex;
         flex-direction: column;
         gap: 9px;
     }
-    &__bg-line{
+
+    &__bg-line-wrapper {
         position: absolute;
         z-index: 1;
-        top:50%;
-        width: 100%;
+        top: 50%;
         transform: translateY(-50%);
         height: 4px;
-        background: linear-gradient(to right, #03c1ad, #000 90%);
+        overflow: hidden;
+
         @media (max-width:$breakpoint768) {
             height: 100%;
-            top:0;
-            left:50%;
+            top: 0;
+            left: 50%;
             transform: translateX(-50%);
             transform: translateY(0);
+            width: 4px;
+        }
+
+    }
+
+    &__bg-line {
+        height: 4px;
+        background: linear-gradient(to right, #03c1ad, #000 90%);
+        
+        @media (max-width:$breakpoint768) {
             width: 4px;
             background: linear-gradient(to bottom, #03c1ad, #000 96%);
         }
@@ -25,16 +36,18 @@
 
     &__subtitle {
         color: #EEE;
-        font-size: clamp(12px,3vw,20px);
+        font-size: clamp(12px, 3vw, 20px);
         font-style: normal;
         font-weight: 600;
         letter-spacing: -0.6px;
+        margin-top: 14px;
     }
 
-    &__content{
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 36px;
+
         @media (max-width:$breakpoint768) {
             flex-direction: row;
         }
@@ -63,20 +76,23 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+
             @media (max-width:$breakpoint768) {
                 max-width: none;
             }
-            @media (max-width: 640px){
+
+            @media (max-width: 640px) {
                 flex-basis: 137px;
             }
-    
-            @media (max-width: 496px){
+
+            @media (max-width: 496px) {
                 flex-basis: 165px;
             }
+
             @media (max-width:$breakpoint480) {
                 flex-basis: auto;
             }
-    
+
         }
 
         &-title {
@@ -85,6 +101,7 @@
             font-style: normal;
             font-weight: 600;
             letter-spacing: -0.64px;
+
             @media (max-width:$breakpoint480) {
                 font-size: 25px;
             }
@@ -97,6 +114,7 @@
             font-weight: 400;
             line-height: 1.4;
             letter-spacing: -0.6px;
+
             @media (max-width:$breakpoint480) {
                 font-size: 16px;
             }
@@ -108,6 +126,7 @@
         display: flex;
         gap: 24px;
         align-items: flex-start;
+
         @media (max-width:$breakpoint768) {
             flex-direction: column;
         }

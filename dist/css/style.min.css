@@ -1778,7 +1778,7 @@ button {
   background-position: right center;
   background-repeat: no-repeat;
   background-size: contain;
-  padding-top: 150px;
+  padding-top: 75px;
   padding-bottom: 70px;
 }
 @media (max-width: 991.98px) {
@@ -6688,7 +6688,7 @@ label.radio-label input[type=checkbox].invalid {
   font-weight: 400;
   line-height: 27.32px;
   letter-spacing: -0.02em;
-  margin-top: 10px;
+  margin-top: 14px;
 }
 .calculator-promo__content {
   background: url(../img/promo-calculator-bg.png) 0 0/cover no-repeat;
@@ -7092,9 +7092,9 @@ label.radio-label input[type=checkbox].invalid {
   .hosting-map__shadow {
     display: block;
     height: 100%;
-    width: 20%;
+    width: 10%;
     position: absolute;
-    background: linear-gradient(to left, #000, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0));
+    background: linear-gradient(to left, #000, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0));
     left: -1px;
     top: 0;
     transform: rotate(180deg);
@@ -7127,7 +7127,6 @@ label.radio-label input[type=checkbox].invalid {
   align-items: flex-start;
   align-content: flex-start;
   flex-direction: column;
-  gap: 1.6vw;
   border-radius: clamp(10px, 0.7vw, 20px);
   background: #1D1D1D;
   color: #ededed;
@@ -7293,7 +7292,7 @@ label.radio-label input[type=checkbox].invalid {
   transition: transform 0.3s ease-in-out;
   z-index: 3;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .overlay-point-mobile.show-popup {
   transform: translateY(0);
@@ -7305,7 +7304,7 @@ label.radio-label input[type=checkbox].invalid {
   align-items: center;
 }
 .overlay-point-mobile__head {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .overlay-point-mobile .overlay-point-mobile__body .overlay-point-mobile__characteristics_first,
 .overlay-point-mobile .overlay-point-mobile__body .overlay-point-mobile__characteistics_second {
@@ -7320,8 +7319,6 @@ label.radio-label input[type=checkbox].invalid {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 20px;
-  margin-right: 10px;
-  margin-bottom: 10px;
   background-color: #333;
   padding: 7px 20px;
 }
@@ -7400,21 +7397,34 @@ label.radio-label input[type=checkbox].invalid {
 }
 .overlay-point-popup .overlay-point-mobile__body .overlay-point-mobile__characteristics_first,
 .overlay-point-popup .overlay-point-mobile__body .overlay-point-mobile__characteistics_second {
-  margin-bottom: 20px;
+  margin-bottom: 15.5px;
 }
 .overlay-point-popup .overlay-point-mobile__body .overlay-point-mobile__characteristics-title {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 10px;
+  color: #EDEDED;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  margin-bottom: 9px;
 }
 .overlay-point-popup .overlay-point-mobile__body .characteristic {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 20px;
-  margin-right: 10px;
-  margin-bottom: 10px;
   background-color: #333;
+  margin: 0 4px 4px 0;
   padding: 7px 20px;
+  color: #FFF;
+  /*   leading-trim: both;
+    text-edge: cap; */
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  /* 183.333% */
+  letter-spacing: -0.24px;
 }
 .overlay-point-popup .overlay-point-mobile__body ul {
   list-style: none;
@@ -7423,14 +7433,27 @@ label.radio-label input[type=checkbox].invalid {
 .overlay-point-popup .overlay-point-mobile__body ul li {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.83;
+  letter-spacing: -0.24px;
 }
 .overlay-point-popup .overlay-point-mobile__body ul li svg {
   margin-right: 5px;
 }
 .overlay-point-popup .overlay-point-mobile__body .date {
+  color: #EDEDED;
   font-size: 14px;
-  margin-top: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  margin-top: 14px;
 }
 .overlay-point-popup .cross {
   padding: 7px;
@@ -7439,10 +7462,47 @@ label.radio-label input[type=checkbox].invalid {
   position: absolute;
   top: 20px;
   right: 20px;
-  height: 22px;
+  height: 26px;
+  width: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.blink {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blink-animate-on-scroll {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.blink-animate {
+  opacity: 1;
+}
+
+.benefits-hosting {
+  position: relative;
+}
+.benefits-hosting img.bg {
+  position: absolute;
+  z-index: -1;
+  width: 120%;
+  left: 60%;
+  top: 50%;
+  transform: translate(-60%, -50%);
 }
 
 .card-bg {
@@ -7492,22 +7552,30 @@ label.radio-label input[type=checkbox].invalid {
   flex-direction: column;
   gap: 9px;
 }
-.hosting-steps__bg-line {
+.hosting-steps__bg-line-wrapper {
   position: absolute;
   z-index: 1;
   top: 50%;
-  width: 100%;
   transform: translateY(-50%);
   height: 4px;
-  background: linear-gradient(to right, #03c1ad, #000 90%);
+  overflow: hidden;
 }
 @media (max-width: 767.98px) {
-  .hosting-steps__bg-line {
+  .hosting-steps__bg-line-wrapper {
     height: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     transform: translateY(0);
+    width: 4px;
+  }
+}
+.hosting-steps__bg-line {
+  height: 4px;
+  background: linear-gradient(to right, #03c1ad, #000 90%);
+}
+@media (max-width: 767.98px) {
+  .hosting-steps__bg-line {
     width: 4px;
     background: linear-gradient(to bottom, #03c1ad, #000 96%);
   }
@@ -7518,6 +7586,7 @@ label.radio-label input[type=checkbox].invalid {
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.6px;
+  margin-top: 14px;
 }
 .hosting-steps__content {
   display: flex;
@@ -7610,6 +7679,9 @@ label.radio-label input[type=checkbox].invalid {
   }
 }
 
+.why-us {
+  position: relative;
+}
 .why-us__content {
   display: flex;
   gap: 24px;
@@ -7636,6 +7708,14 @@ label.radio-label input[type=checkbox].invalid {
   gap: 24px;
   flex-direction: column;
   flex: 0 1 calc(50% - 12px);
+}
+.why-us img.bg {
+  position: absolute;
+  z-index: -1;
+  width: 120%;
+  left: 60%;
+  top: 50%;
+  transform: translate(-60%, -50%);
 }
 
 .why-card {
