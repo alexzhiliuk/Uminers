@@ -1,15 +1,53 @@
 .hosting-map {
     .section__body {
         position: relative;
+        @media (max-width:$breakpoint576) {
+            overflow-x: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &__bg {
         width: 100%;
         height: auto;
+        @media (max-width:$breakpoint576) {
+
+        width: 300%;
+        margin-left: -100%;
+        height: auto;
+        }
+    }
+
+    &__shadow{
+        display: none;
+        @media (max-width: $breakpoint576) {
+            display: block;
+            height:100%;
+            width:20%;
+            position: absolute;
+            background: linear-gradient(to left, #000, rgba(0,0,0,0.5) 50%, rgba(0, 0, 0, 0));
+                left:0;
+                top:0;
+                transform: rotate(180deg);
+            &:last-of-type{
+                transform: rotate(0deg);
+                left:auto;
+                top: auto;
+                right:0;
+                top:0;
+            }
+        }
     }
 }
 
 .overlay-point {
+    @media (max-width:$breakpoint576) {
+        top:23%;
+        left:68%
+
+    }
     &#ethiopia-overlay-point {
         left: 45%;
         top: 48%;
@@ -20,15 +58,8 @@
         }
 
         @media (max-width:$breakpoint576) {
-            left: 35%;
-        }
-
-        @media (max-width:$breakpoint480) {
-            left: 30%;
-        }
-
-        @media(max-width: 380px) {
-            left: 25%;
+            top:53%;
+            left: 23%;
         }
     }
 
