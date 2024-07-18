@@ -23,6 +23,7 @@ import * as calculatorSlider from './modules/calculatorSlider.js'
 import * as blog from './modules/blog.js'
 import * as tablePopup from './modules/popup-table.js'
 import * as hostingMap from './modules/hosting-map.js'
+import * as gallery from './modules/gallery.js'
 
 flsFunctions.isWebp()
 

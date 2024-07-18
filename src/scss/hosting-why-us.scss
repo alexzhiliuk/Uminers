@@ -1,0 +1,97 @@
+.why-us {
+    $gap: 24px;
+
+    &__content {
+        display: flex;
+        gap: $gap;
+        @media (max-width:$breakpoint1200) {
+            flex-direction: column;
+        }
+    }
+
+    &__wrapper_row {
+        display: flex;
+        gap: $gap;
+        @media (max-width:$breakpoint768) {
+            flex-direction: column;
+        }
+
+        .why-card {
+            flex: 0 1 calc(50% - $gap*1/2)
+        }
+    }
+
+    &__wrapper_column {
+        display: flex;
+        gap: $gap;
+        flex-direction: column;
+        flex: 0 1 calc(50% - $gap*1/2)
+    }
+}
+
+.why-card {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    gap: 30px;
+    border: 2px solid #00C1AD;
+    background: transparent;
+    flex-shrink: 1;
+    @media (max-width:$breakpoint768) {
+        gap: 10px;
+        padding: 20px;
+    }
+
+    &__title {
+        color: #FFF;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0.87;
+        @media (max-width:$breakpoint768) {
+            font-size: 24px;
+        }
+        /* 86.667% */
+
+        &-wrapper {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            svg{
+                flex-shrink: 0;
+                @media (max-width:$breakpoint768) {
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        color: #9D9D9D;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: -0.6px;
+        @media (max-width:$breakpoint480) {
+            font-size: 16px;
+        }
+    
+    }
+
+    &_img {
+        width: 100%;
+        flex: 1 1 auto;
+        height: 50%;
+        overflow: hidden;
+        border-radius: 20px;
+        background-image: url(../img/team_promo.png);
+        background-position: center center;
+        background-size: 100%;
+        background-color: #EDF1F0;
+        background-repeat: no-repeat;
+        @media (max-width:$breakpoint1200) {
+            display: none;
+        }
+    }
+}

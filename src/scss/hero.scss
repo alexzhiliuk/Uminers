@@ -533,15 +533,14 @@
             gap: 16px;
             border-radius: 20px;
             border: 1px solid #B2B2B2;
+            align-items: center;
             background: linear-gradient(92deg, rgba(0, 193, 173, 0.10) 7.58%, rgba(22, 22, 22, 0.10) 92.42%);
             backdrop-filter: blur(15px);
             max-width: 611px;
 
             svg {
-                height: 100%;
+                flex-shrink: 0;
             }
-
-            align-items: stretch;
 
             @media (max-width:$breakpoint480) {
                 flex-direction: column;
@@ -551,12 +550,11 @@
 
         &__text {
             color: #FFF;
-            font-size: clamp(30px, 7vw, 60px);
+            font-size: 24px;
             font-style: normal;
-            font-weight: 600;
-            line-height: 1.1;
-            letter-spacing: -1.2px;
-            margin-bottom: 30px;
+            font-weight: 500;
+            line-height: 110%; /* 26.4px */
+            letter-spacing: -0.48px;
         }
 
 

@@ -1,0 +1,115 @@
+.hosting-steps {
+    .title{
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+    &__bg-line{
+        position: absolute;
+        z-index: 1;
+        top:50%;
+        width: 100%;
+        transform: translateY(-50%);
+        height: 4px;
+        background: linear-gradient(to right, #03c1ad, #000 90%);
+        @media (max-width:$breakpoint768) {
+            height: 100%;
+            top:0;
+            left:50%;
+            transform: translateX(-50%);
+            transform: translateY(0);
+            width: 4px;
+            background: linear-gradient(to bottom, #03c1ad, #000 96%);
+        }
+    }
+
+    &__subtitle {
+        color: #EEE;
+        font-size: clamp(12px,3vw,20px);
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: -0.6px;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        @media (max-width:$breakpoint768) {
+            flex-direction: row;
+        }
+    }
+
+    &__point {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+        flex-shrink: 0;
+        background-color: #03C1AD;
+        border: 10px solid #000;
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -0.48px;
+        z-index: 2;
+
+        &-wrapper {
+            max-width: 312px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            @media (max-width:$breakpoint768) {
+                max-width: none;
+            }
+            @media (max-width: 640px){
+                flex-basis: 137px;
+            }
+    
+            @media (max-width: 496px){
+                flex-basis: 165px;
+            }
+            @media (max-width:$breakpoint480) {
+                flex-basis: auto;
+            }
+    
+        }
+
+        &-title {
+            color: #FFF;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: -0.64px;
+            @media (max-width:$breakpoint480) {
+                font-size: 25px;
+            }
+        }
+
+        &-text {
+            color: #9D9D9D;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.4;
+            letter-spacing: -0.6px;
+            @media (max-width:$breakpoint480) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__points {
+        position: relative;
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        @media (max-width:$breakpoint768) {
+            flex-direction: column;
+        }
+    }
+}
