@@ -407,3 +407,24 @@ button {
         transform: translateY(0);
     }
 }
+
+.gallery{
+    overflow-x: scroll;
+    display: flex;
+    gap: 24px;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    div{
+        flex: 1 0 312px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    img{
+        height: min-content;
+        width:100%;
+    }
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
