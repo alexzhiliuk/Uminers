@@ -29,6 +29,10 @@
         background: linear-gradient(86deg, rgba(0, 0, 0, 0.50) 1.5%, rgba(113, 115, 114, 0.15) 98.5%);
         backdrop-filter: blur(15px);
         min-width: 313px;
+        align-items: center;
+        @media (max-width:$breakpoint576) {
+            align-items: flex-start;
+        }
         @media (max-width:$breakpoint480) {
             min-width: 280px;
         }
