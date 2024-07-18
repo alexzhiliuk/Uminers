@@ -2710,6 +2710,8 @@ button {
   }
 }
 .product-promo__content {
+  position: relative;
+  z-index: 2;
   padding: 40px 50px;
   border-radius: 20px;
   overflow: hidden;
