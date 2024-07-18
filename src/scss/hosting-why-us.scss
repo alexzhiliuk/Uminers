@@ -1,5 +1,6 @@
 .why-us {
     $gap: 24px;
+    position: relative;
 
     &__content {
         display: flex;
@@ -26,6 +27,14 @@
         gap: $gap;
         flex-direction: column;
         flex: 0 1 calc(50% - $gap*1/2)
+    }
+    img.bg{
+        position: absolute;
+        z-index: -1;
+        width:120%;
+        left:60%;
+        top:50%;
+        transform: translate(-60%, -50%);
     }
 }
 
