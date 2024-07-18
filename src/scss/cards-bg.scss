@@ -1,3 +1,14 @@
+.benefits-hosting{
+    position: relative;
+    img.bg{
+        position: absolute;
+        z-index: -1;
+        width:120%;
+        left:60%;
+        top:50%;
+        transform: translate(-60%, -50%);
+    }
+}
 .card-bg {
     position: relative;
     background: rgba(0, 193, 173, 0.10);
