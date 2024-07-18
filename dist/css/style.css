@@ -7066,9 +7066,58 @@ label.radio-label input[type=checkbox].invalid {
 .hosting-map .section__body {
   position: relative;
 }
+@media (max-width: 575.98px) {
+  .hosting-map .section__body {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .hosting-map__bg {
   width: 100%;
   height: auto;
+}
+@media (max-width: 575.98px) {
+  .hosting-map__bg {
+    width: 300%;
+    margin-left: -100%;
+    height: auto;
+  }
+}
+.hosting-map__shadow {
+  display: none;
+}
+@media (max-width: 575.98px) {
+  .hosting-map__shadow {
+    display: block;
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    background: linear-gradient(to left, #000, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0));
+    left: -1px;
+    top: 0;
+    transform: rotate(180deg);
+  }
+  .hosting-map__shadow:last-of-type {
+    transform: rotate(0deg);
+    left: auto;
+    top: auto;
+    right: 0;
+    top: 0;
+  }
+}
+.hosting-map .popup-shade {
+  pointer-events: none;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .overlay-point {
@@ -7087,6 +7136,12 @@ label.radio-label input[type=checkbox].invalid {
   top: 19%;
   transform-origin: top left;
 }
+@media (max-width: 575.98px) {
+  .overlay-point {
+    top: 23%;
+    left: 68%;
+  }
+}
 .overlay-point#ethiopia-overlay-point {
   left: 45%;
   top: 48%;
@@ -7099,17 +7154,8 @@ label.radio-label input[type=checkbox].invalid {
 }
 @media (max-width: 575.98px) {
   .overlay-point#ethiopia-overlay-point {
-    left: 35%;
-  }
-}
-@media (max-width: 479.98px) {
-  .overlay-point#ethiopia-overlay-point {
-    left: 30%;
-  }
-}
-@media (max-width: 380px) {
-  .overlay-point#ethiopia-overlay-point {
-    left: 25%;
+    top: 53%;
+    left: 23%;
   }
 }
 .overlay-point:hover .overlay-point__subtext {
@@ -7245,8 +7291,9 @@ label.radio-label input[type=checkbox].invalid {
   background-color: #1d1d1d;
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
-  border-radius: 10px;
+  z-index: 3;
   padding: 20px;
+  border-radius: 10px;
 }
 .overlay-point-mobile.show-popup {
   transform: translateY(0);
@@ -7327,6 +7374,77 @@ label.radio-label input[type=checkbox].invalid {
     transform: scale3d(1, 1, 1);
   }
 }
+.overlay-point-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EDEDED;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+  background-color: #1d1d1d;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+  padding: 20px;
+  border-radius: 10px;
+}
+.overlay-point-popup.popup-show {
+  opacity: 1;
+  pointer-events: all;
+}
+@media (max-width: 575.98px) {
+  .overlay-point-popup {
+    width: 80%;
+  }
+}
+.overlay-point-popup .overlay-point-mobile__body .overlay-point-mobile__characteristics_first,
+.overlay-point-popup .overlay-point-mobile__body .overlay-point-mobile__characteistics_second {
+  margin-bottom: 20px;
+}
+.overlay-point-popup .overlay-point-mobile__body .overlay-point-mobile__characteristics-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.overlay-point-popup .overlay-point-mobile__body .characteristic {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #333;
+  padding: 7px 20px;
+}
+.overlay-point-popup .overlay-point-mobile__body ul {
+  list-style: none;
+  padding: 0;
+}
+.overlay-point-popup .overlay-point-mobile__body ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.overlay-point-popup .overlay-point-mobile__body ul li svg {
+  margin-right: 5px;
+}
+.overlay-point-popup .overlay-point-mobile__body .date {
+  font-size: 14px;
+  margin-top: 20px;
+}
+.overlay-point-popup .cross {
+  padding: 7px;
+  border-radius: 50%;
+  background-color: #272727;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card-bg {
   position: relative;
   background: rgba(0, 193, 173, 0.1);

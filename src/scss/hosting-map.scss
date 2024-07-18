@@ -1,15 +1,65 @@
 .hosting-map {
     .section__body {
         position: relative;
+        @media (max-width:$breakpoint576) {
+            overflow-x: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &__bg {
         width: 100%;
         height: auto;
+        @media (max-width:$breakpoint576) {
+
+        width: 300%;
+        margin-left: -100%;
+        height: auto;
+        }
+    }
+
+    &__shadow{
+        display: none;
+        @media (max-width: $breakpoint576) {
+            display: block;
+            height:100%;
+            width:20%;
+            position: absolute;
+            background: linear-gradient(to left, #000, rgba(0,0,0,0.5) 50%, rgba(0, 0, 0, 0));
+                left:-1px;
+                top:0;
+                transform: rotate(180deg);
+            &:last-of-type{
+                transform: rotate(0deg);
+                left:auto;
+                top: auto;
+                right:0;
+                top:0;
+            }
+        }
+    }
+    .popup-shade{
+        pointer-events: none;
+        z-index: 2;
+        width:100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: rgba(0,0,0,0.7);
+        top:0;
+        left: 0;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
     }
 }
 
 .overlay-point {
+    @media (max-width:$breakpoint576) {
+        top:23%;
+        left:68%
+
+    }
     &#ethiopia-overlay-point {
         left: 45%;
         top: 48%;
@@ -20,15 +70,8 @@
         }
 
         @media (max-width:$breakpoint576) {
-            left: 35%;
-        }
-
-        @media (max-width:$breakpoint480) {
-            left: 30%;
-        }
-
-        @media(max-width: 380px) {
-            left: 25%;
+            top:53%;
+            left: 23%;
         }
     }
 
@@ -209,9 +252,9 @@
     background-color: #1d1d1d;
     transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
-    border-radius: 10px;
+    z-index: 3;
     padding: 20px;
-
+    border-radius: 10px;
     &.show-popup {
         transform: translateY(0);
     }
@@ -306,4 +349,86 @@
     100% {
         transform: scale3d(1, 1, 1);
     }
+}
+
+.overlay-point-popup {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: #EDEDED;
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+    background-color: #1d1d1d;
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+    padding: 20px;
+    border-radius: 10px;
+    &.popup-show {
+        opacity: 1;
+        pointer-events: all;
+    }
+    @media (max-width:$breakpoint576) {
+        width:80%;
+    }
+
+    .overlay-point-mobile__body {
+
+
+        .overlay-point-mobile__characteristics_first,
+        .overlay-point-mobile__characteistics_second {
+            margin-bottom: 20px;
+        }
+
+        .overlay-point-mobile__characteristics-title {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .characteristic {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: #333;
+            padding: 7px 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .date {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+
+    .cross{
+        padding:7px;
+        border-radius: 50%;
+        background-color: #272727;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
