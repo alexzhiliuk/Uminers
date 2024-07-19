@@ -1890,6 +1890,17 @@ button {
 .hero_hosting .button-block a {
   white-space: nowrap;
 }
+@media (max-width: 479.98px) {
+  .hero_hosting .button-block a {
+    width: 100%;
+  }
+}
+@media (max-width: 479.98px) {
+  .hero_hosting .button-block {
+    align-items: stretch;
+    width: 100%;
+  }
+}
 .hero__title {
   text-align: center;
   color: #00C1AD;
