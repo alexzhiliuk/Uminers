@@ -26,23 +26,17 @@ function scrollGallery() {
     }
 }
 
-function reverseScrollDirection() {
-    scrollDirection *= -1;
-}
 
 startScrolling();
 
 function cardsSlider() {
+
     if (window.innerWidth <= 480) {
-        gallery.addEventListener('scroll', () => {
-            if (gallery.scrollLeft === 0 || gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
-                reverseScrollDirection();
-            }
-        });
+
 
         document.addEventListener("DOMContentLoaded", function () {
-            const cardsContainer = document.querySelector('.cards');
-            const cards = document.querySelectorAll('.cards-item');
+            const cardsContainer = document.querySelector('.benefits-hosting__content');
+            const cards = cardsContainer.querySelectorAll('.cards-item');
             let currentIndex = 0;
             const totalCards = cards.length;
             const gap = 22;
@@ -98,5 +92,5 @@ function cardsSlider() {
 
 cardsSlider();
 }catch{
-    
+
 }
