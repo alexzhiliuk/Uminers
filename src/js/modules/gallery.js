@@ -1,10 +1,11 @@
+try{
 const gallery = document.querySelector('.gallery');
 let scrollStart = 0;
 let scrollDirection = 1; // 1 - вправо, -1 - влево
 
 function startScrolling() {
     if (gallery.scrollWidth > gallery.clientWidth) {
-        scrollInterval = setInterval(scrollGallery, 10);
+        var scrollInterval = setInterval(scrollGallery, 10);
     }
 }
 
@@ -31,9 +32,71 @@ function reverseScrollDirection() {
 
 startScrolling();
 
-// Переворачиваем направление скроллинга, когда достигаем края галереи
-gallery.addEventListener('scroll', () => {
-    if (gallery.scrollLeft === 0 || gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
-        reverseScrollDirection();
+function cardsSlider() {
+    if (window.innerWidth <= 480) {
+        gallery.addEventListener('scroll', () => {
+            if (gallery.scrollLeft === 0 || gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
+                reverseScrollDirection();
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const cardsContainer = document.querySelector('.cards');
+            const cards = document.querySelectorAll('.cards-item');
+            let currentIndex = 0;
+            const totalCards = cards.length;
+            const gap = 22;
+            const cardWidth = 100;
+            const adjustedWidth = cardWidth + (gap / window.innerWidth * 100);
+            function updateCardsPosition() {
+                cardsContainer.style.transform = `translateX(-${currentIndex * adjustedWidth}%)`;
+            }
+
+            function moveToNextCard() {
+                currentIndex = (currentIndex + 1) % totalCards;
+                updateCardsPosition();
+            }
+
+            function moveToPrevCard() {
+                currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+                updateCardsPosition();
+            }
+
+            function startAutoScroll() {
+                interval = setInterval(moveToNextCard, 3000);
+            }
+
+            function resetInterval() {
+                clearInterval(interval);
+                startAutoScroll();
+            }
+
+            let startX = 0;
+            let endX = 0;
+
+            cardsContainer.addEventListener('touchstart', function (event) {
+                startX = event.touches[0].clientX; 
+            });
+
+            cardsContainer.addEventListener('touchmove', function (event) {
+                endX = event.touches[0].clientX; 
+            });
+
+            cardsContainer.addEventListener('touchend', function () {
+                if (startX > endX + 50) {
+                    moveToNextCard();
+                } else if (startX < endX - 50) {
+                    moveToPrevCard();
+                }
+                resetInterval(); 
+            });
+
+            startAutoScroll(); 
+        });
     }
-});
+}
+
+cardsSlider();
+}catch{
+    
+}

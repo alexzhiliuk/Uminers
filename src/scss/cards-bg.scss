@@ -8,6 +8,23 @@
         top:50%;
         transform: translate(-60%, -50%);
     }
+    .cards {
+        display: flex; /* Flex-контейнер */
+        transition: transform 0.5s ease; /* Плавное перемещение */
+    }
+    
+    @media(max-width: 480px) {
+        .cards {
+            width: 100%; /* Ширина для слайдера */
+            display: flex; /* Flex-контейнер для горизонтального расположения */
+            flex-direction: row; /* Горизонтальная ориентация */
+            flex-wrap: nowrap;
+        }
+    
+        .card-bg {
+            flex: 0 0 100%; /* Каждая карточка занимает 100% ширины */
+        }
+    }
 }
 .card-bg {
     position: relative;
