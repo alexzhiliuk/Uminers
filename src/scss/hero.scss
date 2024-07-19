@@ -611,6 +611,13 @@
             align-items: center;
             a{
                 white-space: nowrap;
+                @media (max-width:$breakpoint480) {
+                    width: 100%;
+                }
+            }
+            @media (max-width:$breakpoint480) {
+                align-items: stretch;
+                width: 100%;
             }
         }
     }
