@@ -407,7 +407,7 @@ button {
         transform: translateY(0);
     }
 }
-
+.gallery-slider{
 .gallery{
     overflow-x: scroll;
     display: flex;
@@ -427,4 +427,5 @@ button {
     &::-webkit-scrollbar{
         display: none;
     }
+}
 }

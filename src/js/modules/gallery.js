@@ -1,5 +1,5 @@
 try{
-const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery-slider .gallery');
 let scrollStart = 0;
 let scrollDirection = 1; // 1 - вправо, -1 - влево
 
