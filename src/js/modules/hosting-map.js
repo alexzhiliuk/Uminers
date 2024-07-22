@@ -44,7 +44,6 @@ try{
     const lineWrapper = document.querySelector('.hosting-steps__bg-line-wrapper');
     const line = document.querySelector('.hosting-steps__bg-line');
     
-    // Функция для обработки события прокрутки
     function handleScroll() {
         if(window.innerWidth>768){
         const pointsWidth = pointsContainer.offsetWidth;
@@ -52,7 +51,6 @@ try{
         const top = sectionRect.top;
         const scrollProgress = Math.max(0, Math.min(1, (window.innerHeight - top) / sectionRect.height));
     
-        // Устанавливаем ширину линии в процентном соотношении с прогрессом
         line.style.width = `${scrollProgress * pointsWidth}px`;
     }else{
         const pointsHeight = pointsContainer.offsetHeight;
@@ -60,16 +58,13 @@ try{
         const top = sectionRect.top;
         const scrollProgress = Math.max(0, Math.min(1, (window.innerHeight - top) / sectionRect.height));
     
-        // Устанавливаем ширину линии в процентном соотношении с прогрессом
         line.style.height = `${scrollProgress * pointsHeight}px`;
     }
     }
     
-    // Добавляем обработчик события скролла
     window.addEventListener('scroll', handleScroll);
     
-    // Вызываем функцию handleScroll при загрузке страницы
     handleScroll();
-}catch(e){
+}catch{
 
 }

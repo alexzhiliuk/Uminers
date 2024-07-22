@@ -1,0 +1,37 @@
+<section class="popup" data-popup-id="8" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Заявка на консультацию</h2>
+        <p class="popup-form__subtitle">
+            Сориентируем по цене и оборудованию, подскажем самые выгодные для вас модели, расскажем про доставку и хостинг
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Имя
+                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+            </div>
+            <label class="radio-label">
+                <input type="checkbox" name="privacy-policy" style="border: 2px solid #373737" id="cart-policy" class="checkbox-main" required>
+                <span class="hidden" id="policy">
+                Я согласен c политикой конфиденциальности
+            </span>
+            </label>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>

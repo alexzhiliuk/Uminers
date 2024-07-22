@@ -627,24 +627,24 @@ button {
     transform: translateY(0);
   }
 }
-.gallery {
+.gallery-slider .gallery {
   overflow-x: scroll;
   display: flex;
   gap: 24px;
 }
-.gallery::-webkit-scrollbar {
+.gallery-slider .gallery::-webkit-scrollbar {
   display: none;
 }
-.gallery div {
+.gallery-slider .gallery div {
   flex: 1 0 312px;
   overflow: hidden;
   border-radius: 20px;
 }
-.gallery img {
+.gallery-slider .gallery img {
   height: 312px;
   width: 100%;
 }
-.gallery::-webkit-scrollbar {
+.gallery-slider .gallery::-webkit-scrollbar {
   display: none;
 }
 
