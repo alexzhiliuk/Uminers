@@ -4,14 +4,6 @@ try {
     const grid = document.querySelector('.catalog__cards');
     const favourites = document.querySelector('.favourites-container');
 
-    for (let i = 0; i < favourites.children.length; i++) {
-        let cardLike = favourites.children.item(i).querySelector('.card__like svg');
-        cardLike.classList.add('activeSVG');
-        cardLike.addEventListener('click', function() {
-            this.parentElement.parentElement.parentElement.remove();
-        });
-    }
-
     filters.forEach(elem => {
         elem.addEventListener('click', () => {
             if (!elem.classList.contains('activeSVG')) {
@@ -47,8 +39,21 @@ try {
             }
         })
     })
-} catch {
 
+    try{
+    for (let i = 0; i < favourites.children.length; i++) {
+        let cardLike = favourites.children.item(i).querySelector('.card__like svg');
+        cardLike.classList.add('activeSVG');
+        cardLike.addEventListener('click', function() {
+            this.parentElement.parentElement.parentElement.remove();
+        });
+    }
+    }catch{
+        
+    }   
+
+} catch(e) {
+    console.log(e)
 }
 
 $(".categories__item").click(function () {
