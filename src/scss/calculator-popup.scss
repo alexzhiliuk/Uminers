@@ -1,0 +1,282 @@
+.calculator-popup {
+    .form {
+        background-color: #0C0C0C;
+        width: fit-content;
+        max-width: none;
+        padding: 40px;
+    }
+
+    &__content {
+        display: flex;
+
+        &_left {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .main-calculations {
+        display: flex;
+        gap: 20px;
+
+        &__image {
+            padding: 25px;
+            flex: 0 2 auto;
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            background: #222;
+            border-radius: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__calculations {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__characteristics {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__characteristic {
+            flex-basis: 50%;
+
+            &-title {
+                color: #FFF;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.375;
+                letter-spacing: -0.16px;
+                margin-bottom: 15px;
+
+                &_big {
+                    color: #FFF;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 1.1;
+                    letter-spacing: -0.2px;
+                    margin-bottom: 25px;
+                }
+            }
+
+            &-value {
+                color: #FFF;
+                font-family: Manrope;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 100%;
+                letter-spacing: -0.4px;
+
+                &_big {
+                    color: #FFF;
+                    font-family: Manrope;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 100%;
+                    letter-spacing: -0.48px;
+                }
+            }
+        }
+
+        input[name=ammount] {
+            background-color: #222;
+            max-width: 40px;
+            border-left: 2px solid #333;
+            border-right: 2px solid #333;
+        }
+    }
+
+    &__electricity {
+        &-title {
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.375;
+            letter-spacing: -0.16px;
+            margin-bottom: 10px;
+        }
+
+        &-body {
+            display: flex;
+            gap: 23px;
+            align-items: center;
+        }
+
+        &-variant {
+            color: #9D9D9D;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -0.32px;
+
+            &.active {
+                color: $primaryColor;
+            }
+        }
+
+    }
+
+    .select-wrapper {
+        position: relative;
+        width: 100%;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            pointer-events: none;
+            cursor: pointer;
+        }
+    }
+
+    .input-main,
+    select {
+        border-radius: 10px;
+        background: #191919;
+    }
+
+    input[type="text"] {
+        flex-grow: 1;
+        padding: 15px 20px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #3f3f3f;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 2px;
+        bottom: 2px;
+        background-color: $primaryColor;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #3f3f3f;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px $primaryColor;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    //tabs
+    .tabs {
+        &__item {
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.375;
+            letter-spacing: -0.16px;
+            padding: 8px 1px;
+        }
+    }
+
+    //radio
+    .radio-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap:8px;
+        grid-auto-flow: column;
+    }
+
+    .form_radio {
+        margin-bottom: 10px;
+    }
+    .form_radio input[type=radio] {
+        display: none;
+    }
+    .form_radio label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px;
+        margin-right: 0;
+        line-height: 18px;
+        user-select: none;
+    }
+    .form_radio label:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $primaryColor;
+        top:50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+    }
+     
+    /* Checked */
+    .form_radio input[type=radio]:checked + label:before {
+        box-shadow: inset 0 0 0 3px #0C0C0C;
+        background-color: $primaryColor;
+    }
+     
+    /* Hover */
+    .form_radio label:hover:before {
+        filter: brightness(120%);
+    }
+     
+    /* Disabled */
+    .form_radio input[type=radio]:disabled + label:before {
+        filter: grayscale(100%);
+    }
+}

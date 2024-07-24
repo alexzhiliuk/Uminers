@@ -1,37 +1,139 @@
-<section class="popup" data-popup-id="8" style="display: none;">
-    <form action="" class="popup-form">
-        <div class="popup-form__close">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.5">
-                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-            </svg>                
-        </div>
-        <h2 class="popup-form__title">Заявка на консультацию</h2>
-        <p class="popup-form__subtitle">
-            Сориентируем по цене и оборудованию, подскажем самые выгодные для вас модели, расскажем про доставку и хостинг
-        </p>
-        <div class="popup-form__inputs">
-            <div class="popup-form__row">
-                <label for="" class="label-main">
-                    Имя
-                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
-                </label>
+<section class="popup calculator-popup calculator product" data-popup-id="8" style="display: none;">
+    <form action="" class="popup-form form">
+        <h2 class="calculator__title calculator__title-thin-gradient">
+            Калькулятор доходности
+        </h2>
+        <div class="calculator-popup__content_left">
+            <div class="calculator-popup__content_left">
+                <div class="calculator-popup__main-calculations main-calculations">
+                    <div class="main-calculations__image">
+                        <img src="../../img/asic-catalog.png" alt="product 3d model">
+                    </div>
+                    <div class="main-calculations__calculations">
+                        <label for="model-select" class="label-main">
+                            Модель
+                            <div class="select-wrapper">
+                                <select name="" id="" class="input-main">
+                                    <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                </select>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M18 10L12.7071 15.2929C12.3166 15.6834 11.6834 15.6834 11.2929 15.2929L6 10"
+                                        stroke="#00C1AD" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+                        </label>
+                        <div class="main-calculations__characteristics">
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Стоимость</h3>
+                                <p class="main-calculations__characteristic-value">623,645 <span
+                                        class="highlighted">₽</span></p>
+                            </div>
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Потребление</h3>
+                                <p class="main-calculations__characteristic-value">3 700 <span
+                                        class="highlighted">Вт</span></p>
+                            </div>
+                        </div>
+                        <div class="main-calculations__characteristics">
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Количество</h3>
+                                <div class="form__ammount">
+                                    <div class="form__symbol_left">
+                                        <span class="highlighted">-</span>
+                                    </div>
+                                    <input type="number" inputmode="numeric" min="1" placeholder="1" value=1
+                                        name="ammount">
+                                    <div class=" form__symbol_right">
+                                        <span class="highlighted">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title_big">Итого</h3>
+                                <p class="main-calculations__characteristic-value_big">2 494 580 <span
+                                        class="highlighted">₽</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="calculator-popup__electricity">
+                    <h3 class="calculator-popup__electricity-title">Цена электроэнергии</h3>
+                    <div class="calculator-popup__electricity-body">
+                        <p class="calculator-popup__electricity-variant active">
+                            Базовое<br>размещение
+                        </p>
+                        <label for="electricity-variant">
+                            <div class="switch">
+                                <input type="checkbox" name="available" id="electricity-variant">
+                                <span class="slider round"></span>
+                            </div>
+                        </label>
+                        <p class="calculator-popup__electricity-variant">
+                            Задать свою<br>
+                            стоимость
+                        </p>
+                        <input type="text" pattern="[0, 9]" placeholder="4,9" disabled class="input-main">
+                    </div>
+                </div>
+                <div class="calculator-popup__tabs">
+                    <h3 class="calculator-popup__electricity-title">
+                        Метод расчёта
+                    </h3>
+                    <div class="tabs">
+                        <div class="tabs__header">
+                            <div class="tabs__item tabs__item_active" data-tab-id="1">Среднее за период</div>
+                            <div class="tabs__item" data-tab-id="2">Прогнозируемые данные</div>
+                            <div class="tabs__item" data-tab-id="3">На сегодня</div>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__body" data-tab-id="1">
+                                <div class="radio-wrapper">
+                                    <div class="form_radio">
+                                        <input id="radio-1" type="radio" name="radio" value="1" checked>
+                                        <label for="radio-1">За последний месяц</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-2" type="radio" name="radio" value="3">
+                                        <label for="radio-2">За последних 3 месяца</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-3" type="radio" name="radio" value="6">
+                                        <label for="radio-3">За последних 6 месяцев</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-4" type="radio" name="radio" value="12">
+                                        <label for="radio-4">За последних 12 месяцев</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-5" type="radio" name="radio" value="24">
+                                        <label for="radio-5">За последних 24 месяца</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__body tabs__text" data-tab-id="2" style="display: none;">
+
+                            </div>
+                            <div class="tabs__body tabs__text" data-tab-id="3" style="display: none;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="popup-form__row">
-                <label for="" class="label-main">
-                    Телефон
-                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
-                </label>
+            <div class="calculator-popup__content_right">
+
             </div>
-            <label class="radio-label">
-                <input type="checkbox" name="privacy-policy" style="border: 2px solid #373737" id="cart-policy" class="checkbox-main" required>
-                <span class="hidden" id="policy">
-                Я согласен c политикой конфиденциальности
-            </span>
-            </label>
         </div>
-        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
     </form>
 </section>
