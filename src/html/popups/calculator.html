@@ -1,5 +1,5 @@
-<section class="popup" data-popup-id="8" style="display: none;">
-    <form action="" class="popup-form">
+<section class="popup calculator-popup calculator product" data-popup-id="8" style="display: none;">
+    <form action="" class="popup-form form">
         <div class="popup-form__close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.5">
@@ -8,30 +8,286 @@
                 </g>
             </svg>                
         </div>
-        <h2 class="popup-form__title">Заявка на консультацию</h2>
-        <p class="popup-form__subtitle">
-            Сориентируем по цене и оборудованию, подскажем самые выгодные для вас модели, расскажем про доставку и хостинг
-        </p>
-        <div class="popup-form__inputs">
-            <div class="popup-form__row">
-                <label for="" class="label-main">
-                    Имя
-                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
-                </label>
+        <h2 class="calculator-popup__title">
+            Калькулятор доходности
+        </h2>
+        <div class="calculator-popup__content">
+            <div class="calculator-popup__content_left">
+                <div class="calculator-popup__main-calculations main-calculations">
+                    <div class="main-calculations__image">
+                        <img src="../../img/asic-catalog.png" alt="product 3d model">
+                    </div>
+                    <div class="main-calculations__calculations">
+                        <label for="model-select" class="label-main">
+                            Модель
+                            <div class="select-wrapper">
+                                <select name="" id="" class="input-main">
+                                    <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                </select>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M18 10L12.7071 15.2929C12.3166 15.6834 11.6834 15.6834 11.2929 15.2929L6 10"
+                                        stroke="#00C1AD" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+                        </label>
+                        <div class="main-calculations__characteristics">
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Стоимость</h3>
+                                <p class="main-calculations__characteristic-value">623,645 <span
+                                        class="highlighted">₽</span></p>
+                            </div>
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Потребление</h3>
+                                <p class="main-calculations__characteristic-value">3 700 <span
+                                        class="highlighted">Вт</span></p>
+                            </div>
+                        </div>
+                        <div class="main-calculations__characteristics">
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Количество</h3>
+                                <div class="form__ammount">
+                                    <div class="form__symbol_left">
+                                        <span class="highlighted">-</span>
+                                    </div>
+                                    <input type="number" inputmode="numeric" min="1" placeholder="1" value=1
+                                        name="ammount">
+                                    <div class=" form__symbol_right">
+                                        <span class="highlighted">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title_big">Итого</h3>
+                                <p class="main-calculations__characteristic-value_big">2 494 580 <span
+                                        class="highlighted">₽</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="calculator-popup__electricity">
+                    <h3 class="calculator-popup__electricity-title">Цена электроэнергии</h3>
+                    <div class="calculator-popup__electricity-body">
+                        <p class="calculator-popup__electricity-variant active">
+                            Базовое<br>размещение
+                        </p>
+                        <label for="electricity-variant">
+                            <div class="switch">
+                                <input type="checkbox" name="available" id="electricity-variant">
+                                <span class="slider round"></span>
+                            </div>
+                        </label>
+                        <p class="calculator-popup__electricity-variant">
+                            Задать свою<br>
+                            стоимость
+                        </p>
+                        <input type="text" pattern="[0, 9]" placeholder="4,9" disabled class="input-main">
+                    </div>
+                </div>
+                <div class="calculator-popup__tabs">
+                    <h3 class="calculator-popup__electricity-title">
+                        Метод расчёта
+                    </h3>
+                    <div class="tabs">
+                        <div class="tabs__header">
+                            <div class="tabs__item tabs__item_active" data-tab-id="1">Среднее за период</div>
+                            <div class="tabs__item" data-tab-id="2">Прогнозируемые данные</div>
+                            <div class="tabs__item" data-tab-id="3">На сегодня</div>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__body" data-tab-id="1">
+                                <div class="radio-wrapper">
+                                    <div class="form_radio">
+                                        <input id="radio-1" type="radio" name="radio" value="1" checked>
+                                        <label for="radio-1">За последний месяц</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-2" type="radio" name="radio" value="3">
+                                        <label for="radio-2">За последних 3 месяца</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-3" type="radio" name="radio" value="6">
+                                        <label for="radio-3">За последних 6 месяцев</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-4" type="radio" name="radio" value="12">
+                                        <label for="radio-4">За последних 12 месяцев</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-5" type="radio" name="radio" value="24">
+                                        <label for="radio-5">За последних 24 месяца</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__body tabs__text" data-tab-id="2" style="display: none;">
+                                <div class="ranges-wrapper">
+                                    <label for="btc-course" class="lable-main">
+                                        Курс BTC ($)
+                                        <div class="min-max">
+                                            <span>0</span>
+                                        </div>
+                                        <div class="double-range-input__progress">
+                                            <input class="double-range-input__range double-range-input__range_min"
+                                                id="btc-course-range" type="range" step="2" min="0" max="200000"
+                                                value="1" name="quantity">
+                                            <div class="range-value" id="btc-course-value">
+                                                <input type="text" value="1" class="input-main">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label for="ruble-course" class="lable-main">
+                                        Изменение сети за год
+                                        <div class="min-max">
+                                            <span>0</span>
+                                            <span>100</span>
+                                        </div>
+                                        <div class="double-range-input__progress">
+                                            <input class="double-range-input__range double-range-input__range_min"
+                                                id="ruble-course-range" type="range" step="5" min="0" max="100"
+                                                value="1" name="quantity">
+                                            <div class="range-value" id="ruble-course-value">
+                                                <input type="text" value="0" class="input-main">
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tabs__body tabs__text" data-tab-id="3" style="display: none;">
+                                <div class="calculator-popup__currency">
+                                    <div class="calculator-popup__currency-item">
+                                        <div class="calculator-popup__currency-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                                viewBox="0 0 41 41" fill="none">
+                                                <path
+                                                    d="M11.9596 8.54167V32.4583M8.54297 8.54167H24.7721C28.0743 8.54167 30.7513 11.2186 30.7513 14.5208C30.7513 17.823 28.0743 20.5 24.7721 20.5H12.643M8.54297 32.4583H26.4805C29.7827 32.4583 32.4596 29.7814 32.4596 26.4792C32.4596 23.177 29.7827 20.5 26.4805 20.5H12.5291M17.0846 8.54167V5.125M17.0846 35.875V32.4583M23.918 8.54167V5.125M23.918 35.875V32.4583"
+                                                    stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="calculator-popup__currency-text">
+                                            <h3 class="calculator-popup__currency-heading">63 095,30 USD</h3>
+                                            <a href="" class="calculator-popup__currency-link">www.binance.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="calculator-popup__currency-item">
+                                        <div class="calculator-popup__currency-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                                viewBox="0 0 41 41" fill="none">
+                                                <path
+                                                    d="M29.0404 13.6665C29.0404 9.89256 25.981 6.83317 22.207 6.83317H18.7904C15.0164 6.83317 11.957 9.89256 11.957 13.6665C11.957 17.4404 15.0164 20.4998 18.7904 20.4998H22.207C25.981 20.4998 29.0404 23.5592 29.0404 27.3332C29.0404 31.1071 25.981 34.1665 22.207 34.1665H18.7904C15.0164 34.1665 11.957 31.1071 11.957 27.3332M20.4987 3.4165L20.4987 37.5832"
+                                                    stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="calculator-popup__currency-text">
+                                            <h3 class="calculator-popup__currency-heading">87,74 RUB</h3>
+                                            <a href="" class="calculator-popup__currency-link">www.cbr.ru</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-popup__buttons">
+                    <button type="submit" class="btn__main">Рассчитать доходность</button>
+                    <button type="reset"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M9.99844 18.9584C5.6651 18.9584 2.14844 15.4334 2.14844 11.1084C2.14844 9.55003 2.60677 8.0417 3.47344 6.7417C3.6651 6.45837 4.05677 6.37503 4.3401 6.5667C4.62344 6.75837 4.70677 7.15003 4.5151 7.43337C3.7901 8.5167 3.40677 9.7917 3.40677 11.1C3.40677 14.7417 6.3651 17.7 10.0068 17.7C13.6484 17.7 16.6068 14.7417 16.6068 11.1C16.6068 7.45837 13.6401 4.50003 9.99844 4.50003C9.23177 4.50003 8.48177 4.60837 7.77344 4.82503C7.4401 4.92503 7.0901 4.7417 6.9901 4.40837C6.8901 4.07503 7.07344 3.72503 7.40677 3.62503C8.2401 3.37503 9.10677 3.2417 9.99844 3.2417C14.3318 3.2417 17.8484 6.7667 17.8484 11.0917C17.8484 15.4167 14.3318 18.9584 9.99844 18.9584Z"
+                                fill="#00C1AD" />
+                            <path
+                                d="M6.55733 5.05811C6.41566 5.05811 6.26566 5.00811 6.149 4.90811C5.88233 4.67477 5.85733 4.28311 6.08233 4.02477L8.49066 1.25811C8.71566 0.999775 9.11566 0.966442 9.374 1.19978C9.63233 1.42478 9.65733 1.82478 9.43233 2.08311L7.024 4.84144C6.899 4.98311 6.724 5.05811 6.55733 5.05811Z"
+                                fill="#00C1AD" />
+                            <path
+                                d="M9.36502 7.10811C9.24002 7.10811 9.10669 7.06645 8.99835 6.99145L6.18169 4.93311C5.90669 4.73311 5.84835 4.34145 6.04835 4.06645C6.24835 3.78311 6.64002 3.72478 6.92335 3.92478L9.73169 5.97478C10.0067 6.17478 10.0734 6.56645 9.86502 6.84978C9.74835 7.02478 9.55669 7.10811 9.36502 7.10811Z"
+                                fill="#00C1AD" />
+                        </svg></button>
+                </div>
             </div>
-            <div class="popup-form__row">
-                <label for="" class="label-main">
-                    Телефон
-                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
-                </label>
+            <div class="calculator-popup__content_right content_right">
+                <div class="content_right__header">
+                    <h3 class="content_right__heading">Результаты расчётов</h3>
+                    <div class="content_right__currency-switch">
+                        <div class="toggle-container">
+                            <input type="radio" id="option1" name="toggle" value="1" checked>
+                            <label for="option1" class="toggle solid" style="left:1px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15"
+                                    fill="none">
+                                    <path
+                                        d="M12.3763 4.8125C12.3971 5.97917 12.0013 7.10417 11.2096 8.04167C10.3346 9.04167 9.02214 9.4375 7.52214 9.4375H4.0013V11.0417H8.08463C8.56788 11.0417 8.95964 11.4334 8.95964 11.9167C8.95964 12.3999 8.56788 12.7917 8.08464 12.7917H4.0013V14C4.0013 14.5523 3.55359 15 3.0013 15H2.8138C2.26152 15 1.8138 14.5523 1.8138 14V12.7917H1.23047C0.74722 12.7917 0.355469 12.3999 0.355469 11.9167C0.355469 11.4334 0.747219 11.0417 1.23047 11.0417H1.8138V9.4375H1.30339C0.779866 9.4375 0.355469 9.0131 0.355469 8.48958C0.355469 7.96606 0.779866 7.54167 1.30339 7.54167H1.8138V0.999999C1.8138 0.447715 2.26152 0 2.8138 0H7.52214C8.79297 0 10.0846 0.500001 10.9805 1.375C11.8138 2.1875 12.3555 3.52083 12.3763 4.8125ZM9.60547 6.60417C10.0013 6.08333 10.1471 5.41667 10.1471 4.8125C10.1471 4.125 9.91797 3.41667 9.4388 2.91667C8.98047 2.39583 8.20964 2.0625 7.52214 2.0625H4.0013V7.54167H7.4388C8.3763 7.54167 9.08464 7.25 9.60547 6.60417Z"
+                                        fill="#272727" />
+                                </svg></label>
+
+                            <input type="radio" id="option2" name="toggle" value="2">
+                            <label for="option2" class="toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M14.1654 6.66663C14.1654 4.82568 12.673 3.33329 10.832 3.33329H9.16536C7.32442 3.33329 5.83203 4.82568 5.83203 6.66663C5.83203 8.50758 7.32442 9.99996 9.16536 9.99996H10.832C12.673 9.99996 14.1654 11.4923 14.1654 13.3333C14.1654 15.1742 12.673 16.6666 10.832 16.6666H9.16536C7.32442 16.6666 5.83203 15.1742 5.83203 13.3333M9.9987 1.66663L9.9987 18.3333"
+                                        stroke="white" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </label>
+
+                            <input type="radio" id="option3" name="toggle" value="3">
+                            <label style="right:1px;" for="option3" class="toggle"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M5.83464 4.16667V15.8333M4.16797 4.16667H12.0846C13.6955 4.16667 15.0013 5.4725 15.0013 7.08333C15.0013 8.69416 13.6955 10 12.0846 10H6.16797M4.16797 15.8333H12.918C14.5288 15.8333 15.8346 14.5275 15.8346 12.9167C15.8346 11.3058 14.5288 10 12.918 10H6.11241M8.33464 4.16667V2.5M8.33464 17.5V15.8333M11.668 4.16667V2.5M11.668 17.5V15.8333"
+                                        stroke="#272727" stroke-width="2" stroke-linecap="round" />
+                                </svg></label>
+
+                            <div class="indicator"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right__body">
+                    <div class="content_right__characteristic_big">
+                        <h3 class="title">Чистая прибыль</h3>
+                        <span class="value highlighted" style="display: flex;">— $<span class="normal"> /
+                                мес.</span></span>
+                    </div>
+                    <div class="content_right__characteristic_big">
+                        <h3 class="title">Окупаемость</h3>
+                        <span class="value highlighted">— <span class="normal">мес.</span></span>
+                    </div>
+                    <div class="content_right__characteristic">
+                        <h3 class="title">Доходность в деньгах</h3>
+                        <span class="value highlighted">— $</span>
+                    </div>
+                    <div class="content_right__characteristic">
+                        <h3 class="title">Доходность % в месяц</h3>
+                        <span class="value highlighted">— %</span>
+                    </div>
+                    <div class="content_right__characteristic">
+                        <h3 class="title">Доходность % годовых</h3>
+                        <span class="value highlighted">— %</span>
+                    </div>
+                    <div class="content_right__characteristic">
+                        <h3 class="title">Потребление</h3>
+                        <span class="value highlighted">— Вт/ч</span>
+                    </div>
+                    <div class="content_right__characteristic_big">
+                        <h3 class="title">Хэшрейт</h3>
+                        <span class="value highlighted">— TH/s<div class="mini"> (1 TH/s в сутки = 0,00000081 BTC)</div>
+                            </span>
+                    </div>
+                    <p class="content_right__text">
+                        Обратите внимание, что расчеты основаны на усреднённых данных. Фактические
+                        результаты могут отличаться.
+                    </p>
+                    <button type="button" class="close-overlay-calculator">Рассчитать еще раз</button>
+                </div>
             </div>
-            <label class="radio-label">
-                <input type="checkbox" name="privacy-policy" style="border: 2px solid #373737" id="cart-policy" class="checkbox-main" required>
-                <span class="hidden" id="policy">
-                Я согласен c политикой конфиденциальности
-            </span>
-            </label>
         </div>
-        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
     </form>
 </section>

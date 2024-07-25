@@ -18,50 +18,15 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-    <title>Delievery</title>
+    <title>Калькулятор</title>
 </head>
 
 <body>
-    <section class="popup" data-popup-id="3" style="display: none;">
-    <form action="" class="popup-form">
-        <div class="popup-form__close">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.5">
-                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-            </svg>                
-        </div>
-        <h2 class="popup-form__title">Ask a question</h2>
-        <p class="popup-form__subtitle">
-            Fill out the form below and we will contact you
-        </p>
-        <div class="popup-form__inputs">
-            <div class="popup-form__row">
-                <label for="" class="label-main">
-                    First name
-                    <input type="text" class="input-main" placeholder="Your first name" name="name" required="">
-                </label>
-            </div>
-            <div class="popup-form__row">
-                <label for="" class="label-main">
-                    Phone number
-                    <input type="tel" class="input-main" placeholder="+86 (020) 8488 8242" name="phone" required="" data-tel-input>
-                </label>
-                <label for="" class="label-main">
-                    Email
-                    <input type="email" class="input-main" placeholder="email@gmail.com" name="email" required="">
-                </label>
-            </div>
-        </div>
-        <button type="submit" class="btn btn__main popup-form__submit">Submit</button>
-    </form>
-</section>
 
     <!-- Header -->
     <header class="header container">
     <div class="bottom-header">
-        <a href="en-index.html" class="bottom-header__logo">
+        <a href="index.html" class="bottom-header__logo">
             <img src="img/logo.svg" alt="Uminers">
         </a>
         <nav class="bottom-header__nav">
@@ -69,12 +34,12 @@
                 <li>
                     <a href="javascript:void(0)" class="catalog-btn js-header-catalog-open">
                         <img src="img/catalog-btn-icon.svg" alt="">
-                        <span>Catalog</span>
+                        <span>Каталог</span>
                     </a>
                 </li>
                 <li>
                     <div class="bottom-header__droplist header-droplist">
-                        <a href="javascript:void(0)">Mining</a>
+                        <a href="javascript:void(0)">Майнинг</a>
                         <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617"
@@ -83,16 +48,19 @@
                         <div class="header-droplist__wrapper">
                             <ul class="header-droplist__list">
                                 <li>
-                                    <a href="en-catalog.html">Equipment</a>
+                                    <a href="catalog.html">Оборудование</a>
                                 </li>
                                 <li>
-                                    <a href="en-calculator.html">Turnkey Mining</a>
+                                    <a href="calculator.html">Майнинг под ключ</a>
                                 </li>
                                 <li>
-                                    <a href="en-hosting.html">Hosting</a>
+                                    <a href="hosting.html">Хостинг</a>
                                 </li>
                                 <li>
-                                    <a href="en-investments.html">Investments</a>
+                                    <a href="leasing.html">Лизинг</a>
+                                </li>
+                                <li>
+                                    <a href="investments.html">Инвестиции</a>
                                 </li>
                             </ul>
                         </div>
@@ -100,7 +68,7 @@
                 </li>
                 <li>
                     <div class="bottom-header__droplist header-droplist">
-                        <a href="javascript:void(0)">Blog</a>
+                        <a href="blog.html">Блог</a>
                         <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617"
@@ -109,13 +77,13 @@
                         <div class="header-droplist__wrapper">
                             <ul class="header-droplist__list">
                                 <li>
-                                    <a href="#">Guides</a>
+                                    <a href="#">Гайды</a>
                                 </li>
                                 <li>
-                                    <a href="#">Articles</a>
+                                    <a href="#">Статьи</a>
                                 </li>
                                 <li>
-                                    <a href="#">News</a>
+                                    <a href="#">Новости</a>
                                 </li>
                             </ul>
                         </div>
@@ -123,7 +91,7 @@
                 </li>
                 <li>
                     <div class="bottom-header__droplist header-droplist">
-                        <a href="javascript:void(0)">About Us</a>
+                        <a href="javascript:void(0)">О нас</a>
                         <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617"
@@ -132,23 +100,21 @@
                         <div class="header-droplist__wrapper">
                             <ul class="header-droplist__list">
                                 <li>
-                                    <a href="en-about.html">About Uminers</a>
+                                    <a href="about.html">О Uminers</a>
                                 </li>
                                 <li>
-                                    <a href="#">Delivery and Payment</a>
+                                    <a href="#">Доставка и оплата</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <a href="en-contacts.html">Contacts</a>
-                </li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
         <div class="bottom-header__icons">
             <div class="bottom-header__contacts">
-                <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
+                <a href="tel:+88004444852">8 (800) 444-48-52</a>
                 <div class="bottom-header__socials">
                     <a href="#" class="bottom-header__social">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +132,7 @@
                     </a>
                 </div>
             </div>
-            <a href="en-favourites.html" class="bottom-header__icon bottom-header__icon_notification"
+            <a href="favourites.html" class="bottom-header__icon bottom-header__icon_notification"
                 data-notification="9">
                 <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path style="transform: scale(0.9);"
@@ -175,7 +141,7 @@
                 </svg>
 
             </a>
-            <a href="en-cart.html" class="bottom-header__icon bottom-header__icon_notification" data-notification="9">
+            <a href="cart.html" class="bottom-header__icon bottom-header__icon_notification" data-notification="8">
                 <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M2.75 2.75011H6.23333C6.59934 2.74116 6.95714 2.85933 7.24582 3.08451C7.5345 3.30968 7.73623 3.62794 7.81667 3.98511L11.965 22.0984C12.0454 22.4556 12.2472 22.7739 12.5358 22.999C12.8245 23.2242 13.1823 23.3424 13.5483 23.3334H26.88C27.2417 23.344 27.5961 23.2303 27.8842 23.0114C28.1722 22.7924 28.3766 22.4814 28.4633 22.1301L31.25 10.6668"
@@ -207,10 +173,11 @@
                         d="M24 13C24 19.0751 19.0751 24 13 24V26C20.1797 26 26 20.1797 26 13H24ZM13 24C6.92487 24 2 19.0751 2 13H0C0 20.1797 5.8203 26 13 26V24ZM2 13C2 6.92487 6.92487 2 13 2V0C5.8203 0 0 5.8203 0 13H2ZM13 2C19.0751 2 24 6.92487 24 13H26C26 5.8203 20.1797 0 13 0V2ZM13 24C12.606 24 12.1518 23.8217 11.6515 23.338C11.1464 22.8497 10.6459 22.0948 10.2038 21.0845C9.32106 19.0667 8.75 16.2091 8.75 13H6.75C6.75 16.4183 7.3542 19.5608 8.37153 21.8861C8.87955 23.0473 9.51029 24.0498 10.2614 24.7759C11.0173 25.5067 11.9443 26 13 26V24ZM8.75 13C8.75 9.79086 9.32106 6.93334 10.2038 4.91554C10.6459 3.90515 11.1464 3.15028 11.6515 2.66197C12.1518 2.17831 12.606 2 13 2V0C11.9443 0 11.0173 0.493262 10.2614 1.22407C9.51029 1.95023 8.87955 2.95271 8.37153 4.1139C7.3542 6.43924 6.75 9.58173 6.75 13H8.75ZM13 26C14.0557 26 14.9827 25.5067 15.7386 24.7759C16.4897 24.0498 17.1204 23.0473 17.6285 21.8861C18.6458 19.5608 19.25 16.4183 19.25 13H17.25C17.25 16.2091 16.6789 19.0667 15.7962 21.0845C15.3541 22.0948 14.8536 22.8497 14.3485 23.338C13.8482 23.8217 13.394 24 13 24V26ZM19.25 13C19.25 9.58173 18.6458 6.43924 17.6285 4.1139C17.1204 2.95271 16.4897 1.95023 15.7386 1.22407C14.9827 0.493262 14.0557 0 13 0V2C13.394 2 13.8482 2.17831 14.3485 2.66197C14.8536 3.15028 15.3541 3.90515 15.7962 4.91554C16.6789 6.93334 17.25 9.79086 17.25 13H19.25ZM1 14.4444H22.3333V12.4444H1V14.4444Z"
                         fill="white" />
                 </svg>
-                EN
+                RU
                 <!-- <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.74173 1.23727L6.24162 4.73739C5.82958 5.14943 5.16153 5.14943 4.74949 4.73739L1.25828 1.24617" stroke="#9D9D9D" stroke-width="1.40679" stroke-linecap="round"/>
                 </svg>   -->
+
                 <div class="header-droplist__wrapper">
                     <ul class="header-droplist__list">
                         <li>
@@ -221,6 +188,7 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
             <a href="javascript:void(0)" class="bottom-header__search js-search-open">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -241,7 +209,7 @@
                 <ul class="catalog-header__menu">
                     <li>
                         <a href="javascript:void(0)" class="active" data-tab-id="1">
-                            Manufacturers
+                            Производители
                             <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -252,7 +220,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)" data-tab-id="2">
-                            Coins
+                            Монеты
                             <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -263,7 +231,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)" data-tab-id="3">
-                            Algorithms
+                            Алгоритмы
                             <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -274,7 +242,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)" data-tab-id="4">
-                            Cooling system
+                            Системы охлаждения
                             <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -285,7 +253,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)" data-tab-id="5">
-                            Ready filters
+                            Готовые фильтры
                             <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -295,14 +263,14 @@
                         </a>
                     </li>
                     <li class="catalog-header__all-products">
-                        <a href="en-catalog.html">All products</a>
+                        <a href="catalog.html">Все товары</a>
                     </li>
                 </ul>
                 <div class="catalog-header__body" data-tab-id="1">
                     <div class="catalog-header__products">
                         <div class="catalog-header__category">
                             <img src="img/bitmain.png" alt="Bitmain">
-                            <a href="catalog.html">View all</a>
+                            <a href="catalog.html">Смотреть все</a>
                         </div>
                         <div class="catalog-header__cards">
                             <a href="product.html" class="catalog-header-card">
@@ -310,35 +278,35 @@
                                     <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
                                 </div>
                                 <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
-                                <div class="catalog-header-card__price">3 600 $</div>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
                             </a>
                             <a href="product.html" class="catalog-header-card">
                                 <div class="catalog-header-card__img">
                                     <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
                                 </div>
                                 <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
-                                <div class="catalog-header-card__price">3 600 $</div>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
                             </a>
                             <a href="product.html" class="catalog-header-card">
                                 <div class="catalog-header-card__img">
                                     <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
                                 </div>
                                 <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
-                                <div class="catalog-header-card__price">3 600 $</div>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
                             </a>
                             <a href="product.html" class="catalog-header-card">
                                 <div class="catalog-header-card__img">
                                     <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
                                 </div>
                                 <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
-                                <div class="catalog-header-card__price">3 600 $</div>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
                             </a>
                         </div>
                     </div>
                     <div class="catalog-header__products">
                         <div class="catalog-header__category">
                             <img src="img/microbt.png" alt="Microbt">
-                            <a href="catalog.html">View all</a>
+                            <a href="catalog.html">Смотреть все</a>
                         </div>
                         <div class="catalog-header__cards">
                             <a href="product.html" class="catalog-header-card">
@@ -346,21 +314,21 @@
                                     <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
                                 </div>
                                 <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
-                                <div class="catalog-header-card__price">3 600 $</div>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
                             </a>
                             <a href="product.html" class="catalog-header-card">
                                 <div class="catalog-header-card__img">
                                     <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
                                 </div>
                                 <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
-                                <div class="catalog-header-card__price">3 600 $</div>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
                             </a>
                             <a href="product.html" class="catalog-header-card">
                                 <div class="catalog-header-card__img">
                                     <img src="img/catalog-header-card.png" alt="Bitmain Antminer S21 195 Th/s">
                                 </div>
                                 <h3 class="catalog-header-card__title">Bitmain Antminer S21 195 Th/s</h3>
-                                <div class="catalog-header-card__price">3 600 $</div>
+                                <div class="catalog-header-card__price">360 000 ₽</div>
                             </a>
                         </div>
                     </div>
@@ -377,7 +345,7 @@
                 </svg>
             </a>
             <form class="search-header__wrapper">
-                <input type="search" class="search-header__input" placeholder="Search" name="q">
+                <input type="search" class="search-header__input" placeholder="Поиск" name="q">
                 <button type="submit" class="search-header__icon">
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -418,12 +386,12 @@
     <nav class="mobile-menu__nav">
         <ul class="mobile-menu__list">
             <li class="mobile-menu__list-item">
-                <a href="catalog.html" class="mobile-menu__list-link">Catalog</a>
+                <a href="catalog.html" class="mobile-menu__list-link">Каталог</a>
 
                 <ul class="mobile-menu__catalog">
                     <li>
                         <span class="mobile-menu__catalog-item">
-                            Manufacturers
+                            Производители
                             <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -450,7 +418,7 @@
                     </li>
                     <li>
                         <span class="mobile-menu__catalog-item">
-                            Coins
+                            Монеты
                             <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -489,7 +457,7 @@
                     </li>
                     <li>
                         <span class="mobile-menu__catalog-item">
-                            Algorithms
+                            Алгоритмы
                             <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -519,7 +487,7 @@
                     </li>
                     <li>
                         <span class="mobile-menu__catalog-item">
-                            Cooling system
+                            Система охлаждения
                             <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -541,10 +509,9 @@
                 </ul>
             </li>
             <ul class="mobile-menu__catalog mobile-menu__catalog_main">
-
                 <li class="mobile-menu__list-item">
                     <span class="mobile-menu__catalog-item mobile-menu__list-link">
-                        Mining
+                        Майнинг
                         <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
@@ -554,31 +521,34 @@
                     <div class="mobile-menu-droplist">
                         <ul class="mobile-menu-droplist__inner">
                             <li>
-                                <a href="en-catalog.html" class="mobile-menu__catalog-item">
-                                    Equipment
-                                    </span>
-                            </li>
-                            <li>
-                                <a href="en-calculator.html" class="mobile-menu__catalog-item">
-                                    Turnkey Mining
-                                    </span>
-                            </li>
-                            <li>
-                                <a href="en-hosting.html" class="mobile-menu__catalog-item">
-                                    Hosting
+                                <a href="catalog.html" class="mobile-menu__catalog-item">
+                                    Оборудование
                                 </a>
                             </li>
                             <li>
-                                <a href="en-leasing.html" class="mobile-menu__catalog-item">
-                                    Investements
+                                <a href="calculator.html" class="mobile-menu__catalog-item">
+                                    Майнинг под ключ
                                 </a>
+                            </li>
+                            <li>
+                                <a href="hosting.html" class="mobile-menu__catalog-item">
+                                    Хостинг
+                                </a>
+                            </li>
+                            <li>
+                                <a href="leasing.html" class="mobile-menu__catalog-item">
+                                    Лизинг
+                                </a>
+                            </li>
+                            <li>
+                                <a href="investments.html">Инвестиции</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li class="mobile-menu__list-item">
                     <span class="mobile-menu__catalog-item mobile-menu__list-link">
-                        Blog
+                        Блог
                         <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
@@ -589,32 +559,26 @@
 
                         <ul class="mobile-menu-droplist__inner">
                             <li>
-                                <a href="#" class="mobile-menu__catalog-item">
-                                    Reviews
-                                </a>
+                                <span class="mobile-menu__catalog-item">
+                                    Гайды
+                                </span>
                             </li>
                             <li>
-                                <a href="#" class="mobile-menu__catalog-item">
-                                    Guides
-                                </a>
+                                <span class="mobile-menu__catalog-item">
+                                    Стастьи
+                                </span>
                             </li>
                             <li>
-                                <a href="#" class="mobile-menu__catalog-item">
-                                    Articles
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="mobile-menu__catalog-item">
-                                    News
-                                </a>
+                                <span class="mobile-menu__catalog-item">
+                                    Новости
+                                </span>
                             </li>
                         </ul>
                     </div>
                 </li>
-
                 <li class="mobile-menu__list-item">
                     <span class="mobile-menu__catalog-item mobile-menu__list-link">
-                        Company
+                        О нас
                         <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.74216 5.73727L6.24204 9.23739C5.83 9.64943 5.16196 9.64943 4.74992 9.23739L1.25871 5.74617"
@@ -622,30 +586,77 @@
                         </svg>
                     </span>
                     <div class="mobile-menu-droplist">
+
                         <ul class="mobile-menu-droplist__inner">
                             <li>
-                                <a href="en-about.html" class="mobile-menu__catalog-item">
-                                    About Uminers
+                                <a href="about.html" class="mobile-menu__catalog-item">
+                                    О Uminers
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="mobile-menu__catalog-item">
-                                    Delievery and Payment
+                                    Доставка
                                 </a>
                             </li>
                         </ul>
+
                     </div>
+                </li>
+                <li class="mobile-menu__list-item">
+                    <a href="contacts.html" class="mobile-menu__list-link">Контакты</a>
                 </li>
             </ul>
-
-            <li class="mobile-menu__list-item">
-                <a href="en-contacts.html" class="mobile-menu__list-link">Contacts</a>
-            </li>
         </ul>
     </nav>
 
     <div class="mobile-menu__icons">
-        <a href="en-favourites.html" class="mobile-menu__icon-wrapper">
+        <!-- <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon ">
+                <svg width="26" height="35" viewBox="0 0 26 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="22.2222" height="32" rx="2.05729" fill="white"/>
+                    <rect x="4.66602" y="4.66675" width="16.8889" height="8.88889" rx="1.044" fill="#000"/>
+                    <rect x="4.66602" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="4.66602" y="22.4443" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <path d="M4.66602 28.6667C4.66602 28.1758 5.06398 27.7778 5.5549 27.7778H8.22157C8.71249 27.7778 9.11046 28.1758 9.11046 28.6667V30.4445C9.11046 30.9354 8.71249 31.3334 8.22157 31.3334H5.5549C5.06399 31.3334 4.66602 30.9354 4.66602 30.4445V28.6667Z" fill="#222222"/>
+                    <rect x="11" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="10.8887" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="10.8887" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="17.1111" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="22.4444" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                    <rect x="17.1113" y="27.7778" width="4.44444" height="3.55556" rx="0.888889" fill="#000"/>
+                </svg>
+            </div>
+            <span>Рассчитать доходность</span>                 
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon ">
+                <svg width="42" height="35" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 33.5H34L34.0895 33.5C34.9551 33.5001 35.7488 33.5002 36.3944 33.4134C37.1054 33.3178 37.8568 33.0929 38.4749 32.4749C39.0929 31.8568 39.3178 31.1054 39.4134 30.3944C39.5002 29.7488 39.5001 28.9551 39.5 28.0895C39.5 28.0597 39.5 28.0299 39.5 28V13C39.5 12.9701 39.5 12.9403 39.5 12.9105C39.5001 12.0449 39.5002 11.2512 39.4134 10.6056C39.3178 9.89462 39.0929 9.14317 38.4749 8.52513C37.8568 7.90708 37.1054 7.68219 36.3944 7.5866C35.7488 7.4998 34.9551 7.49989 34.0895 7.49999C34.0597 7.5 34.0299 7.5 34 7.5H24C23.9855 7.5 23.971 7.5 23.9565 7.5C23.5279 7.49997 23.1342 7.49995 22.8036 7.52251C22.4483 7.54675 22.0576 7.60198 21.6606 7.76642C20.803 8.12165 20.1217 8.80301 19.7664 9.66061C19.602 10.0576 19.5468 10.4483 19.5225 10.8036C19.4999 11.1342 19.5 11.5279 19.5 11.9565C19.5 11.971 19.5 11.9855 19.5 12V27V28C19.5 28.0299 19.5 28.0597 19.5 28.0895C19.4999 28.9551 19.4998 29.7488 19.5866 30.3944C19.6822 31.1054 19.9071 31.8568 20.5251 32.4749C21.1432 33.0929 21.8946 33.3178 22.6056 33.4134C23.2512 33.5002 24.0449 33.5001 24.9105 33.5L25 33.5Z" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M8 27.5H17L17.0895 27.5C17.9551 27.5001 18.7488 27.5002 19.3944 27.4134C20.1054 27.3178 20.8568 27.0929 21.4749 26.4749C22.0929 25.8568 22.3178 25.1054 22.4134 24.3944C22.5002 23.7488 22.5001 22.9551 22.5 22.0895C22.5 22.0597 22.5 22.0299 22.5 22V7C22.5 6.97009 22.5 6.94026 22.5 6.91051C22.5001 6.04488 22.5002 5.25121 22.4134 4.60558C22.3178 3.89462 22.0929 3.14317 21.4749 2.52513C20.8568 1.90708 20.1054 1.68219 19.3944 1.5866C18.7488 1.4998 17.9551 1.49989 17.0895 1.49999C17.0597 1.5 17.0299 1.5 17 1.5H8C7.97008 1.5 7.94025 1.5 7.9105 1.49999C7.04487 1.49989 6.25121 1.4998 5.60558 1.5866C4.89462 1.68219 4.14317 1.90708 3.52513 2.52513C2.90708 3.14317 2.68219 3.89462 2.5866 4.60559C2.4998 5.25121 2.49989 6.04487 2.49999 6.9105C2.5 6.94025 2.5 6.97009 2.5 7V22C2.5 22.0299 2.5 22.0597 2.49999 22.0895C2.49989 22.9551 2.4998 23.7488 2.5866 24.3944C2.68219 25.1054 2.90708 25.8568 3.52513 26.4749C4.14317 27.0929 4.89462 27.3178 5.60558 27.4134C6.25121 27.5002 7.04488 27.5001 7.91051 27.5L8 27.5Z" fill="#000000" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M34.0121 22.868L26.2793 19.9484" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28.8993 18.7978L26.2793 19.9472L27.4288 22.559" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.48595 12.8823L16.2188 15.8019" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5988 16.9525L16.2188 15.8031L15.0692 13.1912" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>         
+            </div>
+            <span>Сравнить модели</span>                                                
+        </a>
+        <a href="#" class="mobile-menu__icon-wrapper">
+            <div class="mobile-menu__icon bottom-header__icon_notification" data-notification="12">
+                <svg width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2029_158)">
+                    <path d="M4.75254 17.3973L17.9547 30.9287C18.0088 30.9841 18.0358 31.0118 18.0597 31.034C18.5893 31.5279 19.4107 31.5279 19.9403 31.034C19.9641 31.0118 19.9912 30.9841 20.0452 30.9287L20.0453 30.9287L33.2475 17.3973C36.0258 14.5498 36.4586 10.1565 34.2893 6.82154C30.7979 1.45383 22.8509 1.72448 19.7328 7.31728L19.2962 8.10022C19.1669 8.33224 18.8331 8.33224 18.7038 8.10022L18.2672 7.31728C15.1491 1.72448 7.2021 1.45383 3.71068 6.82154C1.54143 10.1565 1.97422 14.5498 4.75254 17.3973Z" stroke="white" stroke-width="3"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2029_158">
+                    <rect width="38" height="35" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>        
+            </div>
+            <span>Избранное</span>                                                                    
+        </a> -->
+        <a href="favourites.html" class="mobile-menu__icon-wrapper">
 
             <div class="bottom-header__icon bottom-header__icon_notification"
                 data-notification="9">
@@ -656,10 +667,10 @@
                 </svg>
 
             </div>
-            <span>Favourites</span>
+            <span>Избранное</span>
         </a>
 
-        <a href="en-cart.html" class="mobile-menu__icon-wrapper">
+        <a href="cart.html" class="mobile-menu__icon-wrapper">
             <div class="mobile-menu__icon bottom-header__icon_notification" data-notification="9">
                 <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -673,7 +684,7 @@
                         stroke-linejoin="round" />
                 </svg>
             </div>
-            <span>Cart</span>
+            <span>Корзина</span>
         </a>
         <a href="#" class="mobile-menu__icon-wrapper">
             <div class="mobile-menu__icon">
@@ -689,14 +700,14 @@
                         stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
-            <span>Account</span>
+            <span>Личный кабинет</span>
         </a>
     </div>
 
     <div class="mobile-menu__contacts">
         <div>
             <a href="mailto:sales@uminers.com">sales@uminers.com</a><br>
-            <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
+            <a href="tel:+88004444852">+8 (800) 444-48-52</a>
         </div>
         <div class="mobile-menu__socials">
             <a href="#" class="mobile-menu__social">
@@ -716,217 +727,305 @@
         </div>
     </div>
 </div>
+    <section class="popup calculator-popup calculator product" data-popup-id="8" style="display: none;">
+    <form action="" class="popup-form form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="calculator-popup__title">
+            Калькулятор доходности
+        </h2>
+        <div class="calculator-popup__content">
+            <div class="calculator-popup__content_left">
+                <div class="calculator-popup__main-calculations main-calculations">
+                    <div class="main-calculations__image">
+                        <img src="../../img/asic-catalog.png" alt="product 3d model">
+                    </div>
+                    <div class="main-calculations__calculations">
+                        <label for="model-select" class="label-main">
+                            Модель
+                            <div class="select-wrapper">
+                                <select name="" id="" class="input-main">
+                                    <option value="" selected>Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                    <option value="">Bitmain Antminer S19K Pro 115 TH/s</option>
+                                </select>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M18 10L12.7071 15.2929C12.3166 15.6834 11.6834 15.6834 11.2929 15.2929L6 10"
+                                        stroke="#00C1AD" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+                        </label>
+                        <div class="main-calculations__characteristics">
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Стоимость</h3>
+                                <p class="main-calculations__characteristic-value">623,645 <span
+                                        class="highlighted">₽</span></p>
+                            </div>
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Потребление</h3>
+                                <p class="main-calculations__characteristic-value">3 700 <span
+                                        class="highlighted">Вт</span></p>
+                            </div>
+                        </div>
+                        <div class="main-calculations__characteristics">
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title">Количество</h3>
+                                <div class="form__ammount">
+                                    <div class="form__symbol_left">
+                                        <span class="highlighted">-</span>
+                                    </div>
+                                    <input type="number" inputmode="numeric" min="1" placeholder="1" value=1
+                                        name="ammount">
+                                    <div class=" form__symbol_right">
+                                        <span class="highlighted">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-calculations__characteristic">
+                                <h3 class="main-calculations__characteristic-title_big">Итого</h3>
+                                <p class="main-calculations__characteristic-value_big">2 494 580 <span
+                                        class="highlighted">₽</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="calculator-popup__electricity">
+                    <h3 class="calculator-popup__electricity-title">Цена электроэнергии</h3>
+                    <div class="calculator-popup__electricity-body">
+                        <p class="calculator-popup__electricity-variant active">
+                            Базовое<br>размещение
+                        </p>
+                        <label for="electricity-variant">
+                            <div class="switch">
+                                <input type="checkbox" name="available" id="electricity-variant">
+                                <span class="slider round"></span>
+                            </div>
+                        </label>
+                        <p class="calculator-popup__electricity-variant">
+                            Задать свою<br>
+                            стоимость
+                        </p>
+                        <input type="text" pattern="[0, 9]" placeholder="4,9" disabled class="input-main">
+                    </div>
+                </div>
+                <div class="calculator-popup__tabs">
+                    <h3 class="calculator-popup__electricity-title">
+                        Метод расчёта
+                    </h3>
+                    <div class="tabs">
+                        <div class="tabs__header">
+                            <div class="tabs__item tabs__item_active" data-tab-id="1">Среднее за период</div>
+                            <div class="tabs__item" data-tab-id="2">Прогнозируемые данные</div>
+                            <div class="tabs__item" data-tab-id="3">На сегодня</div>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__body" data-tab-id="1">
+                                <div class="radio-wrapper">
+                                    <div class="form_radio">
+                                        <input id="radio-1" type="radio" name="radio" value="1" checked>
+                                        <label for="radio-1">За последний месяц</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-2" type="radio" name="radio" value="3">
+                                        <label for="radio-2">За последних 3 месяца</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-3" type="radio" name="radio" value="6">
+                                        <label for="radio-3">За последних 6 месяцев</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-4" type="radio" name="radio" value="12">
+                                        <label for="radio-4">За последних 12 месяцев</label>
+                                    </div>
+
+                                    <div class="form_radio">
+                                        <input id="radio-5" type="radio" name="radio" value="24">
+                                        <label for="radio-5">За последних 24 месяца</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__body tabs__text" data-tab-id="2" style="display: none;">
+                                <div class="ranges-wrapper">
+                                    <label for="btc-course" class="lable-main">
+                                        Курс BTC ($)
+                                        <div class="min-max">
+                                            <span>0</span>
+                                        </div>
+                                        <div class="double-range-input__progress">
+                                            <input class="double-range-input__range double-range-input__range_min"
+                                                id="btc-course-range" type="range" step="2" min="0" max="200000"
+                                                value="1" name="quantity">
+                                            <div class="range-value" id="btc-course-value">
+                                                <input type="text" value="1" class="input-main">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label for="ruble-course" class="lable-main">
+                                        Изменение сети за год
+                                        <div class="min-max">
+                                            <span>0</span>
+                                            <span>100</span>
+                                        </div>
+                                        <div class="double-range-input__progress">
+                                            <input class="double-range-input__range double-range-input__range_min"
+                                                id="ruble-course-range" type="range" step="5" min="0" max="100"
+                                                value="1" name="quantity">
+                                            <div class="range-value" id="ruble-course-value">
+                                                <input type="text" value="0" class="input-main">
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tabs__body tabs__text" data-tab-id="3" style="display: none;">
+                                <div class="calculator-popup__currency">
+                                    <div class="calculator-popup__currency-item">
+                                        <div class="calculator-popup__currency-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                                viewBox="0 0 41 41" fill="none">
+                                                <path
+                                                    d="M11.9596 8.54167V32.4583M8.54297 8.54167H24.7721C28.0743 8.54167 30.7513 11.2186 30.7513 14.5208C30.7513 17.823 28.0743 20.5 24.7721 20.5H12.643M8.54297 32.4583H26.4805C29.7827 32.4583 32.4596 29.7814 32.4596 26.4792C32.4596 23.177 29.7827 20.5 26.4805 20.5H12.5291M17.0846 8.54167V5.125M17.0846 35.875V32.4583M23.918 8.54167V5.125M23.918 35.875V32.4583"
+                                                    stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="calculator-popup__currency-text">
+                                            <h3 class="calculator-popup__currency-heading">63 095,30 USD</h3>
+                                            <a href="" class="calculator-popup__currency-link">www.binance.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="calculator-popup__currency-item">
+                                        <div class="calculator-popup__currency-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                                viewBox="0 0 41 41" fill="none">
+                                                <path
+                                                    d="M29.0404 13.6665C29.0404 9.89256 25.981 6.83317 22.207 6.83317H18.7904C15.0164 6.83317 11.957 9.89256 11.957 13.6665C11.957 17.4404 15.0164 20.4998 18.7904 20.4998H22.207C25.981 20.4998 29.0404 23.5592 29.0404 27.3332C29.0404 31.1071 25.981 34.1665 22.207 34.1665H18.7904C15.0164 34.1665 11.957 31.1071 11.957 27.3332M20.4987 3.4165L20.4987 37.5832"
+                                                    stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="calculator-popup__currency-text">
+                                            <h3 class="calculator-popup__currency-heading">87,74 RUB</h3>
+                                            <a href="" class="calculator-popup__currency-link">www.cbr.ru</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-popup__buttons">
+                    <button type="submit" class="btn__main">Рассчитать доходность</button>
+                    <button type="reset"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M9.99844 18.9584C5.6651 18.9584 2.14844 15.4334 2.14844 11.1084C2.14844 9.55003 2.60677 8.0417 3.47344 6.7417C3.6651 6.45837 4.05677 6.37503 4.3401 6.5667C4.62344 6.75837 4.70677 7.15003 4.5151 7.43337C3.7901 8.5167 3.40677 9.7917 3.40677 11.1C3.40677 14.7417 6.3651 17.7 10.0068 17.7C13.6484 17.7 16.6068 14.7417 16.6068 11.1C16.6068 7.45837 13.6401 4.50003 9.99844 4.50003C9.23177 4.50003 8.48177 4.60837 7.77344 4.82503C7.4401 4.92503 7.0901 4.7417 6.9901 4.40837C6.8901 4.07503 7.07344 3.72503 7.40677 3.62503C8.2401 3.37503 9.10677 3.2417 9.99844 3.2417C14.3318 3.2417 17.8484 6.7667 17.8484 11.0917C17.8484 15.4167 14.3318 18.9584 9.99844 18.9584Z"
+                                fill="#00C1AD" />
+                            <path
+                                d="M6.55733 5.05811C6.41566 5.05811 6.26566 5.00811 6.149 4.90811C5.88233 4.67477 5.85733 4.28311 6.08233 4.02477L8.49066 1.25811C8.71566 0.999775 9.11566 0.966442 9.374 1.19978C9.63233 1.42478 9.65733 1.82478 9.43233 2.08311L7.024 4.84144C6.899 4.98311 6.724 5.05811 6.55733 5.05811Z"
+                                fill="#00C1AD" />
+                            <path
+                                d="M9.36502 7.10811C9.24002 7.10811 9.10669 7.06645 8.99835 6.99145L6.18169 4.93311C5.90669 4.73311 5.84835 4.34145 6.04835 4.06645C6.24835 3.78311 6.64002 3.72478 6.92335 3.92478L9.73169 5.97478C10.0067 6.17478 10.0734 6.56645 9.86502 6.84978C9.74835 7.02478 9.55669 7.10811 9.36502 7.10811Z"
+                                fill="#00C1AD" />
+                        </svg></button>
+                </div>
+            </div>
+            <div class="calculator-popup__content_right content_right">
+                <div class="content_right__header">
+                    <h3 class="content_right__heading">Результаты расчётов</h3>
+                    <div class="content_right__currency-switch">
+                        <div class="toggle-container">
+                            <input type="radio" id="option1" name="toggle" value="1" checked>
+                            <label for="option1" class="toggle solid" style="left:1px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15"
+                                    fill="none">
+                                    <path
+                                        d="M12.3763 4.8125C12.3971 5.97917 12.0013 7.10417 11.2096 8.04167C10.3346 9.04167 9.02214 9.4375 7.52214 9.4375H4.0013V11.0417H8.08463C8.56788 11.0417 8.95964 11.4334 8.95964 11.9167C8.95964 12.3999 8.56788 12.7917 8.08464 12.7917H4.0013V14C4.0013 14.5523 3.55359 15 3.0013 15H2.8138C2.26152 15 1.8138 14.5523 1.8138 14V12.7917H1.23047C0.74722 12.7917 0.355469 12.3999 0.355469 11.9167C0.355469 11.4334 0.747219 11.0417 1.23047 11.0417H1.8138V9.4375H1.30339C0.779866 9.4375 0.355469 9.0131 0.355469 8.48958C0.355469 7.96606 0.779866 7.54167 1.30339 7.54167H1.8138V0.999999C1.8138 0.447715 2.26152 0 2.8138 0H7.52214C8.79297 0 10.0846 0.500001 10.9805 1.375C11.8138 2.1875 12.3555 3.52083 12.3763 4.8125ZM9.60547 6.60417C10.0013 6.08333 10.1471 5.41667 10.1471 4.8125C10.1471 4.125 9.91797 3.41667 9.4388 2.91667C8.98047 2.39583 8.20964 2.0625 7.52214 2.0625H4.0013V7.54167H7.4388C8.3763 7.54167 9.08464 7.25 9.60547 6.60417Z"
+                                        fill="#272727" />
+                                </svg></label>
+
+                            <input type="radio" id="option2" name="toggle" value="2">
+                            <label for="option2" class="toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M14.1654 6.66663C14.1654 4.82568 12.673 3.33329 10.832 3.33329H9.16536C7.32442 3.33329 5.83203 4.82568 5.83203 6.66663C5.83203 8.50758 7.32442 9.99996 9.16536 9.99996H10.832C12.673 9.99996 14.1654 11.4923 14.1654 13.3333C14.1654 15.1742 12.673 16.6666 10.832 16.6666H9.16536C7.32442 16.6666 5.83203 15.1742 5.83203 13.3333M9.9987 1.66663L9.9987 18.3333"
+                                        stroke="white" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </label>
+
+                            <input type="radio" id="option3" name="toggle" value="3">
+                            <label style="right:1px;" for="option3" class="toggle"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M5.83464 4.16667V15.8333M4.16797 4.16667H12.0846C13.6955 4.16667 15.0013 5.4725 15.0013 7.08333C15.0013 8.69416 13.6955 10 12.0846 10H6.16797M4.16797 15.8333H12.918C14.5288 15.8333 15.8346 14.5275 15.8346 12.9167C15.8346 11.3058 14.5288 10 12.918 10H6.11241M8.33464 4.16667V2.5M8.33464 17.5V15.8333M11.668 4.16667V2.5M11.668 17.5V15.8333"
+                                        stroke="#272727" stroke-width="2" stroke-linecap="round" />
+                                </svg></label>
+
+                            <div class="indicator"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right__body">
+                    <div class="content_right__characteristic_big">
+                        <h3 class="title">Чистая прибыль</h3>
+                        <span class="value highlighted" style="display: flex;">— $<span class="normal"> /
+                                мес.</span></span>
+                    </div>
+                    <div class="content_right__characteristic_big">
+                        <h3 class="title">Окупаемость</h3>
+                        <span class="value highlighted">— <span class="normal">мес.</span></span>
+                    </div>
+                    <div class="content_right__characteristic">
+                        <h3 class="title">Доходность в деньгах</h3>
+                        <span class="value highlighted">— $</span>
+                    </div>
+                    <div class="content_right__characteristic">
+                        <h3 class="title">Доходность % в месяц</h3>
+                        <span class="value highlighted">— %</span>
+                    </div>
+                    <div class="content_right__characteristic">
+                        <h3 class="title">Доходность % годовых</h3>
+                        <span class="value highlighted">— %</span>
+                    </div>
+                    <div class="content_right__characteristic">
+                        <h3 class="title">Потребление</h3>
+                        <span class="value highlighted">— Вт/ч</span>
+                    </div>
+                    <div class="content_right__characteristic_big">
+                        <h3 class="title">Хэшрейт</h3>
+                        <span class="value highlighted">— TH/s<div class="mini"> (1 TH/s в сутки = 0,00000081 BTC)</div>
+                            </span>
+                    </div>
+                    <p class="content_right__text">
+                        Обратите внимание, что расчеты основаны на усреднённых данных. Фактические
+                        результаты могут отличаться.
+                    </p>
+                    <button type="button" class="close-overlay-calculator">Рассчитать еще раз</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
 
     <main>
 
-        <!-- Hero -->
-        <section class="container section hero_delievery">
-    <h1 class="hero_delievery__title">Mining equipment with<br> <span
-            class="hero_delievery__title_highlighted">delivery across the World</span></h1>
-    <div class="hero_delievery__card">
-        <svg width="40" height="42" viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M17.9351 2.69132C19.2304 2.02237 20.7696 2.02237 22.0649 2.69132L29.25 6.402L36.064 10.0526C37.5139 10.8294 38.4244 12.3353 38.4388 13.98L38.5 20.9999L38.4388 28.0199C38.4244 29.6646 37.5139 31.1705 36.064 31.9472L29.25 35.5979L22.0649 39.3086C20.7696 39.9775 19.2304 39.9775 17.9351 39.3086L10.75 35.5979L3.93596 31.9472C2.48613 31.1705 1.57559 29.6646 1.56124 28.0199L1.5 20.9999L1.56124 13.98C1.57559 12.3353 2.48613 10.8294 3.93596 10.0526L10.75 6.402L17.9351 2.69132Z"
-                stroke="#00C1AD" stroke-width="2.5" />
-            <path d="M20.2109 38.7499V21.2499M20.2109 21.2499L36.4609 12.4999M20.2109 21.2499L2.71094 12.4999"
-                stroke="#00C1AD" stroke-width="2.5" />
-            <path d="M11.25 6L30 16V23.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-        </svg>
-        <p class="hero_delievery__text">
-            We will deliver equipment from stock or by order from China in a period of 7 days
-        </p>
-
-    </div>
-</section>
-
-        <section class="container">
-    <h2 class="section-title">About delivery</h2>
-    <div class="section__body delievery-cards">
-        <div class="flex-column-30">
-            <div class="cards cards_column">
-                <div class="card_outlined card card_row card_bg-blur cards__item_half">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 10.4167V13.75" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M16.668 10.4167V13.75" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M14.9987 36.6666H24.9987C33.332 36.6666 36.6654 33.3333 36.6654 25V15C36.6654 6.66665 33.332 3.33331 24.9987 3.33331H14.9987C6.66536 3.33331 3.33203 6.66665 3.33203 15V25C3.33203 33.3333 6.66536 36.6666 14.9987 36.6666Z"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10 26.6667V30" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M16.668 26.6667V30" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M23.332 12.0833H29.9987" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M23.332 28.3333H29.9987" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3.33203 20H36.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-
-                    <p class="card_outlined__text">
-                        All equipment supplied by Uminers is original and produced by official manufactures such as BITMAIN, MICROBT, and others.
-                    </p>
-                </div>
-                <div class="card_outlined card card_row card_bg-blur cards__item_half">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M5 16.6666C5 10.3813 5 7.23856 6.95262 5.28593C8.90524 3.33331 12.0479 3.33331 18.3333 3.33331H21.6667C27.9521 3.33331 31.0948 3.33331 33.0474 5.28593C35 7.23856 35 10.3813 35 16.6666V23.3333C35 29.6187 35 32.7614 33.0474 34.714C31.0948 36.6666 27.9521 36.6666 21.6667 36.6666H18.3333C12.0479 36.6666 8.90524 36.6666 6.95262 34.714C5 32.7614 5 29.6187 5 23.3333V16.6666Z"
-                            stroke="#00C1AD" stroke-width="2.5" />
-                        <path d="M13.332 20H26.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                        <path d="M13.332 13.3333H26.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                        <path d="M13.332 26.6667H21.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                    </svg>
-
-                    <p class="card_outlined__text">
-                        We only conduct legal deliveries and provide supporting documents: Certificate of Conformity and Delivery Contract.
-                    </p>
-                </div>
-                <div class="card_outlined card card_row card_bg-blur cards__item_half">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16.6654 27.5L21.6654 29.1667C21.6654 29.1667 34.1654 26.6667 35.832 26.6667C37.4987 26.6667 37.4987 28.3333 35.832 30C34.1654 31.6667 28.332 36.6667 23.332 36.6667C18.332 36.6667 14.9987 34.1667 11.6654 34.1667C8.33203 34.1667 3.33203 34.1667 3.33203 34.1667"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M3.33203 24.1667C4.9987 22.5 8.33203 20 11.6654 20C14.9987 20 22.9154 23.3333 24.1654 25C25.4154 26.6667 21.6654 29.1667 21.6654 29.1667"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M13.332 15V8.33332C13.332 7.41285 14.0782 6.66666 14.9987 6.66666H34.9987C35.9192 6.66666 36.6654 7.41285 36.6654 8.33332V21.6667"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M29.1654 6.66666H20.832V14.1667H29.1654V6.66666Z" stroke="#00C1AD" stroke-width="2.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-
-                    <p class="card_outlined__text">
-                        When ordering equipment from China, we deliver it to our office, and then arrange delivery by a transport company to your address.
-                    </p>
-                </div>
-                <div class="card_outlined card card_row card_bg-blur cards__item_half">
-
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M33.3346 16C33.3346 9.33332 30.668 6.66666 24.0013 6.66666H16.0013C9.33464 6.66666 6.66797 9.33332 6.66797 16V24C6.66797 30.6667 9.33464 33.3333 16.0013 33.3333"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M27.2513 13.3333C26.3346 12.1667 24.8013 11.6667 22.5013 11.6667H17.5013C13.3346 11.6667 11.668 13.3333 11.668 17.5V22.5C11.668 24.8 12.168 26.3333 13.318 27.25"
-                            stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.3516 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M20 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M26.668 6.66668V3.33334" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M33.332 13.3333H36.6654" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M13.3516 33.3333V36.6667" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3.33203 13.3333H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3.33203 20H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3.33203 26.6667H6.66536" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M27.8492 30.9833C29.3128 30.9833 30.4992 29.7969 30.4992 28.3333C30.4992 26.8698 29.3128 25.6833 27.8492 25.6833C26.3857 25.6833 25.1992 26.8698 25.1992 28.3333C25.1992 29.7969 26.3857 30.9833 27.8492 30.9833Z"
-                            stroke="#00C1AD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M19.0156 29.1V27.55C19.0156 26.6333 19.7656 25.8833 20.6823 25.8833C22.2823 25.8833 22.9323 24.75 22.1323 23.3667C21.6656 22.5667 21.949 21.5333 22.749 21.0833L24.2656 20.2C24.9656 19.7833 25.8656 20.0333 26.2823 20.7333L26.3823 20.9C27.1823 22.2833 28.4823 22.2833 29.2823 20.9L29.3823 20.7333C29.799 20.0333 30.699 19.8 31.399 20.2L32.9156 21.0833C33.7156 21.55 33.999 22.5667 33.5323 23.3667C32.7323 24.75 33.3823 25.8833 34.9823 25.8833C35.899 25.8833 36.649 26.6333 36.649 27.55V29.1C36.649 30.0166 35.899 30.7666 34.9823 30.7666C33.3823 30.7666 32.7323 31.9 33.5323 33.2833C33.999 34.0833 33.7156 35.1167 32.9156 35.5667L31.399 36.45C30.699 36.8667 29.799 36.6167 29.3823 35.9167L29.2823 35.75C28.4823 34.3667 27.1823 34.3667 26.3823 35.75L26.2823 35.9167C25.8656 36.6167 24.9656 36.85 24.2656 36.45L22.749 35.5667C21.949 35.1 21.6656 34.0833 22.1323 33.2833C22.9323 31.9 22.2823 30.7666 20.6823 30.7666C19.7656 30.7833 19.0156 30.0333 19.0156 29.1Z"
-                            stroke="#00C1AD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-
-                    <p class="card_outlined__text">
-                        When placing equipment in our hosting, we independently deliver it to the data center, connect and set it up.
-                    </p>
-                </div>
-            </div>
-            <a class="btn btn_33 btn-round__main">Перейти в каталог</a>
-        </div>
-        <img src="../../img/delievery-cards-bg.png" alt="colorfull gradient backgroud" class="bg">
-    </div>
-</section>
-        <section class="section container payment">
-    <h2 class="section-title">Способы оплаты</h2>
-    <div class="section__body cards">
-        <div class="card cards__item_bigger card_row payment__item">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M14.9987 31.6667C10.3172 31.6667 7.97639 31.6667 6.2949 30.5431C5.56696 30.0567 4.94196 29.4317 4.45557 28.7038C3.33203 27.0223 3.33203 24.6815 3.33203 20C3.33203 15.3185 3.33203 12.9777 4.45557 11.2962C4.94196 10.5683 5.56696 9.94326 6.2949 9.45687C7.97639 8.33333 10.3172 8.33333 14.9987 8.33333L24.9987 8.33333C29.6802 8.33333 32.021 8.33333 33.7025 9.45687C34.4304 9.94326 35.0554 10.5683 35.5418 11.2962C36.6654 12.9777 36.6654 15.3185 36.6654 20C36.6654 24.6815 36.6654 27.0223 35.5418 28.7038C35.0554 29.4317 34.4304 30.0567 33.7025 30.5431C32.021 31.6667 29.6802 31.6667 24.9987 31.6667H14.9987Z"
-                    stroke="#00C1AD" stroke-width="2.5" />
-                <path d="M15 15C12.2386 15 10 17.2386 10 20C10 22.7614 12.2386 25 15 25" stroke="#00C1AD"
-                    stroke-width="2.5" />
-                <path d="M25 15C27.7614 15 30 17.2386 30 20C30 22.7614 27.7614 25 25 25" stroke="#00C1AD"
-                    stroke-width="2.5" />
-                <path d="M15 8.33333V30.8333" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M25 8.33333V30.8333" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-            </svg>
-
-            <div class="payment__text">
-                <h3 class="payment__title">
-                    Cash
-                </h3>
-                <p class="payment__subtitle">
-                    To an employee at&nbsp;the&nbsp;office
-                </p>
-            </div>
-        </div>
-        <div class="card cards__item_bigger card_row payment__item">
-            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M3.33203 20.5C3.33203 14.2146 3.33203 11.0719 5.28465 9.11929C7.23727 7.16667 10.38 7.16667 16.6654 7.16667H23.332C29.6174 7.16667 32.7601 7.16667 34.7127 9.11929C36.6654 11.0719 36.6654 14.2146 36.6654 20.5C36.6654 26.7854 36.6654 29.9281 34.7127 31.8807C32.7601 33.8333 29.6174 33.8333 23.332 33.8333H16.6654C10.38 33.8333 7.23727 33.8333 5.28465 31.8807C3.33203 29.9281 3.33203 26.7854 3.33203 20.5Z"
-                    stroke="#00C1AD" stroke-width="2.5" />
-                <path d="M16.6667 27.1667H10" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M23.332 27.1667H20.832" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M3.33203 17.1667L36.6654 17.1667" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-            </svg>
-
-            <div class="payment__text">
-                <h3 class="payment__title">
-                    By bank card
-                </h3>
-            </div>
-        </div>
-        <div class="card cards__item_bigger card_row payment__item">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M29.375 35C30.4443 34.0495 32.0557 34.0495 33.125 35C33.8515 35.6458 35 35.13 35 34.158V5.8417C35 4.86966 33.8515 4.35391 33.125 4.99971C32.0557 5.9502 30.4443 5.9502 29.375 4.99971C28.3057 4.04921 26.6943 4.04921 25.625 4.99971C24.5557 5.9502 22.9443 5.9502 21.875 4.99971C20.8057 4.04921 19.1943 4.04921 18.125 4.99971C17.0557 5.9502 15.4443 5.9502 14.375 4.99971C13.3057 4.04921 11.6943 4.04921 10.625 4.99971C9.55569 5.9502 7.94431 5.9502 6.875 4.99971C6.14848 4.35391 5 4.86966 5 5.8417V34.158C5 35.13 6.14848 35.6458 6.875 35C7.94431 34.0495 9.55569 34.0495 10.625 35C11.6943 35.9505 13.3057 35.9505 14.375 35C15.4443 34.0495 17.0557 34.0495 18.125 35C19.1943 35.9505 20.8057 35.9505 21.875 35C22.9443 34.0495 24.5557 34.0495 25.625 35C26.6943 35.9505 28.3057 35.9505 29.375 35Z"
-                    stroke="#00C1AD" stroke-width="2.5" />
-                <path d="M12.5 25.8333H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M12.5 20H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M12.5 14.1667H27.5" stroke="#00C1AD" stroke-width="2.5" stroke-linecap="round" />
-            </svg>
-
-            <div class="payment__text">
-                <h3 class="payment__title">
-                    Payments by&nbsp;requisites
-                </h3>
-                <p class="payment__subtitle">
-                    For legal entities
-                </p>
-            </div>
-        </div>
-    </div>
-    <img src="../../img/payment-bg.png" alt="colorfull gradient background" class="bg">
-</section>
-        <section class="section product-promo container m-90">
-    <div class="product-promo__content " style="background: url(img/product/promo.png) center center / cover no-repeat;">
-        <div class="product-promo__textContent">
-            <div class="product-promo__text">
-                <h2 class="product-promo__title section-title section-title_40">
-                    Feel free to ask any questions
-                </h2>
-                <p class="product-promo__subtitle" >
-                    Our specialist will answer your questions
-                </p>
-            </div>
-        </div>
-        <a href="javascript:void(0)" class="product-promo__btn btn btn_white js-popup-open" data-popup-id="3">
-            Request a consultation
+        <a href="javascript:void(0)" class="btn__round_main js-popup-open" data-popup-id="8">
+            рассчитать
         </a>
-    </div>
-</section>
 
     </main>
 
@@ -936,11 +1035,11 @@
     <div class="footer__row container">
         <div class="footer__col">
             <div class="footer__item">
-                <div class="footer__item-caption">Contacts</div>
+                <div class="footer__item-caption">Контакты</div>
                 <div class="footer__contacts">
                     <div class="footer__contact">
                         <img src="img/footer_phone.png" alt="Phone icon">
-                        <a href="tel:+8602084888242">+86 (020) 8488 8242</a>
+                        <a href="tel:88004444852">8 (800) 444-48-52</a>
                     </div>
                     <div class="footer__contact">
                         <img src="img/footer_mail.png" alt="Mail icon">
@@ -948,45 +1047,56 @@
                     </div>
                 </div>
             </div>
-            <div class="footer__item">
-                <div class="footer__item-caption">Headquaters in China</div>
-                <p class="footer__text">
-                    Room 2004-2006, Nimble Plaza Tower A, Panyu Dadao North 330, Nancun Town, Guangzhou, China
-                </p>
+            <div class="footer__item-wrapper">
+                <div class="footer__item">
+                    <div class="footer__item-caption">Офис в Москве</div>
+                    <p class="footer__text">
+                        Москва, Ленинская слобода, 19, БЦ «Омега Плаза», 2 этаж
+                    </p>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-caption">Штаб-квартира в Китае</div>
+                    <p class="footer__text">
+                        Room 2004-2006, Nimble Plaza Tower A, Panyu Dadao North 330, Nancun Town, Guangzhou, China
+                    </p>
+                </div>
             </div>
         </div>
         <div class="footer__col">
             <div class="footer__navWrapper">
                 <div class="footer__item">
-                    <div class="footer__item-caption">Navigation</div>
+                    <div class="footer__item-caption">Навигация</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
                             <li>
-                                <a href="en-catalog.html" class="footer__list-item">Catalog</a>
+                                <a href="catalog.html" class="footer__list-item">Каталог</a>
                             </li>
                             <li>
-                                <a href="en-about.html" class="footer__list-item">About Us</a>
+                                <a href="about.html" class="footer__list-item">О Uminers</a>
                             </li>
                             <li>
-                                <a href="en-contacts.html" class="footer__list-item">Contacts</a>
+                                <a href="contacts.html" class="footer__list-item">Контакты</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__list-item">Delivery and Payment</a>
+                                <a href="#" class="footer__list-item">Доставка и оплата</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__list-item">Turnkey Mining</a>
+                                <a href="#" class="footer__list-item">Майнинг под ключ</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__list-item">Hosting</a>
+                                <a href="#" class="footer__list-item">Хостинг</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__list-item">Blog</a>
+                                <a href="#" class="footer__list-item">Лизинг</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__list-item">Блог</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="footer__item">
-                    <div class="footer__item-caption">Manufacturers</div>
+                    <div class="footer__item-caption">Производители</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
                             <li>
@@ -1014,7 +1124,7 @@
                     </nav>
                 </div>
                 <div class="footer__item">
-                    <div class="footer__item-caption">Algorithm</div>
+                    <div class="footer__item-caption">Алгоритмы</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
                             <li>
@@ -1051,7 +1161,7 @@
                     </nav>
                 </div>
                 <div class="footer__item">
-                    <div class="footer__item-caption">Coins</div>
+                    <div class="footer__item-caption">Монеты</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
                             <li>
@@ -1099,7 +1209,7 @@
                 © 2024 Uminers
             </li>
             <li>
-                <a href="#">Privacy policy</a>
+                <a href="#">Политика конфиденциальности</a>
             </li>
             <div class="footer__gradient">
                 <img src="img/background-gradient.png" alt="footer colorfull gradient background">
@@ -1111,3 +1221,5 @@
 
     <script src="js/app.min.js"></script>
 </body>
+
+</html>
