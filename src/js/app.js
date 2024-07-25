@@ -25,6 +25,7 @@ import * as tablePopup from './modules/popup-table.js'
 import * as hostingMap from './modules/hosting-map.js'
 import * as gallery from './modules/gallery.js'
 import * as calculatorPopup from './modules/calculatorPopupHandler.js'
+import * as rangeInputValue from './modules/rangeInputValue.js'
 
 flsFunctions.isWebp()
 
