@@ -1,0 +1,151 @@
+.card_glass {
+    border-radius: 22.669px;
+    border: 1.133px solid #B2B2B2;
+    background: rgba(0, 1, 1, 0.20);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    min-width: 345px;
+
+    @media (max-width:$breakpoint576) {
+        min-width: 0;
+        flex-basis: 100%;
+    }
+
+    &.cards__item_half {
+        min-width: 500px;
+
+        @media (max-width:$breakpoint576) {
+            min-width: 0;
+            flex-basis: 100%;
+            flex-direction: column;
+        }
+    }
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    &__text {
+        color: #FFF;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 46px;
+        letter-spacing: -0.78px;
+
+        .highlighted {
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 71.875%;
+            letter-spacing: -1.92px;
+        }
+    }
+}
+
+.card_transparent {
+    border-radius: 22.669px;
+    border: 1.133px solid #B2B2B2;
+    background: rgba(0, 1, 1, 0.20);
+    backdrop-filter: blur(15px);
+    margin-bottom: 20px;
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 0.88;
+        letter-spacing: -1.08px;
+    }
+
+    &__subtitle {
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.33;
+        letter-spacing: -0.72px;
+    }
+}
+
+.investment-benefits {
+    position: relative;
+    &__item {
+        flex-direction: row;
+        gap: clamp(15px, 5vw, 50px);
+        align-items: center;
+        margin-bottom: 10px;
+
+        @media (max-width:$breakpoint576) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 27px;
+        /* 96.429% */
+        letter-spacing: -0.56px;
+        margin-bottom: 11px;
+    }
+
+    &__subtitle {
+        color: #EDEDED;
+        font-family: Manrope;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        /* 112.5% */
+        letter-spacing: -0.48px;
+    }
+
+    img {
+        height: auto;
+        width: 91px;
+    }
+
+    .bg{
+        width: 120%;
+        left: 60%;
+        transform: translateX(-60%);
+        position: absolute;
+        z-index: -1;
+        bottom:-20%
+    }
+}
+
+.investment-why{
+    position: relative;
+    .bg {
+        position: absolute;
+        z-index: -1;
+        top: -100%;
+        width: 113%;
+        height: auto;
+        left: -6.5%;
+
+        @media (max-width:$breakpoint1100) {
+            top: -60%;
+        }
+
+        @media (max-width:$breakpoint768) {
+            top: -30%
+        }
+
+        @media (max-width:$breakpoint576) {
+            top: 0px;
+        }
+    }
+}
