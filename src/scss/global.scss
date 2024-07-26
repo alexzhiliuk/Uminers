@@ -416,16 +416,25 @@ button {
         display: none;
     }
     div{
+        user-select: none;
         flex: 1 0 312px;
         overflow: hidden;
         border-radius: 20px;
     }
     img{
         height: 312px;
-        width:100%;
+        width:auto;
+        user-select: none;
+
     }
     &::-webkit-scrollbar{
         display: none;
     }
 }
+}
+.gradient {
+    background: linear-gradient(90deg, #00C1AD 0%, #005B52 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

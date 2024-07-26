@@ -34,6 +34,10 @@
         &_smaller{
             flex: 1 calc(16.7% - $gap);
         }
+        &_bigger{
+            flex: 1 calc(33% - $gap);
+            min-width: 274px;
+        }
         flex: 1 calc(100% - 80% - $gap);
         min-width: 209px;
     }

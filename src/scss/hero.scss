@@ -622,6 +622,32 @@
         }
     }
 
+    &_investment {
+        background: url(../img/investment-hero.png);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-clip: padding-box;
+        &__text {
+            color: #DADADA;
+            font-size: clamp(16px,1.33vw,20px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.4px;
+            @media (max-width:360px) {
+                br{
+                    display: none;
+                }
+            }
+        }
+        
+        a.btn{
+            max-width: 349px;
+            margin-top: 32px;
+        }
+    }
+
     // .hero__title
     &__title {
         text-align: center;
