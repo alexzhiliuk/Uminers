@@ -1,3 +1,8 @@
+/* todo: 
+    отступ табы в целом
+    
+    табы:, ранжи размер текста
+ */
 .calculator-popup {
     .form {
         background-color: #0C0C0C;
@@ -82,6 +87,10 @@ background-clip: text;
                 margin-bottom: 20px;
                 padding:10px;
                 border-radius: 10px;
+            }
+
+            @media (max-width: 380px) {
+                margin-bottom: 0;
             }
 
             img {
@@ -287,6 +296,14 @@ background-clip: text;
         }
     }
 
+    //active: #fff
+    //basic: #9c9c9c
+    //line: fit-content
+
+    //lasttab
+    //padding-right: 10px;
+    //border-bottom: 1px solid #1a1a1a 
+
     .input-main,
     select {
         border-radius: 10px;
@@ -300,10 +317,20 @@ background-clip: text;
             letter-spacing: -0.2px;
         }
     }
+    select{
+        color:#fff;
+    }
 
     input[type="text"] {
         width:100%;
         padding: 15px 20px;
+        color:#fff;
+        &::placeholder{
+            color:#fff;
+        }
+        &:disabled::placeholder{
+            color: #9c9c9c
+        }
     }
 
     .input-wrapper{
@@ -325,9 +352,6 @@ background-clip: text;
                 line-height: 100%;
                 letter-spacing: -0.2px;
             }
-        }
-        input[type=text]:disabled+.sub{
-            color: #222;   
         }
     }
 
@@ -393,13 +417,22 @@ background-clip: text;
     //tabs
     .tabs {
         &__header{
+            width:fit-content;
             @media (max-width:$breakpoint576) {
-                gap:12px;
+                gap: 12px;
+            }
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        &__content{
+            @media (max-width:576px) {
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
         }
 
         &__item {
-            color: #FFF;
+            color: #9c9c9c;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -408,6 +441,12 @@ background-clip: text;
             padding: 8px 1px;
             @media (max-width:$breakpoint576) {
                 font-size: 10px;
+            }
+            &_active{
+                color:#fff;
+            }
+            &:last-child{
+                padding-right: 10px;
             }
         }
 
@@ -418,7 +457,7 @@ background-clip: text;
                 width: 45%;
 
                 @media (max-width:$breakpoint576) {
-                    font-size: 12px;
+                    font-size: 10.6px;
                 }
             }
         }
@@ -443,12 +482,34 @@ background-clip: text;
     .form_radio {
         margin-bottom: 10px;
         @media (max-width:$breakpoint576) {
+            margin-bottom: 0;
         }
     }
 
     .form_radio input[type=radio] {
         display: none;
     }
+
+    .label-main.hidden{
+        display: none;
+        @media(max-width:380px){
+            display: block;
+        }
+    }
+    #main-select{
+        @media (max-width:380px) {
+            display: none;
+        }
+    }
+    //25px 40px
+    //margin:0;
+
+
+    //margin:0;
+
+    //расстояние в табах
+
+    //11.6px
 
     .form_radio label {
         display: inline-block;
