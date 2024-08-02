@@ -27,6 +27,12 @@
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+        br{
+            display: none;
+            @media (max-width: 420px) {
+                display: block;
+            }
+        }
     }
 
     &__content {
@@ -72,13 +78,15 @@ background-clip: text;
             border-radius: 20px;
 
             @media (max-width:$breakpoint576) {
-                flex: 1 1 100px;
-                align-self: flex-start;
-                padding:15px;
+                flex: 1 1;
+                margin-bottom: 20px;
+                padding:10px;
+                border-radius: 10px;
             }
 
             img {
                 width: 100%;
+                min-width: 84px;
             }
         }
 
@@ -95,10 +103,14 @@ background-clip: text;
         &__characteristics {
             display: flex;
             justify-content: space-between;
+            @media (max-width: 380px) {
+                justify-content: flex-start;
+                gap:20px;
+            }
 
             @media (max-width:$breakpoint576) {
                 &:nth-of-type(2) {
-                    flex-direction: column;
+                    align-items: flex-end;
                     gap: 10px;
                 }
             }
@@ -106,6 +118,9 @@ background-clip: text;
 
         &__characteristic {
             flex-basis: 50%;
+            @media (max-width: 380px) {
+                flex-basis: auto;
+            }
 
 
             &-title {
@@ -287,8 +302,33 @@ background-clip: text;
     }
 
     input[type="text"] {
-        flex-grow: 1;
+        width:100%;
         padding: 15px 20px;
+    }
+
+    .input-wrapper{
+        flex-grow: 1;
+        position: relative;
+        .sub{
+            position: absolute;
+            right:20px;
+            top:50%;
+            transform: translateY(-50%);
+            color:#9c9c9c;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21.86px;
+            letter-spacing: -0.02em;
+            @media (max-width:$breakpoint576) {
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 100%;
+                letter-spacing: -0.2px;
+            }
+        }
+        input[type=text]:disabled+.sub{
+            color: #222;   
+        }
     }
 
     .switch {
@@ -352,6 +392,12 @@ background-clip: text;
 
     //tabs
     .tabs {
+        &__header{
+            @media (max-width:$breakpoint576) {
+                gap:12px;
+            }
+        }
+
         &__item {
             color: #FFF;
             font-size: 16px;
@@ -360,6 +406,9 @@ background-clip: text;
             line-height: 1.375;
             letter-spacing: -0.16px;
             padding: 8px 1px;
+            @media (max-width:$breakpoint576) {
+                font-size: 10px;
+            }
         }
 
         max-width: none;
@@ -387,12 +436,14 @@ background-clip: text;
         gap: 8px;
         grid-auto-flow: column;
         @media (max-width:$breakpoint576) {
-            gap:0;
+            gap: 10px;
         }
     }
 
     .form_radio {
         margin-bottom: 10px;
+        @media (max-width:$breakpoint576) {
+        }
     }
 
     .form_radio input[type=radio] {
@@ -412,7 +463,8 @@ background-clip: text;
             font-size: 10px;
             font-style: normal;
             font-weight: 400;
-            line-height: 22px;
+            line-height: 1.1;
+            margin-bottom: 0;
             padding-left: 24px;
             /* 220% */
             letter-spacing: -0.1px;
@@ -426,7 +478,7 @@ background-clip: text;
         left: 0;
         width: 20px;
         height: 20px;
-        border: 2px solid $primaryColor;
+        border: 2px solid #9d9d9d;
         top: 50%;
         transform: translateY(-50%);
         border-radius: 50%;
@@ -439,6 +491,7 @@ background-clip: text;
     /* Checked */
     .form_radio input[type=radio]:checked+label:before {
         box-shadow: inset 0 0 0 3px #0C0C0C;
+        border: 2px solid $primaryColor;
         background-color: $primaryColor;
     }
 
@@ -588,6 +641,7 @@ background-clip: text;
     }
 
 
+
     //content-right
 
     .content_right {
@@ -603,7 +657,6 @@ background-clip: text;
                 [type=button]{
                     display: flex;
                 }
-                
             }
         }
 

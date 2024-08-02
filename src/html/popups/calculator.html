@@ -3,13 +3,15 @@
         <div class="popup-form__close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.5">
-                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </g>
-            </svg>                
+            </svg>
         </div>
         <h2 class="calculator-popup__title">
-            Калькулятор доходности
+            Калькулятор<br> доходности
         </h2>
         <div class="calculator-popup__content">
             <div class="calculator-popup__content_left">
@@ -87,7 +89,10 @@
                             Задать свою<br>
                             стоимость
                         </p>
-                        <input type="text" pattern="[0, 9]" placeholder="4,9" disabled class="input-main">
+                        <div class="input-wrapper">
+                            <input type="text" pattern="[0, 9]" placeholder="4,9" disabled class="input-main">
+                            <span class="sub">₽ /кВт./ч.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="calculator-popup__tabs">
@@ -279,7 +284,7 @@
                     <div class="content_right__characteristic_big">
                         <h3 class="title">Хэшрейт</h3>
                         <span class="value highlighted">— TH/s<div class="mini"> (1 TH/s в сутки = 0,00000081 BTC)</div>
-                            </span>
+                        </span>
                     </div>
                     <p class="content_right__text">
                         Обратите внимание, что расчеты основаны на усреднённых данных. Фактические
