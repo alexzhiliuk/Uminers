@@ -1,8 +1,4 @@
-/* todo: 
-    отступ табы в целом
-    
-    табы:, ранжи размер текста
- */
+
 .calculator-popup {
     .form {
         background-color: #0C0C0C;
@@ -91,6 +87,7 @@ background-clip: text;
 
             @media (max-width: 380px) {
                 margin-bottom: 0;
+                padding: 25px 40px;
             }
 
             img {
@@ -296,14 +293,6 @@ background-clip: text;
         }
     }
 
-    //active: #fff
-    //basic: #9c9c9c
-    //line: fit-content
-
-    //lasttab
-    //padding-right: 10px;
-    //border-bottom: 1px solid #1a1a1a 
-
     .input-main,
     select {
         border-radius: 10px;
@@ -501,15 +490,6 @@ background-clip: text;
             display: none;
         }
     }
-    //25px 40px
-    //margin:0;
-
-
-    //margin:0;
-
-    //расстояние в табах
-
-    //11.6px
 
     .form_radio label {
         display: inline-block;

@@ -7930,11 +7930,6 @@ label.radio-label input[type=checkbox].invalid {
   }
 }
 
-/* todo: 
-    отступ табы в целом
-
-    табы:, ранжи размер текста
- */
 .calculator-popup {
   /* Checked */
   /* Hover */
@@ -8032,6 +8027,7 @@ label.radio-label input[type=checkbox].invalid {
 @media (max-width: 380px) {
   .calculator-popup .main-calculations__image {
     margin-bottom: 0;
+    padding: 25px 40px;
   }
 }
 .calculator-popup .main-calculations__image img {
