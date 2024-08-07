@@ -851,6 +851,11 @@ button {
   display: flex;
   align-items: center;
 }
+@media (max-width: 575.98px) {
+  .bottom-header__icon.none {
+    display: none;
+  }
+}
 .bottom-header__icon svg {
   height: 35px;
   width: auto;
@@ -2611,7 +2616,7 @@ button {
 }
 .promo__subtitle {
   color: #ffffff;
-  font-size: 26px;
+  font-size: clamp(18px, 3.5vw, 26px);
   line-height: 1.3;
   font-weight: 400;
 }
@@ -4112,6 +4117,9 @@ input:checked + .slider:before {
   width: auto;
   flex-shrink: 0;
   margin-right: -15px;
+}
+.catalog .card__crypto img [alt=LTC] {
+  height: 90%;
 }
 .catalog .card__crypto img:last-child {
   margin-right: 0;

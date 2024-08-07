@@ -208,6 +208,9 @@
                 width: auto;
                 flex-shrink: 0;
                 margin-right: -15px;
+                [alt=LTC]{
+                    height: 90%;
+                }
 
                 &:last-child {
                     margin-right: 0;

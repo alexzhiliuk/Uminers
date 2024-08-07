@@ -280,6 +280,11 @@
     &__icon {
         display: flex;
         align-items: center;
+        &.none{
+            @media (max-width:$breakpoint576) {
+                display: none;
+            }
+        }
 
         svg {
             height: 35px;

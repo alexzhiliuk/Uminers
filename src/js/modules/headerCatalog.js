@@ -6,9 +6,11 @@ $(".js-header-catalog-open").click(function() {
 $(".js-search-open").click(function() {
     $(".search-header").toggle()
     $(".catalog-header").hide()
+    document.querySelector('.search-header').querySelector('input').focus()
 })
 $(".search-header__close").click(function() {
     $(".search-header").hide()
+    document.querySelector('.search-header').querySelector('input').blur()
 })
 
 
