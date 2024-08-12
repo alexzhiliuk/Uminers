@@ -765,16 +765,52 @@
         </div>
     </div>
 </div>
+    
+    <!-- Popups -->
+    <section class="popup" data-popup-id="10" style="display: none;">
+    <form action="" class="popup-form">
+        <div class="popup-form__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L2 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>                
+        </div>
+        <h2 class="popup-form__title">Оставить заявку на хостинг</h2>
+        <p class="popup-form__subtitle">
+            Заполните форму ниже и мы свяжемся с вами
+        </p>
+        <div class="popup-form__inputs">
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Имя
+                    <input type="text" class="input-main" placeholder="Ваше имя" name="Name" required="">
+                </label>
+            </div>
+            <div class="popup-form__row">
+                <label for="" class="label-main">
+                    Телефон
+                    <input type="tel" class="input-main" placeholder="+7 999 999-99-99" name="phone" required="" data-tel-input>
+                </label>
+                <label for="" class="label-main">
+                    Электронная почта
+                    <input type="email" class="input-main" placeholder="poshta@mail.ru" name="email" required="">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn__main popup-form__submit">Отправить</button>
+    </form>
+</section>
 
     <main>
         <!-- Hero -->
         <section class="hero container hero_hosting">
-    <h1 class="hero_hosting__title">Хостинг ASIC Майнеров<br> в дата-центре криптодобычи Uminers</h1>
-    <p class="hero_hosting__subtitle">Ведущий хостинг для майнинга криптовалют для энтузиастов и профессионалов. Майнинг биткоинов мирового класса с мощностью 100+ МВт для размещения ASIC Майнеров.</p>
+    <h1 class="hero_hosting__title">Хостинг ASIC Майнеров<br> в дата-центре Uminers</h1>
+    <p class="hero_hosting__subtitle">Ведущий хостинг для майнинга криптовалют с мощностью 100+ МВт</p>
     <img src="img/asic-hosting-hero.png" alt="3d asic-miner ultrarealistic model">
     <div class="button-block">
-        <a href="" class="btn btn-round__main">Купить и захостить</a>
-        <a href="" class="btn-round__main_outlined" style="background: transparent;">Только захостить</a>
+        <a href="javascript:void(0)" class="btn btn-round__main js-popup-open" data-popup-id="10">Оставить заявку на хостинг</a>
     </div>
 </section>
 
@@ -800,7 +836,6 @@
                     <h4 class="overlay-point__characteristics-title" >Используемые типы энергетики</h4>
                     <div class="overlay-point__characteristics">
                         <span class="characteristic">Гидро</span>
-                        <span class="characteristic">Ядерная</span>
                     </div>
                 </div>
                 <div class="overlay-point__characteistics_second">
@@ -850,8 +885,6 @@
                     <h4 class="overlay-point__characteristics-title">Используемые типы энергетики</h4>
                     <div class="overlay-point__characteristics">
                         <span class="characteristic">Гидро</span>
-                        <span class="characteristic">Ядерная</span>
-                        <span class="characteristic">Ядерная</span>
                     </div>
                 </div>
                 <div class="overlay-point__characteistics_second">
@@ -1007,7 +1040,7 @@
 
         <section class="section container benefits-hosting">
     <h2 class="section-title">
-        Преимущества хостинга майнеров в Uminers
+        Преимущества хостинга в Uminers
     </h2>
     <div class="cards section__body benefits-hosting__content">
         <div class="card-bg card cards-item">
@@ -1015,7 +1048,7 @@
                 Масштабируемость и гибкость
             </h3>
             <p class="card-bg__text">
-                Наши услуги хостинга масштабируются под ваши потребности, обеспечивая бесперебойную работу оборудования.
+                Мы понимаем, что гибкость – ключ к успешному майнингу. Наш хостинг адаптируется под ваши потребности, вне зависимости от объемов размещения.
             </p>
             <svg width="207" height="208" viewBox="0 0 207 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -1039,11 +1072,10 @@
         </div>
         <div class="card-bg card cards-item">
             <h3 class="card-bg__title">
-                Круглосуточная поддержка
+                Круглосуточная <br> поддержка
             </h3>
             <p class="card-bg__text">
-                Круглосуточная поддержка и видеонаблюдение гарантируют безопасность и эффективную работу вашего
-                оборудования.
+                На объекте круглосуточно дежурит команда технических специалистов, которые мониторят работу оборудования и оперативно устраняют неполадки
             </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="149" height="165" viewBox="0 0 149 165" fill="none">
                 <path
@@ -1057,8 +1089,7 @@
                 Передовые системы охлаждения
             </h3>
             <p class="card-bg__text">
-                Наши системы охлаждения поддерживают оптимальную температуру оборудования в любых климатических
-                условиях.
+                В процессе майнинга образуется много тепла, которое может оказывать негативное воздействие на работу оборудования. Наши системы охлаждения обеспечивают оптимальную температуру для майнеров и не допускают перегревания.
             </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="198" height="164" viewBox="0 0 198 164" fill="none">
                 <path
@@ -1074,10 +1105,10 @@
         </div>
         <div class="card-bg card cards-item">
             <h3 class="card-bg__title">
-                Продуманные решения для криптохостинга
+                Uptime > 99%
             </h3>
             <p class="card-bg__text">
-                Наши центры предлагают трехфазные подключения, обеспечивая надежное соединение для вашего оборудования.
+                Обеспечивая стабильную работу оборудования
             </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="162" height="171" viewBox="0 0 162 171" fill="none">
                 <circle cx="108.999" cy="109.246" r="90.8333" stroke="white" stroke-opacity="0.05" stroke-width="15" />
@@ -1087,10 +1118,10 @@
         </div>
         <div class="card-bg card cards-item">
             <h3 class="card-bg__title">
-                Экологичные альтернативы хостинга
+                Экологичный майнинг
             </h3>
             <p class="card-bg__text">
-                Дата-центры UMINERS используют гидроэнергию, уменьшая углеродный след и поддерживая экологичность.
+                Дата-центры UMINERS используют гидроэнергию, уменьшая углеродный след и поддерживая экологию.
             </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="153" height="154" viewBox="0 0 153 154" fill="none">
                 <path
@@ -1106,7 +1137,7 @@
                 Программное обеспечение на заказ
             </h3>
             <p class="card-bg__text">
-                Наши программы оптимизируют майнинг, предоставляя анализ в реальном времени для максимальной
+                Наши программы оптимизируют майнинг, анализируя работу в реальном времени для максимальной
                 эффективности.
             </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="183" height="189" viewBox="0 0 183 189" fill="none">
@@ -1158,16 +1189,18 @@
                     специалистами UMINERS.</p>
             </div>
             <div class="hosting-steps__point-wrapper">
-                <h3 class="hosting-steps__point-title">Запуск хостинга</h3>
+                <h3 class="hosting-steps__point-title">Подключение хостинга</h3>
                 <p class="hosting-steps__point-text">Оборудование устанавливается, мониторится и обслуживается нашей
                     командой.</p>
             </div>
             <div class="hosting-steps__point-wrapper">
-                <h3 class="hosting-steps__point-title">Поддержка</h3>
-                <p class="hosting-steps__point-text">Круглосуточная поддержка включает обслуживание, устранение проблем
-                    и оптимизацию майнинга.</p>
+                <h3 class="hosting-steps__point-title">Получение дохода</h3>
+                <p class="hosting-steps__point-text">Вам остается только подключить кошелек и зарабатывать</p>
             </div>
         </div>
+    </div>
+    <div class="btn-round" style="margin-top: 40px; display: flex; justify-content: center;">
+        <a href="catalog.html" class="btn-round__main">Оставить заявку на хостинг</a>
     </div>
 </section>
 
@@ -1183,7 +1216,7 @@
                     01
                 </div>
                 <p class="calculator-promo__text">
-                    Бесперебойная подача электроэнергии и интернет-соединение
+                    Uptime >99% за счет круглосуточного мониторинга и регулярного обслуживания
                 </p>
             </div>
             <div class="calculator-promo__item">
@@ -1201,7 +1234,7 @@
                     03
                 </div>
                 <p class="calculator-promo__text">
-                    Соблюдение условий работы и регулярное техническое обслуживание
+                    Обеспечиваем для майнеров идеальные условия работы и регулярно проводим техническое обслуживание
                 </p>
             </div>
             <div class="calculator-promo__item">
@@ -1209,7 +1242,7 @@
                     04
                 </div>
                 <p class="calculator-promo__text">
-                    Круглосуточный мониторинг работы оборудования
+                    Оплата только за электроэнергию, без скрытых платежей
                 </p>
             </div>
         </div>
@@ -1248,7 +1281,7 @@
                         </svg>
                         <h3 class="why-card__title">Прозрачность</h3>
                     </div>
-                    <p class="why-card__text">Прозрачность – одна из наших ценностей. Мы предоставляем честную и точную информацию о производительности вашего оборудования и дата-центра.</p>
+                    <p class="why-card__text">Прозрачность – одна из наших ценностей. Мы предоставляем честную и точную информацию о производительности вашего оборудования.</p>
                 </div>
                 <div class="card why-us__card why-card">
                     <div class="why-card__title-wrapper">
@@ -1259,7 +1292,7 @@
                         </svg>
                         <h3 class="why-card__title">Экономичность</h3>
                     </div>
-                    <p class="why-card__text">Наши международные связи и знания помогают получить выгодные цены на оборудование и хостинг, повышая вашу прибыль.</p>
+                    <p class="why-card__text">Долгосрочные контракты с производителями, благодаря чему вы можете получать самые выгодные цены на оборудование и хостинг на лучших условиях.</p>
                 </div>
             </div>
         </div>
@@ -1281,7 +1314,7 @@
                     </svg>
                     <h3 class="why-card__title">Индивидуальные решения</h3>
                 </div>
-                <p class="why-card__text">Мы адаптируем наши услуги под ваши конкретные потребности и цели, будь то максимизация прибыли или оптимизация эффективности.</p>
+                <p class="why-card__text">В зависимости от ваших потребностей и целей поможем подобрать оборудование и предложим самые выгодные условия размещения.</p>
             </div>
         </div>
     </div>
@@ -1290,7 +1323,7 @@
 
         <section class="section container gallery-slider">
     <h2 class="section-title">
-        Команда инженеров
+        Команда инженеров Uminers
     </h2>
     <div class="section__body gallery">
         <div class="image-wrapper">

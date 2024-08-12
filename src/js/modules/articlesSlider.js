@@ -14,6 +14,11 @@ const swiperHero = new Swiper('#articlesSlider', {
         prevEl: '#articlesSliderPrev',
     },
 
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+
     breakpoints: {
         576: {
             slidesPerView: 1.8,
