@@ -7761,6 +7761,9 @@ label.radio-label input[type=checkbox].invalid {
   .hosting-steps__content .hosting-steps__points:last-child {
     width: 73%;
   }
+  .hosting-steps__content .hosting-steps__points:last-child .hosting-steps__point-wrapper {
+    width: 100%;
+  }
   .hosting-steps__content .hosting-steps__point-title {
     position: relative;
   }

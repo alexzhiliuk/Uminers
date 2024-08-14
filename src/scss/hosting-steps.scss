@@ -66,6 +66,10 @@
                 }
                 &:last-child {
                     width: 73%;
+
+                    .hosting-steps__point-wrapper {
+                        width: 100%;
+                    }
                 }
             }
 
