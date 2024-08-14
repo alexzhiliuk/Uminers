@@ -4711,7 +4711,7 @@ input:checked + .slider:before {
   gap: 20px;
 }
 .footer__contact img {
-  width: clamp(18px, 5vw, 50px);
+  width: clamp(18px, 4vw, 38px);
 }
 .footer__contact a {
   color: #ffffff;
