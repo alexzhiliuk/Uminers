@@ -54,6 +54,48 @@
 
         @media (max-width:$breakpoint768) {
             flex-direction: row;
+            justify-content: flex-end;
+            counter-reset: num;
+
+            .hosting-steps__points {
+                &:first-child {
+                    flex: 1;
+                    .hosting-steps__point-wrapper {
+                        display: none;
+                    }
+                }
+                &:last-child {
+                    width: 73%;
+                }
+            }
+
+            .hosting-steps__point-title {
+                position: relative;
+                &::before {
+                    counter-increment: num;
+                    content: counter(num);
+                    position: absolute;
+                    right: calc(100% + (100vw - 100%) / 2);
+                    translate: 52%;
+                    top: -4px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    width: 58px;
+                    height: 58px;
+                    flex-shrink: 0;
+                    background-color: #03C1AD;
+                    border: 10px solid #000;
+                    color: #000;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    letter-spacing: -0.48px;
+                    z-index: 2;
+                }
+            }
         }
     }
 

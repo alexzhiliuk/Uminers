@@ -89,6 +89,12 @@
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
+
+        @media screen and (max-width: $breakpoint480) {
+            & > * {
+                flex: 1 0 calc(50% - 20px / 2);
+            }
+        }
     }
 
     // .footer__list

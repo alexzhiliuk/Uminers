@@ -4116,7 +4116,7 @@ input:checked + .slider:before {
   height: 100%;
   width: auto;
   flex-shrink: 0;
-  margin-right: -15px;
+  margin-right: -12px;
 }
 .catalog .card__crypto img [alt=LTC] {
   height: 90%;
@@ -4731,6 +4731,11 @@ input:checked + .slider:before {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 479.98px) {
+  .footer__navWrapper > * {
+    flex: 1 0 calc(50% - 10px);
+  }
 }
 .footer__list {
   display: flex;
@@ -7744,6 +7749,43 @@ label.radio-label input[type=checkbox].invalid {
 @media (max-width: 767.98px) {
   .hosting-steps__content {
     flex-direction: row;
+    justify-content: flex-end;
+    counter-reset: num;
+  }
+  .hosting-steps__content .hosting-steps__points:first-child {
+    flex: 1;
+  }
+  .hosting-steps__content .hosting-steps__points:first-child .hosting-steps__point-wrapper {
+    display: none;
+  }
+  .hosting-steps__content .hosting-steps__points:last-child {
+    width: 73%;
+  }
+  .hosting-steps__content .hosting-steps__point-title {
+    position: relative;
+  }
+  .hosting-steps__content .hosting-steps__point-title::before {
+    counter-increment: num;
+    content: counter(num);
+    position: absolute;
+    right: calc(100% + (100vw - 100%) / 2);
+    translate: 52%;
+    top: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    background-color: #03C1AD;
+    border: 10px solid #000;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    z-index: 2;
   }
 }
 .hosting-steps__point {
