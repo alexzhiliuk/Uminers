@@ -2154,6 +2154,11 @@ button {
     flex-direction: column;
   }
 }
+.card_row .card_transparent__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .card_outline {
   background-color: unset;
   border: 1px solid #4d4d4d;
@@ -4429,6 +4434,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  flex-grow: 1;
 }
 .product__comments {
   display: flex;

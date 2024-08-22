@@ -126,6 +126,12 @@ $borderRaius: 20 + px;
         @media (max-width:$breakpoint576) {
             flex-direction: column;
         }
+
+        .card_transparent__text {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 
     &_outline {
